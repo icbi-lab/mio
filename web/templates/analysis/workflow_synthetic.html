@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block titulo %}
+   Data
+{% endblock titulo %}
+{% block body %}
+
+<section id="#">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          {% if messages %}
+          <div>
+              <ul>
+              {% for message in messages %}
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                      <strong>{{message | safe}}</strong>
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+              </div>
+              {% endfor %}
+              </ul>
+          </div>  
+        {% endif %}
+          <h2> {{title}} </h2>
+          <hr class="my-4">
+          <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <div id="tquery">
+              {{form.tQuery | as_crispy_field}}
+            </div>
+
+            <p>
+              <div id="use_set" name = "use_set"  class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" name = "use_set" id="use_setcheckbox" value=True>
+                <label class="form-check-label" for="use_setcheckbox">Predict geneset target</label>
+              </div>
+            </p>
+
+            <div id="geneset" style="display:none">
+                <p> Select geneset to analyze </p>
+              <select class="chosen" style="width:350px;" name="publicGeneset" multiple> 
+                {% for value,key in form.publicGeneset.field.choices %}
+                    <option name="publicGeneset" value="{{value}}">{{key}}</option>
+                {%endfor%}
+              </select>
+              <table style="width:100%">
+                <tr><td style="padding: 10px"></td></tr>
+              </table>
+            </div>
+
+            <p>
+              <div id="use_correlation" name = "use_correlation"  class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" name = "use_correlation" id="use_correlationcheckbox" value=True>
+                <label class="form-check-label" for="use_correlationcheckbox">Use miRNA/Gene Correlation Result</label>
+              </div>
+            </p>
+            
+            <div id="correlation" style="display:none">
+              <select class="chosen" style="width:350px;" name="table"> 
+                {% for value,key in form.table.field.choices %}
+                    <option name="table" value="{{value}}">{{key}}</option>
+                {%endfor%}
+              </select>              {{form.pval | as_crispy_field}}
+              {{form.low_coef | as_crispy_field}}
+              {{form.high_coef | as_crispy_field}}
+            </div>
+
+              <table style="width:100%">
+                {{form.join | as_crispy_field}}
+
+                <tr>
+                  {% for value,key in form.nDB.field.choices %}
+                    {%if forloop.counter0|divisibleby:"7" %}
+                    </tr>
+                    <tr>
+                    {%endif%}
+                    <td><input type="checkbox" name="nDB" value='{{value}}'></td>
+                    <td style="text-align:left;">{{value}}</td>
+                  {%endfor%}
+                </tr>
+                <tr><td style="padding: 10px"></td></tr>
+              </table>
+              <table style="width:100%">
+                <tr>
+                  <td align="center">
+                    <input type="button" class="btn btn-outline-primary" onclick='selects()' value="Select All"/>
+                    <input type="button" class="btn btn-outline-secondary" onclick='deSelect()' value="Deselect All"/>
+                    <input type="button" class="btn btn-outline-success" onclick='SelectCurated()' value="Select Validated"/>
+                  </td> 
+                </tr>
+                <tr><td style="padding: 10px"></td></tr>
+              </table>
+
+              {{form.min_db | as_crispy_field}}
+
+            <button type="submit" class="btn btn-primary btn-block">Apply Filter</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+{% endblock body %}
+
+{% block js %}
+
+<script type="text/javascript">
+        var checkbox = document.getElementById("use_correlationcheckbox");
+        var checkboxset = document.getElementById("use_setcheckbox");
+        checkbox.addEventListener('change', function() {
+              if (this.checked) {
+                console.log("Checkbox is checked..");
+                document.getElementById("correlation").style = "display:true";
+
+              } else {
+                console.log("Checkbox is not checked..");
+                document.getElementById("correlation").style = "display:none";
+              }
+            });
+
+        checkboxset.addEventListener('change', function() {
+              if (this.checked) {
+                console.log("Checkbox is checked..");
+                document.getElementById("geneset").style = "display:true";
+                document.getElementById("tquery").style = "display:none";
+
+              } else {
+                console.log("Checkbox is not checked..");
+                document.getElementById("geneset").style = "display:none";
+                document.getElementById("tquery").style = "display:true";
+
+              }
+            });
+    function selects(){  
+        var ele=document.getElementsByName('nDB');  
+        for(var i=0; i<ele.length; i++){  
+            if(ele[i].type=='checkbox')  
+                ele[i].checked=true;  
+        }  
+    }  
+    function deSelect(){  
+        var ele=document.getElementsByName('nDB');  
+        for(var i=0; i<ele.length; i++){  
+            if(ele[i].type=='checkbox')  
+                ele[i].checked=false;  
+              
+        }  
+    }  
+    function SelectCurated(){  
+        var ele=document.getElementsByName('nDB');
+        const curated = ["polymiRTS3", "miRTarBase", "miRecords", "TarBase", "StarBase","oncomiRDB"]  
+        for(var i=0; i<ele.length; i++){  
+            if(ele[i].type=='checkbox'){
+              if (curated.includes(ele[i].value)){
+                ele[i].checked=true;  
+                }
+              }
+        }
+      }      
+  </script>
+{% endblock js %}

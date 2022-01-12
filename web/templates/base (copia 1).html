@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+{% load static%}
+{% load crispy_forms_tags %}
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>MIO</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'analysis/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'analysis/css/scrolling-nav.css' %}" rel="stylesheet">
+
+  {% block css %}
+  {% endblock css %}
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"  id="mainNav">
+      <div class="container">
+              <!-- Logo -->
+        <a class="navbar-brand js-scroll-trigger" href="{% url 'index' %}">MIO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+            <!--  Menu -->
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+
+                <!--  Analysis Menu -->
+            <ul class="nav navbar-nav navbar-left">
+                {% if session_detail%}
+                  <!-- https://bootstrap-menu.com/demos/basic-hover.html -->
+                    <ul class="navbar-nav">
+                        <!--<li class="nav-item active"> <a class="nav-link" href="{% url 'index'%}">Home </a> </li>-->
+                        {% if session_detail.public != 1%}
+                          <li class="nav-item dropdown">
+                              <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Correlation Analysis  </a>
+                              <ul class="dropdown-menu">
+                                  </li><a href="{% url 'workflow_correlation' session_slug=session_detail.identifier %}" class="dropdown-item"> miRNA/Gene Correlation</a></li>
+                                  <li><a href="{% url 'workflow_genesetscore' session_slug=session_detail.identifier %}" class="dropdown-item"> miRNA/GeneSet Correlation</a></li>
+                              </ul>
+                          </li>
+                        {% endif %}
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Target Prediction  </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url 'workflow_target' session_slug=session_detail.identifier %}" class="dropdown-item"> miRNA/Gene Target Prediction</a></li>
+                                <li><a href="{% url 'workflow_synthetic' session_slug=session_detail.identifier %}" class="dropdown-item"> miRNA Synthetic Lethal Prediction</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                {%endif%}      
+            </ul> <!--  End Analysis Menu -->
+
+            <div class="navbar-collapse collapse">
+                <!--Scroll Menu-->
+              <ul class="nav navbar-nav navbar-center">
+                {% block menu_nav %}
+                {% endblock menu_nav %}
+              </ul><!--End Scroll Menu-->
+            </div>
+
+            <!-- User Menu-->
+            <ul class="nav navbar-nav navbar-rigth">
+                <!-- https://bootstrap-menu.com/demos/basic-hover.html -->
+                  <ul class="navbar-nav">
+                    {% if user.is_anonymous %}
+                      <li class="nav-item active"> <a class="nav-link" href="{%url 'account_login'%}"> Log in </a> </li>
+                      <li class="nav-item active"> <a class="nav-link" href="{%url 'account_signup'%}"> Sign up </a> </li>
+
+                    {% elif user.is_authenticated %}
+                      <li class="nav-item dropdown">
+                          <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  {{user.get_username}}   </a>
+                          <ul class="dropdown-menu">
+                              <li><a href="{% url 'user_update' user_slug=user.identifier%}" class="dropdown-item"> Profile</a></li>
+                              <li><a href="{%url 'account_logout'%}" class="dropdown-item"> Logout</a></li>
+                              <li><a href="{% url 'data_detail' user_slug=user.identifier%}" class="dropdown-item"> Upload Data</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item active"> <a class="nav-link" href="{% url 'analysis'%}"> Sessions </a> </li>
+                    {%endif%}
+
+                    <!-- Always-->
+
+                    <li class="nav-item active"> <a class="nav-link" href="{% url 'geneset_list'%}"> Publics Geneset </a> </li>
+                    <li class="nav-item active"> <a class="nav-link" href="{% url 'index'%}"> Help </a> </li>
+
+                  </ul>
+            </ul><!--End User Menu-->
+
+        </div> <!-- End Menu -->
+      </div>
+    </nav>
+  
+  <div id="body_box">
+    {% block header %}
+
+    {% endblock header %}
+  
+    
+
+    {% block body %}
+ 
+    {% endblock body %}
+  </div>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">MIO &copy; Developed by the Institute of Bioinformatics</p>
+        <p class="m-0 text-center text-white">Biocenter Innsbruck Medical University</p>
+
+      </div>
+      <!-- /.container -->
+    </footer>
+  
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'analysis/vendor/jquery/jquery.min.js' %}"></script>  
+    <!-- Plugin JavaScript -->
+    <script src="{% static 'analysis/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'analysis/js/dropdown' %}"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="{% static 'analysis/js/scrolling-nav.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    {% block js %}
+
+    {% endblock js %}
+  </body>
+  
+  </html>
+  

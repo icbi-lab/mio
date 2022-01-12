@@ -1,0 +1,121 @@
+###########
+# BUILDER #
+###########
+
+# pull official base image
+FROM ubuntu:20.04 as builder
+
+# set work directory
+WORKDIR /usr/src/app
+
+# set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+#Time to install Postgresql
+ENV TZ=Europe/Kiev
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+# Setup Python
+RUN apt update
+RUN apt-get update && \
+    apt-get install --no-install-recommends -y \
+    python3.8 python3-pip python3.8-dev \
+    build-essential autoconf libtool pkg-config gcc libssl-dev netcat libxml2-dev libcurl4-openssl-dev 
+ 
+# Setup Postgres
+RUN apt-get install --no-install-recommends -y postgresql postgresql-contrib
+
+# install dependencies
+COPY ./requirements.txt .
+
+RUN pip3 wheel --no-cache-dir --no-deps --wheel-dir /usr/src/app/wheels -r requirements.txt
+
+# copy project
+COPY . .
+#RUN flake8 --ignore=E501,F401 .
+#RUN cd miopy && python3.8 setup.py install --user
+
+
+###########
+# FINAL   #
+###########
+
+# pull official base image
+FROM ubuntu:20.04
+
+#Time to install Postgresql
+ENV TZ=Europe/Kiev
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN apt update
+
+# Setup Python
+RUN apt-get update && \
+    apt-get install --no-install-recommends -y \
+    python3.8 python3-pip python3.8-dev \
+    build-essential autoconf libtool pkg-config gcc libssl-dev netcat libxml2-dev libcurl4-openssl-dev 
+ 
+# Setup Postgres
+RUN apt-get install --no-install-recommends -y postgresql postgresql-contrib
+
+# create directory for the app user
+RUN mkdir -p /home/app
+RUN mkdir -p /home/app/.local/lib/python3.8/site-packages
+
+# Install R
+RUN apt-get update && apt-get -y install --no-install-recommends --no-install-suggests \
+        ca-certificates software-properties-common gnupg2 gnupg1 dirmngr  apt-transport-https  \
+      && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 \
+      && add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/' \
+      && apt-get -y install r-base 
+
+##R Library 
+COPY ./scripts/docker/r_dependence.r ${APP_HOME}
+RUN Rscript ${APP_HOME}/r_dependence.r
+
+# create the app user
+#RUN addgroup 65534 && useradd  -d /home/app/ -u 65534 -g 65534  nobody
+
+# create the appropriate directories
+ENV HOME=/home/app
+ENV APP_HOME=/home/app/web
+RUN mkdir $APP_HOME
+RUN mkdir $APP_HOME/staticfiles
+RUN mkdir $APP_HOME/Data
+RUN mkdir $APP_HOME/staticfiles/account/
+WORKDIR $APP_HOME
+
+# Setup Python
+COPY --from=builder /usr/src/app/wheels /wheels
+COPY --from=builder /usr/src/app/requirements.txt .
+RUN pip3 install --no-cache /wheels/*
+
+# copy entrypoint-prod.sh
+COPY ./scripts/docker/entrypoint.sh $APP_HOME
+
+# copy project
+COPY . $APP_HOME
+
+#RUN cd ${APP_HOME}/miotools && python3 setup.py install
+
+# chown all the files to the app user
+RUN chown -R nobody:nogroup $APP_HOME/
+RUN chown -R nobody:nogroup $APP_HOME/*
+RUN chown -R nobody:nogroup /home/app/.local/*
+RUN touch /var/log/django.log && chown -R nobody:nogroup /var/log/django.log
+RUN touch /home/app/web/gunicorn-access.log && chown nobody:nogroup /home/app/web/gunicorn-access.log
+RUN mkdir -p '/home/app/web/staticfiles/account' & chown -R nobody:nogroup '/home/app/web/staticfiles/account'
+RUN mkdir -p '/home/app/.local/bin/' 
+RUN mkdir -p '/home/app/web/Data/' && chown -R nobody:nogroup '/home/app/web/Data/' && chmod ugo+rw '/home/app/web/Data/'
+RUN python3 -m pip install git+https://github.com/icbi-lab/miopy.git
+
+# change to the app user
+#USER app
+RUN chmod +x "/home/app/web/entrypoint.sh"
+USER nobody
+
+# run entrypoint.prod.sh
+ENTRYPOINT ["/home/app/web/entrypoint.sh"]
+
+
+

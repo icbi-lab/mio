@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{%block body%}
+<section id="#">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2> Dataset List </h2>
+              <form class="form-row" style="direction: r" method="GET" action="{% url 'dataset_list' search='search' %}" >
+                <input class="form" type="search" name="search"> 
+                <button class="btn btn-primary" type="submit"> Search </button>
+              </form>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th> Name </th>
+                <th> Technology </th>
+                <th>Gene Number</th>
+                <th>Mir Number</th>
+                <th>Sample Number</th>
+                <th>Metadata Fields</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {% if datasets%}
+                {% for dt in datasets %}                
+                  <tr>
+                    <th> {{dt.name}} </th>
+                    <th> {{dt.technology}} </th>
+                    <th> {{dt.get_number_gene}} </th>
+                    <th> {{dt.get_number_mir}} </th>
+                    <th> {{dt.get_number_sample}} </th>
+                    <th> {{dt.get_metadata_fields}} </th>
+                    <th>
+                      <form method="get" action="{% url 'metadata_detail' pk=dt.pk %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary">View</button>
+                      </form>
+                    </th>
+                {% endfor %}
+              {% endif %}
+            </tbody>
+            <p class="lead"></p>
+         </table>
+
+        {% if is_paginated %}
+        <ul class="pagination list-inline d-flex justify-content-center">
+          {% if page_obj.has_previous %}
+            <li><a class="btn btn-outline-info" href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+          {% else %}
+            <li class="btn btn-outline-secondary"><span>&laquo;</span></li>
+          {% endif %}
+          {% for i in paginator.page_range %}
+            {% if page_obj.number == i %}
+              <li class="btn btn-outline-secondary"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+            {% elif i > page_obj.number|add:'-3' and i < page_obj.number|add:'3' %}
+              <li><a class="btn btn-outline-info" href="?page={{ i }}">{{ i }}</a></li>
+            {% endif %}
+            {% if page_obj.paginator.num_pages > page_obj.number|add:'3' and forloop.last %}
+            <li><a class="btn btn-outline-info">...</a></li>
+            <li><a class="btn btn-outline-info"href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a></li>
+            {% endif %}
+          {% endfor %}
+          {% if page_obj.has_next %}
+            <li><a class="btn btn-outline-info" href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+          {% else %}
+            <li class="btn btn-outline-secondary"><span>&raquo;</span></li>
+          {% endif %}
+        </ul>
+        {% endif %}
+
+        {% if genesets%}
+
+        <th><a class="btn btn-primary btn-lg btn-block" href="{% url 'download_geneset_gmt' gname='symbol' %}">All Geneset GMT Format (Symbol)</a></th>
+        <th><a class="btn btn-primary btn-lg btn-block" href="{% url 'download_geneset_gmt' gname='entrez_id' %}">All Geneset GMT Format (EntrezID)</a></th>
+        {% endif %}
+  
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{%endblock body%}

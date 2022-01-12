@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+ {% load static %}
+
+
+ {% block body %}
+
+
+ <section id="File List" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h1>403 - You Shall Not Pass</h1>
+          <p>Uh oh, Gandalf is blocking the way!<br/>Maybe you have a typo in the url? Or you meant to go to a different location? Like...Hobbiton?</p>
+          <a class="btn btn-primary btn-lg btn-block" href="{% url 'index' %}">Back Index</a>
+          <p class="lead"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock body %}

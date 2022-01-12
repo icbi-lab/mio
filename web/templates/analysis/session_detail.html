@@ -1,0 +1,361 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+
+<li class="nav-item">
+  <a class="nav-link js-scroll-trigger" href="#workflow">Workflow</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link js-scroll-trigger" href="#File">Correlation Results</a>
+</li>
+
+
+{% block body %}
+<section id="workflow" class="bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h1> Analysis {{session_detail.name}} Detail</h1>
+        <p class="lead"></p>
+        <hr/>
+        <dl class="dl-horizontal">
+          <dt>Analysis created by:</dt>
+          <dd>{{session_detail.user_id.username}}</dd>
+          <dt>Number of analyses in this view: </dt>
+          <dd>{{session_detail.get_number_workflows}}</dd>
+        </dl>
+        {% if session_detail.user_id == user %}
+
+          <form method="post" action="{% url 'session_delete' pk=session_detail.pk %}">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger btn-block">Delete Analysis</button>
+          </form>
+        {%endif%}
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="workflow" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Correlation Analysis List</h2>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th> Name </th>
+                  <th> Analysis </th>
+                  <th> Dataset </th>
+                  <th> Geneset </th>
+                  <th> Status </th>
+                  <th>   </th>
+                  <th>  </th>
+
+                </tr>
+              </thead>
+
+              <tbody>
+                {% for workflow in page_cor.object_list %}
+                  <tr>
+                    <th> {{workflow.label}} </th>
+                    <th> {{workflow.analysis_type}} </th>
+                    <th> {{workflow.dataset_id}} </th>
+                    <th> 
+                      {% for gs in workflow.get_geneset%}
+                        <p>{{gs}}</p>
+                      {%endfor%}
+                    </th>
+                    <th>
+                      {% if workflow.status == 0 %}
+                        <button type="button" class="btn btn-outline-secondary">Queue</button>
+                      {% elif workflow.status == 1 %}
+                        <button type="button" class="btn btn-outline-info">Running</button>
+                      {% elif workflow.status == 2 %}
+                        <button type="button" class="btn btn-outline-success">Success</button>
+                      {% elif workflow.status == 3 %}
+                        <button type="button" class="btn btn-outline-warning"><a href="" title="{{workflow.get_log}}">Canceled</a></button>
+                      {% endif %}
+                    </th>
+
+                    {% if session_detail.user_id == user %}
+                      <th> 
+                        <form method="post" action="{% url 'workflow_delete' session_slug=session_detail.identifier pk=workflow.pk%}">
+                          {% csrf_token %}
+                          <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                      </th>
+                    {% endif %} 
+                    <th>
+
+                      {% if workflow.status == 2 %}
+                          <a class="btn btn-success" href="{% url 'workflow_filter' session_slug=session_detail.identifier pk=workflow.pk %}">View</a>
+                    </th>
+
+                    <th> 
+                      <form method="post" action="{% url 'data_download' session_slug=session_detail.identifier pk_file=workflow.get_files_result.pk %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary">Download</button>
+                      </form>
+                    </th>
+                  </tr>
+                  
+                  {% endif %}
+
+                {% endfor %}
+              </tbody>
+
+              <p class="lead"></p>
+            </table>
+
+            {% if page_cor %}
+
+              <ul class="pagination list-inline d-flex justify-content-center">
+                {% if page_cor.has_previous %}
+                  <li><a class="btn btn-outline-info" href="?page1={{ page_cor.previous_page_number }}">&laquo;</a></li>
+                {% else %}
+                  <li class="btn btn-outline-secondary"><span>&laquo;</span></li>
+                {% endif %}
+                {% for i in page_cor.paginator.page_range %}
+                  {% if page_cor.number == i %}
+                    <li class="btn btn-outline-secondary"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                  {% elif i > page_cor.number|add:'-3' and i < page_cor.number|add:'3' %}
+                    <li><a class="btn btn-outline-info" href="?page1={{ i }}">{{ i }}</a></li>
+                  {% endif %}
+                  {% if page_cor.paginator.num_pages > page_cor.number|add:'3' and forloop.last %}
+                  <li><a class="btn btn-outline-info">...</a></li>
+                  <li><a class="btn btn-outline-info"href="?page1={{ page_cor.paginator.num_pages }}">{{ page_cor.paginator.num_pages }}</a></li>
+                  {% endif %}
+                {% endfor %}
+                {% if page_feat.has_next %}
+                  <li><a class="btn btn-outline-info" href="?page1={{ page_feat.next_page_number }}">&raquo;</a></li>
+                {% else %}
+                  <li class="btn btn-outline-secondary"><span>&raquo;</span></li>
+                {% endif %}
+              </ul>
+            {%endif%}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="workflow" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Survival Analysis List</h2>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th> Name </th>
+                  <th> Analysis </th>
+                  <th> Dataset </th>
+                  <th> Geneset </th>
+                  <th> Status </th>
+                  <th>   </th>
+                  <th>  </th>
+
+                </tr>
+              </thead>
+
+              <tbody>
+                {% for workflow in page_surv.object_list %}
+                  <tr>
+                    <th> {{workflow.label}} </th>
+                    <th> {{workflow.analysis_type}} </th>
+                    <th> {{workflow.dataset_id}} </th>
+                    <th> 
+                      {% for gs in workflow.get_geneset%}
+                        <p>{{gs}}</p>
+                      {%endfor%}
+                    </th>
+                    <th>
+                      {% if workflow.status == 0 %}
+                        <button type="button" class="btn btn-outline-secondary">Queue</button>
+                      {% elif workflow.status == 1 %}
+                        <button type="button" class="btn btn-outline-info">Running</button>
+                      {% elif workflow.status == 2 %}
+                        <button type="button" class="btn btn-outline-success">Success</button>
+                      {% elif workflow.status == 3 %}
+                        <button type="button" class="btn btn-outline-warning"><a href="" title="{{workflow.get_log}}">Canceled</a></button>
+                      {% endif %}
+                    </th>
+
+                    {% if session_detail.user_id == user %}
+                      <th> 
+                        <form method="post" action="{% url 'workflow_delete' session_slug=session_detail.identifier pk=workflow.pk%}">
+                          {% csrf_token %}
+                          <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                      </th>
+                    {% endif %} 
+                    <th>
+
+                      {% if workflow.status == 2 %}
+
+                          <a class="btn btn-success" href="{% url 'results_survival' session_slug=session_detail.identifier pk=workflow.pk %}">View</a>     
+
+                    </th>
+
+                    <th> 
+                      <form method="post" action="{% url 'data_download' session_slug=session_detail.identifier pk_file=workflow.get_files_result.pk %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary">Download</button>
+                      </form>
+                    </th>
+                  </tr>
+                  
+                  {% endif %}
+
+                {% endfor %}
+              </tbody>
+
+              <p class="lead"></p>
+            </table>
+
+            {% if page_surv %}
+
+              <ul class="pagination list-inline d-flex justify-content-center">
+                {% if page_surv.has_previous %}
+                  <li><a class="btn btn-outline-info" href="?page2={{ page_surv.previous_page_number }}">&laquo;</a></li>
+                {% else %}
+                  <li class="btn btn-outline-secondary"><span>&laquo;</span></li>
+                {% endif %}
+                {% for i in page_surv.paginator.page_range %}
+                  {% if page_surv.number == i %}
+                    <li class="btn btn-outline-secondary"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                  {% elif i > page_surv.number|add:'-3' and i < page_surv.number|add:'3' %}
+                    <li><a class="btn btn-outline-info" href="?page2={{ i }}">{{ i }}</a></li>
+                  {% endif %}
+                  {% if page_surv.paginator.num_pages > page_surv.number|add:'3' and forloop.last %}
+                  <li><a class="btn btn-outline-info">...</a></li>
+                  <li><a class="btn btn-outline-info"href="?page2={{ page_surv.paginator.num_pages }}">{{ page_surv.paginator.num_pages }}</a></li>
+                  {% endif %}
+                {% endfor %}
+                {% if page_feat.has_next %}
+                  <li><a class="btn btn-outline-info" href="?page2={{ page_feat.next_page_number }}">&raquo;</a></li>
+                {% else %}
+                  <li class="btn btn-outline-secondary"><span>&raquo;</span></li>
+                {% endif %}
+              </ul>
+            {%endif%}
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="workflow" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Classification Analysis List</h2>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th> Name </th>
+                  <th> Analysis </th>
+                  <th> Dataset</th>
+                  <th> Geneset/Mirnaset </th>
+                  <th> Status </th>
+                  <th>   </th>
+                  <th>  </th>
+
+                </tr>
+              </thead>
+
+              <tbody>
+                {% for workflow in page_feat.object_list %}
+                  <tr>
+                    <th> {{workflow.label}} </th>
+                    <th> {{workflow.analysis_type}} </th>
+                    <th> {{workflow.dataset_id}} </th>
+                    <th> 
+                      {% for gs in workflow.get_geneset%}
+                        <p>{{gs}}</p>
+                      {%endfor%}
+                      {% for ms in workflow.get_mirset%}
+                      <p>{{ms}}</p>
+                    {%endfor%}
+                    </th>
+                    <th>
+                      {% if workflow.status == 0 %}
+                        <button type="button" class="btn btn-outline-secondary">Queue</button>
+                      {% elif workflow.status == 1 %}
+                        <button type="button" class="btn btn-outline-info">Running</button>
+                      {% elif workflow.status == 2 %}
+                        <button type="button" class="btn btn-outline-success">Success</button>
+                      {% elif workflow.status == 3 %}
+                        <button type="button" class="btn btn-outline-warning"><a href="" title="{{workflow.get_log}}">Canceled</a></button>
+                      {% endif %}
+                    </th>
+
+                    {% if session_detail.user_id == user %}
+                      <th> 
+                        <form method="post" action="{% url 'workflow_delete' session_slug=session_detail.identifier pk=workflow.pk%}">
+                          {% csrf_token %}
+                          <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                      </th>
+                    {% endif %} 
+                    <th>
+
+                      {% if workflow.status == 2 %}
+                        {% if workflow.analysis == "Feature" %}
+                          <a class="btn btn-success" href="{% url 'results_feature' session_slug=session_detail.identifier pk=workflow.pk %}">View</a>
+                        {% else %}
+                        <a class="btn btn-success" href="{% url 'results_classification' session_slug=session_detail.identifier pk=workflow.pk %}">View</a>
+                        {% endif %}
+                    </th>
+
+                    <th> 
+                      <form method="post" action="{% url 'data_download' session_slug=session_detail.identifier pk_file=workflow.get_files_result.pk %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary">Download</button>
+                      </form>
+                    </th>
+                  </tr>
+                  
+                  {% endif %}
+
+                {% endfor %}
+              </tbody>
+
+              <p class="lead"></p>
+            </table>
+
+            {% if page_feat %}
+
+              <ul class="pagination list-inline d-flex justify-content-center">
+                {% if page_feat.has_previous %}
+                  <li><a class="btn btn-outline-info" href="?page3={{ page_feat.previous_page_number }}">&laquo;</a></li>
+                {% else %}
+                  <li class="btn btn-outline-secondary"><span>&laquo;</span></li>
+                {% endif %}
+                {% for i in page_feat.paginator.page_range %}
+                  {% if page_feat.number == i %}
+                    <li class="btn btn-outline-secondary"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                  {% elif i > page_feat.number|add:'-3' and i < page_feat.number|add:'3' %}
+                    <li><a class="btn btn-outline-info" href="?page3={{ i }}">{{ i }}</a></li>
+                  {% endif %}
+                  {% if page_feat.paginator.num_pages > page_feat.number|add:'3' and forloop.last %}
+                  <li><a class="btn btn-outline-info">...</a></li>
+                  <li><a class="btn btn-outline-info"href="?page3={{ page_feat.paginator.num_pages }}">{{ page_feat.paginator.num_pages }}</a></li>
+                  {% endif %}
+                {% endfor %}
+                {% if page_feat.has_next %}
+                  <li><a class="btn btn-outline-info" href="?page3={{ page_feat.next_page_number }}">&raquo;</a></li>
+                {% else %}
+                  <li class="btn btn-outline-secondary"><span>&raquo;</span></li>
+                {% endif %}
+              </ul>
+            {%endif%}
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+{% endblock body %}

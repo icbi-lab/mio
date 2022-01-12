@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block titulo %}
+   KM
+{% endblock titulo %}
+{% block body %}
+
+ <section id=heatmap class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Kaplan Meier</h2>
+            <hr class="my-4">
+              {{KM_script| safe}}
+              <hr class="my-4">
+              <a  class="btn btn-primary btn-lg btn-block" href="{% url 'session_detail' session_slug=session_detail.identifier %}">Back to Session</a>
+
+        </div>
+      </div>
+    </div> 
+</section> 
+{% endblock body %}
+
+{% block js%}
+
+{% endblock js %}

@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block first_menu_nav %}
+
+{% endblock first_menu_nav %}
+
+{% block menu_nav% }
+
+<li class="nav-item">
+  <a class="nav-link js-scroll-trigger" href="#profile">Profile</a>
+</li>
+{% endblock menu_nav% }
+
+
+{% block body %}
+
+ <section id="profile" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>YOU ARE WORKING WITH A TEMPORARY USER.
+            YOUR DATA WILL BE REMOVED IN 7 DAYS</h2>    
+          <p class="lead"></p>
+          <dl class="dl-horizontal">
+            <dt>Username</dt>
+            <dd class="row align-items-end">
+              <div class="form-group col-2 col-md-2 ">
+                <input class="form-control " style = "width: 100%" value="{{ username }}" id="myInput" readonly> 
+              </div>
+              <div class="form-group col-3 col-md-2">
+                <button class="btn btn-outline-success" onclick="myFunction()">Copy</button>
+              </div>
+            </dd>
+            <dt>Password</dt>
+            <dd class="row align-items-end">
+              <div class="form-group col-2 col-md-2 ">
+                <input class="form-control " style = "width: 100%" value="{{ pass }}" id="myInput" readonly> 
+              </div>
+              <div class="form-group col-3 col-md-2">
+                <button class="btn btn-outline-success" onclick="myFunction()">Copy</button>
+              </div>
+            </dd>
+          </dl> 
+          
+          <a href="{% url 'new_session'%}" type="button" class="btn btn-secondary btn-lg">New Analysis</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock body %}
+
+{% block js %}
+<script>
+function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+   /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+{% endblock %}

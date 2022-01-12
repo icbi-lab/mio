@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block titulo %}
+   Data
+{% endblock titulo %}
+{% block body %}
+
+<section id="#">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2> {{title}} </h2>
+          <hr class="my-4">
+          <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            {{form.pval | as_crispy_field}}
+            {{form.low_coef | as_crispy_field}}
+            {{form.high_coef | as_crispy_field}}
+
+            {% if workflow.analysis == "Correlation" %}
+              {{form.survival | as_crispy_field}}
+              {{form.join | as_crispy_field}}
+
+              <table style="width:100%">
+                <tr>
+                  {% for value,key in form.nDB.field.choices %}
+                    {%if forloop.counter0|divisibleby:"7" %}
+                    </tr>
+                    <tr>
+                    {%endif%}
+                    <td><input type="checkbox" name="nDB" value='{{value}}'></td>
+                    <td style="text-align:left;">{{value}}</td>
+                  {%endfor%}
+                </tr>
+                <tr><td style="padding: 10px"></td></tr>
+              </table>
+              <table style="width:100%">
+                <tr>
+                  <td align="center">
+                    <input type="button" class="btn btn-outline-primary" onclick='selects()' value="Select All"/>
+                    <input type="button" class="btn btn-outline-secondary" onclick='deSelect()' value="Deselect All"/>
+                    <input type="button" class="btn btn-outline-success" onclick='SelectCurated()' value="Select Validated"/>
+                  </td> 
+                </tr>
+                <tr><td style="padding: 10px"></td></tr>
+              </table>
+
+              {{form.min_db | as_crispy_field}}
+
+            {% endif %}
+
+            
+            <button type="submit" class="btn btn-primary btn-block">Apply Filter</button>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+{% endblock body %}
+
+{% block js%}
+  <script type="text/javascript">  
+    function selects(){  
+        var ele=document.getElementsByName('nDB');  
+        for(var i=0; i<ele.length; i++){  
+            if(ele[i].type=='checkbox')  
+                ele[i].checked=true;  
+        }  
+    }
+      
+    function deSelect(){  
+        var ele=document.getElementsByName('nDB');  
+        for(var i=0; i<ele.length; i++){  
+            if(ele[i].type=='checkbox')  
+                ele[i].checked=false;  
+              
+        }  
+    }
+    
+    function SelectCurated(){  
+        var ele=document.getElementsByName('nDB');
+        const curated = ["polymiRTS3", "miRTarBase", "miRecords", "TarBase", "StarBase", "oncomiRDB"]  
+        for(var i=0; i<ele.length; i++){  
+            if(ele[i].type=='checkbox'){
+              if (curated.includes(ele[i].value)){
+                ele[i].checked=true;  
+                }
+              }
+        }
+      }    
+  </script>  
+{%endblock js%}

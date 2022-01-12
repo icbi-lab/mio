@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block titulo %}
+   KM
+{% endblock titulo %}
+{% block body %}
+
+<section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          {% if messages %}
+            <div>
+              <ul>
+              {% for message in messages %}
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                      <strong>{{message | safe}}</strong>
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+              </div>
+              {% endfor %}
+              </ul>
+            </div>  
+          {% endif %}
+        
+          <h2>{{title}}</h2>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}            
+                {{form.target | as_crispy_field}}
+
+                <p>
+                  <div id="get_cutoff" name = "get_cutoff"  class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" name = "get_cutoff" id="get_cutoffcheckbox" value=True>
+                    <label class="form-check-label" for="get_cutoffcheckbox">Determine the optimal cutpoint of variables</label>
+                  </div>
+                </p>
+
+                <div id="quantile" name = "quantile">
+                  {{form.q | as_crispy_field}}
+                </div>
+              <p>
+                <p> Select dataset to analyze </p>
+                <select class="chosen" style="width:350px;" name="dataset"> 
+                  {% for value,key in form.dataset.field.choices %}
+                      <option name="dataset" value="{{value}}">{{key}}</option>
+                  {%endfor%}
+                </select>
+              </p>
+              <button type="submit" class="btn btn-primary btn-block">Obtain Curve</button>
+            </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock body %}
+
+
+{% block js %}
+
+<script type="text/javascript">
+        var checkbox = document.getElementById("get_cutoffcheckbox");
+        checkbox.addEventListener('change', function() {
+              if (this.checked) {
+                console.log("Checkbox is checked..");
+                document.getElementById("quantile").style = "display:none";
+
+              } else {
+                console.log("Checkbox is not checked..");
+                document.getElementById("quantile").style = "display:true";
+              }
+            });   
+  </script>
+{% endblock js %}

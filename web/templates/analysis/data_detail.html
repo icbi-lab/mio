@@ -1,0 +1,236 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block first_menu_nav %}
+
+{% endblock first_menu_nav %}
+
+{% block menu_nav% }
+
+<li class="nav-item">
+  <a class="nav-link js-scroll-trigger" href="#data">Session Data</a>
+</li>
+{% endblock menu_nav% }
+
+
+{% block body %}
+
+ <section id="data" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>User dataset</h2>     
+          <p class="lead"></p>
+          <p>
+            <a href="{% url 'create_dataset' user_slug=user.identifier%}" class="btn btn-primary"> Upload Dataset</a>
+          </p>
+    
+            <table class="table">
+              <thead>
+                <tr>
+                  <th> Name </th>
+                  <th> Samples </th>
+                  <th>Metadata</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                {% for dataset in page_dataset.object_list %}                
+                  <tr>
+                    <th> {{dataset.name}} </th>
+                    <th> {{dataset.get_number_sample}} </th>
+                    <th> {{dataset.get_metadata_fields}} </th>
+                    <th>
+                      <form method="post" action="{% url 'delet_dataset' user_slug=user.identifier pk=dataset.pk %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                      </form>
+                    </th>
+                    <th>
+                      <form method="get" action="{% url 'metadata_detail' pk=dataset.pk %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary">View</button>
+                      </form>
+                    </th>
+                  </tr>
+                {% endfor %}
+              </tbody>
+              <p class="lead"></p>
+
+           </table>
+
+            {% if page_dataset %}
+            <ul class="pagination list-inline d-flex justify-content-center">
+              {% if page_dataset.has_previous %}
+                <li><a class="btn btn-outline-info" href="?page1={{ page_dataset.previous_page_number }}">&laquo;</a></li>
+              {% else %}
+                <li class="btn btn-outline-secondary"><span>&laquo;</span></li>
+              {% endif %}
+              {% for i in page_dataset.paginator.page_range %}
+                {% if page_dataset.number == i %}
+                  <li class="btn btn-outline-secondary"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                {% elif i > page_dataset.number|add:'-3' and i < page_dataset.number|add:'3' %}
+                  <li><a class="btn btn-outline-info" href="?page1={{ i }}">{{ i }}</a></li>
+                {% endif %}
+                {% if page_dataset.paginator.num_pages > page_dataset.number|add:'3' and forloop.last %}
+                <li><a class="btn btn-outline-info">...</a></li>
+                <li><a class="btn btn-outline-info"href="?page1={{ page_dataset.paginator.num_pages }}">{{ page_dataset.paginator.num_pages }}</a></li>
+                {% endif %}
+              {% endfor %}
+              {% if page_dataset.has_next %}
+                <li><a class="btn btn-outline-info" href="?page1={{ page_dataset.next_page_number }}">&raquo;</a></li>
+              {% else %}
+                <li class="btn btn-outline-secondary"><span>&raquo;</span></li>
+              {% endif %}
+            </ul>
+          {%endif%}
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+ <section id="data" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+           <h2>User geneset</h2>     
+           <p class="lead"></p>
+           <p>
+             <a href="{% url 'create_geneset' user_slug=user.identifier%}" class="btn btn-primary"> Upload Geneset</a>
+             <a href="{% url 'create_geneset_gmt' user_slug=user.identifier%}" class="btn btn-primary"> Upload GMT</a>
+           </p>
+           <table class="table">
+            <thead>
+              <tr>
+                <th> Name </th>
+                <th> Type </th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+
+            <tbody>
+           {% for geneset in page_geneset.object_list %}                
+           <tr>
+             <th> {{geneset.name}} </th>
+             <th> Geneset </th>
+             <th>
+               <form method="post" action="{% url 'delet_geneset' user_slug=user.identifier pk=geneset.pk %}">
+                 {% csrf_token %}
+                 <button type="submit" class="btn btn-danger">Delete</button>
+               </form>
+             </th>
+           </tr>
+         {% endfor %}
+              </tbody>
+              <p class="lead"></p>
+           </table>
+
+
+           {% if page_geneset %}
+           <ul class="pagination list-inline d-flex justify-content-center">
+             {% if page_geneset.has_previous %}
+               <li><a class="btn btn-outline-info" href="?page2={{ page_geneset.previous_page_number }}">&laquo;</a></li>
+             {% else %}
+               <li class="btn btn-outline-secondary"><span>&laquo;</span></li>
+             {% endif %}
+             {% for i in page_geneset.paginator.page_range %}
+               {% if page_geneset.number == i %}
+                 <li class="btn btn-outline-secondary"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+               {% elif i > page_geneset.number|add:'-3' and i < page_geneset.number|add:'3' %}
+                 <li><a class="btn btn-outline-info" href="?page2={{ i }}">{{ i }}</a></li>
+               {% endif %}
+               {% if page_geneset.paginator.num_pages > page_geneset.number|add:'3' and forloop.last %}
+               <li><a class="btn btn-outline-info">...</a></li>
+               <li><a class="btn btn-outline-info"href="?page2={{ page_geneset.paginator.num_pages }}">{{ page_geneset.paginator.num_pages }}</a></li>
+               {% endif %}
+             {% endfor %}
+             {% if page_geneset.has_next %}
+               <li><a class="btn btn-outline-info" href="?page2={{ page_geneset.next_page_number }}">&raquo;</a></li>
+             {% else %}
+               <li class="btn btn-outline-secondary"><span>&raquo;</span></li>
+             {% endif %}
+           </ul>
+         {%endif%}     
+           
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+ <section id="data" class="bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+         <h2>User miRNAset</h2>     
+         <p class="lead"></p>
+         <p>
+           <a href="{% url 'create_mirset' user_slug=user.identifier%}" class="btn btn-primary"> Upload MiRNAset</a>
+         </p>
+         <table class="table">
+          <thead>
+            <tr>
+              <th> Name </th>
+              <th> Type </th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+         {% for mirset in page_mirset.object_list %}                
+         <tr>
+           <th> {{mirset.name}} </th>
+           <th> Mirset </th>
+           <th>
+             <form method="post" action="{% url 'delet_mirset' user_slug=user.identifier pk=mirset.pk %}">
+               {% csrf_token %}
+               <button type="submit" class="btn btn-danger">Delete</button>
+             </form>
+           </th>
+         </tr>
+       {% endfor %}
+            </tbody>
+            <p class="lead"></p>
+         </table>
+
+
+        {% if page_mirset %}
+         <ul class="pagination list-inline d-flex justify-content-center">
+           {% if page_mirset.has_previous %}
+             <li><a class="btn btn-outline-info" href="?page3={{ page_mirset.previous_page_number }}">&laquo;</a></li>
+           {% else %}
+             <li class="btn btn-outline-secondary"><span>&laquo;</span></li>
+           {% endif %}
+           {% for i in page_mirset.paginator.page_range %}
+             {% if page_mirset.number == i %}
+               <li class="btn btn-outline-secondary"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+             {% elif i > page_mirset.number|add:'-3' and i < page_mirset.number|add:'3' %}
+               <li><a class="btn btn-outline-info" href="?page3={{ i }}">{{ i }}</a></li>
+             {% endif %}
+             {% if page_mirset.paginator.num_pages > page_mirset.number|add:'3' and forloop.last %}
+             <li><a class="btn btn-outline-info">...</a></li>
+             <li><a class="btn btn-outline-info"href="?page3={{ page_mirset.paginator.num_pages }}">{{ page_mirset.paginator.num_pages }}</a></li>
+             {% endif %}
+           {% endfor %}
+           {% if page_mirset.has_next %}
+             <li><a class="btn btn-outline-info" href="?page3={{ page_mirset.next_page_number }}">&raquo;</a></li>
+           {% else %}
+             <li class="btn btn-outline-secondary"><span>&raquo;</span></li>
+           {% endif %}
+         </ul>
+       {%endif%}         
+         
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock body %}

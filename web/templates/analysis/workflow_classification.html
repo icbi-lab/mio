@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static%}
+{% block titulo %}
+   Feature Selection
+{% endblock titulo %}
+
+{% block css %}
+<link href="{% static 'admin/css/vendor/select2/select2.css' %}" type="text/css" media="screen" rel="stylesheet">
+<link href="{% static 'admin/css/autocomplete.css' %}" type="text/css" media="screen" rel="stylesheet">
+{% endblock css %}
+
+{% block body %}
+
+<section id="#">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          
+          <h2> {{title}} </h2>
+          <hr class="my-4">
+          {% if messages %}
+          <div>
+              <ul>
+              {% for message in messages %}
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                      <strong>{{message | safe}}</strong>
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+              </div>
+              {% endfor %}
+              </ul>
+          </div>  
+        {% endif %}
+          <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            {{form.label | as_crispy_field}}
+            <p> Select dataset to analyze </p>
+            <select class="chosen" style="width:350px;" name="publicDataset"> 
+              {% for value,key in form.publicDataset.field.choices %}
+                  <option name="publicDataset" value="{{value}}">{{key}}</option>
+              {%endfor%}
+            </select>
+            <p>
+              <div id="use_fit_model" name = "use_fit_model"  class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" name = "use_fit_model" id="use_fit_modelcheckbox" value=True>
+                <label class="form-check-label" for="use_fit_modelcheckbox">Use training model</label>
+              </div>
+            </p>
+
+            <div id="training_model" style="display:none">
+              {{form.publicModel | as_crispy_field}}
+            </div>
+
+            <div id="new_model"> 
+              {{form.model | as_crispy_field}}
+              {{form.k | as_crispy_field}}
+              
+              <p> Select genset to analyze </p>
+              <select class="chosen" style="width:350px;" name="publicGeneset" multiple> 
+                {% for value,key in form.publicGeneset.field.choices %}
+                    <option name="publicGeneset" value="{{value}}">{{key}}</option>
+                {%endfor%}
+              </select>
+              <table style="width:100%">
+                <tr><td style="padding: 10px"></td></tr>
+              </table>
+
+
+              <p> Select miRNAset to analyze </p>
+              <select id = "chosenmir" class="chosen" style="width:350px;" name="publicMirnaset" multiple> 
+                {% for value,key in form.publicMirnaset.field.choices %}
+                    <option name="publicMirnaset" value="{{value}}">{{key}}</option>
+                {%endfor%}
+              </select>
+              <table style="width:100%">
+                <tr><td style="padding: 10px"></td></tr>
+              </table>
+            </div>
+          {{form.group | as_crispy_field}}
+
+            <button type="submit" class="btn btn-primary btn-block">Run Analysis</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+{% endblock body %}
+
+
+{% block js %}
+
+<script src="{% static 'admin/js/vendor/select2/select2.full.js'%}"></script>
+<script src="{% static 'admin/js/jquery.init.js' %}"></script>
+<script src="{% static 'admin/js/autocomplete.js' %}"></script>
+
+
+<script type="text/javascript">
+  var checkbox = document.getElementById("use_fit_modelcheckbox");
+  checkbox.addEventListener('change', function() {
+        if (this.checked) {
+          console.log("Checkbox is checked..");
+          document.getElementById("training_model").style = "display:true";
+          document.getElementById("new_model").style = "display:none";
+
+
+        } else {
+          console.log("Checkbox is not checked..");
+          document.getElementById("training_model").style = "display:none";
+          document.getElementById("new_model").style = "display:true";
+
+        }
+      });
+</script>
+
+{% endblock js %}

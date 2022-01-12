@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block first_menu_nav %}
+
+{% endblock first_menu_nav %}
+
+{% block menu_nav% }
+
+<li class="nav-item">
+  <a class="nav-link js-scroll-trigger" href="#profile">Profile</a>
+</li>
+{% endblock menu_nav% }
+
+
+{% block body %}
+
+ <section id="profile" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Profile {{user}}</h2>    
+          <p class="lead"></p>
+          <dl class="dl-horizontal">
+            <dt>First Name</dt>
+            <dd>{{ user.first_name }}</dd>
+            <dt>Last Name</dt>
+            <dd>{{ user.last_name }}</dd>
+            <dt>Job</dt>
+            <dd>Something</dd>
+            <dt>username</dt>
+            <dd>{{ user.username }}</dd>
+            <dt>Email</dt>
+            <dd>{{ user.email }}</dd>
+          </dl> 
+          
+          <a href="{% url 'create_dataset' user_slug=user.identifier%}" class="btn btn-secondary"> Upload Dataset</a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock body %}

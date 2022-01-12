@@ -1,0 +1,64 @@
+{%extends 'base.html'%}
+{% load static %}
+
+{% block css %}
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+  
+{% endblock css %}
+
+{% block menu_nav %}
+
+{% endblock menu_nav %}
+{%block body%}
+
+
+<section id=info class="bg-light">
+    <div class="container">
+      <div class="col-lg-8 mx-auto row">
+
+          <div class="col-sm-5">
+            <h2> Target prediction tools</h2>
+
+            <dl class="dl-horizontal">
+
+              <p>
+                <dt><a href="http://ophid.utoronto.ca/mirDIP"> mirDIP</a></dt>
+                <dd> 
+                  <p>Institution: Jurisica Lab, Krembil Research Institute - the University Health Network, Toronto, Canada. Last modified June 25, 2021. (Version 5.0.2.3, Database version 5.0.2.2)  Authors: 
+                  Tomas Tokar, Chiara Pastrello, Elize A Shirdel, Andrea E M Rossos, Mark Abovsky, Anne-Christin Hauschild, Max Kotlyar, Mike Tsay, Richard Lu, Gitta Ekaputeri, Dylan Bethune-Waddell, Zuhaib Ahmed, Wing Xie, Tak W Mak, Igor Jurisica
+                </p>
+                <p><a href="https://academic.oup.com/nar/article/46/D1/D360/4670951">Tokar et al. Nucleic Acids Res. 2018, Shirdel  et al. Plos One. 2011</a></p>
+                </dd>
+              </p>
+
+              {% for tool in tools %}
+              <p>
+                <dt><a href="{{tool.url}}"> {{tool.name}}</a></dt>
+                <dd><a href="{{tool.doi}}">{{tool.reference}}</a></dd>
+              </p>
+              {% endfor %}
+            </dl> 
+            <hr class="my-4">
+          </div>
+      </div>
+    </div> 
+</section> 
+
+  {% endblock body %}
+
+  {% block js %}
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.18/af-2.3.0/b-1.5.2/b-colvis-1.5.2/b-flash-1.5.2/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/fh-3.1.4/r-2.2.2/datatables.min.css"/>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.18/af-2.3.0/b-1.5.2/b-colvis-1.5.2/b-flash-1.5.2/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/fh-3.1.4/r-2.2.2/datatables.min.js"></script>
+  <!-- needed to use moment.js for our date sorting-->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.19/sorting/datetime-moment.js"></script>
+ 
+  {% endblock js%}
+  </body>
+</html>
+
+<!-- <a href="{% url 'visualization:wf_file_download' session_slug=session.identifier workflow_slug="add:csv" %}">Download</a> -->

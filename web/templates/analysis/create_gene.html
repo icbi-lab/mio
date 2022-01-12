@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block titulo %}
+   Data
+{% endblock titulo %}
+{% block body %}
+
+<section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>{{title}}</h2>
+            <form method="POST" enctype="multipart/form-data">
+              {% if messages %}
+              <div>
+                  <ul>
+                  {% for message in messages %}
+                  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                          <strong>{{message | safe}}</strong>
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                          </button>
+                  </div>
+                  {% endfor %}
+                  </ul>
+              </div>  
+            {% endif %}
+                {% csrf_token %}
+                {{ form|crispy }}
+
+              <button type="submit" class="btn btn-primary btn-lg">Upload to DB</button>
+            </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+{% endblock body %}
+
+{% block js%}
+
+{% endblock js %}

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block menu_nav %}
+<li class="nav-item">
+  <a class="nav-link js-scroll-trigger" href="#session">Session Detail</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link js-scroll-trigger" href="#samples">Samples</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link js-scroll-trigger" href="#workflow">Workflow</a>
+</li>
+{% endblock menu_nav %}
+
+{% block body %}
+ <section id="File List" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Upload Sample</h2>
+            <form method="POST"  enctype="multipart/form-data" class="create_form">
+              {% csrf_token %}
+
+              {{ form|crispy }}
+
+              <button type="submit" class="btn btn-ptimary">Upload File</button>
+            </form>
+          <p class="lead"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock body %}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block menu_nav %}
+
+
+{% endblock menu_nav %}
+
+{% block header %}
+  <header class="bg-primary text-white">
+    <div class="container text-center">
+      <h1>Welcome to MIO</h1>
+       <b>M</b>icroRNA target analysis system for <b>I</b>mmuno-<b>O</b>ncology
+    </div>
+  </header>
+{% endblock header %}
+ 
+{% block body %}
+<section id="run" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          
+          <a class="btn btn-primary btn-lg btn-block" href="{% url 'analysis' %}">Run Analysis</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+{% for page in pages%}
+
+ <section id={{ page.1 }} class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>{{page.1}}</h2>
+               <p class="lead">{{page.2}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% endfor %}
+
+  
+  {% endblock body %}

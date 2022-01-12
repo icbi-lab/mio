@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block first_menu_nav %}
+
+{% endblock first_menu_nav %}
+
+{% block menu_nav% }
+
+<li class="nav-item">
+  <a class="nav-link js-scroll-trigger" href="#profile">Profile</a>
+</li>
+{% endblock menu_nav% }
+
+
+{% block body %}
+
+ <section id="profile" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          {% if messages %}
+            <div>
+              <ul>
+              {% for message in messages %}
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                      <strong>{{message | safe}}</strong>
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+              </div>
+              {% endfor %}
+              </ul>
+          </div>  
+        {% endif %}
+        
+          <h2>Profile {{user}}</h2>    
+          <p class="lead"></p>
+          
+          <form method="post">
+            {% csrf_token %}
+            {{ form | crispy}}
+            <input type="submit" class="btn btn-outline-success" value="Update">
+          </form>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock body %}

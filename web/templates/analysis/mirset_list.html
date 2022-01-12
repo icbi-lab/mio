@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{%block body%}
+<section id="#">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2> MiRNAset List </h2>
+              <form class="form-row" style="direction: r" method="GET" action="{% url 'geneset_list' search='search' %}" >
+                <input class="form" type="search" name="search"> 
+                <button class="btn btn-primary" type="submit"> Search </button>
+              </form>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th> Name </th>
+                <th> Description </th>
+                <th> MiRNA Number</th>
+                <th> Download ID</th>
+                <th> Download Acc</th>
+
+              </tr>
+            </thead>
+
+            <tbody>
+              {% if mirnasets%}
+                {% for ms in mirnasets %}                
+                  <tr>
+                    <th> {{ms.name}} </th>
+                    <th> <p>{{ms.description|slice:"0:50"}}...</p> </th>
+                    <th> {{ms.get_number_mir}} </th>
+                    <th><a class="btn btn-primary" href="{% url 'download_geneset' pk=ms.pk identifier='mature_id' set_type='mirset'%}">Download</a></th>
+                    <th><a class="btn btn-primary" href="{% url 'download_geneset' pk=ms.pk identifier='mature_acc' set_type='mirset'%}">Download</a></th>
+
+                {% endfor %}
+              {% endif %}
+            </tbody>
+            <p class="lead"></p>
+         </table>
+        {% if is_paginated %}
+        <ul class="pagination list-inline d-flex justify-content-center">
+          {% if page_obj.has_previous %}
+            <li><a class="btn btn-outline-info" href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+          {% else %}
+            <li class="btn btn-outline-secondary"><span>&laquo;</span></li>
+          {% endif %}
+          {% for i in paginator.page_range %}
+            {% if page_obj.number == i %}
+              <li class="btn btn-outline-secondary"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+            {% elif i > page_obj.number|add:'-3' and i < page_obj.number|add:'3' %}
+              <li><a class="btn btn-outline-info" href="?page={{ i }}">{{ i }}</a></li>
+            {% endif %}
+            {% if page_obj.paginator.num_pages > page_obj.number|add:'3' and forloop.last %}
+            <li><a class="btn btn-outline-info">...</a></li>
+            <li><a class="btn btn-outline-info"href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a></li>
+            {% endif %}
+          {% endfor %}
+          {% if page_obj.has_next %}
+            <li><a class="btn btn-outline-info" href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+          {% else %}
+            <li class="btn btn-outline-secondary"><span>&raquo;</span></li>
+          {% endif %}
+        </ul>
+        {% endif %}
+
+        {% if mirnasets%}
+
+        <p><a class="" href="{% url 'download_geneset_gmt' identifier='mature_id' set_type='mirset' %}">All MiRNAset GMT Format (Mature ID)</a></p>
+        <p><a class="" href="{% url 'download_geneset_gmt' identifier='mature_acc' set_type='mirset' %}">All Geneset GMT Format (Mature Accesion)</a></p>
+        {% endif %}
+  
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{%endblock body%}

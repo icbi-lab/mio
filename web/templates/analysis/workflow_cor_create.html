@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static%}
+
+{% block css %}
+
+{% endblock css %}
+
+{% block body %}
+
+<section id="about">
+   <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+
+        
+          <h2>{{title}}</h2>
+          <hr class="my-4">
+          <p>
+            <div id="dataset" name = "dataset" class="col-sm-30">
+            <p> Select dataset to analyze </p>
+            <label for=""></label> <a href="#" data-toggle="tooltip" data-placement="top" title="Use our Datasets or upload your own files." style='text-decoration:none;'>&#9432;</a>
+              <select name="myselect" id="myselect">
+                {% for id, name in form.dataset.field.choices %}
+              <option value="{{ id }}">{{ name }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </p>
+
+          <form method="post" enctype="multipart/form-data">
+             {% csrf_token %}
+
+            <div id="own_data" style="display:none">
+              {{form.name_dataset | as_crispy_field}}
+              {{form.mirFile | as_crispy_field}}
+              {{form.geneFile | as_crispy_field}}
+              {{form.technology | as_crispy_field}}
+            </div>
+
+            <div id="public" style="display:none">
+              <p> Select datasetet to analyze </p>
+              <select class="chosen" style="width:350px;" name="publicDataset"> 
+                {% for value,key in form.publicDataset.field.choices %}
+                    <option name="publicDataset" value="{{value}}">{{key}}</option>
+                {%endfor%}
+              </select>
+              <p>
+            </div>
+
+            <div id="rest_form"  style="display:none">
+              {{form.label| as_crispy_field}}
+              {{form.normal| as_crispy_field}}
+              {{form.survival| as_crispy_field}}
+
+              <p> Select geneset to analyze </p>
+              <select class="chosen" style="width:350px;" name="publicGeneset" multiple> 
+                {% for value,key in form.publicGeneset.field.choices %}
+                    <option name="publicGeneset" value="{{value}}">{{key}}</option>
+                {%endfor%}
+              </select>
+
+              <p>
+                <div id="filter_sample" name = "filter_sample"  class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" name = "filter_sample" id="filter_sample_checkbox" value=True>
+                  <label class="form-check-label" for="filter_sample_checkbox">Filter samples to get correlation</label>
+                </div>
+              </p>
+
+              <div id="filtersample"  style="display:none">
+                {{form.group_sample | as_crispy_field}}
+                {{form.filter_group| as_crispy_field}}
+              </div>
+
+                <p>
+                  <div id="dea" name = "dea"  class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" value=1>
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Apply different expression analysis </label>
+                  </div>
+                </p>
+            </div>
+
+
+            <div id="filter"  style="display:none">
+              {{form.clinicalFile | as_crispy_field}}
+              {{form.filter| as_crispy_field}}
+              {{form.group | as_crispy_field}}
+              {{form.logfc| as_crispy_field}}
+              {{form.pval| as_crispy_field}}
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Submit Analysis</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>      
+{% endblock body %}
+
+{% block js %}
+
+<script type="text/javascript">
+            var SelectChoice = document.getElementById("myselect");
+            var checkbox = document.getElementById("flexSwitchCheckDefault");
+            var checkboxfilter = document.getElementById("filter_sample_checkbox");
+
+            SelectChoice.addEventListener('change', function() {
+              // Get the value of selected <option>
+              var value = SelectChoice.options[SelectChoice.selectedIndex].value;
+              if (value == 1){ // checks pre_index selected
+                // checks pre_indexed genome selected
+                document.getElementById("own_data").style = "display:true"
+                document.getElementById("public").style =  "display:none"
+                document.getElementById("rest_form").style = "display:true"
+              } else if (value == 0) {
+              //  block of code to be executed if the condition1 is false and condition2 is true
+                document.getElementById("own_data").style =  "display:none"
+                document.getElementById("public").style = "display:true"
+                document.getElementById("rest_form").style = "display:true"
+              } else {
+                //  block of code to be executed if the condition1 is false and condition2 is false
+                document.getElementById("own_data").style =  "display:none"
+                document.getElementById("public").style = "display:none"
+                document.getElementById("rest_form").style = "display:none"
+
+              }
+            })
+            
+            checkboxfilter.addEventListener('change', function() {
+              if (this.checked) {
+                console.log("Checkbox is checked..");
+                document.getElementById("filtersample").style = "display:true";
+
+              } else {
+                console.log("Checkbox is not checked..");
+                document.getElementById("filtersample").style = "display:none";
+              }
+            });
+  
+            checkbox.addEventListener('change', function() {
+              if (this.checked) {
+                console.log("Checkbox is checked..");
+                document.getElementById("filter").style = "display:true";
+
+              } else {
+                console.log("Checkbox is not checked..");
+                document.getElementById("filter").style = "display:none";
+              }
+            });
+          </script>
+{% endblock js %}
+

@@ -1,0 +1,94 @@
+{%extends 'base.html'%}
+{% load static %}
+
+{% block css %}
+  
+{% endblock css %}
+
+{% block menu_nav %}
+
+
+{% endblock menu_nav %}
+{%block body%}
+
+<section id=info class="bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2>{{workflow.label}} Info</h2>
+          <hr class="my-4">
+          <dl class="dl-horizontal">
+            <dt>Dataset Name</dt>
+            <dd>{{ workflow.dataset_id.name }}</dd>
+            <dt>miRNAset/Geneset Name</dt>
+            {%for set in workflow.get_geneset%}
+            <dd>{{set}}</dd>
+            {%endfor%}
+            {%for set in workflow.get_mirset%}
+            <dd>{{set}}</dd>
+            {%endfor%}
+            <dt>Model Used</dt>
+            <dd>{{model}}</dd>
+            <dt>Cross-validation Score</dt>
+            {% for train, test in score%}
+            <dd>Training: {{train|floatformat:3}}, test: {{test|floatformat:3 }} </dd>
+            {% endfor %}
+            <dd><b>Test mean: {{test_mean|floatformat:3}} </b></dd>
+          </dl>
+          {%if not use_fit_model%}
+            <a class="btn btn-primary btn-log btn-block" href="{% url 'model_save' session_slug=session_detail.identifier pk=workflow.pk %}">Save Model</a>
+          {%endif%} 
+          <hr class="my-4">
+      </div>
+    </div>
+  </div> 
+</section> 
+
+
+<section id=table class="cell-border compact stripe">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">          
+          <h2>{{workflow.label}} ROC-CURVE</h2>
+          <hr class="my-4">
+          {{plotly_roc | safe}}
+          <hr class="my-4">
+        </div>
+      </div>
+    </div> 
+</section> 
+
+<section id=table class="cell-border compact stripe">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">          
+        <h2>{{workflow.label}} PCA</h2>
+        <hr class="my-4">
+        {{plotly_pca | safe}}
+        <hr class="my-4">
+      </div>
+    </div>
+  </div> 
+</section> 
+
+
+<section id=table class="cell-border compact stripe">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto"> 
+        <h2>{{workflow.label}} Feature Weigth</h2>
+        <hr class="my-4"> 
+        {{plotly_feature|safe}}
+        <hr class="my-4">
+        <a  class="btn btn-primary btn-lg btn-block" href="{% url 'session_detail' session_slug=session_detail.identifier %}">Back to Session</a>
+
+      </div>
+    </div>
+  </div> 
+</section> 
+  {% endblock body %}
+
+  </body>
+</html>
+
+<!-- <a href="{% url 'visualization:wf_file_download' session_slug=session.identifier workflow_slug="add:csv" %}">Download</a> -->

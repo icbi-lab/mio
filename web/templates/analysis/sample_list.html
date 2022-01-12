@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block menu_nav %}
+<li class="nav-item">
+  <a class="nav-link js-scroll-trigger" href="#session">Session Detail</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link js-scroll-trigger" href="#samples">Samples</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link js-scroll-trigger" href="#workflow">Workflow</a>
+</li>
+{% endblock menu_nav %}
+
+{% block body %}
+
+
+ <section id="Sample List" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <p>
+            <a href="{% url 'sample_create' %}" class="btn btn-primary"> Upload Samples</a>
+          </p>
+          <h2>Sample List</h2>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th> File </th>
+                  <th> Download </th>
+                  <th> Update </th>
+                  <th> Delete </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {% for sample in samples %}
+                  <tr>
+                    <td>{{ sample.miR }}</td>
+                  </tr>
+                  <tr>
+                    <td>{{ sample.mRNA }}</td>
+                  </tr>
+                    <tr>
+                    <td>{{ sample.metadata}}</td>
+                  </tr>
+                {% endfor %}
+          <p class="lead"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock body %}
