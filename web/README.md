@@ -32,11 +32,3 @@ MIO allows the identification of genes affecting the vulnerability of cancer bas
 
 
 ![architecture](doc/architecture.png)
-
-## Current stage of development
-
-RAWG is still in its infancy, we are actively looking for contributors and welcome any comments, suggesttions and ideas. In particular, we are looking for
-
-- Web developer: to furnish our Django website and improve visualisation functionality.
-- Server-side developer: our framework for generating workflows need refactor and make integrating new tools easier.
-- Researchers with RNASeq experience: what tools do you use which are not currently available on RAWG? How does RAWG compare to your current analysis experience?
