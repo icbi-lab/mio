@@ -1,0 +1,231 @@
+1	T cell exclusion [Jerby-Arnon]	T cell exclusion [Jerby-Arnon]	nan	Jerby-Arnon et al. Cell 2018 (PMID: 30388455)	t	1
+2	Inflamed [Spranger]	Inflamed [Spranger]	nan	Spranger  et al. Proc Natl Acad Sci U S A 2016 (PMID:27837020)	t	1
+3	Expanded inflamed [Ayers]	Expanded inflamed [Ayers]	 	Ayers et al. J Clin Invest 2017 (PMID: 28650338)	t	1
+4	T cell inflamed [Ayers]	T cell inflamed [Ayers]	nan	Ayers et al. J Clin Invest 2017 (PMID: 28650338)	t	1
+5	IFNG [Ayers]	IFNG [Ayers]	nan	Ayers et al. J Clin Invest 2017 (PMID: 28650338)	t	1
+6	CTL [Jiang]	CTL [Jiang]	nan	Jiang et al. Nat Med 2018 (PMID: 30127393)	t	1
+7	CD8 cells [Jiang]	CD8 cells [Jiang]	nan	Jiang et al. Nat Med 2018 (PMID: 30127393)	t	1
+8	IFNG [Jiang]	IFNG [Jiang]	nan	Jiang et al. Nat Med 2018 (PMID: 30127393)	t	1
+9	TCELL_DYSF_POS [Jiang]	TCELL_DYSF_POS [Jiang]	Cox regression model including interaction with CTL	Jiang et al. Nat Med 2018 (PMID: 30127393)	t	1
+10	TCELL_DYSF_NEG [Jiang]	TCELL_DYSF_NEG [Jiang]	Cox regression model including interaction with CTL	Jiang et al. Nat Med 2018 (PMID: 30127393)	t	1
+11	Intratumoral stimulatory dendritic cells (SDCs) [Barry]	Intratumoral stimulatory dendritic cells (SDCs) [Barry]	nan	Barry et al Nat Med 2018 (PMID: 29942093)	t	1
+12	NK [Barry]	NK [Barry]	nan	Barry et al Nat Med 2018 (PMID: 29942093)	t	1
+13	Tumor inflamation signature (TIS) [Danaher]	Tumor inflamation signature (TIS) [Danaher]	nan	Danaher et al. J Immunother Cancer 2018 (PMID: 29929551)	t	1
+14	Immune essential genes [Patel]	Immune essential genes [Patel]	2CT CRIPSR	Patel et al. Nature 2017 (PMID:28783722)	t	1
+15	PD-L1 synthetic pathway [Danbaran]	PD-L1 synthetic pathway [Danbaran]	nan	Danbaran et al. Int Immunopharmacol 2020 (PMID:32416456)	t	1
+16	Antigen processing [ICBI]	Antigen processing [ICBI]	nan	ICBI/CBIO	t	1
+17	Immune checkpoints [ICBI]	Immune checkpoints [ICBI]	nan	ICBI/CBIO	t	1
+18	Complement [ICBI]	Complement [ICBI]	nan	ICBI/CBIO	t	1
+19	Cytokines and chemokines [ICBI]	Cytokines and chemokines [ICBI]	nan	ICBI/CBIO	t	1
+20	CAF marker [ICBI]	CAF marker [ICBI]	nan	ICBI/CBIO	t	1
+21	IFNG [Higgs]	IFNG [Higgs]	nan	Higgs et al. Clin Cancer Res 2018 (PMID: 29716923)	t	1
+22	Tertiary lymphoid structures (TLS) [Cabrita]	Tertiary lymphoid structures (TLS) [Cabrita]	nan	Cabrita et al. Nature 2020 (PMID: 31942071)	t	1
+23	Cytolytic activity [Rooney]	Cytolytic activity [Rooney]	nan	Rooney et al. Cell 2015 (PMID: 25594174)	t	1
+24	IMPRES [Auslander]	IMPRES [Auslander]	Relations between pre-defined immune checkpoint gene pairs	Auslander et al. Nat Med 2018 (PMID: 30127394)	t	1
+25	Immune signature (IS) [Ock]	Immune signature (IS) [Ock]	nan	Ock et al. Nat Commun 2017 (PMID: 29051489)	t	1
+26	Antimicrobials [ImmPort]	Antimicrobials [ImmPort]	ImmPort	Bhattacharya et al. Immunol Res 2014 (PMID:24791905)	t	1
+27	Antigen Processig and Presentation [ImmPort]	Antigen Processig and Presentation [ImmPort]	ImmPort	Bhattacharya et al. Immunol Res 2014 (PMID:24791905)	t	1
+28	Natural Killer Cell [ImmPort]	Natural Killer Cell [ImmPort]	ImmPort	Bhattacharya et al. Immunol Res 2014 (PMID:24791905)	t	1
+29	BCR Signaling Pathway [ImmPort]	BCR Signaling Pathway [ImmPort]	ImmPort	Bhattacharya et al. Immunol Res 2014 (PMID:24791905)	t	1
+30	TCR signaling pathway [ImmPort]	TCR signaling pathway [ImmPort]	ImmPort	Bhattacharya et al. Immunol Res 2014 (PMID:24791905)	t	1
+31	Chemokine Receptor [ImmPort]	Chemokine Receptor [ImmPort]	ImmPort	Bhattacharya et al. Immunol Res 2014 (PMID:24791905)	t	1
+32	TNF Family Receptor [ImmPort]	TNF Family Receptor [ImmPort]	ImmPort	Bhattacharya et al. Immunol Res 2014 (PMID:24791905)	t	1
+33	Interferon Receptor [ImmPort]	Interferon Receptor [ImmPort]	ImmPort	Bhattacharya et al. Immunol Res 2014 (PMID:24791905)	t	1
+34	InterleukinReceptor [ImmPort]	InterleukinReceptor [ImmPort]	ImmPort	Bhattacharya et al. Immunol Res 2014 (PMID:24791905)	t	1
+35	Cytokine receptor [ImmPort]	Cytokine receptor [ImmPort]	ImmPort	Bhattacharya et al. Immunol Res 2014 (PMID:24791905)	t	1
+36	Chemokines [ImmPort]	Chemokines [ImmPort]	ImmPort	Bhattacharya et al. Immunol Res 2014 (PMID:24791905)	t	1
+37	TGF-B Family Members [ImmPort]	TGF-B Family Members [ImmPort]	ImmPort	Bhattacharya et al. Immunol Res 2014 (PMID:24791905)	t	1
+38	TNF family members [ImmPort]	TNF family members [ImmPort]	ImmPort	Bhattacharya et al. Immunol Res 2014 (PMID:24791905)	t	1
+39	Interferons [ImmPort]	Interferons [ImmPort]	ImmPort	Bhattacharya et al. Immunol Res 2014 (PMID:24791905)	t	1
+40	Interleukins [ImmPort]	Interleukins [ImmPort]	ImmPort	Bhattacharya et al. Immunol Res 2014 (PMID:24791905)	t	1
+41	Angiogenesis [Bagaev]	Angiogenesis [Bagaev]	Angiogenesis	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+42	Antitumor cytokines [Bagaev]	Antitumor cytokines [Bagaev]	Anti tumor microenvironment	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+43	B cells [Bagaev]	B cells [Bagaev]	B cells	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+44	Cancer-associated fibroblasts [Bagaev]	Cancer-associated fibroblasts [Bagaev]	CAF	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+45	Checkpoint molecules [Bagaev]	Checkpoint molecules [Bagaev]	Checkpoint inhibition	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+46	Co-activation molecules [Bagaev]	Co-activation molecules [Bagaev]	Antigen presentation	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+47	Co-stimulatory ligands [Bagaev]	Co-stimulatory ligands [Bagaev]	Immune modulaters/checkpoints	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+48	Co-stimulatory receptors [Bagaev]	Co-stimulatory receptors [Bagaev]	Immune modulaters/checkpoints	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+49	Effector cell traffic [Bagaev]	Effector cell traffic [Bagaev]	Cytotoxic T and NK cells	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+50	Effector cells [Bagaev]	Effector cells [Bagaev]	Cytotoxic T and NK cells	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+51	EMT signature [Bagaev]	EMT signature [Bagaev]	Tumor features	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+52	Endothelium [Bagaev]	Endothelium [Bagaev]	Angiogenesis	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+53	Granulocyte traffic [Bagaev]	Granulocyte traffic [Bagaev]	Granulocytes	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+54	Immune Suppression by Myeloid Cells [Bagaev]	Immune Suppression by Myeloid Cells [Bagaev]	MDSC	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+55	M1 signature [Bagaev]	M1 signature [Bagaev]	Anti tumor microenvironment	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+56	MHCI [Bagaev]	MHCI [Bagaev]	Antigen presentation	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+57	MHCII [Bagaev]	MHCII [Bagaev]	Antigen presentation	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+58	Macrophage and DC traffic [Bagaev]	Macrophage and DC traffic [Bagaev]	Tumor promotive immune infiltrate	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+59	Matrix [Bagaev]	Matrix [Bagaev]	CAF	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+60	Matrix remodeling [Bagaev]	Matrix remodeling [Bagaev]	CAF	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+61	Myeloid cells traffic [Bagaev]	Myeloid cells traffic [Bagaev]	MDSC	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+62	NK cells [Bagaev]	NK cells [Bagaev]	Cytotoxic T and NK cells	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+63	Neutrophil signature [Bagaev]	Neutrophil signature [Bagaev]	Granulocytes	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+64	Protumor cytokines [Bagaev]	Protumor cytokines [Bagaev]	Tumor promotive immune infiltrate	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+65	T cells [Bagaev]	T cells [Bagaev]	Cytotoxic T and NK cells	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+66	Th1 signature [Bagaev]	Th1 signature [Bagaev]	Anti tumor microenvironment	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+67	Th2 signature [Bagaev]	Th2 signature [Bagaev]	Tumor promotive immune infiltrate	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+68	Treg [Bagaev]	Treg [Bagaev]	Treg	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+69	Treg and Th2 traffic [Bagaev]	Treg and Th2 traffic [Bagaev]	Treg	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+70	Tumor proliferation rate [Bagaev]	Tumor proliferation rate [Bagaev]	Tumor features	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+71	Tumor-associated Macrophages [Bagaev]	Tumor-associated Macrophages [Bagaev]	Tumor promotive immune infiltrate	Bagaev et al Cancer Cell 2021 (PMID: 34019806)	t	1
+72	Immune stimulators [Charoentong]	Immune stimulators [Charoentong]	Immune modulaters/checkpoints	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+73	Immune inhibitors [Charoentong]	Immune inhibitors [Charoentong]	Immune modulaters/checkpoints	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+74	MHCI classical  [Charoentong]	MHCI classical  [Charoentong]	Antigen presentation	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+75	MHCII classical [Charoentong]	MHCII classical [Charoentong]	Antigen presentation	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+76	MHCI non-classical [Charoentong]	MHCI non-classical [Charoentong]	Antigen presentation	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+77	MHCII non-classical [Charoentong]	MHCII non-classical [Charoentong]	Antigen presentation	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+78	Cancer germline antigens (CGA) [Charoentong]	Cancer germline antigens (CGA) [Charoentong]	nan	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+79	Activated B cell [Charoentong]	Activated B cell [Charoentong]	Pancancer immune metagenes - Adaptive Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+80	Activated CD4 T cell [Charoentong]	Activated CD4 T cell [Charoentong]	Pancancer immune metagenes - Adaptive Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+81	Activated CD8 T cell [Charoentong]	Activated CD8 T cell [Charoentong]	Pancancer immune metagenes - Adaptive Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+82	Central memory CD4 T cell [Charoentong]	Central memory CD4 T cell [Charoentong]	Pancancer immune metagenes - Adaptive Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+83	Central memory CD8 T cell [Charoentong]	Central memory CD8 T cell [Charoentong]	Pancancer immune metagenes - Adaptive Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+84	Effector memory CD4 T cell [Charoentong]	Effector memory CD4 T cell [Charoentong]	Pancancer immune metagenes - Adaptive Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+85	Effector memory CD8 T cell [Charoentong]	Effector memory CD8 T cell [Charoentong]	Pancancer immune metagenes - Adaptive Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+86	Gamma delta T cells [Charoentong]	Gamma delta T cells [Charoentong]	Pancancer immune metagenes - Adaptive Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+87	Immature B cells [Charoentong]	Immature B cells [Charoentong]	Pancancer immune metagenes - Adaptive Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+88	Memory B cells [Charoentong]	Memory B cells [Charoentong]	Pancancer immune metagenes - Adaptive Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+89	Regulatory T cells [Charoentong]	Regulatory T cells [Charoentong]	Pancancer immune metagenes - Adaptive Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+90	T folicular helper cells [Charoentong]	T folicular helper cells [Charoentong]	Pancancer immune metagenes - Adaptive Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+91	Type 1 helper cells [Charoentong]	Type 1 helper cells [Charoentong]	Pancancer immune metagenes - Adaptive Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+92	Type 17 helper cells [Charoentong]	Type 17 helper cells [Charoentong]	Pancancer immune metagenes - Adaptive Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+135	Tfh [Bindea]	Tfh [Bindea]	Intratumoral immune cells	Bindea et al. Immunity 2013 (PMID: 24138885)	t	1
+93	Type 2 helper cells [Charoentong]	Type 2 helper cells [Charoentong]	Pancancer immune metagenes - Adaptive Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+94	Activated dendritic cells [Charoentong]	Activated dendritic cells [Charoentong]	Pancancer immune metagenes - Innate Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+95	CD56 bright natural killer cells [Charoentong]	CD56 bright natural killer cells [Charoentong]	Pancancer immune metagenes - Innate Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+96	CD56 dim natural killer cells [Charoentong]	CD56 dim natural killer cells [Charoentong]	Pancancer immune metagenes - Innate Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+97	Eosinophiles [Charoentong]	Eosinophiles [Charoentong]	Pancancer immune metagenes - Innate Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+98	Imature dendritic cells [Charoentong]	Imature dendritic cells [Charoentong]	Pancancer immune metagenes - Innate Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+99	Macrophages [Charoentong]	Macrophages [Charoentong]	Pancancer immune metagenes - Innate Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+100	Mast cells [Charoentong]	Mast cells [Charoentong]	Pancancer immune metagenes - Innate Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+101	MDSCc [Charoentong]	MDSCc [Charoentong]	Pancancer immune metagenes - Innate Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+102	Monocytes [Charoentong]	Monocytes [Charoentong]	Pancancer immune metagenes - Innate Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+103	Natural killer cells [Charoentong]	Natural killer cells [Charoentong]	Pancancer immune metagenes - Innate Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+104	Natural killer T cells [Charoentong]	Natural killer T cells [Charoentong]	Pancancer immune metagenes - Innate Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+105	Neutrophils [Charoentong]	Neutrophils [Charoentong]	Pancancer immune metagenes - Innate Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+106	Plasmacytoid dentritic cells [Charoentong]	Plasmacytoid dentritic cells [Charoentong]	Pancancer immune metagenes - Innate Immunity	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+107	Immunophenoscore IPS  [Charoentong]	Immunophenoscore IPS  [Charoentong]	MHC+CP + EC (Act CD8, Act CD4,Tem CD8, Tem CD4 ) + SC(TREG+MDSC)	Charoentong et al Cell Rep 2017 (PMID: 28052254)	t	1
+108	T cells [MCPcounter]	T cells [MCPcounter]	MCPcounter marker genes	Becht et al. Genome Biol 2016 (PMID: 27765066)	t	1
+109	CD8 T cells [MCPcounter]	CD8 T cells [MCPcounter]	MCPcounter marker genes	Becht et al. Genome Biol 2016 (PMID: 27765066)	t	1
+110	CTL [MCPcounter]	CTL [MCPcounter]	MCPcounter marker genes	Becht et al. Genome Biol 2016 (PMID: 27765066)	t	1
+111	B lineage [MCPcounter]	B lineage [MCPcounter]	MCPcounter marker genes	Becht et al. Genome Biol 2016 (PMID: 27765066)	t	1
+112	NK cells [MCPcounter]	NK cells [MCPcounter]	MCPcounter marker genes	Becht et al. Genome Biol 2016 (PMID: 27765066)	t	1
+113	Monocytic lineage [MCPcounter]	Monocytic lineage [MCPcounter]	MCPcounter marker genes	Becht et al. Genome Biol 2016 (PMID: 27765066)	t	1
+114	Myeloid dendritic cells [MCPcounter]	Myeloid dendritic cells [MCPcounter]	MCPcounter marker genes	Becht et al. Genome Biol 2016 (PMID: 27765066)	t	1
+115	Neutrophils [MCPcounter]	Neutrophils [MCPcounter]	MCPcounter marker genes	Becht et al. Genome Biol 2016 (PMID: 27765066)	t	1
+116	Endothelial cells [MCPcounter]	Endothelial cells [MCPcounter]	MCPcounter marker genes	Becht et al. Genome Biol 2016 (PMID: 27765066)	t	1
+117	Fibroblasts [MCPcounter]	Fibroblasts [MCPcounter]	MCPcounter marker genes	Becht et al. Genome Biol 2016 (PMID: 27765066)	t	1
+118	B cells  [QuanTIseq]	B cells  [QuanTIseq]	QuanTIseq immune cell related genes for deconvolution	Finotello et al. Genome Med 2019 (PMID: 31126321 )	t	1
+119	Macrophages M1 [QuanTIseq]	Macrophages M1 [QuanTIseq]	QuanTIseq immune cell related genes for deconvolution	Finotello et al. Genome Med 2019 (PMID: 31126321 )	t	1
+120	Macrophages M2 [QuanTIseq]	Macrophages M2 [QuanTIseq]	QuanTIseq immune cell related genes for deconvolution	Finotello et al. Genome Med 2019 (PMID: 31126321 )	t	1
+121	Monocytes [QuanTIseq]	Monocytes [QuanTIseq]	QuanTIseq immune cell related genes for deconvolution	Finotello et al. Genome Med 2019 (PMID: 31126321 )	t	1
+122	Neutrophils [QuanTIseq]	Neutrophils [QuanTIseq]	QuanTIseq immune cell related genes for deconvolution	Finotello et al. Genome Med 2019 (PMID: 31126321 )	t	1
+123	NK cells [QuanTIseq]	NK cells [QuanTIseq]	QuanTIseq immune cell related genes for deconvolution	Finotello et al. Genome Med 2019 (PMID: 31126321 )	t	1
+124	T cells CD4 [QuanTIseq]	T cells CD4 [QuanTIseq]	QuanTIseq immune cell related genes for deconvolution	Finotello et al. Genome Med 2019 (PMID: 31126321 )	t	1
+125	T cells CD8 [QuanTIseq]	T cells CD8 [QuanTIseq]	QuanTIseq immune cell related genes for deconvolution	Finotello et al. Genome Med 2019 (PMID: 31126321 )	t	1
+126	Tregs [QuanTIseq]	Tregs [QuanTIseq]	QuanTIseq immune cell related genes for deconvolution	Finotello et al. Genome Med 2019 (PMID: 31126321 )	t	1
+127	Dendritic cells [QuanTIseq]	Dendritic cells [QuanTIseq]	QuanTIseq immune cell related genes for deconvolution	Finotello et al. Genome Med 2019 (PMID: 31126321 )	t	1
+128	B cells [Bindea]	B cells [Bindea]	Intratumoral immune cells	Bindea et al. Immunity 2013 (PMID: 24138885)	t	1
+129	T cells [Bindea]	T cells [Bindea]	Intratumoral immune cells	Bindea et al. Immunity 2013 (PMID: 24138885)	t	1
+130	T helper cells [Bindea]	T helper cells [Bindea]	Intratumoral immune cells	Bindea et al. Immunity 2013 (PMID: 24138885)	t	1
+131	Tcm [Bindea]	Tcm [Bindea]	Intratumoral immune cells	Bindea et al. Immunity 2013 (PMID: 24138885)	t	1
+132	Tem [Bindea]	Tem [Bindea]	Intratumoral immune cells	Bindea et al. Immunity 2013 (PMID: 24138885)	t	1
+133	Th1 cells [Bindea]	Th1 cells [Bindea]	Intratumoral immune cells	Bindea et al. Immunity 2013 (PMID: 24138885)	t	1
+134	Th2 cells [Bindea]	Th2 cells [Bindea]	Intratumoral immune cells	Bindea et al. Immunity 2013 (PMID: 24138885)	t	1
+136	Th17 cells [Bindea]	Th17 cells [Bindea]	Intratumoral immune cells	Bindea et al. Immunity 2013 (PMID: 24138885)	t	1
+137	Treg [Bindea]	Treg [Bindea]	Intratumoral immune cells	Bindea et al. Immunity 2013 (PMID: 24138885)	t	1
+138	CD8 T cells [Bindea]	CD8 T cells [Bindea]	Intratumoral immune cells	Bindea et al. Immunity 2013 (PMID: 24138885)	t	1
+139	Tgd [Bindea]	Tgd [Bindea]	Intratumoral immune cells	Bindea et al. Immunity 2013 (PMID: 24138885)	t	1
+140	Cytotoxic cells [Bindea]	Cytotoxic cells [Bindea]	Intratumoral immune cells	Bindea et al. Immunity 2013 (PMID: 24138885)	t	1
+141	NK cells [Bindea]	NK cells [Bindea]	Intratumoral immune cells	Bindea et al. Immunity 2013 (PMID: 24138885)	t	1
+142	NK CD56dim cells [Bindea]	NK CD56dim cells [Bindea]	Intratumoral immune cells	Bindea et al. Immunity 2013 (PMID: 24138885)	t	1
+143	NK CD56bright cells [Bindea]	NK CD56bright cells [Bindea]	Intratumoral immune cells	Bindea et al. Immunity 2013 (PMID: 24138885)	t	1
+144	DC [Bindea]	DC [Bindea]	Intratumoral immune cells	Bindea et al. Immunity 2013 (PMID: 24138885)	t	1
+145	iDC [Bindea]	iDC [Bindea]	Intratumoral immune cells	Bindea et al. Immunity 2013 (PMID: 24138885)	t	1
+146	aDC [Bindea]	aDC [Bindea]	Intratumoral immune cells	Bindea et al. Immunity 2013 (PMID: 24138885)	t	1
+147	pDC [Bindea]	pDC [Bindea]	Intratumoral immune cells	Bindea et al. Immunity 2013 (PMID: 24138885)	t	1
+148	Eosinophils [Bindea]	Eosinophils [Bindea]	Intratumoral immune cells	Bindea et al. Immunity 2013 (PMID: 24138885)	t	1
+149	Macrophages [Bindea]	Macrophages [Bindea]	Intratumoral immune cells	Bindea et al. Immunity 2013 (PMID: 24138885)	t	1
+150	Mast cells [Bindea]	Mast cells [Bindea]	Intratumoral immune cells	Bindea et al. Immunity 2013 (PMID: 24138885)	t	1
+151	Neutrophils [Bindea]	Neutrophils [Bindea]	Intratumoral immune cells	Bindea et al. Immunity 2013 (PMID: 24138885)	t	1
+152	B cells [ImSig]	B cells [ImSig]	ImSig	Nirmal et al. Cancer Immunol Res 2018 (PMID: 30266715)	t	1
+153	T cells [ImSig]	T cells [ImSig]	ImSig	Nirmal et al. Cancer Immunol Res 2018 (PMID: 30266715)	t	1
+154	Macrophages [ImSig]	Macrophages [ImSig]	ImSig	Nirmal et al. Cancer Immunol Res 2018 (PMID: 30266715)	t	1
+155	Monocytes [ImSig]	Monocytes [ImSig]	ImSig	Nirmal et al. Cancer Immunol Res 2018 (PMID: 30266715)	t	1
+156	Neutrophils [ImSig]	Neutrophils [ImSig]	ImSig	Nirmal et al. Cancer Immunol Res 2018 (PMID: 30266715)	t	1
+157	NK cells [ImSig]	NK cells [ImSig]	ImSig	Nirmal et al. Cancer Immunol Res 2018 (PMID: 30266715)	t	1
+158	Plasma cells [ImSig]	Plasma cells [ImSig]	ImSig	Nirmal et al. Cancer Immunol Res 2018 (PMID: 30266715)	t	1
+159	Interferon [ImSig]	Interferon [ImSig]	ImSig	Nirmal et al. Cancer Immunol Res 2018 (PMID: 30266715)	t	1
+160	Proliferation [ImSig]	Proliferation [ImSig]	ImSig	Nirmal et al. Cancer Immunol Res 2018 (PMID: 30266715)	t	1
+161	Translation [ImSig]	Translation [ImSig]	ImSig	Nirmal et al. Cancer Immunol Res 2018 (PMID: 30266715)	t	1
+162	DNA damage and repair (DDR) [Knijnenburg]	DNA damage and repair (DDR) [Knijnenburg]	DDR pathways	Knijnenburg  et al. Cell Rep 2018 (PMID: 29617664)	t	1
+163	Base Excision Repair (BER) [Knijnenburg]	Base Excision Repair (BER) [Knijnenburg]	DDR pathways	Knijnenburg  et al. Cell Rep 2018 (PMID: 29617664)	t	1
+164	Nucleotide Excision Repair (NER) [Knijnenburg]	Nucleotide Excision Repair (NER) [Knijnenburg]	DDR pathways	Knijnenburg  et al. Cell Rep 2018 (PMID: 29617664)	t	1
+165	Mismatch Repair (MMR) [Knijnenburg]	Mismatch Repair (MMR) [Knijnenburg]	DDR pathways	Knijnenburg  et al. Cell Rep 2018 (PMID: 29617664)	t	1
+166	Fanconi Anemia (FA) [Knijnenburg]	Fanconi Anemia (FA) [Knijnenburg]	DDR pathways	Knijnenburg  et al. Cell Rep 2018 (PMID: 29617664)	t	1
+167	Homology-dependent recombination (HDR) [Knijnenburg]	Homology-dependent recombination (HDR) [Knijnenburg]	DDR pathways	Knijnenburg  et al. Cell Rep 2018 (PMID: 29617664)	t	1
+168	Non-homologous End Joining (NHEJ) [Knijnenburg]	Non-homologous End Joining (NHEJ) [Knijnenburg]	DDR pathways	Knijnenburg  et al. Cell Rep 2018 (PMID: 29617664)	t	1
+169	Direct Repair (DR) [Knijnenburg]	Direct Repair (DR) [Knijnenburg]	DDR pathways	Knijnenburg  et al. Cell Rep 2018 (PMID: 29617664)	t	1
+170	Translesion Synthesis (TLS) [Knijnenburg]	Translesion Synthesis (TLS) [Knijnenburg]	DDR pathways	Knijnenburg  et al. Cell Rep 2018 (PMID: 29617664)	t	1
+171	Nucleotide pools (NP) [Knijnenburg]	Nucleotide pools (NP) [Knijnenburg]	DDR pathways	Knijnenburg  et al. Cell Rep 2018 (PMID: 29617664)	t	1
+172	Other damage and repair [Knijnenburg]	Other damage and repair [Knijnenburg]	DDR pathways	Knijnenburg  et al. Cell Rep 2018 (PMID: 29617664)	t	1
+173	Core Base Excision Repair (BER) [Knijnenburg]	Core Base Excision Repair (BER) [Knijnenburg]	DDR core pathway	Knijnenburg  et al. Cell Rep 2018 (PMID: 29617664)	t	1
+174	Core Nucleotide Excision Repair (NER) [Knijnenburg]	Core Nucleotide Excision Repair (NER) [Knijnenburg]	DDR core pathway	Knijnenburg  et al. Cell Rep 2018 (PMID: 29617664)	t	1
+175	Core Mismatch Repair (MMR) [Knijnenburg]	Core Mismatch Repair (MMR) [Knijnenburg]	DDR core pathway	Knijnenburg  et al. Cell Rep 2018 (PMID: 29617664)	t	1
+176	Core Fanconi Anemia (FA) [Knijnenburg]	Core Fanconi Anemia (FA) [Knijnenburg]	DDR core pathway	Knijnenburg  et al. Cell Rep 2018 (PMID: 29617664)	t	1
+177	Core HomologousRecombination (HR) [Knijnenburg]	Core HomologousRecombination (HR) [Knijnenburg]	DDR core pathway	Knijnenburg  et al. Cell Rep 2018 (PMID: 29617664)	t	1
+178	Core Non-homologous End Joining (NHEJ) [Knijnenburg]	Core Non-homologous End Joining (NHEJ) [Knijnenburg]	DDR core pathway	Knijnenburg  et al. Cell Rep 2018 (PMID: 29617664)	t	1
+179	Core Direct Repair (DR) [Knijnenburg]	Core Direct Repair (DR) [Knijnenburg]	DDR core pathway	Knijnenburg  et al. Cell Rep 2018 (PMID: 29617664)	t	1
+180	Core Translesion Synthesis (TLS) [Knijnenburg]	Core Translesion Synthesis (TLS) [Knijnenburg]	DDR core pathway	Knijnenburg  et al. Cell Rep 2018 (PMID: 29617664)	t	1
+181	Core Damage Sensor [Knijnenburg]	Core Damage Sensor [Knijnenburg]	DDR core pathway	Knijnenburg  et al. Cell Rep 2018 (PMID: 29617664)	t	1
+182	TNFA_SIGNALING_VIA_NFKB [HALLMARK]	TNFA_SIGNALING_VIA_NFKB [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+183	HYPOXIA [HALLMARK]	HYPOXIA [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+184	CHOLESTEROL_HOMEOSTASIS [HALLMARK]	CHOLESTEROL_HOMEOSTASIS [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+185	MITOTIC_SPINDLE [HALLMARK]	MITOTIC_SPINDLE [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+186	WNT_BETA_CATENIN_SIGNALING [HALLMARK]	WNT_BETA_CATENIN_SIGNALING [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+187	TGF_BETA_SIGNALING [HALLMARK]	TGF_BETA_SIGNALING [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+188	IL6_JAK_STAT3_SIGNALING [HALLMARK]	IL6_JAK_STAT3_SIGNALING [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+189	DNA_REPAIR [HALLMARK]	DNA_REPAIR [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+190	G2M_CHECKPOINT [HALLMARK]	G2M_CHECKPOINT [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+191	APOPTOSIS [HALLMARK]	APOPTOSIS [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+192	NOTCH_SIGNALING [HALLMARK]	NOTCH_SIGNALING [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+193	ADIPOGENESIS [HALLMARK]	ADIPOGENESIS [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+194	ESTROGEN_RESPONSE_EARLY [HALLMARK]	ESTROGEN_RESPONSE_EARLY [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+195	ESTROGEN_RESPONSE_LATE [HALLMARK]	ESTROGEN_RESPONSE_LATE [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+196	ANDROGEN_RESPONSE [HALLMARK]	ANDROGEN_RESPONSE [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+197	MYOGENESIS [HALLMARK]	MYOGENESIS [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+198	PROTEIN_SECRETION [HALLMARK]	PROTEIN_SECRETION [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+199	INTERFERON_ALPHA_RESPONSE [HALLMARK]	INTERFERON_ALPHA_RESPONSE [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+200	INTERFERON_GAMMA_RESPONSE [HALLMARK]	INTERFERON_GAMMA_RESPONSE [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+201	APICAL_JUNCTION [HALLMARK]	APICAL_JUNCTION [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+202	APICAL_SURFACE [HALLMARK]	APICAL_SURFACE [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+203	HEDGEHOG_SIGNALING [HALLMARK]	HEDGEHOG_SIGNALING [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+204	COMPLEMENT [HALLMARK]	COMPLEMENT [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+205	UNFOLDED_PROTEIN_RESPONSE [HALLMARK]	UNFOLDED_PROTEIN_RESPONSE [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+206	PI3K_AKT_MTOR_SIGNALING [HALLMARK]	PI3K_AKT_MTOR_SIGNALING [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+207	MTORC1_SIGNALING [HALLMARK]	MTORC1_SIGNALING [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+208	E2F_TARGETS [HALLMARK]	E2F_TARGETS [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+209	MYC_TARGETS_V1 [HALLMARK]	MYC_TARGETS_V1 [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+210	MYC_TARGETS_V2 [HALLMARK]	MYC_TARGETS_V2 [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+211	EPITHELIAL_MESENCHYMAL_TRANSITION [HALLMARK]	EPITHELIAL_MESENCHYMAL_TRANSITION [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+212	INFLAMMATORY_RESPONSE [HALLMARK]	INFLAMMATORY_RESPONSE [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+213	XENOBIOTIC_METABOLISM [HALLMARK]	XENOBIOTIC_METABOLISM [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+214	FATTY_ACID_METABOLISM [HALLMARK]	FATTY_ACID_METABOLISM [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+215	OXIDATIVE_PHOSPHORYLATION [HALLMARK]	OXIDATIVE_PHOSPHORYLATION [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+216	GLYCOLYSIS [HALLMARK]	GLYCOLYSIS [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+217	REACTIVE_OXYGEN_SPECIES_PATHWAY [HALLMARK]	REACTIVE_OXYGEN_SPECIES_PATHWAY [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+218	P53_PATHWAY [HALLMARK]	P53_PATHWAY [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+219	UV_RESPONSE_UP [HALLMARK]	UV_RESPONSE_UP [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+220	UV_RESPONSE_DN [HALLMARK]	UV_RESPONSE_DN [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+221	ANGIOGENESIS [HALLMARK]	ANGIOGENESIS [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+222	HEME_METABOLISM [HALLMARK]	HEME_METABOLISM [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+223	COAGULATION [HALLMARK]	COAGULATION [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+224	IL2_STAT5_SIGNALING [HALLMARK]	IL2_STAT5_SIGNALING [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+225	BILE_ACID_METABOLISM [HALLMARK]	BILE_ACID_METABOLISM [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+226	PEROXISOME [HALLMARK]	PEROXISOME [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+227	ALLOGRAFT_REJECTION [HALLMARK]	ALLOGRAFT_REJECTION [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+228	SPERMATOGENESIS [HALLMARK]	SPERMATOGENESIS [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+229	KRAS_SIGNALING_UP [HALLMARK]	KRAS_SIGNALING_UP [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+230	KRAS_SIGNALING_DN [HALLMARK]	KRAS_SIGNALING_DN [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1
+231	PANCREAS_BETA_CELLS [HALLMARK]	PANCREAS_BETA_CELLS [HALLMARK]	MSIGDB v 7.4 Hallmark gene sets (H)	Liberzon et al. Cell Syst 2015 (PMID:26771021)	t	1

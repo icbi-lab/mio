@@ -1,0 +1,39 @@
+1	multiMiR	https://www.bioconductor.org/packages/release/bioc/html/multiMiR.html	https://doi.org/10.1093/nar/gku631	25063298	Ru et al. Nucleic Acids Res. 2014 
+2	BCmicrO	http://compgenomics.utsa.edu/gene/gene_1.php	https://doi.org/10.1186/1471-2164-13-s8-s13	23282032	Yue et al. BMC Genomics 2012
+3	CoMeTa	https://cometa.tigem.it/site/index.php	https://doi.org/10.1101/gr.130435.111	22345618	Gennarino et al. Genome Res 2012
+4	Cupid	http://cupidtool.sourceforge.net/	https://doi.org/10.1101/gr.178194.114	25378249	Chiu et al. Genome Res 2015
+5	DIANA-microT-CDS	http://diana.imis.athena-innovation.gr/DianaTools/	https://doi.org/10.1093/nar/gkt393	23680784	Paraskevopoulou et al. Nucl Acids Res 2013
+6	ElMMo3	http://www.clipz.unibas.ch//ElMMo3/	https://doi.org/10.1186/1471-2105-8-69	17331257	Gaidatzis et al. BMC Bioinform 2007
+7	GenMir++	http://www.psi.toronto.edu/genmir/	https://doi.org/10.1038/nmeth1130	18026111	Huang et al. Nat Methods 2007
+8	MAMI	https://mami.med.harvard.edu/	0	0	0
+9	MBStar	https://www.isical.ac.in/~bioinfo_miu/MBStar/MBStar_download20.htm	https://doi.org/10.1038/srep08004	25614300	Bandyopadhyay et al. Sci Rep 2015
+10	MicroCosm	http://www.ebi.ac.uk/enright-srv/microcosm/cgi-bin/targets/v5/download.pl	https://doi.org/10.1093/nar/gkm952	17991681	Griffiths-Jones et al. Nucl Acids Res 2008
+11	miR2Disease	http://www.mir2disease.org/	https://doi.org/10.1093/nar/gkn714	18927107	Jiang et al. Nucleic Acids Res 2009
+12	MirAncesTar	https://www.cs.mcgill.ca/~blanchem/mirancestar/	https://doi.org/10.1093/nar/gkw1085	27899600	Leclercq et al. Nucleic Acids Res 2017
+13	mirBase	http://www.mirbase.org/	https://doi.org/10.1093/nar/gkt1181	24275495	Kozomara et al. Nucleic Acids Res 2014
+14	miRanda	http://www.mircrorna.org	https://doi.org/10.1371/journal.pbio.0020363	15502875	John et al. PLoS Biol. 2004 
+15	miRBridge	http://mirsystem.cgm.ntu.edu.tw/	https://doi.org/10.1016/j.molcel.2010.03.007	20385095	Tsang et al. Mol Cell 2010
+16	miRcode	http://www.mircode.org/	https://doi.org/10.1093/bioinformatics/bts344	22718787	Jeggari et al. Bioinformatics 2012
+17	mirCoX	http://wrenlab.org/mirCoX/	https://doi.org/10.1186/1471-2105-14-s14-s17	24267917	Giles et al. BMC Bioinformatics 2013
+18	miRDsnp	http://mirdsnp.ccr.buffalo.edu/download.php	https://doi.org/10.1186/1471-2164-13-44	22276777	Bruno et al. BMC Genomics 2012
+19	miRDB	http://mirdb.org/download.html	https://doi.org/10.1093/nar/gkz757	31504780	Chen et al. Nucleic Acids Res 2020
+20	miRecords	http://c1.accurascience.com/miRecords/download.php	https://doi.org/10.1093/nar/gkn851	18996891	Xiao et al. Nucleic Acids Res. 2009
+21	MirGate	http://mirgate.bioinfo.cnio.es/	https://doi.org/10.1093/database/bav035	25858286	Andrés-León et al. Database 2015
+22	miRMap	https://mirmap.ezlab.org/downloads/mirmap201301e/	https://doi.org/10.1093/nar/gks901	23034802	Vejnar et al. Nucleic Acids Res. 2012
+23	MirSNP	http://bioinfo.bjmu.edu.cn/mirsnp/search/	https://doi.org/10.1186/1471-2164-13-661	23173617	Liu et al. BMC Genomics. 2012
+24	MirTar	http://mirtar.mbc.nctu.edu.tw/	https://doi.org/10.1186/1471-2105-12-300	21791068	Hsu et al. BMC Bioinformatics. 2011
+25	miRTar2GO	http://www.mirtar2go.org	https://doi.org/10.1093/nar/gkw1185	27903911	Ahadi et al.Nucleic Acids Res. 2017
+26	miRTarBase	https://mirtarbase.cuhk.edu.cn/~miRTarBase/miRTarBase_2019/php/download.php	https://doi.org/10.1093/nar/gkz896	31647101	Huang et al. Nucleic Acids Res. 2020
+27	mirWalk3	http://mirwalk.umm.uni-heidelberg.de/resources/	https://doi.org/10.1371/journal.pone.0206239	30335862	Sticht et al. PLoS One. 2018
+28	Mirza-G	http://www.clipz.unibas.ch/index.php?r=tools/sub/mirza_g	https://doi.org/10.1093/nar/gkv050	25628353	Gumienny et al. Nucleic Acids Res. 2015
+29	MultiMiTar	https://www.isical.ac.in/~bioinfo_miu/multimitar-download.htm	https://doi.org/10.1371/journal.pone.0024583	21949731	Mitra R et al. PLoS One. 2011
+30	PACCMIT	https://www.epfl.ch/labs/lcpt/research/biophysics_and_bioinformatics/microrna_target_predictions/	https://doi.org/10.1261/rna.033282.112	22915600	Marín et al. RNA. 2012
+31	PharmacoMir	http://www.pharmaco-mir.org/	https://doi.org/10.1093/bib/bbs082	23376192	Rukov et al. Brief Bioinform. 2014
+32	PITA	https://genie.weizmann.ac.il/pubs/mir07/mir07_data.html	https://doi.org/10.1038/ng2135	17893677	Kertesz et al. Nat Genet. 2007
+33	PolymiRTS	https://compbio.uthsc.edu/miRSNP/download/PolymiRTS3.0/	https://doi.org/10.1093/nar/gkt1028	24163105	Bhattacharya et al. Nucleic Acids Res. 2014
+34	RNA22	https://cm.jefferson.edu/rna22-full-sets-of-predictions/	https://doi.org/10.1093/bioinformatics/bts615	23074262	Loher et al. Bioinformatics. 2012.
+35	RPmirDP	https://doi.org/10.5683/SP2/LD8JKJ	https://doi.org/10.1038/s41598-020-68251-4	32678114	Kyrollos et al. Sci Rep. 2020
+36	StarBase	http://starbase.sysu.edu.cn/	https://doi.org/10.1093/nar/gkt1248	24297251	Li et al. Nucleic Acids Res. 2014
+37	TargetRank	http://hollywood.mit.edu/targetrank/downloads.html	https://doi.org/10.1261/rna.768207	17872505	Nielsen et al. RNA. 2007
+38	TargetScan	http://www.targetscan.org/cgi-bin/targetscan/data_download.vert72.cgi	https://doi.org/10.7554/elife.05005	26267216	Agarwal et al. Elife. 2015
+39	TargetSpy	http://webclu.bio.wzw.tum.de/targetspy/index.php?down=true	https://doi.org/10.1186/1471-2105-11-292	20509939	Sturm et al. BMC Bioinformatics. 2010

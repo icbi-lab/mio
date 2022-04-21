@@ -1,0 +1,2693 @@
+75118	hsa-let-7a-5p	hsa-let-7a	MIMAT0000062	experimental	cloned [1-3,5-8], Northern [1], Illumina [9]		0
+75119	hsa-let-7a-3p	hsa-let-7a*	MIMAT0004481	experimental	cloned [6]		0
+75121	hsa-let-7a-2-3p	hsa-let-7a-2*	MIMAT0010195	experimental	qRT-PCR [9]		0
+75124	hsa-let-7b-5p	hsa-let-7b	MIMAT0000063	experimental	cloned [1,3-5], Northern [1]		0
+75125	hsa-let-7b-3p	hsa-let-7b*	MIMAT0004482	experimental	cloned [4-5]		0
+75126	hsa-let-7c-5p		MIMAT0000064	experimental	cloned [1-4], Northern [1], Illumina [5-6]		0
+75128	hsa-let-7d-5p	hsa-let-7d	MIMAT0000065	experimental	cloned [1-4], Northern [1], Illumina [5]		0
+75129	hsa-let-7d-3p	hsa-let-7d*	MIMAT0004484	experimental	cloned [3]		0
+75130	hsa-let-7e-5p	hsa-let-7e	MIMAT0000066	experimental	cloned [1-4], Northern [1], Illumina [5]		0
+75131	hsa-let-7e-3p	hsa-let-7e*	MIMAT0004485	experimental	cloned [3]		0
+75132	hsa-let-7f-5p	hsa-let-7f	MIMAT0000067	experimental	cloned [1,3-5], Northern [1], Illumina [6]		0
+75133	hsa-let-7f-1-3p	hsa-let-7f-1*	MIMAT0004486	experimental	cloned [4]		0
+75135	hsa-let-7f-2-3p	hsa-let-7f-2*	MIMAT0004487	experimental	cloned [4]		0
+75136	hsa-miR-15a-5p	hsa-miR-15a	MIMAT0000068	experimental	cloned [1,3-6], Northern [1]		0
+75137	hsa-miR-15a-3p	hsa-miR-15a*	MIMAT0004488	experimental	cloned [5]		0
+75138	hsa-miR-16-5p	hsa-miR-16	MIMAT0000069	experimental	cloned [1,3-4,6-8], Northern [3]		0
+75139	hsa-miR-16-1-3p	hsa-miR-16-1*	MIMAT0004489	experimental	cloned [8]		0
+75140	hsa-miR-17-5p	hsa-miR-17-5p;hsa-miR-17	MIMAT0000070	experimental	cloned [2,5-8], Northern [4]		0
+75141	hsa-miR-17-3p	hsa-miR-17-3p;hsa-miR-17*	MIMAT0000071	experimental	cloned [1,5,7-8], Northern [1]		0
+75142	hsa-miR-18a-5p	hsa-miR-18;hsa-miR-18a	MIMAT0000072	experimental	cloned [1,3-6], Northern [1]		0
+75143	hsa-miR-18a-3p	hsa-miR-18a*	MIMAT0002891	experimental	cloned [4-6]		0
+75144	hsa-miR-19a-5p	hsa-miR-19a*	MIMAT0004490	experimental	cloned [4]		0
+75145	hsa-miR-19a-3p	hsa-miR-19a	MIMAT0000073	experimental	cloned [1-5], Northern [1]		0
+75146	hsa-miR-19b-1-5p	hsa-miR-19b-1*	MIMAT0004491	experimental	cloned [8]		0
+75147	hsa-miR-19b-3p	hsa-miR-19b	MIMAT0000074	experimental	cloned [1-3,6-9], Northern [1,5]		0
+75148	hsa-miR-19b-2-5p	hsa-miR-19b-2*	MIMAT0004492	experimental	cloned [8]		0
+75150	hsa-miR-20a-5p	hsa-miR-20;hsa-miR-20a	MIMAT0000075	experimental	cloned [1,4-7], Northern [1]		0
+75151	hsa-miR-20a-3p	hsa-miR-20a*	MIMAT0004493	experimental	cloned [6]		0
+75152	hsa-miR-21-5p	hsa-miR-21	MIMAT0000076	experimental	cloned [1-3,6-9], Northern [1,5], Illumina [10]		0
+75153	hsa-miR-21-3p	hsa-miR-21*	MIMAT0004494	experimental	cloned [8-9]		0
+75154	hsa-miR-22-5p	hsa-miR-22*	MIMAT0004495	experimental	cloned [4]		0
+75155	hsa-miR-22-3p	hsa-miR-22	MIMAT0000077	experimental	cloned [1,3-5], Northern [1], Illumina [6]		0
+75156	hsa-miR-23a-5p	hsa-miR-23a*	MIMAT0004496	experimental	cloned [6-7]		0
+75157	hsa-miR-23a-3p	hsa-miR-23a	MIMAT0000078	experimental	cloned [1,4-7], Northern [1]		0
+75158	hsa-miR-24-1-5p	hsa-miR-189;hsa-miR-24-1*	MIMAT0000079	experimental	cloned [7]	MI0000231	0
+75159	hsa-miR-24-3p	hsa-miR-24	MIMAT0000080	experimental	cloned [1,4-7], Northern [1], Illumina [8]		0
+75160	hsa-miR-24-2-5p	hsa-miR-24-2*	MIMAT0004497	experimental	cloned [6]		0
+75162	hsa-miR-25-5p	hsa-miR-25*	MIMAT0004498	experimental	cloned [3]		0
+75163	hsa-miR-25-3p	hsa-miR-25	MIMAT0000081	experimental	cloned [1-4], Northern [1]		0
+75164	hsa-miR-26a-5p	hsa-miR-26a	MIMAT0000082	experimental	cloned [2,4-7], Northern [3]		0
+75165	hsa-miR-26a-1-3p	hsa-miR-26a-1*	MIMAT0004499	experimental	cloned [6]		0
+75166	hsa-miR-26b-5p	hsa-miR-26b	MIMAT0000083	experimental	cloned [1,3-5], Northern [1]		0
+75167	hsa-miR-26b-3p	hsa-miR-26b*	MIMAT0004500	experimental	cloned [4]		0
+75168	hsa-miR-27a-5p	hsa-miR-27a*	MIMAT0004501	experimental	cloned [4]		0
+75169	hsa-miR-27a-3p	hsa-miR-27a	MIMAT0000084	experimental	cloned [1,3-5], Northern [1]		0
+75170	hsa-miR-28-5p	hsa-miR-28	MIMAT0000085	experimental	cloned [1-3], Northern [1]		0
+75171	hsa-miR-28-3p		MIMAT0004502	experimental	cloned [2-4]		0
+75172	hsa-miR-29a-5p	hsa-miR-29a*	MIMAT0004503	experimental	cloned [6]		0
+75173	hsa-miR-29a-3p	hsa-miR-29a	MIMAT0000086	experimental	cloned [1-3,5-7], Northern [1,4], Illumina [8]		0
+75174	hsa-miR-30a-5p	hsa-miR-30a-5p;hsa-miR-30a	MIMAT0000087	experimental	cloned [2,4-6]		0
+75175	hsa-miR-30a-3p	hsa-miR-30a-3p;hsa-miR-30a*	MIMAT0000088	experimental	cloned [1,4-5], Northern [1]		0
+75176	hsa-miR-31-5p	hsa-miR-31	MIMAT0000089	experimental	cloned [1-3], Northern [1]		0
+75177	hsa-miR-31-3p	hsa-miR-31*	MIMAT0004504	experimental	cloned [2]		0
+75178	hsa-miR-32-5p	hsa-miR-32	MIMAT0000090	experimental	cloned [1-2], Northern [1]		0
+75179	hsa-miR-32-3p	hsa-miR-32*	MIMAT0004505	experimental	cloned [2]		0
+75180	hsa-miR-33a-5p	hsa-miR-33;hsa-miR-33a	MIMAT0000091	experimental	cloned [1-2], Northern [1]		0
+75181	hsa-miR-33a-3p	hsa-miR-33a*	MIMAT0004506	experimental	cloned [2]		0
+75182	hsa-miR-92a-1-5p	hsa-miR-92a-1*	MIMAT0004507	experimental	cloned [7-8]		0
+75183	hsa-miR-92a-3p	hsa-miR-92;hsa-miR-92a	MIMAT0000092	experimental	cloned [1,3,5-8], Northern [4]		0
+75184	hsa-miR-92a-2-5p	hsa-miR-92a-2*	MIMAT0004508	experimental	cloned [7]		0
+75186	hsa-miR-93-5p	hsa-miR-93	MIMAT0000093	experimental	cloned [1,3-6], Northern [4]		0
+75187	hsa-miR-93-3p	hsa-miR-93*	MIMAT0004509	experimental	cloned [5]		0
+75188	hsa-miR-95-3p		MIMAT0000094	experimental	cloned [1-2], Illumina [3]		0
+75189	hsa-miR-96-5p	hsa-miR-96	MIMAT0000095	experimental	cloned [1-3]		0
+75190	hsa-miR-96-3p	hsa-miR-96*	MIMAT0004510	experimental	cloned [2]		0
+75191	hsa-miR-98-5p	hsa-miR-98	MIMAT0000096	experimental	cloned [1-3], SOLiD [4]		0
+75192	hsa-miR-99a-5p	hsa-miR-99a	MIMAT0000097	experimental	cloned [1-3]		0
+75193	hsa-miR-99a-3p	hsa-miR-99a*	MIMAT0004511	experimental	cloned [2]		0
+75194	hsa-miR-100-5p	hsa-miR-100	MIMAT0000098	experimental	cloned [1-3], Illumina [4]		0
+75195	hsa-miR-100-3p	hsa-miR-100*	MIMAT0004512	experimental	cloned [2]		0
+75196	hsa-miR-101-5p	hsa-miR-101*	MIMAT0004513	experimental	cloned [3-4]		0
+75197	hsa-miR-101-3p	hsa-miR-101	MIMAT0000099	experimental	cloned [1-4]		0
+75198	hsa-miR-29b-1-5p	hsa-miR-29b-1*	MIMAT0004514	experimental	cloned [3-4]		0
+75199	hsa-miR-29b-3p	hsa-miR-29b	MIMAT0000100	experimental	cloned [1-4], Northern [2]		0
+75200	hsa-miR-29b-2-5p	hsa-miR-29b-2*	MIMAT0004515	experimental	cloned [3]		0
+75202	hsa-miR-103a-2-5p	hsa-miR-103-2*;hsa-miR-103a-2*	MIMAT0009196	experimental	454 [5]		0
+75203	hsa-miR-103a-3p	hsa-miR-103;hsa-miR-103a	MIMAT0000101	experimental	cloned [1-4], Northern [2], Illumina [5]		0
+75205	hsa-miR-105-5p	hsa-miR-105	MIMAT0000102	experimental	cloned [1-2]		0
+75206	hsa-miR-105-3p	hsa-miR-105*	MIMAT0004516	experimental	cloned [2]		0
+75209	hsa-miR-106a-5p	hsa-miR-106a	MIMAT0000103	experimental	cloned [2-3]		0
+75210	hsa-miR-106a-3p	hsa-miR-106a*	MIMAT0004517	experimental	cloned [3]		0
+75211	hsa-miR-107		MIMAT0000104	experimental	cloned [2]		0
+75213	hsa-miR-16-2-3p	hsa-miR-16-2*	MIMAT0004518	experimental	cloned [7]		0
+108819	hsa-miR-203a-5p		MIMAT0031890	not_experimental	\N		0
+75384	hsa-miR-192-5p	hsa-miR-192	MIMAT0000222	experimental	cloned [3-4]		0
+75385	hsa-miR-192-3p	hsa-miR-192*	MIMAT0004543	experimental	cloned [4]		0
+75392	hsa-miR-196a-5p	hsa-miR-196a	MIMAT0000226	experimental	cloned [3-5]		0
+75393	hsa-miR-197-3p	hsa-miR-197	MIMAT0000227	experimental	cloned [1-3]		0
+75394	hsa-miR-198		MIMAT0000228	experimental	cloned [1-2]		0
+75397	hsa-miR-199a-5p	hsa-miR-199a	MIMAT0000231	experimental	cloned [2-4]		0
+75398	hsa-miR-199a-3p	hsa-miR-199a*	MIMAT0000232	experimental	cloned [4], Illumina [5]	MI0000713	0
+75414	hsa-miR-208a-3p	hsa-miR-208	MIMAT0000241	experimental	Illumina [2]	MI0000555	0
+75415	hsa-miR-129-5p	hsa-miR-129	MIMAT0000242	experimental	cloned [2-3]		0
+75416	hsa-miR-129-1-3p	hsa-miR-129*	MIMAT0004548	experimental	cloned [3]		0
+75417	hsa-miR-148a-5p	hsa-miR-148a*	MIMAT0004549	experimental	cloned [3]		0
+75418	hsa-miR-148a-3p	hsa-miR-148a	MIMAT0000243	experimental	cloned [1-3], Northern [2]		0
+75419	hsa-miR-30c-5p	hsa-miR-30c	MIMAT0000244	experimental	cloned [2,4-6]	MI0000547	0
+75420	hsa-miR-30c-2-3p	hsa-miR-30c-2*	MIMAT0004550	experimental	cloned [5]		0
+75421	hsa-miR-30d-5p	hsa-miR-30d	MIMAT0000245	experimental	cloned [2-4]	MI0000549	0
+75422	hsa-miR-30d-3p	hsa-miR-30d*	MIMAT0004551	experimental	cloned [2]		0
+75429	hsa-miR-139-5p	hsa-miR-139	MIMAT0000250	experimental	cloned [2]	MI0000693	0
+75430	hsa-miR-139-3p		MIMAT0004552	experimental	cloned [2]		0
+75431	hsa-miR-147a	hsa-miR-147	MIMAT0000251	not_experimental	\N		0
+75432	hsa-miR-7-5p	hsa-miR-7	MIMAT0000252	experimental	cloned [2-3]	MI0001362	0
+75433	hsa-miR-7-1-3p	hsa-miR-7-1*	MIMAT0004553	experimental	cloned [2]		0
+75435	hsa-miR-7-2-3p	hsa-miR-7-2*	MIMAT0004554	experimental	cloned [2]		0
+75437	hsa-miR-10a-5p	hsa-miR-10a	MIMAT0000253	experimental	cloned [2-3]	MI0001363	0
+75438	hsa-miR-10a-3p	hsa-miR-10a*	MIMAT0004555	experimental	cloned [2]		0
+75439	hsa-miR-10b-5p	hsa-miR-10b	MIMAT0000254	experimental	cloned [2-4]		0
+75440	hsa-miR-10b-3p	hsa-miR-10b*	MIMAT0004556	experimental	cloned [3]		0
+75441	hsa-miR-34a-5p	hsa-miR-34a	MIMAT0000255	experimental	cloned [2-4]		0
+75442	hsa-miR-34a-3p	hsa-miR-34a*	MIMAT0004557	experimental	cloned [3]		0
+75443	hsa-miR-181a-5p	hsa-miR-181a	MIMAT0000256	experimental	cloned [2,4-6]		0
+75444	hsa-miR-181a-2-3p	hsa-miR-181a-2*	MIMAT0004558	experimental	cloned [4]		0
+75445	hsa-miR-181b-5p	hsa-miR-181b	MIMAT0000257	experimental	cloned [3-5]	MI0001367	0
+75446	hsa-miR-181c-5p	hsa-miR-181c	MIMAT0000258	experimental	cloned [2]	MI0001380	0
+75447	hsa-miR-181c-3p	hsa-miR-181c*	MIMAT0004559	experimental	cloned [2]		0
+75448	hsa-miR-182-5p	hsa-miR-182	MIMAT0000259	experimental	cloned [2-3]	MI0001368	0
+75449	hsa-miR-182-3p	hsa-miR-182*	MIMAT0000260	not_experimental	\N	MI0001368	0
+75450	hsa-miR-183-5p	hsa-miR-183	MIMAT0000261	experimental	cloned [2-4]		0
+75451	hsa-miR-183-3p	hsa-miR-183*	MIMAT0004560	experimental	cloned [3]		0
+75452	hsa-miR-187-5p	hsa-miR-187*	MIMAT0004561	experimental	cloned [2]		0
+75453	hsa-miR-187-3p	hsa-miR-187	MIMAT0000262	experimental	cloned [2]	MI0001370	0
+75455	hsa-miR-196a-3p	hsa-miR-196a*	MIMAT0004562	experimental	cloned [4]		0
+75458	hsa-miR-199b-5p	hsa-miR-199b	MIMAT0000263	experimental	cloned [2-3]		0
+75459	hsa-miR-199b-3p		MIMAT0004563	experimental	cloned [3]		0
+75460	hsa-miR-203a-3p	hsa-miR-203a	MIMAT0000264	experimental	cloned [2]	MI0001376	0
+75461	hsa-miR-204-5p	hsa-miR-204	MIMAT0000265	experimental	cloned [2]	MI0001377	0
+75462	hsa-miR-205-5p	hsa-miR-205	MIMAT0000266	experimental	cloned [2-3]	MI0001378	0
+75463	hsa-miR-205-3p	hsa-miR-205*	MIMAT0009197	experimental	454 [4]		0
+75464	hsa-miR-210-3p		MIMAT0000267	experimental	cloned [2-4], Illumina [5]	MI0001379	0
+75465	hsa-miR-211-5p	hsa-miR-211	MIMAT0000268	not_experimental	\N	MI0001377	0
+75466	hsa-miR-212-3p	hsa-miR-212	MIMAT0000269	not_experimental	\N	MI0003385	0
+75468	hsa-miR-181a-3p	hsa-miR-213;hsa-miR-181a*	MIMAT0000270	experimental	cloned [4]	MI0001380	0
+75469	hsa-miR-214-5p	hsa-miR-214*	MIMAT0004564	experimental	cloned [2-3], Northern [3]		0
+75470	hsa-miR-214-3p	hsa-miR-214	MIMAT0000271	experimental	cloned [2]	MI0001381	0
+75471	hsa-miR-215-5p		MIMAT0000272	experimental	cloned [2], Illumina [3]		0
+75472	hsa-miR-216a-5p	hsa-miR-216;hsa-miR-216a	MIMAT0000273	experimental	cloned [2], SOLiD [3]	MI0001382	0
+75473	hsa-miR-217-5p		MIMAT0000274	experimental	cloned [2]	MI0001383	0
+75474	hsa-miR-218-5p	hsa-miR-218	MIMAT0000275	experimental	cloned [2-3]	MI0000957	0
+75475	hsa-miR-218-1-3p	hsa-miR-218-1*	MIMAT0004565	experimental	cloned [2]		0
+75477	hsa-miR-218-2-3p	hsa-miR-218-2*	MIMAT0004566	experimental	cloned [2]		0
+75478	hsa-miR-219a-5p	hsa-miR-219	MIMAT0000276	experimental	cloned [3]	MI0001385	0
+75479	hsa-miR-219a-1-3p		MIMAT0004567	experimental	cloned [3]		0
+75480	hsa-miR-221-5p	hsa-miR-221*	MIMAT0004568	experimental	cloned [3]		0
+75481	hsa-miR-221-3p	hsa-miR-221	MIMAT0000278	experimental	cloned [2-4], Illumina [5]	MI0001387	0
+75482	hsa-miR-222-5p	hsa-miR-222*	MIMAT0004569	experimental	cloned [4]		0
+75483	hsa-miR-222-3p	hsa-miR-222	MIMAT0000279	experimental	cloned [2-5], Northern [2]		0
+75484	hsa-miR-223-5p	hsa-miR-223*	MIMAT0004570	experimental	cloned [2]		0
+75485	hsa-miR-223-3p	hsa-miR-223	MIMAT0000280	experimental	cloned [2]	MI0001389	0
+75486	hsa-miR-224-5p	hsa-miR-224	MIMAT0000281	experimental	cloned [1-4]		0
+75487	hsa-miR-224-3p	hsa-miR-224*	MIMAT0009198	experimental	qRT-PCR [5], 454 [6]		0
+75535	hsa-miR-200b-5p	hsa-miR-200b*	MIMAT0004571	experimental	cloned [4]		0
+75536	hsa-miR-200b-3p	hsa-miR-200b	MIMAT0000318	experimental	Northern [1], cloned [2-5]		0
+75649	hsa-let-7g-5p	hsa-let-7g	MIMAT0000414	experimental	cloned [2-3], Illumina [4]	MI0000137	0
+75650	hsa-let-7g-3p	hsa-let-7g*	MIMAT0004584	experimental	cloned [2]		0
+75651	hsa-let-7i-5p	hsa-let-7i	MIMAT0000415	experimental	cloned [2-3], Illumina [5]	MI0000138	0
+75652	hsa-let-7i-3p	hsa-let-7i*	MIMAT0004585	experimental	cloned [2-4]		0
+75653	hsa-miR-1-3p	hsa-miR-1	MIMAT0000416	experimental	cloned [2], Illumina [3]	MI0000139	0
+75654	hsa-miR-15b-5p	hsa-miR-15b	MIMAT0000417	experimental	cloned [2-5]		0
+75655	hsa-miR-15b-3p	hsa-miR-15b*	MIMAT0004586	experimental	cloned [4-5]		0
+75656	hsa-miR-23b-5p	hsa-miR-23b*	MIMAT0004587	experimental	cloned [3]		0
+75657	hsa-miR-23b-3p	hsa-miR-23b	MIMAT0000418	experimental	cloned [2-3]	MI0000141	0
+75658	hsa-miR-27b-5p	hsa-miR-27b*	MIMAT0004588	experimental	cloned [4-5]		0
+75659	hsa-miR-27b-3p	hsa-miR-27b	MIMAT0000419	experimental	cloned [2-5]		0
+75660	hsa-miR-30b-5p	hsa-miR-30b	MIMAT0000420	experimental	cloned [2-3]	MI0000145	0
+75661	hsa-miR-30b-3p	hsa-miR-30b*	MIMAT0004589	experimental	cloned [2]		0
+75662	hsa-miR-122-5p	hsa-miR-122a;hsa-miR-122	MIMAT0000421	experimental	cloned [2-3], Northern [2]	MI0000256	0
+75663	hsa-miR-122-3p	hsa-miR-122*	MIMAT0004590	experimental	cloned [3]		0
+75664	hsa-miR-124-5p	hsa-miR-124*	MIMAT0004591	experimental	cloned [5]		0
+75665	hsa-miR-124-3p	hsa-miR-124a;hsa-miR-124	MIMAT0000422	experimental	cloned [2,4-5]		0
+75670	hsa-miR-125b-5p	hsa-miR-125b	MIMAT0000423	experimental	cloned [2,4-6], Illumina [7]	MI0000725	0
+75671	hsa-miR-125b-1-3p	hsa-miR-125b-1*	MIMAT0004592	experimental	cloned [5]		0
+75672	hsa-miR-128-3p	hsa-miR-128a	MIMAT0000424	experimental	cloned [3], Illumina [4]	MI0000901	0
+75673	hsa-miR-130a-5p	hsa-miR-130a*	MIMAT0004593	experimental	cloned [3]		0
+75674	hsa-miR-130a-3p	hsa-miR-130a	MIMAT0000425	experimental	cloned [2-4], Northern [2]		0
+75675	hsa-miR-132-5p	hsa-miR-132*	MIMAT0004594	experimental	cloned [2]		0
+75676	hsa-miR-132-3p	hsa-miR-132	MIMAT0000426	experimental	cloned [2-3]	MI0000158	0
+75677	hsa-miR-133a-3p		MIMAT0000427	experimental	cloned [2], Illumina [3]	MI0000820	0
+75679	hsa-miR-135a-5p	hsa-miR-135a	MIMAT0000428	experimental	cloned [2-3]		0
+75680	hsa-miR-135a-3p	hsa-miR-135a*	MIMAT0004595	experimental	cloned [3]		0
+75682	hsa-miR-137-3p		MIMAT0000429	experimental	cloned [2]	MI0000163	0
+75683	hsa-miR-138-5p	hsa-miR-138	MIMAT0000430	experimental	cloned [2]	MI0000722	0
+75684	hsa-miR-138-2-3p	hsa-miR-138-2*	MIMAT0004596	experimental	cloned [2]		0
+75685	hsa-miR-140-5p	hsa-miR-140	MIMAT0000431	experimental	cloned [2-3]	MI0000165	0
+75686	hsa-miR-140-3p		MIMAT0004597	experimental	cloned [3-4]		0
+75687	hsa-miR-141-5p	hsa-miR-141*	MIMAT0004598	experimental	cloned [3]		0
+75688	hsa-miR-141-3p	hsa-miR-141	MIMAT0000432	experimental	cloned [2-4]		0
+75689	hsa-miR-142-5p		MIMAT0000433	experimental	cloned [3-4]	MI0000167	0
+75690	hsa-miR-142-3p		MIMAT0000434	experimental	cloned [2-4]		0
+75691	hsa-miR-143-5p	hsa-miR-143*	MIMAT0004599	experimental	cloned [3]		0
+75692	hsa-miR-143-3p	hsa-miR-143	MIMAT0000435	experimental	cloned [2-3], Illumina [4]		0
+75693	hsa-miR-144-5p	hsa-miR-144*	MIMAT0004600	experimental	cloned [2]		0
+75694	hsa-miR-144-3p	hsa-miR-144	MIMAT0000436	experimental	cloned [2]	MI0000168	0
+75695	hsa-miR-145-5p	hsa-miR-145	MIMAT0000437	experimental	cloned [2-4]		0
+75696	hsa-miR-145-3p	hsa-miR-145*	MIMAT0004601	experimental	cloned [4]		0
+75697	hsa-miR-152-3p		MIMAT0000438	experimental	cloned [2-3], Illumina [4-5]	MI0000174	0
+75698	hsa-miR-153-3p		MIMAT0000439	experimental	cloned [2], Illumina [3]	MI0000175	0
+75700	hsa-miR-191-5p	hsa-miR-191	MIMAT0000440	experimental	cloned [2-5]	MI0000233	0
+75701	hsa-miR-191-3p	hsa-miR-191*	MIMAT0001618	experimental	cloned [2-4]		0
+75702	hsa-miR-9-5p	hsa-miR-9	MIMAT0000441	experimental	cloned [2]	MI0000721	0
+75703	hsa-miR-9-3p	hsa-miR-9*	MIMAT0000442	experimental	cloned [2]	MI0000721	0
+75708	hsa-miR-125a-5p	hsa-miR-125a	MIMAT0000443	experimental	cloned [2-3]	MI0000151	0
+75709	hsa-miR-125a-3p		MIMAT0004602	experimental	cloned [2-3]		0
+75711	hsa-miR-125b-2-3p	hsa-miR-125b-2*	MIMAT0004603	experimental	cloned [5]		0
+75712	hsa-miR-126-5p	hsa-miR-126*	MIMAT0000444	experimental	cloned [2]	MI0000153	0
+75713	hsa-miR-126-3p	hsa-miR-126	MIMAT0000445	experimental	cloned [2]	MI0000153	0
+75714	hsa-miR-127-5p		MIMAT0004604	experimental	cloned [3-4]		0
+75715	hsa-miR-127-3p	hsa-miR-127	MIMAT0000446	experimental	cloned [2-3]	MI0000899	0
+75717	hsa-miR-129-2-3p	hsa-miR-129-3p	MIMAT0004605	experimental	cloned [3]		0
+75718	hsa-miR-134-5p		MIMAT0000447	experimental	cloned [2-4], Illumina [5]		0
+75719	hsa-miR-136-5p	hsa-miR-136	MIMAT0000448	experimental	cloned [2-4]		0
+75720	hsa-miR-136-3p	hsa-miR-136*	MIMAT0004606	experimental	cloned [4]		0
+75722	hsa-miR-138-1-3p	hsa-miR-138-1*	MIMAT0004607	experimental	cloned [2]		0
+75723	hsa-miR-146a-5p	hsa-miR-146;hsa-miR-146a	MIMAT0000449	experimental	cloned [2-3]	MI0000170	0
+75724	hsa-miR-146a-3p	hsa-miR-146a*	MIMAT0004608	experimental	cloned [3]		0
+75725	hsa-miR-149-5p	hsa-miR-149	MIMAT0000450	experimental	cloned [2-3]	MI0000171	0
+75726	hsa-miR-149-3p	hsa-miR-149*	MIMAT0004609	experimental	cloned [3]		0
+75727	hsa-miR-150-5p	hsa-miR-150	MIMAT0000451	experimental	cloned [2]	MI0000172	0
+75728	hsa-miR-150-3p	hsa-miR-150*	MIMAT0004610	experimental	cloned [2]		0
+75729	hsa-miR-154-5p	hsa-miR-154	MIMAT0000452	experimental	cloned [3-4]	MI0000176	0
+75730	hsa-miR-154-3p	hsa-miR-154*	MIMAT0000453	experimental	cloned [2,4], Northern [2]	MI0000176	0
+75731	hsa-miR-184		MIMAT0000454	experimental	cloned [2]	MI0000226	0
+75732	hsa-miR-185-5p	hsa-miR-185	MIMAT0000455	experimental	cloned [2-4], Illumina [5]	MI0000227	0
+75733	hsa-miR-185-3p	hsa-miR-185*	MIMAT0004611	experimental	cloned [3]		0
+75734	hsa-miR-186-5p	hsa-miR-186	MIMAT0000456	experimental	cloned [1-3]		0
+75735	hsa-miR-186-3p	hsa-miR-186*	MIMAT0004612	experimental	cloned [2]		0
+75736	hsa-miR-188-5p	hsa-miR-188	MIMAT0000457	experimental	cloned [2]	MI0000230	0
+75737	hsa-miR-188-3p		MIMAT0004613	experimental	cloned [2-3]		0
+75738	hsa-miR-190a-5p	hsa-miR-190	MIMAT0000458	experimental	cloned [2], Illumina [3]	MI0000232	0
+75739	hsa-miR-193a-5p		MIMAT0004614	experimental	cloned [2-3]		0
+75740	hsa-miR-193a-3p	hsa-miR-193;hsa-miR-193a	MIMAT0000459	experimental	cloned [2-3]	MI0000235	0
+75741	hsa-miR-194-5p	hsa-miR-194	MIMAT0000460	experimental	cloned [2-3]		0
+75742	hsa-miR-195-5p	hsa-miR-195	MIMAT0000461	experimental	cloned [2]	MI0000237	0
+75743	hsa-miR-195-3p	hsa-miR-195*	MIMAT0004615	experimental	cloned [2]		0
+75744	hsa-miR-206		MIMAT0000462	experimental	cloned [2]	MI0000249	0
+75793	hsa-miR-320a-3p	hsa-miR-320	MIMAT0000510	experimental	cloned [1-4], Illumina [5]		0
+108822	hsa-miR-181b-2-3p		MIMAT0031893	not_experimental	\N		0
+108821	hsa-miR-1-5p		MIMAT0031892	not_experimental	\N		0
+75989	hsa-miR-200c-5p	hsa-miR-200c*	MIMAT0004657	experimental	cloned [3]		0
+75990	hsa-miR-200c-3p	hsa-miR-200c	MIMAT0000617	experimental	cloned [1-4], Northern [2]		0
+76023	hsa-miR-155-5p	hsa-miR-155	MIMAT0000646	experimental	cloned [2,5-7]	MI0000177	0
+76024	hsa-miR-155-3p	hsa-miR-155*	MIMAT0004658	experimental	cloned [5]		0
+76118	hsa-miR-194-3p	hsa-miR-194*	MIMAT0004671	experimental	cloned [3]		0
+76121	hsa-miR-106b-5p	hsa-miR-106b	MIMAT0000680	experimental	cloned [3-6]	MI0000407	0
+76122	hsa-miR-106b-3p	hsa-miR-106b*	MIMAT0004672	experimental	cloned [5-7], Northern [7]		0
+76123	hsa-miR-29c-5p	hsa-miR-29c*	MIMAT0004673	experimental	cloned [3]		0
+76124	hsa-miR-29c-3p	hsa-miR-29c	MIMAT0000681	experimental	cloned [2-4]		0
+76126	hsa-miR-30c-1-3p	hsa-miR-30c-1*	MIMAT0004674	experimental	cloned [5]		0
+76127	hsa-miR-200a-5p	hsa-miR-200a*	MIMAT0001620	experimental	cloned [3-4]		0
+76128	hsa-miR-200a-3p	hsa-miR-200a	MIMAT0000682	experimental	cloned [3-5]	MI0000554	0
+76129	hsa-miR-302a-5p	hsa-miR-302a*	MIMAT0000683	experimental	cloned [2,4], Northern [2]		0
+76130	hsa-miR-302a-3p	hsa-miR-302a	MIMAT0000684	experimental	cloned [2,4], Northern [2]		0
+76133	hsa-miR-219a-2-3p		MIMAT0004675	experimental	cloned [3]		0
+76136	hsa-miR-34b-5p	hsa-miR-34b;hsa-miR-34b*	MIMAT0000685	not_experimental	\N	MI0000404	0
+76137	hsa-miR-34b-3p	hsa-miR-34b	MIMAT0004676	experimental	cloned [2]		0
+76138	hsa-miR-34c-5p	hsa-miR-34c	MIMAT0000686	experimental	cloned [2]	MI0000403	0
+76139	hsa-miR-34c-3p		MIMAT0004677	experimental	cloned [2]		0
+76140	hsa-miR-299-5p		MIMAT0002890	experimental	cloned [4]	MI0000399	0
+76141	hsa-miR-299-3p	hsa-miR-299;hsa-miR-299-5p	MIMAT0000687	experimental	cloned [3-4]		0
+76142	hsa-miR-301a-3p	hsa-miR-301;hsa-miR-301a	MIMAT0000688	experimental	cloned [2,4], Northern [2]		0
+76143	hsa-miR-99b-5p	hsa-miR-99b	MIMAT0000689	experimental	cloned [4-6]	MI0000147	0
+76144	hsa-miR-99b-3p	hsa-miR-99b*	MIMAT0004678	experimental	cloned [5]		0
+76145	hsa-miR-296-5p	hsa-miR-296	MIMAT0000690	experimental	cloned [2,4-5]		0
+76146	hsa-miR-296-3p		MIMAT0004679	experimental	cloned [4]		0
+76147	hsa-miR-130b-5p	hsa-miR-130b*	MIMAT0004680	experimental	cloned [4-5]		0
+76148	hsa-miR-130b-3p	hsa-miR-130b	MIMAT0000691	experimental	cloned [3-5]	MI0000408	0
+76149	hsa-miR-30e-5p	hsa-miR-30e-5p;hsa-miR-30e	MIMAT0000692	experimental	cloned [3,5-6]		0
+76150	hsa-miR-30e-3p	hsa-miR-30e-3p;hsa-miR-30e*	MIMAT0000693	experimental	cloned [3,5]		0
+76152	hsa-miR-26a-2-3p	hsa-miR-26a-2*	MIMAT0004681	experimental	cloned [6]		0
+76164	hsa-miR-361-5p	hsa-miR-361	MIMAT0000703	experimental	cloned [2]	MI0000761	0
+76165	hsa-miR-361-3p		MIMAT0004682	experimental	cloned [2-3], Northern [3]		0
+76168	hsa-miR-362-5p	hsa-miR-362	MIMAT0000705	experimental	array-cloned [1], cloned [2-3]		0
+76169	hsa-miR-362-3p		MIMAT0004683	experimental	cloned [3]		0
+76172	hsa-miR-363-5p	hsa-miR-363*	MIMAT0003385	experimental	cloned [2-3]		0
+76173	hsa-miR-363-3p	hsa-miR-363	MIMAT0000707	experimental	array-cloned [1], cloned [2-3]	MI0002067	0
+76176	hsa-miR-365a-3p	hsa-miR-365	MIMAT0000710	experimental	cloned [1,3-4], array-cloned [2]		0
+76181	hsa-miR-302b-5p	hsa-miR-302b*	MIMAT0000714	experimental	cloned [1-2], Northern [1]		0
+76182	hsa-miR-302b-3p	hsa-miR-302b	MIMAT0000715	experimental	cloned [1-2], Northern [1]		0
+76183	hsa-miR-302c-5p	hsa-miR-302c*	MIMAT0000716	experimental	cloned [1-2], Northern [1]		0
+76184	hsa-miR-302c-3p	hsa-miR-302c	MIMAT0000717	experimental	cloned [1-2], Northern [1]		0
+76185	hsa-miR-302d-5p	hsa-miR-302d*	MIMAT0004685	experimental	cloned [2]		0
+76186	hsa-miR-302d-3p	hsa-miR-302d	MIMAT0000718	experimental	cloned [1-2], Northern [1]		0
+76187	hsa-miR-367-5p	hsa-miR-367*	MIMAT0004686	experimental	cloned [3]		0
+76188	hsa-miR-367-3p	hsa-miR-367	MIMAT0000719	experimental	cloned [1-3], Northern [1]		0
+76189	hsa-miR-376c-3p	hsa-miR-368;hsa-miR-376c	MIMAT0000720	experimental	cloned [1-2,4], Northern [1], SOLiD [5]		0
+76190	hsa-miR-369-5p		MIMAT0001621	experimental	cloned [2-4]		0
+76191	hsa-miR-369-3p	hsa-miR-369	MIMAT0000721	experimental	cloned [1-4]		0
+76192	hsa-miR-370-3p		MIMAT0000722	experimental	cloned [1-3], Illumina [4]		0
+76193	hsa-miR-371a-5p	hsa-miR-371-5p	MIMAT0004687	experimental	cloned [2]		0
+76194	hsa-miR-371a-3p	hsa-miR-371;hsa-miR-371-3p	MIMAT0000723	experimental	cloned [1-2], Northern [1]		0
+76195	hsa-miR-372-3p		MIMAT0000724	experimental	cloned [1-2], Northern [1], Illumina [3]		0
+76196	hsa-miR-373-5p	hsa-miR-373*	MIMAT0000725	experimental	cloned [1]		0
+76197	hsa-miR-373-3p	hsa-miR-373	MIMAT0000726	experimental	cloned [1-2], Northern [1]		0
+76198	hsa-miR-374a-5p	hsa-miR-374;hsa-miR-374a	MIMAT0000727	experimental	cloned [1-4], Northern [1]		0
+76199	hsa-miR-374a-3p	hsa-miR-374a*	MIMAT0004688	experimental	cloned [3]		0
+76200	hsa-miR-375-3p		MIMAT0000728	experimental	cloned [2]	MI0000792	0
+76201	hsa-miR-376a-5p	hsa-miR-376a*	MIMAT0003386	experimental	cloned [2,4]		0
+76202	hsa-miR-376a-3p	hsa-miR-376a	MIMAT0000729	experimental	cloned [1,3], SOLiD [4]		0
+76203	hsa-miR-377-5p	hsa-miR-377*	MIMAT0004689	experimental	cloned [3]		0
+76204	hsa-miR-377-3p	hsa-miR-377	MIMAT0000730	experimental	cloned [1-3]	MI0000794	0
+76205	hsa-miR-378a-5p	hsa-miR-378;hsa-miR-378*	MIMAT0000731	experimental	cloned [3]	MI0000795	0
+76206	hsa-miR-378a-3p	hsa-miR-422b;hsa-miR-378	MIMAT0000732	experimental	cloned [2-3], Northern [2]		0
+76207	hsa-miR-379-5p	hsa-miR-379	MIMAT0000733	experimental	cloned [2-4]	MI0000796	0
+76208	hsa-miR-379-3p	hsa-miR-379*	MIMAT0004690	experimental	cloned [4]		0
+76209	hsa-miR-380-5p	hsa-miR-380-5p;hsa-miR-380*	MIMAT0000734	not_experimental	\N	MI0000797	0
+76210	hsa-miR-380-3p	hsa-miR-380-3p;hsa-miR-380	MIMAT0000735	experimental	cloned [3]	MI0000797	0
+76211	hsa-miR-381-3p	hsa-miR-381	MIMAT0000736	experimental	cloned [1-2], SOLiD [3]	MI0000798	0
+76212	hsa-miR-382-5p	hsa-miR-382	MIMAT0000737	experimental	cloned [1-3]	MI0000799	0
+76213	hsa-miR-383-5p		MIMAT0000738	experimental	cloned [2], Illumina [3]	MI0000800	0
+76233	hsa-miR-340-5p	hsa-miR-340	MIMAT0004692	experimental	cloned [3]		0
+76234	hsa-miR-340-3p	hsa-miR-340;hsa-miR-340*	MIMAT0000750	experimental	cloned [3]	MI0000622	0
+76235	hsa-miR-330-5p		MIMAT0004693	experimental	cloned [3-4]		0
+76236	hsa-miR-330-3p	hsa-miR-330	MIMAT0000751	experimental	cloned [3]	MI0000606	0
+76237	hsa-miR-328-3p		MIMAT0000752	experimental	cloned [3], Illumina [4]	MI0000602	0
+76238	hsa-miR-342-5p		MIMAT0004694	experimental	cloned [3-5], Northern [5]		0
+76239	hsa-miR-342-3p	hsa-miR-342	MIMAT0000753	experimental	cloned [3-4]	MI0000626	0
+76240	hsa-miR-337-5p		MIMAT0004695	experimental	cloned [3]		0
+76241	hsa-miR-337-3p	hsa-miR-337	MIMAT0000754	experimental	cloned [3]	MI0000614	0
+76242	hsa-miR-323a-5p	hsa-miR-323-5p	MIMAT0004696	experimental	cloned [3]		0
+76243	hsa-miR-323a-3p	hsa-miR-323;hsa-miR-323-3p	MIMAT0000755	experimental	cloned [3]	MI0000591	0
+76244	hsa-miR-326		MIMAT0000756	experimental	cloned [3]	MI0000599	0
+76245	hsa-miR-151a-5p	hsa-miR-151-5p	MIMAT0004697	experimental	cloned [4-5]		0
+76246	hsa-miR-151a-3p	hsa-miR-151;hsa-miR-151-3p	MIMAT0000757	experimental	cloned [3-5], Northern [3]	MI0000647	0
+76247	hsa-miR-135b-5p	hsa-miR-135b	MIMAT0000758	experimental	cloned [3-4]	MI0000645	0
+76248	hsa-miR-135b-3p	hsa-miR-135b*	MIMAT0004698	experimental	cloned [3]		0
+76249	hsa-miR-148b-5p	hsa-miR-148b*	MIMAT0004699	experimental	cloned [3]		0
+76250	hsa-miR-148b-3p	hsa-miR-148b	MIMAT0000759	experimental	cloned [3-4]	MI0000616	0
+76251	hsa-miR-331-5p		MIMAT0004700	experimental	cloned [3]		0
+76252	hsa-miR-331-3p	hsa-miR-331	MIMAT0000760	experimental	cloned [3-4]	MI0000608	0
+76253	hsa-miR-324-5p		MIMAT0000761	experimental	cloned [4-5]	MI0000594	0
+76254	hsa-miR-324-3p		MIMAT0000762	experimental	cloned [3-5]	MI0000594	0
+76255	hsa-miR-338-5p		MIMAT0004701	experimental	cloned [3-4]		0
+76256	hsa-miR-338-3p	hsa-miR-338	MIMAT0000763	experimental	cloned [3]	MI0000618	0
+76257	hsa-miR-339-5p	hsa-miR-339	MIMAT0000764	experimental	cloned [2,4]	MI0000620	0
+76258	hsa-miR-339-3p		MIMAT0004702	experimental	cloned [4]		0
+76259	hsa-miR-335-5p	hsa-miR-335	MIMAT0000765	experimental	cloned [3-4]	MI0000612	0
+76260	hsa-miR-335-3p	hsa-miR-335*	MIMAT0004703	experimental	cloned [3]		0
+76269	hsa-miR-133b		MIMAT0000770	experimental	cloned [2]	MI0000820	0
+76272	hsa-miR-325		MIMAT0000771	not_experimental	\N	MI0000596	0
+76273	hsa-miR-345-5p	hsa-miR-345	MIMAT0000772	experimental	cloned [3-4], Northern [3]	MI0000631	0
+76274	hsa-miR-346		MIMAT0000773	not_experimental	\N	MI0000633	0
+76727	hsa-miR-384		MIMAT0001075	not_experimental	\N	MI0001146	0
+76734	hsa-miR-196b-5p	hsa-miR-196b	MIMAT0001080	experimental	cloned [2-3]	MI0000238	0
+76735	hsa-miR-196b-3p	hsa-miR-196b*	MIMAT0009201	experimental	454 [4]		0
+77042	hsa-miR-422a		MIMAT0001339	experimental	cloned [2]	MI0000786	0
+77043	hsa-miR-423-5p		MIMAT0004748	experimental	cloned [2-4], Northern [4], Illumina [5]		0
+77044	hsa-miR-423-3p	hsa-miR-423	MIMAT0001340	experimental	cloned [1-2], Northern [1]		0
+77045	hsa-miR-424-5p	hsa-miR-424	MIMAT0001341	experimental	cloned [1-2], Northern [1]		0
+77046	hsa-miR-424-3p	hsa-miR-424*	MIMAT0004749	experimental	cloned [2-3]		0
+77049	hsa-miR-425-5p	hsa-miR-425-5p;hsa-miR-425	MIMAT0003393	experimental	cloned [2-4]		0
+77050	hsa-miR-425-3p	hsa-miR-425;hsa-miR-425-3p;hsa-miR-425*	MIMAT0001343	experimental	cloned [2-3]	MI0001447	0
+77154	hsa-miR-18b-5p	hsa-miR-18b	MIMAT0001412	experimental	cloned [2]	MI0000072	0
+77155	hsa-miR-18b-3p	hsa-miR-18b*	MIMAT0004751	experimental	cloned [2]		0
+77156	hsa-miR-20b-5p	hsa-miR-20b	MIMAT0001413	experimental	array-cloned [2], cloned [3-5]	MI0000076	0
+77157	hsa-miR-20b-3p	hsa-miR-20b*	MIMAT0004752	experimental	cloned [4]		0
+77274	hsa-miR-448		MIMAT0001532	experimental	cloned [1]		0
+77280	hsa-miR-429		MIMAT0001536	experimental	cloned [1-4]		0
+77288	hsa-miR-449a	hsa-miR-449	MIMAT0001541	experimental	cloned [1-2]		0
+77294	hsa-miR-450a-5p	hsa-miR-450;hsa-miR-450a	MIMAT0001545	experimental	array-cloned [1,3], cloned [1,4]		0
+77370	hsa-miR-431-5p	hsa-miR-431	MIMAT0001625	experimental	cloned [1-2]		0
+77371	hsa-miR-431-3p	hsa-miR-431*	MIMAT0004757	experimental	cloned [2]		0
+77373	hsa-miR-433-3p		MIMAT0001627	experimental	cloned [1-2], Illumina [3]		0
+77376	hsa-miR-329-3p		MIMAT0001629	experimental	cloned [1,3-4], array-cloned [2], Illumina [5]		0
+77378	hsa-miR-451a	hsa-miR-451	MIMAT0001631	experimental	cloned [1-3]		0
+77383	hsa-miR-452-5p	hsa-miR-452	MIMAT0001635	experimental	cloned [1,3-5], array-cloned [2]		0
+77384	hsa-miR-452-3p	hsa-miR-452*	MIMAT0001636	experimental	array-cloned [2], cloned [4]		0
+77387	hsa-miR-409-5p		MIMAT0001638	experimental	cloned [1,3-4]		0
+77388	hsa-miR-409-3p		MIMAT0001639	experimental	cloned [1,3-4], array-cloned [2]		0
+78138	hsa-miR-412-3p		MIMAT0002170	not_experimental	\N	MI0001164	0
+78139	hsa-miR-410-3p		MIMAT0002171	experimental	array-cloned [2], cloned [3-5], Northern [3], Illumina [6]	MI0001161	0
+78140	hsa-miR-376b-3p	hsa-miR-376b	MIMAT0002172	experimental	cloned [3], SOLiD [4]	MI0001162	0
+78141	hsa-miR-483-5p		MIMAT0004761	experimental	cloned [2]		0
+78142	hsa-miR-483-3p	hsa-miR-483	MIMAT0002173	experimental	cloned [1-2], Northern [1]		0
+78143	hsa-miR-484		MIMAT0002174	experimental	cloned [1-3], Northern [1]		0
+78144	hsa-miR-485-5p		MIMAT0002175	experimental	array-cloned [2], cloned [3]		0
+78145	hsa-miR-485-3p		MIMAT0002176	experimental	cloned [1,3], array-cloned [2]		0
+78146	hsa-miR-486-5p	hsa-miR-486	MIMAT0002177	experimental	Illumina [1]		0
+78147	hsa-miR-486-3p		MIMAT0004762	experimental	Illumina [1]		0
+78148	hsa-miR-487a-3p	hsa-miR-487	MIMAT0002178	experimental	cloned [1-3], Northern [1], Illumina [4]		0
+78832	hsa-miR-488-5p	hsa-miR-488;hsa-miR-488*	MIMAT0002804	experimental	array-cloned [1]		0
+78833	hsa-miR-488-3p	hsa-miR-488	MIMAT0004763	experimental	cloned [2]		0
+78834	hsa-miR-489-3p		MIMAT0002805	experimental	array-cloned [1], cloned [2], Illumina [3]		0
+78835	hsa-miR-490-5p		MIMAT0004764	experimental	cloned [2-3]		0
+78836	hsa-miR-490-3p	hsa-miR-490	MIMAT0002806	experimental	array-cloned [1]		0
+78837	hsa-miR-491-5p	hsa-miR-491	MIMAT0002807	experimental	array-cloned [1], cloned [2-3]		0
+78838	hsa-miR-491-3p		MIMAT0004765	experimental	cloned [2]		0
+78839	hsa-miR-511-5p		MIMAT0002808	experimental	array-cloned [1], Illumina [2]		0
+78841	hsa-miR-146b-5p	hsa-miR-146b	MIMAT0002809	experimental	array-cloned [1], cloned [2]		0
+78842	hsa-miR-146b-3p		MIMAT0004766	experimental	cloned [2]		0
+78843	hsa-miR-202-5p	hsa-miR-202*	MIMAT0002810	experimental	array-cloned [1], cloned [2]		0
+78844	hsa-miR-202-3p	hsa-miR-202	MIMAT0002811	experimental	cloned [2]	MI0000245	0
+78845	hsa-miR-492		MIMAT0002812	experimental	array-cloned [1]		0
+78846	hsa-miR-493-5p	hsa-miR-493;hsa-miR-493-5p;hsa-miR-493*	MIMAT0002813	experimental	array-cloned [1], cloned [2-3]		0
+78847	hsa-miR-493-3p	hsa-miR-493-3p;hsa-miR-493	MIMAT0003161	experimental	cloned [2-3]		0
+78848	hsa-miR-432-5p	hsa-miR-432	MIMAT0002814	experimental	array-cloned [1], cloned [2-3]		0
+78849	hsa-miR-432-3p	hsa-miR-432*	MIMAT0002815	experimental	array-cloned [1]		0
+78850	hsa-miR-494-3p		MIMAT0002816	experimental	array-cloned [1], cloned [2-3], Illumina [4]		0
+78851	hsa-miR-495-3p	hsa-miR-495	MIMAT0002817	experimental	array-cloned [1], cloned [2], SOLiD [3]		0
+78852	hsa-miR-496		MIMAT0002818	experimental	array-cloned [1], cloned [2]		0
+78853	hsa-miR-193b-5p	hsa-miR-193b*	MIMAT0004767	experimental	cloned [3-4]		0
+78854	hsa-miR-193b-3p	hsa-miR-193b	MIMAT0002819	experimental	array-cloned [1], cloned [2-4]		0
+78855	hsa-miR-497-5p	hsa-miR-497	MIMAT0002820	experimental	array-cloned [1], cloned [2]		0
+78856	hsa-miR-497-3p	hsa-miR-497*	MIMAT0004768	experimental	cloned [2]		0
+78857	hsa-miR-181d-5p		MIMAT0002821	experimental	array-cloned [1], cloned [2], Illumina [3]		0
+78858	hsa-miR-512-5p		MIMAT0002822	experimental	array-cloned [1]		0
+78859	hsa-miR-512-3p		MIMAT0002823	experimental	array-cloned [1], cloned [2]		0
+78862	hsa-miR-498-5p		MIMAT0002824	experimental	array-cloned [1], cloned [2]		0
+78863	hsa-miR-520e-3p		MIMAT0002825	experimental	array-cloned [1]		0
+78864	hsa-miR-515-5p		MIMAT0002826	experimental	array-cloned [1], cloned [2]		0
+78865	hsa-miR-515-3p		MIMAT0002827	experimental	array-cloned [1], cloned [2]		0
+78866	hsa-miR-519e-5p	hsa-miR-519e*	MIMAT0002828	experimental	array-cloned [1]		0
+78867	hsa-miR-519e-3p	hsa-miR-519e	MIMAT0002829	experimental	array-cloned [1], cloned [2]		0
+78868	hsa-miR-520f-3p		MIMAT0002830	experimental	array-cloned [1], Illumina [2]		0
+78871	hsa-miR-519c-5p	hsa-miR-526c	MIMAT0002831	experimental	array-cloned [1], cloned [2]		0
+78872	hsa-miR-519c-3p	hsa-miR-519c	MIMAT0002832	experimental	array-cloned [1]		0
+78873	hsa-miR-520a-5p	hsa-miR-520a*	MIMAT0002833	experimental	array-cloned [1], cloned [2]		0
+78874	hsa-miR-520a-3p	hsa-miR-520a	MIMAT0002834	experimental	array-cloned [1]		0
+78875	hsa-miR-526b-5p	hsa-miR-526b	MIMAT0002835	experimental	array-cloned [1], cloned [2]		0
+78876	hsa-miR-526b-3p	hsa-miR-526b*	MIMAT0002836	experimental	array-cloned [1], cloned [2]		0
+78877	hsa-miR-519b-5p		MIMAT0005454	experimental	array-cloned [1], cloned [2]		0
+78878	hsa-miR-519b-3p	hsa-miR-519b	MIMAT0002837	experimental	array-cloned [1], cloned [2]		0
+78879	hsa-miR-525-5p	hsa-miR-525	MIMAT0002838	experimental	array-cloned [1], cloned [2]		0
+78880	hsa-miR-525-3p	hsa-miR-525*	MIMAT0002839	experimental	array-cloned [1], cloned [2]		0
+78881	hsa-miR-523-5p	hsa-miR-523*	MIMAT0005449	experimental	array-cloned [1], cloned [2]		0
+78882	hsa-miR-523-3p	hsa-miR-523	MIMAT0002840	experimental	array-cloned [1], cloned [2]		0
+78883	hsa-miR-518f-5p	hsa-miR-518f*	MIMAT0002841	experimental	array-cloned [1], cloned [2]		0
+78884	hsa-miR-518f-3p	hsa-miR-518f	MIMAT0002842	experimental	array-cloned [1], cloned [2]		0
+78885	hsa-miR-520b-3p		MIMAT0002843	experimental	array-cloned [1]		0
+78886	hsa-miR-518b		MIMAT0002844	experimental	array-cloned [1], cloned [2]		0
+78887	hsa-miR-526a-5p		MIMAT0002845	experimental	array-cloned [1], cloned [2]		0
+78888	hsa-miR-520c-5p		MIMAT0005455	experimental	array-cloned [1], cloned [2]		0
+78889	hsa-miR-520c-3p	hsa-miR-520c	MIMAT0002846	experimental	array-cloned [1], cloned [2]		0
+78890	hsa-miR-518c-5p	hsa-miR-518c*	MIMAT0002847	experimental	array-cloned [1]		0
+78891	hsa-miR-518c-3p	hsa-miR-518c	MIMAT0002848	experimental	array-cloned [1], cloned [2]		0
+78892	hsa-miR-524-5p	hsa-miR-524*	MIMAT0002849	experimental	array-cloned [1], cloned [2]		0
+78893	hsa-miR-524-3p	hsa-miR-524	MIMAT0002850	experimental	array-cloned [1]		0
+78894	hsa-miR-517-5p	hsa-miR-517*	MIMAT0002851	experimental	array-cloned [1]		0
+78895	hsa-miR-517a-3p	hsa-miR-517a	MIMAT0002852	experimental	array-cloned [1], cloned [2]		0
+78896	hsa-miR-519d-3p		MIMAT0002853	experimental	array-cloned [1], cloned [2], Illumina [3]		0
+78897	hsa-miR-521		MIMAT0002854	experimental	array-cloned [1], cloned [2]		0
+78898	hsa-miR-520d-5p	hsa-miR-520d*	MIMAT0002855	experimental	array-cloned [1], cloned [2]		0
+78899	hsa-miR-520d-3p	hsa-miR-520d	MIMAT0002856	experimental	array-cloned [1], cloned [2]		0
+78901	hsa-miR-517b-3p	hsa-miR-517b	MIMAT0002857	experimental	array-cloned [1]		0
+78902	hsa-miR-520g-3p		MIMAT0002858	experimental	array-cloned [1], cloned [2], Illumina [3]		0
+78903	hsa-miR-516b-5p	hsa-miR-516-5p;hsa-miR-516b	MIMAT0002859	experimental	array-cloned [1], cloned [2]		0
+78904	hsa-miR-516b-3p	hsa-miR-516-3p;hsa-miR-516b*;hsa-miR-516a-3p;hsa-miR-516b*;hsa-miR-516a-3p;hsa-miR-516b*	MIMAT0002860	experimental	array-cloned [1]		0
+78906	hsa-miR-518e-5p	hsa-miR-518e*	MIMAT0005450	experimental	array-cloned [1], cloned [2]		0
+78907	hsa-miR-518e-3p	hsa-miR-518e	MIMAT0002861	experimental	array-cloned [1], cloned [2]		0
+78908	hsa-miR-518a-5p		MIMAT0005457	experimental	array-cloned [1]		0
+78909	hsa-miR-518a-3p	hsa-miR-518a	MIMAT0002863	experimental	array-cloned [1], cloned [2]		0
+78910	hsa-miR-518d-5p		MIMAT0005456	experimental	array-cloned [1], cloned [2]		0
+78911	hsa-miR-518d-3p	hsa-miR-518d	MIMAT0002864	experimental	array-cloned [1]		0
+78917	hsa-miR-517c-3p	hsa-miR-517c	MIMAT0002866	experimental	array-cloned [1], cloned [2]		0
+78918	hsa-miR-520h		MIMAT0002867	experimental	array-cloned [1]		0
+78920	hsa-miR-522-5p	hsa-miR-522*	MIMAT0005451	experimental	array-cloned [1], cloned [2]		0
+78921	hsa-miR-522-3p	hsa-miR-522	MIMAT0002868	experimental	array-cloned [1], cloned [2-3]		0
+78922	hsa-miR-519a-5p	hsa-miR-519a*	MIMAT0005452	experimental	array-cloned [1], cloned [2]		0
+78923	hsa-miR-519a-3p	hsa-miR-519a	MIMAT0002869	experimental	array-cloned [1], cloned [2]		0
+78924	hsa-miR-527		MIMAT0002862	experimental	array-cloned [1], cloned [2]		0
+78925	hsa-miR-516a-5p		MIMAT0004770	experimental	cloned [2]		0
+78926	hsa-miR-516a-3p		MIMAT0006778	experimental	array-cloned [1]		0
+78930	hsa-miR-499a-5p	hsa-miR-499;hsa-miR-499-5p	MIMAT0002870	experimental	array-cloned [1], cloned [2]		0
+78931	hsa-miR-499a-3p	hsa-miR-499-3p	MIMAT0004772	experimental	cloned [2]		0
+78932	hsa-miR-500a-5p	hsa-miR-500;hsa-miR-500a	MIMAT0004773	experimental	cloned [2]		0
+78933	hsa-miR-500a-3p	hsa-miR-500;hsa-miR-500*;hsa-miR-500a*	MIMAT0002871	experimental	array-cloned [1], cloned [2]		0
+78934	hsa-miR-501-5p	hsa-miR-501	MIMAT0002872	experimental	array-cloned [1], cloned [2]		0
+78935	hsa-miR-501-3p		MIMAT0004774	experimental	cloned [2]		0
+78936	hsa-miR-502-5p	hsa-miR-502	MIMAT0002873	experimental	array-cloned [1]		0
+78937	hsa-miR-502-3p		MIMAT0004775	experimental	cloned [2]		0
+78939	hsa-miR-503-5p	hsa-miR-503	MIMAT0002874	experimental	array-cloned [1], cloned [2-3], SOLiD [4]		0
+78940	hsa-miR-504-5p		MIMAT0002875	experimental	array-cloned [1], cloned [2], Illumina [3]		0
+78941	hsa-miR-505-5p	hsa-miR-505*	MIMAT0004776	experimental	cloned [2]		0
+78942	hsa-miR-505-3p	hsa-miR-505	MIMAT0002876	experimental	array-cloned [1], cloned [2-3]		0
+78943	hsa-miR-513a-5p	hsa-miR-513;hsa-miR-513-5p	MIMAT0002877	experimental	array-cloned [1], cloned [2]		0
+78944	hsa-miR-513a-3p	hsa-miR-513-3p	MIMAT0004777	experimental	cloned [2]		0
+78947	hsa-miR-506-3p	hsa-miR-506	MIMAT0002878	experimental	array-cloned [1]		0
+78948	hsa-miR-507		MIMAT0002879	experimental	array-cloned [1], cloned [2]		0
+78949	hsa-miR-508-5p		MIMAT0004778	experimental	cloned [2]		0
+78950	hsa-miR-508-3p	hsa-miR-508	MIMAT0002880	experimental	array-cloned [1], cloned [2]		0
+78951	hsa-miR-509-5p		MIMAT0004779	experimental	cloned [3]		0
+78952	hsa-miR-509-3p	hsa-miR-509	MIMAT0002881	experimental	array-cloned [1], cloned [2-3]		0
+78953	hsa-miR-510-5p		MIMAT0002882	experimental	array-cloned [1], cloned [2], Illumina [3]		0
+78954	hsa-miR-514a-3p	hsa-miR-514	MIMAT0002883	experimental	array-cloned [1], cloned [2]		0
+78962	hsa-miR-532-5p	hsa-miR-532	MIMAT0002888	experimental	PCR [1], cloned [2-3]		0
+78963	hsa-miR-532-3p		MIMAT0004780	experimental	cloned [2]		0
+79291	hsa-miR-455-5p	hsa-miR-455	MIMAT0003150	experimental	Northern [1], cloned [2-3]		0
+79292	hsa-miR-455-3p		MIMAT0004784	experimental	cloned [2-3]		0
+79293	hsa-miR-539-5p	hsa-miR-539	MIMAT0003163	experimental	cloned [1,3], miRAP-cloned [2]		0
+79294	hsa-miR-544a	hsa-miR-544	MIMAT0003164	experimental	cloned [1-2]		0
+79295	hsa-miR-545-5p	hsa-miR-545*	MIMAT0004785	experimental	cloned [2]		0
+79296	hsa-miR-545-3p	hsa-miR-545	MIMAT0003165	experimental	cloned [1-2]		0
+79321	hsa-miR-487b-3p		MIMAT0003180	experimental	cloned [1-2], Illumina [3]		0
+79372	hsa-miR-551a		MIMAT0003214	experimental	SAGE [1]		0
+79373	hsa-miR-552-3p		MIMAT0003215	experimental	SAGE [1], Illumina [2]		0
+79374	hsa-miR-553		MIMAT0003216	experimental	SAGE [1]		0
+79375	hsa-miR-554		MIMAT0003217	experimental	SAGE [1]		0
+79376	hsa-miR-92b-5p	hsa-miR-92b*	MIMAT0004792	experimental	cloned [2]		0
+79377	hsa-miR-92b-3p	hsa-miR-92b	MIMAT0003218	experimental	Microarray [1], RT-PCR [1], SAGE [1], cloned [2-3]		0
+79378	hsa-miR-555		MIMAT0003219	experimental	SAGE [1]		0
+79379	hsa-miR-556-5p	hsa-miR-556	MIMAT0003220	experimental	SAGE [1], cloned [2]		0
+79380	hsa-miR-556-3p		MIMAT0004793	experimental	cloned [2]		0
+79381	hsa-miR-557		MIMAT0003221	experimental	Microarray [1], SAGE [1]		0
+79382	hsa-miR-558		MIMAT0003222	experimental	RT-PCR [1], SAGE [1]		0
+79383	hsa-miR-559		MIMAT0003223	experimental	SAGE [1]		0
+79384	hsa-miR-561-3p	hsa-miR-561	MIMAT0003225	experimental	SAGE [1], cloned [2]		0
+79385	hsa-miR-562		MIMAT0003226	experimental	SAGE [1]		0
+79386	hsa-miR-563		MIMAT0003227	experimental	Microarray [1], SAGE [1]		0
+79387	hsa-miR-564		MIMAT0003228	experimental	RT-PCR [1], SAGE [1]		0
+79388	hsa-miR-566		MIMAT0003230	experimental	SAGE [1]		1
+79389	hsa-miR-567		MIMAT0003231	experimental	SAGE [1]		0
+79390	hsa-miR-568		MIMAT0003232	experimental	Microarray [1], SAGE [1]		0
+79391	hsa-miR-551b-5p	hsa-miR-551b*	MIMAT0004794	experimental	cloned [2]		0
+79392	hsa-miR-551b-3p	hsa-miR-551b	MIMAT0003233	experimental	Microarray [1], RT-PCR [1], SAGE [1], cloned [2]		0
+79393	hsa-miR-569		MIMAT0003234	experimental	SAGE [1]		0
+79394	hsa-miR-570-3p	hsa-miR-570	MIMAT0003235	experimental	SAGE [1], cloned [2]		0
+79395	hsa-miR-571		MIMAT0003236	experimental	RT-PCR [1], SAGE [1]		0
+79396	hsa-miR-572		MIMAT0003237	experimental	Microarray [1], SAGE [1]		0
+79397	hsa-miR-573		MIMAT0003238	experimental	SAGE [1]		0
+79398	hsa-miR-574-5p		MIMAT0004795	experimental	cloned [2]		0
+79399	hsa-miR-574-3p	hsa-miR-574	MIMAT0003239	experimental	Microarray [1], RT-PCR [1], SAGE [1], cloned [2-3]		0
+79400	hsa-miR-575		MIMAT0003240	experimental	Microarray [1], SAGE [1]		0
+79401	hsa-miR-576-5p	hsa-miR-576	MIMAT0003241	experimental	SAGE [1], cloned [2]		0
+79402	hsa-miR-576-3p		MIMAT0004796	experimental	cloned [2]		0
+79403	hsa-miR-577		MIMAT0003242	experimental	Microarray [1], RT-PCR [1], SAGE [1]		0
+79404	hsa-miR-578		MIMAT0003243	experimental	SAGE [1]		0
+79405	hsa-miR-579-3p		MIMAT0003244	experimental	SAGE [1], cloned [2], Illumina [3]		0
+79406	hsa-miR-580-3p		MIMAT0003245	experimental	RT-PCR [1], SAGE [1], Illumina [2]		0
+79407	hsa-miR-581		MIMAT0003246	experimental	RT-PCR [1], SAGE [1]		0
+79408	hsa-miR-582-5p	hsa-miR-582	MIMAT0003247	experimental	Microarray [1], RT-PCR [1], SAGE [1], cloned [2]		0
+79409	hsa-miR-582-3p		MIMAT0004797	experimental	cloned [2-3]		0
+79410	hsa-miR-583		MIMAT0003248	experimental	SAGE [1]		0
+79411	hsa-miR-584-5p	hsa-miR-584	MIMAT0003249	experimental	Microarray [1], RT-PCR [1], SAGE [1], cloned [2-3]		0
+79412	hsa-miR-585-3p		MIMAT0003250	experimental	SAGE [1], Illumina [2]		0
+79413	hsa-miR-548a-3p	hsa-miR-548a	MIMAT0003251	experimental	SAGE [1], cloned [2]		0
+79414	hsa-miR-586		MIMAT0003252	experimental	SAGE [1]		0
+79415	hsa-miR-587		MIMAT0003253	experimental	SAGE [1]		0
+79416	hsa-miR-548b-5p		MIMAT0004798	experimental	cloned [2]		0
+79417	hsa-miR-548b-3p	hsa-miR-548b	MIMAT0003254	experimental	SAGE [1], cloned [2]		0
+79418	hsa-miR-588		MIMAT0003255	experimental	SAGE [1]		0
+79420	hsa-miR-589-5p	hsa-miR-589	MIMAT0004799	experimental	cloned [2]		0
+79421	hsa-miR-589-3p	hsa-miR-589;hsa-miR-589*	MIMAT0003256	experimental	SAGE [1]		0
+79422	hsa-miR-550a-5p	hsa-miR-550;hsa-miR-550a	MIMAT0004800	experimental	cloned [2]		0
+79423	hsa-miR-550a-3p	hsa-miR-550;hsa-miR-550*;hsa-miR-550a*	MIMAT0003257	experimental	RAKE [1], Illumina [2]		0
+79426	hsa-miR-590-5p	hsa-miR-590	MIMAT0003258	experimental	Microarray [1], SAGE [1], cloned [2]		0
+79427	hsa-miR-590-3p		MIMAT0004801	experimental	cloned [2]		0
+79428	hsa-miR-591		MIMAT0003259	experimental	SAGE [1]		0
+79429	hsa-miR-592		MIMAT0003260	experimental	Microarray [1], RT-PCR [1], SAGE [1]		0
+79430	hsa-miR-593-5p	hsa-miR-593;hsa-miR-593*	MIMAT0003261	experimental	SAGE [1]		0
+79431	hsa-miR-593-3p	hsa-miR-593	MIMAT0004802	experimental	cloned [2]		0
+79432	hsa-miR-595		MIMAT0003263	experimental	RT-PCR [1], SAGE [1]		0
+79433	hsa-miR-596		MIMAT0003264	experimental	SAGE [1]		0
+79434	hsa-miR-597-5p		MIMAT0003265	experimental	SAGE [1], cloned [2], Illumina [3]		0
+79435	hsa-miR-598-3p		MIMAT0003266	experimental	Microarray [1], SAGE [1], cloned [2], Illumina [3]		0
+79436	hsa-miR-599		MIMAT0003267	experimental	SAGE [1]		0
+79437	hsa-miR-548a-5p		MIMAT0004803	experimental	cloned [2]		0
+79439	hsa-miR-600		MIMAT0003268	experimental	RT-PCR [1], SAGE [1]		0
+79440	hsa-miR-601		MIMAT0003269	experimental	Microarray [1], RT-PCR [1], SAGE [1]		0
+79441	hsa-miR-602		MIMAT0003270	experimental	Microarray [1], SAGE [1]		0
+79442	hsa-miR-603		MIMAT0003271	experimental	Microarray [1], SAGE [1]		0
+79443	hsa-miR-604		MIMAT0003272	experimental	SAGE [1]		0
+79444	hsa-miR-605-5p		MIMAT0003273	experimental	SAGE [1]		0
+79445	hsa-miR-606		MIMAT0003274	experimental	SAGE [1]		0
+79446	hsa-miR-607		MIMAT0003275	experimental	SAGE [1]		0
+79447	hsa-miR-608		MIMAT0003276	experimental	Microarray [1], SAGE [1]		0
+79448	hsa-miR-609		MIMAT0003277	experimental	SAGE [1]		0
+79449	hsa-miR-610		MIMAT0003278	experimental	SAGE [1]		0
+79450	hsa-miR-611		MIMAT0003279	experimental	SAGE [1]		0
+79451	hsa-miR-612		MIMAT0003280	experimental	RT-PCR [1], SAGE [1]		0
+79452	hsa-miR-613		MIMAT0003281	experimental	SAGE [1]		0
+79453	hsa-miR-614		MIMAT0003282	experimental	SAGE [1]		0
+79454	hsa-miR-615-5p		MIMAT0004804	experimental	cloned [2]		0
+79455	hsa-miR-615-3p	hsa-miR-615	MIMAT0003283	experimental	RT-PCR [1], SAGE [1], cloned [2]		0
+79456	hsa-miR-616-5p	hsa-miR-616;hsa-miR-616*	MIMAT0003284	experimental	SAGE [1]		0
+79457	hsa-miR-616-3p	hsa-miR-616	MIMAT0004805	experimental	cloned [2]		0
+79458	hsa-miR-548c-5p		MIMAT0004806	experimental	cloned [2]		0
+79459	hsa-miR-548c-3p	hsa-miR-548c	MIMAT0003285	experimental	SAGE [1]		0
+79460	hsa-miR-617		MIMAT0003286	experimental	Microarray [1], SAGE [1]		0
+79461	hsa-miR-618		MIMAT0003287	experimental	RT-PCR [1], SAGE [1], cloned [2]		0
+79462	hsa-miR-619-3p		MIMAT0003288	experimental	SAGE [1]		0
+79463	hsa-miR-620		MIMAT0003289	experimental	SAGE [1]		0
+79464	hsa-miR-621		MIMAT0003290	experimental	SAGE [1]		0
+79465	hsa-miR-622		MIMAT0003291	experimental	RT-PCR [1], SAGE [1]		0
+79466	hsa-miR-623		MIMAT0003292	experimental	Microarray [1], SAGE [1]		0
+79467	hsa-miR-624-5p	hsa-miR-624;hsa-miR-624*	MIMAT0003293	experimental	SAGE [1]		0
+79468	hsa-miR-624-3p	hsa-miR-624	MIMAT0004807	experimental	cloned [2]		0
+79469	hsa-miR-625-5p	hsa-miR-625	MIMAT0003294	experimental	Microarray [1], RT-PCR [1], SAGE [1], cloned [2]		0
+79470	hsa-miR-625-3p	hsa-miR-625*	MIMAT0004808	experimental	cloned [2]		0
+79471	hsa-miR-626		MIMAT0003295	experimental	SAGE [1]		0
+79472	hsa-miR-627-5p		MIMAT0003296	experimental	SAGE [1], cloned [2]		0
+79473	hsa-miR-628-5p		MIMAT0004809	experimental	cloned [2]		0
+79474	hsa-miR-628-3p	hsa-miR-628	MIMAT0003297	experimental	Microarray [1], RT-PCR [1], SAGE [1], cloned [2]		0
+79475	hsa-miR-629-5p	hsa-miR-629	MIMAT0004810	experimental	cloned [2]		0
+79476	hsa-miR-629-3p	hsa-miR-629;hsa-miR-629*	MIMAT0003298	experimental	SAGE [1], cloned [2]		0
+79477	hsa-miR-630		MIMAT0003299	experimental	RT-PCR [1], SAGE [1]		0
+79478	hsa-miR-631		MIMAT0003300	experimental	SAGE [1]		0
+79479	hsa-miR-33b-5p	hsa-miR-33b	MIMAT0003301	experimental	SAGE [1], cloned [2]		0
+79480	hsa-miR-33b-3p	hsa-miR-33b*	MIMAT0004811	experimental	cloned [2]		0
+79481	hsa-miR-632		MIMAT0003302	experimental	SAGE [1]		0
+79482	hsa-miR-633		MIMAT0003303	experimental	SAGE [1]		0
+79483	hsa-miR-634		MIMAT0003304	experimental	SAGE [1]		0
+79484	hsa-miR-635		MIMAT0003305	experimental	SAGE [1]		0
+79485	hsa-miR-636		MIMAT0003306	experimental	SAGE [1], cloned [2]		0
+79486	hsa-miR-637		MIMAT0003307	experimental	SAGE [1]		0
+79487	hsa-miR-638		MIMAT0003308	experimental	Microarray [1], SAGE [1]		0
+79488	hsa-miR-639		MIMAT0003309	experimental	SAGE [1]		0
+79489	hsa-miR-640		MIMAT0003310	experimental	RT-PCR [1], SAGE [1]		0
+79490	hsa-miR-641		MIMAT0003311	experimental	SAGE [1]		0
+79491	hsa-miR-642a-5p	hsa-miR-642;hsa-miR-642a	MIMAT0003312	experimental	RT-PCR [1], SAGE [1], cloned [2]		0
+79492	hsa-miR-643		MIMAT0003313	experimental	SAGE [1]		0
+79493	hsa-miR-644a	hsa-miR-644	MIMAT0003314	experimental	SAGE [1]		0
+79494	hsa-miR-645		MIMAT0003315	experimental	SAGE [1]		0
+79495	hsa-miR-646		MIMAT0003316	experimental	SAGE [1]		0
+79496	hsa-miR-647		MIMAT0003317	experimental	Microarray [1], SAGE [1]		0
+79497	hsa-miR-648		MIMAT0003318	experimental	SAGE [1]		0
+79498	hsa-miR-649		MIMAT0003319	experimental	RT-PCR [1], SAGE [1]		0
+79499	hsa-miR-650		MIMAT0003320	experimental	Microarray [1], RT-PCR [1], SAGE [1]		0
+79500	hsa-miR-651-5p		MIMAT0003321	experimental	RT-PCR [1], SAGE [1], cloned [2], Illumina [3]		0
+79501	hsa-miR-652-3p	hsa-miR-652	MIMAT0003322	experimental	Microarray [1], SAGE [1], cloned [2]		0
+79502	hsa-miR-548d-5p		MIMAT0004812	experimental	cloned [2]		0
+79503	hsa-miR-548d-3p	hsa-miR-548d	MIMAT0003323	experimental	RT-PCR [1], SAGE [1], cloned [2]		0
+79504	hsa-miR-661		MIMAT0003324	experimental	SAGE [1]		0
+79505	hsa-miR-662		MIMAT0003325	experimental	SAGE [1]		0
+79508	hsa-miR-663a	hsa-miR-663	MIMAT0003326	experimental	SAGE [1]		0
+79509	hsa-miR-449b-5p	hsa-miR-449b	MIMAT0003327	experimental	Microarray [1], RT-PCR [1], SAGE [1], cloned [2]		0
+79510	hsa-miR-449b-3p	hsa-miR-449b*	MIMAT0009203	experimental	454 [3]		0
+79511	hsa-miR-653-5p		MIMAT0003328	experimental	SAGE [1], cloned [2], Illumina [3]		0
+79512	hsa-miR-411-5p	hsa-miR-411	MIMAT0003329	experimental	Microarray [1], RT-PCR [1], SAGE [1], cloned [2]		0
+79513	hsa-miR-411-3p	hsa-miR-411*	MIMAT0004813	experimental	cloned [2]		0
+79514	hsa-miR-654-5p	hsa-miR-654	MIMAT0003330	experimental	Microarray [1], SAGE [1], cloned [2]		0
+79515	hsa-miR-654-3p		MIMAT0004814	experimental	cloned [2]		0
+79516	hsa-miR-655-3p		MIMAT0003331	experimental	Microarray [1], RT-PCR [1], SAGE [1], cloned [2], Illumina [3]		0
+79517	hsa-miR-656-3p		MIMAT0003332	experimental	Microarray [1], RT-PCR [1], SAGE [1], Illumina [2]		0
+79518	hsa-miR-549a-3p	hsa-miR-549	MIMAT0003333	experimental	SAGE [1]		0
+79519	hsa-miR-657		MIMAT0003335	experimental	SAGE [1]		0
+79520	hsa-miR-658		MIMAT0003336	experimental	Microarray [1], SAGE [1]		0
+79521	hsa-miR-659-3p	hsa-miR-659	MIMAT0003337	experimental	Microarray [1], SAGE [1]		0
+79522	hsa-miR-660-5p	hsa-miR-660	MIMAT0003338	experimental	Microarray [1], RT-PCR [1], SAGE [1], cloned [2]		0
+79523	hsa-miR-421		MIMAT0003339	experimental	Microarray [1], SAGE [1], cloned [2]		0
+79524	hsa-miR-542-5p		MIMAT0003340	experimental	cloned [1-3]		0
+79525	hsa-miR-542-3p		MIMAT0003389	experimental	cloned [1-2]		0
+79626	hsa-miR-758-3p	hsa-miR-758	MIMAT0003879	experimental	cloned [1-2], SOLiD [3]		0
+79627	hsa-miR-1264		MIMAT0005791	experimental	Illumina [2]		0
+79628	hsa-miR-671-5p	hsa-miR-671	MIMAT0003880	experimental	cloned [1-2]		0
+79629	hsa-miR-671-3p		MIMAT0004819	experimental	cloned [2]		0
+79630	hsa-miR-668-3p		MIMAT0003881	experimental	cloned [1], Illumina [2]		0
+79631	hsa-miR-767-5p		MIMAT0003882	experimental	cloned [1]		0
+79632	hsa-miR-767-3p		MIMAT0003883	experimental	cloned [1]		0
+79633	hsa-miR-1224-5p		MIMAT0005458	experimental	RAKE [1], cloned [2]		0
+79634	hsa-miR-1224-3p		MIMAT0005459	experimental	cloned [2]		0
+79635	hsa-miR-320b		MIMAT0005792	experimental	RAKE [1], Illumina [2-3]		0
+79636	hsa-miR-320c		MIMAT0005793	experimental	Illumina [1]		0
+79637	hsa-miR-1296-5p		MIMAT0005794	experimental	Illumina [2,4], 454 [3]		0
+79638	hsa-miR-1468-5p		MIMAT0006789	experimental	cloned [2], Illumina [3]		0
+79639	hsa-miR-1323		MIMAT0005795	experimental	RAKE [1], cloned [2]		0
+79640	hsa-miR-1271-5p	hsa-miR-1271	MIMAT0005796	experimental	Illumina [2], 454 [3]		0
+79641	hsa-miR-1301-3p		MIMAT0005797	experimental	Illumina [2,5], 454 [3-4]		0
+79642	hsa-miR-454-5p	hsa-miR-454-5p;hsa-miR-454*	MIMAT0003884	experimental	cloned [1-2]		0
+79643	hsa-miR-454-3p	hsa-miR-454-3p;hsa-miR-454	MIMAT0003885	experimental	cloned [1-2]		0
+79644	hsa-miR-1185-5p	hsa-miR-1185	MIMAT0005798	experimental	cloned [2]		0
+79645	hsa-miR-449c-5p	hsa-miR-449c	MIMAT0010251	experimental	RAKE [1], 454 [2]		0
+79646	hsa-miR-449c-3p	hsa-miR-449c*	MIMAT0013771	experimental	454 [2]		0
+79647	hsa-miR-1283		MIMAT0005799	experimental	Illumina [1]		0
+79648	hsa-miR-769-5p		MIMAT0003886	experimental	cloned [1]		0
+79649	hsa-miR-769-3p		MIMAT0003887	experimental	cloned [1]		0
+79650	hsa-miR-766-3p	hsa-miR-766	MIMAT0003888	experimental	cloned [1]		0
+79653	hsa-miR-762		MIMAT0010313	experimental	RAKE [1]	MI0004215	0
+79654	hsa-miR-802		MIMAT0004185	experimental	miRAP-cloned [1]		0
+79655	hsa-miR-670-5p		MIMAT0010357	experimental	RAKE [1], Illumina [3]	MI0004295	0
+79656	hsa-miR-1298-5p		MIMAT0005800	experimental	Illumina [2-3]		0
+79657	hsa-miR-2113		MIMAT0009206	experimental	qRT-PCR [2]		0
+79658	hsa-miR-761		MIMAT0010364	experimental	RAKE [1]	MI0004133	0
+79659	hsa-miR-764		MIMAT0010367	experimental	RAKE [1]	MI0004611	0
+79660	hsa-miR-759		MIMAT0010497	experimental	RAKE [1]	MI0004554	0
+80312	hsa-miR-765		MIMAT0003945	experimental	cloned [1]		0
+80313	hsa-miR-770-5p		MIMAT0003948	experimental	cloned [1]		0
+80683	hsa-miR-675-5p	hsa-miR-675	MIMAT0004284	experimental	cloned [1]		0
+80684	hsa-miR-675-3p	hsa-miR-675b;hsa-miR-675*	MIMAT0006790	experimental	cloned [2]		0
+80836	hsa-miR-298		MIMAT0004901	not_experimental	\N	MI0000398	0
+80837	hsa-miR-891a-5p		MIMAT0004902	experimental	cloned [1], Illumina [2]		0
+80838	hsa-miR-300		MIMAT0004903	not_experimental	\N	MI0000400	0
+80839	hsa-miR-892a		MIMAT0004907	experimental	cloned [1]		0
+80842	hsa-miR-450b-5p		MIMAT0004909	experimental	cloned [1]		0
+80843	hsa-miR-450b-3p		MIMAT0004910	experimental	cloned [1]		0
+80844	hsa-miR-874-3p		MIMAT0004911	experimental	cloned [1-2], Illumina [3]		0
+80845	hsa-miR-890		MIMAT0004912	experimental	cloned [1]		0
+80846	hsa-miR-891b		MIMAT0004913	experimental	cloned [1]		0
+80847	hsa-miR-888-5p	hsa-miR-888	MIMAT0004916	experimental	cloned [1]		0
+80848	hsa-miR-888-3p	hsa-miR-888*	MIMAT0004917	experimental	cloned [1]		0
+80849	hsa-miR-892b		MIMAT0004918	experimental	cloned [1]		0
+80850	hsa-miR-541-5p	hsa-miR-541*	MIMAT0004919	not_experimental	\N		0
+80851	hsa-miR-541-3p	hsa-miR-541	MIMAT0004920	experimental	cloned [1]		0
+80852	hsa-miR-889-3p		MIMAT0004921	experimental	cloned [1], Illumina [2]		0
+80853	hsa-miR-875-5p		MIMAT0004922	experimental	cloned [1]		0
+80854	hsa-miR-875-3p		MIMAT0004923	experimental	cloned [1]		0
+80855	hsa-miR-876-5p		MIMAT0004924	experimental	cloned [1]		0
+80856	hsa-miR-876-3p		MIMAT0004925	experimental	cloned [1]		0
+80857	hsa-miR-708-5p	hsa-miR-708	MIMAT0004926	experimental	cloned [1-2]		0
+80858	hsa-miR-708-3p	hsa-miR-708*	MIMAT0004927	experimental	cloned [1]		0
+80859	hsa-miR-147b-3p		MIMAT0004928	experimental	cloned [1]		0
+80860	hsa-miR-190b-5p		MIMAT0004929	not_experimental	\N	MI0005478	0
+80884	hsa-miR-744-5p	hsa-miR-744	MIMAT0004945	experimental	cloned [2]		0
+80885	hsa-miR-744-3p	hsa-miR-744*	MIMAT0004946	experimental	cloned [2]		0
+80886	hsa-miR-885-5p		MIMAT0004947	experimental	cloned [2]		0
+80887	hsa-miR-885-3p		MIMAT0004948	experimental	cloned [2]		0
+80888	hsa-miR-877-5p	hsa-miR-877	MIMAT0004949	experimental	cloned [1-3]		0
+80889	hsa-miR-877-3p	hsa-miR-877*	MIMAT0004950	experimental	cloned [1-3]		0
+80890	hsa-miR-887-3p		MIMAT0004951	experimental	cloned [2], Illumina [3]		0
+80891	hsa-miR-665		MIMAT0004952	experimental	cloned [2]		0
+80892	hsa-miR-873-5p	hsa-miR-873	MIMAT0004953	experimental	cloned [2]		0
+80893	hsa-miR-543		MIMAT0004954	experimental	RAKE [1]		0
+80894	hsa-miR-374b-5p	hsa-miR-374b	MIMAT0004955	experimental	cloned [2-3]		0
+80895	hsa-miR-374b-3p	hsa-miR-374b*	MIMAT0004956	experimental	cloned [2]		0
+80896	hsa-miR-760		MIMAT0004957	experimental	cloned [2]		0
+80897	hsa-miR-301b-3p	hsa-miR-301b	MIMAT0004958	experimental	cloned [2]		0
+80898	hsa-miR-216b-5p		MIMAT0004959	experimental	cloned [2], Illumina [3]		0
+80899	hsa-miR-208b-3p		MIMAT0004960	experimental	cloned [2], Illumina [3]		0
+81048	hsa-miR-920		MIMAT0004970	experimental	cloned [1]		0
+81049	hsa-miR-921		MIMAT0004971	experimental	cloned [1]		0
+81050	hsa-miR-922		MIMAT0004972	experimental	cloned [1]		0
+81051	hsa-miR-924		MIMAT0004974	experimental	cloned [1]		0
+81052	hsa-miR-509-3-5p		MIMAT0004975	experimental	cloned [3]		0
+81091	hsa-miR-933		MIMAT0004976	experimental	cloned [1]		0
+81092	hsa-miR-934		MIMAT0004977	experimental	cloned [1]		0
+81093	hsa-miR-935		MIMAT0004978	experimental	cloned [1]		0
+81094	hsa-miR-936		MIMAT0004979	experimental	cloned [1]		0
+81095	hsa-miR-937-3p	hsa-miR-937	MIMAT0004980	experimental	cloned [1]		0
+81096	hsa-miR-938		MIMAT0004981	experimental	cloned [1]		0
+81097	hsa-miR-939-5p	hsa-miR-939	MIMAT0004982	experimental	cloned [1]		0
+81098	hsa-miR-940		MIMAT0004983	experimental	cloned [1]		0
+81099	hsa-miR-941		MIMAT0004984	experimental	cloned [1], SOLiD [2]		0
+81103	hsa-miR-942-5p		MIMAT0004985	experimental	cloned [1], Illumina [2]		0
+81104	hsa-miR-943		MIMAT0004986	experimental	cloned [1]		0
+81105	hsa-miR-944		MIMAT0004987	experimental	cloned [1]		0
+81111	hsa-miR-297		MIMAT0004450	experimental	microarray [1], Northern [1]		0
+81740	hsa-miR-1178-3p	hsa-miR-1178	MIMAT0005823	experimental	cloned [1]		0
+81741	hsa-miR-1179		MIMAT0005824	experimental	cloned [1]		0
+81742	hsa-miR-1180-3p		MIMAT0005825	experimental	cloned [1], 454 [2], Illumina [3]		0
+81743	hsa-miR-1181		MIMAT0005826	experimental	cloned [1]		0
+81744	hsa-miR-1182		MIMAT0005827	experimental	cloned [1]		0
+81745	hsa-miR-1183		MIMAT0005828	experimental	cloned [1]		0
+81746	hsa-miR-1184		MIMAT0005829	experimental	cloned [1]		0
+81795	hsa-miR-1225-5p		MIMAT0005572	experimental	cloned [1]		0
+81796	hsa-miR-1225-3p		MIMAT0005573	experimental	cloned [1]		0
+81799	hsa-miR-1226-5p	hsa-miR-1226*	MIMAT0005576	experimental	cloned [1]		0
+81800	hsa-miR-1226-3p	hsa-miR-1226	MIMAT0005577	experimental	cloned [1]		0
+81803	hsa-miR-1227-3p	hsa-miR-1227	MIMAT0005580	experimental	cloned [1]		0
+81805	hsa-miR-1228-5p	hsa-miR-1228*	MIMAT0005582	experimental	cloned [1]		0
+81806	hsa-miR-1228-3p	hsa-miR-1228	MIMAT0005583	experimental	cloned [1]		0
+81807	hsa-miR-1229-3p	hsa-miR-1229	MIMAT0005584	experimental	cloned [1]		0
+81809	hsa-miR-1231		MIMAT0005586	experimental	cloned [1]		0
+81812	hsa-miR-1234-3p	hsa-miR-1234	MIMAT0005589	experimental	cloned [1]		0
+81814	hsa-miR-1236-3p	hsa-miR-1236	MIMAT0005591	experimental	cloned [1]		0
+81815	hsa-miR-1237-3p	hsa-miR-1237	MIMAT0005592	experimental	cloned [1]		0
+81816	hsa-miR-1238-3p	hsa-miR-1238	MIMAT0005593	experimental	cloned [1]		0
+81820	hsa-miR-1200		MIMAT0005863	experimental	cloned [1]		0
+81821	hsa-miR-1202		MIMAT0005865	experimental	cloned [1]		0
+81822	hsa-miR-1203		MIMAT0005866	experimental	cloned [1]		0
+81823	hsa-miR-663b		MIMAT0005867	experimental	miRAP [1]		0
+81824	hsa-miR-1204		MIMAT0005868	experimental	Northern [1]		0
+81825	hsa-miR-1205		MIMAT0005869	experimental	Northern [1]		0
+81826	hsa-miR-1206		MIMAT0005870	experimental	Northern [1]		0
+81827	hsa-miR-1207-5p		MIMAT0005871	experimental	Northern [1]		0
+81828	hsa-miR-1207-3p		MIMAT0005872	experimental	Northern [1]		0
+81829	hsa-miR-1208		MIMAT0005873	experimental	Northern [1]		0
+81834	hsa-miR-548e-3p		MIMAT0005874	experimental	Illumina [1-2]		0
+81835	hsa-miR-548j-5p		MIMAT0005875	experimental	Illumina [1]		0
+81836	hsa-miR-1285-3p	hsa-miR-1285	MIMAT0005876	experimental	Illumina [1]		0
+81838	hsa-miR-1286		MIMAT0005877	experimental	Illumina [1]		0
+81839	hsa-miR-1287-5p		MIMAT0005878	experimental	Illumina [1,3], 454 [2]		0
+81840	hsa-miR-1289		MIMAT0005879	experimental	Illumina [1]		0
+81842	hsa-miR-1290		MIMAT0005880	experimental	Illumina [1]		0
+81843	hsa-miR-1291		MIMAT0005881	experimental	Illumina [1]		0
+81844	hsa-miR-548k		MIMAT0005882	experimental	Illumina [1]		0
+81845	hsa-miR-1293		MIMAT0005883	experimental	Illumina [1]		0
+81846	hsa-miR-1294		MIMAT0005884	experimental	Illumina [1]		0
+81847	hsa-miR-1295a	hsa-miR-1295	MIMAT0005885	experimental	Illumina [1]		0
+81848	hsa-miR-1297		MIMAT0005886	experimental	Illumina [1]		0
+81849	hsa-miR-1299		MIMAT0005887	experimental	Illumina [1]		0
+81850	hsa-miR-548l		MIMAT0005889	experimental	Illumina [1]		0
+81851	hsa-miR-1302		MIMAT0005890	experimental	Illumina [1]		0
+81859	hsa-miR-1303		MIMAT0005891	experimental	Illumina [1]		0
+81860	hsa-miR-1304-5p	hsa-miR-1304	MIMAT0005892	experimental	Illumina [1]		0
+81861	hsa-miR-1305		MIMAT0005893	experimental	Illumina [1]		0
+81862	hsa-miR-1243		MIMAT0005894	experimental	Illumina [1]		0
+81863	hsa-miR-548f-3p		MIMAT0005895	experimental	Illumina [1]		0
+81868	hsa-miR-1244		MIMAT0005896	experimental	Illumina [1]		0
+81869	hsa-miR-1245a	hsa-miR-1245	MIMAT0005897	experimental	Illumina [1]		0
+81870	hsa-miR-1246		MIMAT0005898	experimental	Illumina [1]		0
+81871	hsa-miR-1247-5p	hsa-miR-1247	MIMAT0005899	experimental	Illumina [1]		0
+81872	hsa-miR-1248		MIMAT0005900	experimental	Illumina [1]		0
+81873	hsa-miR-1249-3p	hsa-miR-1249	MIMAT0005901	experimental	Illumina [1]		0
+81874	hsa-miR-1250-5p		MIMAT0005902	experimental	Illumina [1-2]		0
+81875	hsa-miR-1251-5p		MIMAT0005903	experimental	Illumina [1,3], cloned [2]		0
+81876	hsa-miR-1253		MIMAT0005904	experimental	Illumina [1]		0
+81877	hsa-miR-1254		MIMAT0005905	experimental	Illumina [1]		1
+81878	hsa-miR-1255a		MIMAT0005906	experimental	Illumina [1]		0
+81879	hsa-miR-1256		MIMAT0005907	experimental	Illumina [1]		0
+81880	hsa-miR-1257		MIMAT0005908	experimental	Illumina [1]		0
+81881	hsa-miR-1258		MIMAT0005909	experimental	Illumina [1]		0
+81882	hsa-miR-1260a	hsa-miR-1260	MIMAT0005911	experimental	Illumina [1]		0
+81883	hsa-miR-548g-3p	hsa-miR-548g	MIMAT0005912	experimental	Illumina [1]		0
+81884	hsa-miR-1261		MIMAT0005913	experimental	Illumina [1]		0
+81885	hsa-miR-1262		MIMAT0005914	experimental	Illumina [1]		0
+81886	hsa-miR-1263		MIMAT0005915	experimental	Illumina [1]		0
+81887	hsa-miR-548n		MIMAT0005916	experimental	Illumina [1]		0
+81888	hsa-miR-548m		MIMAT0005917	experimental	Illumina [1]		0
+81889	hsa-miR-1265		MIMAT0005918	experimental	Illumina [1]		0
+81890	hsa-miR-548o-3p	hsa-miR-548o	MIMAT0005919	experimental	Illumina [1]		0
+81891	hsa-miR-1266-5p		MIMAT0005920	experimental	Illumina [1-2]		0
+81892	hsa-miR-1267		MIMAT0005921	experimental	Illumina [1]		0
+81893	hsa-miR-1268a	hsa-miR-1268	MIMAT0005922	experimental	Illumina [1]		0
+81894	hsa-miR-1269a	hsa-miR-1269	MIMAT0005923	experimental	Illumina [1]		0
+81895	hsa-miR-1270		MIMAT0005924	experimental	Illumina [1]		0
+81896	hsa-miR-1272		MIMAT0005925	experimental	Illumina [1]		0
+81897	hsa-miR-1273a	hsa-miR-1273	MIMAT0005926	experimental	Illumina [1]		1
+81899	hsa-miR-548h-5p	hsa-miR-548h	MIMAT0005928	experimental	Illumina [1]		0
+81903	hsa-miR-1275		MIMAT0005929	experimental	Illumina [1]		0
+81904	hsa-miR-1276		MIMAT0005930	experimental	Illumina [1]		0
+81905	hsa-miR-302e		MIMAT0005931	experimental	Illumina [1]		0
+81906	hsa-miR-302f		MIMAT0005932	experimental	Illumina [1]		0
+81907	hsa-miR-1277-3p	hsa-miR-1277	MIMAT0005933	experimental	Illumina [1]		0
+81908	hsa-miR-548p		MIMAT0005934	experimental	Illumina [1]		0
+81909	hsa-miR-548i		MIMAT0005935	experimental	Illumina [1]		0
+81913	hsa-miR-1278		MIMAT0005936	experimental	Illumina [1]		0
+81914	hsa-miR-1279		MIMAT0005937	experimental	Illumina [1]		0
+81916	hsa-miR-1281		MIMAT0005939	experimental	Illumina [1]		0
+81917	hsa-miR-1282		MIMAT0005940	experimental	Illumina [1]		0
+81919	hsa-miR-1284		MIMAT0005941	experimental	Illumina [1]		0
+81920	hsa-miR-1288-3p		MIMAT0005942	experimental	Illumina [1-2]		0
+81921	hsa-miR-1292-5p	hsa-miR-1292	MIMAT0005943	experimental	Illumina [1]		0
+81922	hsa-miR-1252-5p		MIMAT0005944	experimental	Illumina [1-2]		0
+81923	hsa-miR-1255b-5p	hsa-miR-1255b	MIMAT0005945	experimental	Illumina [1]		0
+81929	hsa-miR-664a-5p	hsa-miR-664*;hsa-miR-664-5p	MIMAT0005948	experimental	Illumina [1]		0
+81930	hsa-miR-664a-3p	hsa-miR-664;hsa-miR-664-3p	MIMAT0005949	experimental	Illumina [1]		0
+81931	hsa-miR-1306-3p	hsa-miR-1306	MIMAT0005950	experimental	Illumina [1]		0
+81932	hsa-miR-1307-3p	hsa-miR-1307	MIMAT0005951	experimental	Illumina [1], 454 [2]		0
+82131	hsa-miR-513b-5p		MIMAT0005788	experimental	Illumina [2]	MI0003191	0
+82132	hsa-miR-513c-5p	hsa-miR-513c	MIMAT0005789	not_experimental	\N	MI0003191	0
+82134	hsa-miR-1321		MIMAT0005952	experimental	cloned [1]		0
+82135	hsa-miR-1322		MIMAT0005953	experimental	cloned [1]		0
+82137	hsa-miR-1197		MIMAT0005955	experimental	cloned [1]		0
+82138	hsa-miR-1324		MIMAT0005956	experimental	cloned [1]		0
+82804	hsa-miR-1469		MIMAT0007347	experimental	cloned [1]		0
+82805	hsa-miR-1470		MIMAT0007348	experimental	cloned [1]		0
+82806	hsa-miR-1471		MIMAT0007349	experimental	cloned [1]		0
+83010	hsa-miR-1537-3p		MIMAT0007399	experimental	ChIP-seq [1], Illumina [2]		0
+83011	hsa-miR-1538		MIMAT0007400	experimental	ChIP-seq [1]		0
+83012	hsa-miR-1539		MIMAT0007401	experimental	ChIP-seq [1]		0
+83013	hsa-miR-103b	hsa-miR-103-as	MIMAT0007402	experimental	ChIP-seq [1]		0
+84034	hsa-miR-320d		MIMAT0006764	experimental	Illumina [1]		0
+84037	hsa-miR-1825		MIMAT0006765	experimental	Illumina [1]		0
+84038	hsa-miR-1827		MIMAT0006767	experimental	Illumina [1]		0
+84192	hsa-miR-1908-5p		MIMAT0007881	experimental	454 [1-2], Illumina [3]		0
+84193	hsa-miR-1909-5p	hsa-miR-1909*	MIMAT0007882	experimental	454 [1]		0
+84194	hsa-miR-1909-3p	hsa-miR-1909	MIMAT0007883	experimental	454 [1]		0
+84195	hsa-miR-1910-5p		MIMAT0007884	experimental	454 [1]		0
+84196	hsa-miR-1911-5p	hsa-miR-1911	MIMAT0007885	experimental	454 [1]		0
+84197	hsa-miR-1911-3p	hsa-miR-1911*	MIMAT0007886	experimental	454 [1]		0
+84198	hsa-miR-1912-3p		MIMAT0007887	experimental	454 [1], SOLiD [2]		0
+84199	hsa-miR-1913		MIMAT0007888	experimental	454 [1]		0
+84200	hsa-miR-1914-5p	hsa-miR-1914	MIMAT0007889	experimental	454 [1]		0
+84201	hsa-miR-1914-3p	hsa-miR-1914*	MIMAT0007890	experimental	454 [1]		0
+84202	hsa-miR-1915-5p	hsa-miR-1915*	MIMAT0007891	experimental	454 [1]		0
+84203	hsa-miR-1915-3p	hsa-miR-1915	MIMAT0007892	experimental	454 [1]		0
+85913	hsa-miR-1972		MIMAT0009447	experimental	cloned [1]		0
+85914	hsa-miR-1973		MIMAT0009448	experimental	cloned [1]		0
+85915	hsa-miR-1976		MIMAT0009451	experimental	cloned [1]		0
+86462	hsa-miR-2052		MIMAT0009977	experimental	cloned [1], PCR [1]		0
+86463	hsa-miR-2053		MIMAT0009978	experimental	PCR [1]		0
+86464	hsa-miR-2054		MIMAT0009979	experimental	cloned [1], PCR [1]		0
+86636	hsa-miR-2110		MIMAT0010133	experimental	454 [1]		0
+86643	hsa-miR-2114-5p	hsa-miR-2114	MIMAT0011156	experimental	454 [1], Illumina [2]		0
+86644	hsa-miR-2114-3p	hsa-miR-2114*	MIMAT0011157	experimental	454 [1], Illumina [2]		0
+86645	hsa-miR-2115-5p	hsa-miR-2115	MIMAT0011158	experimental	454 [1], Illumina [2]		0
+86646	hsa-miR-2115-3p	hsa-miR-2115*	MIMAT0011159	experimental	454 [1], Illumina [2]		0
+86647	hsa-miR-2116-5p	hsa-miR-2116	MIMAT0011160	experimental	454 [1]		0
+86648	hsa-miR-2116-3p	hsa-miR-2116*	MIMAT0011161	experimental	454 [1]		0
+86649	hsa-miR-2117		MIMAT0011162	experimental	454 [1]		0
+86650	hsa-miR-548q		MIMAT0011163	experimental	454 [1]		0
+87428	hsa-miR-2276-3p		MIMAT0011775	experimental	454 [1], Illumina [2]		0
+87429	hsa-miR-2277-5p		MIMAT0017352	experimental	Illumina [2]		0
+87430	hsa-miR-2277-3p	hsa-miR-2277	MIMAT0011777	experimental	454 [1]		0
+87431	hsa-miR-2278		MIMAT0011778	experimental	454 [1]		0
+88843	hsa-miR-711		MIMAT0012734	not_experimental	\N	MI0004695	0
+88844	hsa-miR-718		MIMAT0012735	not_experimental	\N	MI0004707	0
+89421	hsa-miR-2861		MIMAT0013802	not_experimental	\N	MI0013007	0
+89499	hsa-miR-2909		MIMAT0013863	experimental	qPCR [1]		0
+90835	hsa-miR-3115		MIMAT0014977	experimental	Illumina [1-2]		0
+90836	hsa-miR-3116		MIMAT0014978	experimental	Illumina [1-2]		0
+90838	hsa-miR-3117-3p	hsa-miR-3117	MIMAT0014979	experimental	Illumina [1-3]		0
+90839	hsa-miR-3118		MIMAT0014980	experimental	Illumina [1]		0
+90842	hsa-miR-3119		MIMAT0014981	experimental	Illumina [1]		0
+90844	hsa-miR-3120-3p	hsa-miR-3120	MIMAT0014982	experimental	Illumina [1-2]		0
+90845	hsa-miR-3121-3p	hsa-miR-3121	MIMAT0014983	experimental	Illumina [1-3]		0
+90846	hsa-miR-3122		MIMAT0014984	experimental	Illumina [1]		0
+90847	hsa-miR-3123		MIMAT0014985	experimental	Illumina [1]		0
+90848	hsa-miR-3124-5p	hsa-miR-3124	MIMAT0014986	experimental	Illumina [1-3]		0
+90849	hsa-miR-548s		MIMAT0014987	experimental	Illumina [1]		0
+90850	hsa-miR-3125		MIMAT0014988	experimental	Illumina [1]		0
+90851	hsa-miR-3126-5p		MIMAT0014989	experimental	Illumina [2-4]		0
+90852	hsa-miR-3126-3p		MIMAT0015377	experimental	SOLiD [1], Illumina [4]		0
+90853	hsa-miR-3127-5p	hsa-miR-3127	MIMAT0014990	experimental	Illumina [1-2]		0
+90854	hsa-miR-3128		MIMAT0014991	experimental	Illumina [1-2]		0
+90855	hsa-miR-3129-5p	hsa-miR-3129	MIMAT0014992	experimental	Illumina [1-3]		0
+90857	hsa-miR-3130-3p		MIMAT0014994	experimental	Illumina [1-3]		0
+90860	hsa-miR-3131		MIMAT0014996	experimental	Illumina [1-2]		0
+90861	hsa-miR-3132		MIMAT0014997	experimental	Illumina [1]		0
+90862	hsa-miR-3133		MIMAT0014998	experimental	Illumina [1]		0
+90863	hsa-miR-378b		MIMAT0014999	experimental	Illumina [1]		0
+90864	hsa-miR-3134		MIMAT0015000	experimental	Illumina [1]		0
+90865	hsa-miR-3135a	hsa-miR-3135	MIMAT0015001	experimental	Illumina [1]		0
+90866	hsa-miR-466		MIMAT0015002	experimental	Illumina [1-2]		0
+90867	hsa-miR-3136-5p	hsa-miR-3136	MIMAT0015003	experimental	Illumina [1-3]		0
+90868	hsa-miR-544b		MIMAT0015004	experimental	Illumina [1]		0
+90869	hsa-miR-3137		MIMAT0015005	experimental	Illumina [1]		0
+90870	hsa-miR-3138		MIMAT0015006	experimental	Illumina [1-2]		0
+90871	hsa-miR-3139		MIMAT0015007	experimental	Illumina [1]		0
+90872	hsa-miR-3140-3p	hsa-miR-3140	MIMAT0015008	experimental	Illumina [1-4]		0
+90873	hsa-miR-548t-5p	hsa-miR-548t	MIMAT0015009	experimental	Illumina [1], Northern [2]		0
+90874	hsa-miR-3141		MIMAT0015010	experimental	Illumina [1]		0
+90875	hsa-miR-3142		MIMAT0015011	experimental	Illumina [1]		0
+90876	hsa-miR-3143		MIMAT0015012	experimental	Illumina [1-2]		0
+90877	hsa-miR-548u		MIMAT0015013	experimental	Illumina [1]		0
+90878	hsa-miR-3144-5p		MIMAT0015014	experimental	Illumina [1-2]		0
+90879	hsa-miR-3144-3p		MIMAT0015015	experimental	Illumina [1-2]		0
+90880	hsa-miR-3145-3p	hsa-miR-3145	MIMAT0015016	experimental	Illumina [1-2]		0
+90881	hsa-miR-1273c		MIMAT0015017	experimental	Illumina [1-2]		0
+90882	hsa-miR-3146		MIMAT0015018	experimental	Illumina [1-2]		0
+90883	hsa-miR-3147		MIMAT0015019	experimental	Illumina [1]		0
+90884	hsa-miR-548v		MIMAT0015020	experimental	Illumina [1]		0
+90885	hsa-miR-3148		MIMAT0015021	experimental	Illumina [1]		0
+90886	hsa-miR-3149		MIMAT0015022	experimental	Illumina [1-2]		0
+90887	hsa-miR-3150a-3p	hsa-miR-3150	MIMAT0015023	experimental	Illumina [1-2]		0
+90888	hsa-miR-3151-5p		MIMAT0015024	experimental	Illumina [1-4]		0
+90889	hsa-miR-3152-3p	hsa-miR-3152	MIMAT0015025	experimental	Illumina [2-4]		0
+90890	hsa-miR-3153		MIMAT0015026	experimental	Illumina [1]		0
+90891	hsa-miR-3074-3p	hsa-miR-3074	MIMAT0015027	experimental	Illumina [1-2]		0
+90892	hsa-miR-3154		MIMAT0015028	experimental	SOLiD [2], Illumina [3-5]		0
+90893	hsa-miR-3155a	hsa-miR-3155	MIMAT0015029	experimental	Illumina [1]		0
+90894	hsa-miR-3156-5p	hsa-miR-3156	MIMAT0015030	experimental	Illumina [1-2]		0
+90895	hsa-miR-3157-5p	hsa-miR-3157	MIMAT0015031	experimental	Illumina [1-2]		0
+90896	hsa-miR-3158-3p	hsa-miR-3158	MIMAT0015032	experimental	Illumina [1-2]		0
+90898	hsa-miR-3159		MIMAT0015033	experimental	Illumina [1]		0
+90899	hsa-miR-3160-3p	hsa-miR-3160	MIMAT0015034	experimental	Illumina [1-2]		0
+94157	hsa-miR-3160-5p		MIMAT0019212	experimental	Illumina [2]		0
+90901	hsa-miR-3161		MIMAT0015035	experimental	Illumina [1]		0
+90902	hsa-miR-3162-5p	hsa-miR-3162	MIMAT0015036	experimental	Illumina [1-2]		0
+90903	hsa-miR-3163		MIMAT0015037	experimental	Illumina [1]		0
+90904	hsa-miR-3164		MIMAT0015038	experimental	Illumina [1]		0
+90905	hsa-miR-3165		MIMAT0015039	experimental	Illumina [1-2]		0
+90906	hsa-miR-3166		MIMAT0015040	experimental	Illumina [1]		0
+90907	hsa-miR-1260b		MIMAT0015041	experimental	Illumina [1]		0
+90908	hsa-miR-3167		MIMAT0015042	experimental	Illumina [1-2]		0
+90909	hsa-miR-3168		MIMAT0015043	experimental	Illumina [1]		0
+90910	hsa-miR-3169		MIMAT0015044	experimental	Illumina [1]		0
+90911	hsa-miR-3170		MIMAT0015045	experimental	Illumina [1-2]		0
+90912	hsa-miR-3171		MIMAT0015046	experimental	Illumina [1-2], Northern [3]		0
+90913	hsa-miR-3173-3p	hsa-miR-3173	MIMAT0015048	experimental	Illumina [1-3]		0
+90914	hsa-miR-1193		MIMAT0015049	experimental	Illumina [1]		0
+90915	hsa-miR-323b-5p	hsa-miR-453	MIMAT0001630	experimental	cloned [1-2]		0
+90916	hsa-miR-323b-3p		MIMAT0015050	experimental	Illumina [3]		0
+90918	hsa-miR-3174		MIMAT0015051	experimental	Illumina [1]		0
+90919	hsa-miR-3175		MIMAT0015052	experimental	Illumina [1-3]		0
+90920	hsa-miR-3176		MIMAT0015053	experimental	Illumina [1-2]		0
+90921	hsa-miR-3177-3p	hsa-miR-3177	MIMAT0015054	experimental	Illumina [1-3]		0
+90922	hsa-miR-3178		MIMAT0015055	experimental	Illumina [1]		0
+90923	hsa-miR-3179		MIMAT0015056	experimental	Illumina [1-2]		0
+90924	hsa-miR-3180-5p		MIMAT0015057	experimental	Illumina [1]		0
+90925	hsa-miR-3180-3p		MIMAT0015058	experimental	Illumina [1]		0
+90932	hsa-miR-548w		MIMAT0015060	experimental	Illumina [1]		0
+90933	hsa-miR-3181		MIMAT0015061	experimental	Illumina [1]		0
+90934	hsa-miR-3182		MIMAT0015062	experimental	Illumina [1]		0
+90935	hsa-miR-3183		MIMAT0015063	experimental	Illumina [1-3]		0
+90936	hsa-miR-3184-5p	hsa-miR-3184	MIMAT0015064	experimental	Illumina [1]		0
+90937	hsa-miR-3185		MIMAT0015065	experimental	Illumina [1]		0
+90938	hsa-miR-3065-5p		MIMAT0015066	experimental	Illumina [1,3], 454 [2]		0
+90939	hsa-miR-3065-3p		MIMAT0015378	experimental	Illumina [1,3], 454 [2]		0
+90940	hsa-miR-3186-5p		MIMAT0015067	experimental	Illumina [1-2]		0
+90941	hsa-miR-3186-3p		MIMAT0015068	experimental	Illumina [1]		0
+90943	hsa-miR-3187-3p	hsa-miR-3187	MIMAT0015069	experimental	Illumina [1-2]		0
+90944	hsa-miR-3188		MIMAT0015070	experimental	Illumina [1]		0
+90945	hsa-miR-3189-3p	hsa-miR-3189	MIMAT0015071	experimental	Illumina [1-2]		0
+90946	hsa-miR-320e		MIMAT0015072	experimental	SOLiD [1], Illumina [2]		0
+90947	hsa-miR-3190-5p	hsa-miR-3190-5p;hsa-miR-3190	MIMAT0015073	experimental	Illumina [2]		0
+90948	hsa-miR-3191-3p	hsa-miR-3191	MIMAT0015075	experimental	Illumina [1]		0
+90949	hsa-miR-3192-5p		MIMAT0015076	experimental	Illumina [1-3]		0
+90950	hsa-miR-3193		MIMAT0015077	experimental	Illumina [1]		0
+90951	hsa-miR-3194-5p	hsa-miR-3194	MIMAT0015078	experimental	Illumina [1-2]		0
+90952	hsa-miR-3195		MIMAT0015079	experimental	Illumina [1]		0
+90953	hsa-miR-3196		MIMAT0015080	experimental	Illumina [1]		0
+94152	hsa-miR-3156-3p		MIMAT0019209	experimental	Illumina [2]		0
+90956	hsa-miR-548x-3p	hsa-miR-548x	MIMAT0015081	experimental	Illumina [1]		0
+90957	hsa-miR-3197		MIMAT0015082	experimental	Illumina [1]		0
+90958	hsa-miR-3198		MIMAT0015083	experimental	Illumina [1-2]		0
+90959	hsa-miR-3199		MIMAT0015084	experimental	Illumina [1]		0
+90961	hsa-miR-3200-5p		MIMAT0017392	experimental	Illumina [2-3,5], Northern [4]		0
+90962	hsa-miR-3200-3p	hsa-miR-3200	MIMAT0015085	experimental	Illumina [1-3,5], Northern [4]		0
+90963	hsa-miR-3201		MIMAT0015086	experimental	Illumina [1]		0
+90964	hsa-miR-514b-5p		MIMAT0015087	experimental	Illumina [1-4]		0
+90965	hsa-miR-514b-3p		MIMAT0015088	experimental	Illumina [1,3-4]		0
+90966	hsa-miR-3202		MIMAT0015089	experimental	Illumina [1]		0
+90968	hsa-miR-1273d		MIMAT0015090	experimental	Illumina [1]		1
+93081	hsa-miR-4295		MIMAT0016844	experimental	SOLiD [1]		0
+93082	hsa-miR-4296		MIMAT0016845	experimental	SOLiD [1]		0
+93083	hsa-miR-4297		MIMAT0016846	experimental	SOLiD [1]		0
+93084	hsa-miR-378c		MIMAT0016847	experimental	SOLiD [1]		0
+93085	hsa-miR-4293		MIMAT0016848	experimental	SOLiD [1]		0
+93086	hsa-miR-4294		MIMAT0016849	experimental	SOLiD [1]		0
+93087	hsa-miR-4301		MIMAT0016850	experimental	SOLiD [1]		0
+93088	hsa-miR-4299		MIMAT0016851	experimental	SOLiD [1]		0
+93089	hsa-miR-4298		MIMAT0016852	experimental	SOLiD [1]		0
+93090	hsa-miR-4300		MIMAT0016853	experimental	SOLiD [1]		0
+93091	hsa-miR-4304		MIMAT0016854	experimental	SOLiD [1]		0
+93092	hsa-miR-4302		MIMAT0016855	experimental	SOLiD [1]		0
+93093	hsa-miR-4303		MIMAT0016856	experimental	SOLiD [1]		0
+93094	hsa-miR-4305		MIMAT0016857	experimental	SOLiD [1]		0
+93095	hsa-miR-4306		MIMAT0016858	experimental	SOLiD [1]		0
+93096	hsa-miR-4309		MIMAT0016859	experimental	SOLiD [1]		0
+93097	hsa-miR-4307		MIMAT0016860	experimental	SOLiD [1]		0
+93098	hsa-miR-4308		MIMAT0016861	experimental	SOLiD [1]		0
+93099	hsa-miR-4310		MIMAT0016862	experimental	SOLiD [1]		0
+93100	hsa-miR-4311		MIMAT0016863	experimental	SOLiD [1]		0
+93101	hsa-miR-4312		MIMAT0016864	experimental	SOLiD [1]		0
+93102	hsa-miR-4313		MIMAT0016865	experimental	SOLiD [1]		0
+93103	hsa-miR-4315		MIMAT0016866	experimental	SOLiD [1]		0
+93104	hsa-miR-4316		MIMAT0016867	experimental	SOLiD [1]		0
+93105	hsa-miR-4314		MIMAT0016868	experimental	SOLiD [1]		0
+93106	hsa-miR-4318		MIMAT0016869	experimental	SOLiD [1]		0
+93107	hsa-miR-4319		MIMAT0016870	experimental	SOLiD [1]		0
+93108	hsa-miR-4320		MIMAT0016871	experimental	SOLiD [1]		0
+93109	hsa-miR-4317		MIMAT0016872	experimental	SOLiD [1]		0
+93110	hsa-miR-4322		MIMAT0016873	experimental	SOLiD [1]		0
+93111	hsa-miR-4321		MIMAT0016874	experimental	SOLiD [1]		0
+93112	hsa-miR-4323		MIMAT0016875	experimental	SOLiD [1]		0
+93113	hsa-miR-4324		MIMAT0016876	experimental	SOLiD [1]		0
+93114	hsa-miR-4256		MIMAT0016877	experimental	SOLiD [1]		0
+93115	hsa-miR-4257		MIMAT0016878	experimental	SOLiD [1]		0
+93116	hsa-miR-4258		MIMAT0016879	experimental	SOLiD [1]		0
+93117	hsa-miR-4259		MIMAT0016880	experimental	SOLiD [1]		0
+93118	hsa-miR-4260		MIMAT0016881	experimental	SOLiD [1]		0
+93119	hsa-miR-4253		MIMAT0016882	experimental	SOLiD [1]		0
+93120	hsa-miR-4251		MIMAT0016883	experimental	SOLiD [1]		0
+93121	hsa-miR-4254		MIMAT0016884	experimental	SOLiD [1]		0
+93122	hsa-miR-4255		MIMAT0016885	experimental	SOLiD [1]		0
+93123	hsa-miR-4252		MIMAT0016886	experimental	SOLiD [1]		0
+93124	hsa-miR-4325		MIMAT0016887	experimental	SOLiD [1]		0
+93125	hsa-miR-4326		MIMAT0016888	experimental	SOLiD [1]		0
+93126	hsa-miR-4327		MIMAT0016889	experimental	SOLiD [1]		0
+93127	hsa-miR-4261		MIMAT0016890	experimental	SOLiD [1]		0
+93128	hsa-miR-4265		MIMAT0016891	experimental	SOLiD [1]		0
+93129	hsa-miR-4266		MIMAT0016892	experimental	SOLiD [1]		0
+93130	hsa-miR-4267		MIMAT0016893	experimental	SOLiD [1]		0
+93131	hsa-miR-4262		MIMAT0016894	experimental	SOLiD [1]		0
+93132	hsa-miR-2355-5p	hsa-miR-2355	MIMAT0016895	experimental	SOLiD [1], Illumina [2-3,5], Northern [4]		0
+93133	hsa-miR-2355-3p		MIMAT0017950	experimental	Illumina [2-3,5], Northern [4]		0
+93134	hsa-miR-4268		MIMAT0016896	experimental	SOLiD [1]		0
+93135	hsa-miR-4269		MIMAT0016897	experimental	SOLiD [1]		0
+93136	hsa-miR-4263		MIMAT0016898	experimental	SOLiD [1]		0
+93137	hsa-miR-4264		MIMAT0016899	experimental	SOLiD [1]		0
+93138	hsa-miR-4270		MIMAT0016900	experimental	SOLiD [1]		0
+93139	hsa-miR-4271		MIMAT0016901	experimental	SOLiD [1]		0
+93140	hsa-miR-4272		MIMAT0016902	experimental	SOLiD [1]		0
+93141	hsa-miR-4273		MIMAT0016903	experimental	SOLiD [1]		0
+93142	hsa-miR-4276		MIMAT0016904	experimental	SOLiD [1]		0
+93143	hsa-miR-4275		MIMAT0016905	experimental	SOLiD [1]		0
+93144	hsa-miR-4274		MIMAT0016906	experimental	SOLiD [1]		0
+93145	hsa-miR-4281		MIMAT0016907	experimental	SOLiD [1]		0
+93146	hsa-miR-4277		MIMAT0016908	experimental	SOLiD [1]		0
+93147	hsa-miR-4279		MIMAT0016909	experimental	SOLiD [1]		0
+93148	hsa-miR-4278		MIMAT0016910	experimental	SOLiD [1]		0
+93149	hsa-miR-4280		MIMAT0016911	experimental	SOLiD [1]		0
+93150	hsa-miR-4282		MIMAT0016912	experimental	SOLiD [1]		0
+93151	hsa-miR-4285		MIMAT0016913	experimental	SOLiD [1]		0
+93152	hsa-miR-4283		MIMAT0016914	experimental	SOLiD [1]		0
+93153	hsa-miR-4284		MIMAT0016915	experimental	SOLiD [1]		0
+93154	hsa-miR-4286		MIMAT0016916	experimental	SOLiD [1]		0
+93155	hsa-miR-4287		MIMAT0016917	experimental	SOLiD [1]		0
+93156	hsa-miR-4288		MIMAT0016918	experimental	SOLiD [1]		0
+93157	hsa-miR-4292		MIMAT0016919	experimental	SOLiD [1]		0
+93158	hsa-miR-4289		MIMAT0016920	experimental	SOLiD [1]		0
+93159	hsa-miR-4290		MIMAT0016921	experimental	SOLiD [1]		0
+93160	hsa-miR-4291		MIMAT0016922	experimental	SOLiD [1]		0
+93161	hsa-miR-4329		MIMAT0016923	experimental	SOLiD [1]		0
+93162	hsa-miR-4330		MIMAT0016924	experimental	SOLiD [1]		0
+93163	hsa-miR-500b-5p		MIMAT0016925	experimental	SOLiD [1], Illumina [2]		0
+93164	hsa-miR-4328		MIMAT0016926	experimental	SOLiD [1]		0
+93234	hsa-miR-1233-3p	hsa-miR-1233	MIMAT0005588	experimental	cloned [1]		0
+93265	hsa-miR-3605-5p		MIMAT0017981	experimental	Illumina [2]		0
+93266	hsa-miR-3605-3p		MIMAT0017982	experimental	Illumina [1]		0
+93267	hsa-miR-3606-5p	hsa-miR-3606	MIMAT0017983	experimental	Illumina [1]		0
+93268	hsa-miR-3607-5p		MIMAT0017984	experimental	Illumina [1]		1
+93269	hsa-miR-3607-3p		MIMAT0017985	experimental	Illumina [1]		1
+93270	hsa-miR-3609		MIMAT0017986	experimental	Illumina [1]		0
+93271	hsa-miR-3610		MIMAT0017987	experimental	Illumina [1]		0
+93272	hsa-miR-3611		MIMAT0017988	experimental	Illumina [1]		0
+93273	hsa-miR-3612		MIMAT0017989	experimental	Illumina [1]		0
+93274	hsa-miR-3613-5p		MIMAT0017990	experimental	Illumina [1]		0
+93275	hsa-miR-3613-3p		MIMAT0017991	experimental	Illumina [1]		0
+93276	hsa-miR-3614-5p		MIMAT0017992	experimental	Illumina [1-3]		0
+93277	hsa-miR-3614-3p		MIMAT0017993	experimental	Illumina [1-3]		0
+93278	hsa-miR-3615		MIMAT0017994	experimental	Illumina [1]		0
+93279	hsa-miR-3616-5p		MIMAT0017995	experimental	Illumina [1]		0
+93280	hsa-miR-3616-3p		MIMAT0017996	experimental	Illumina [1]		0
+93281	hsa-miR-3617-5p	hsa-miR-3617	MIMAT0017997	experimental	Illumina [1-2]		0
+93282	hsa-miR-3618		MIMAT0017998	experimental	Illumina [1]		0
+93283	hsa-miR-3619-5p	hsa-miR-3619	MIMAT0017999	experimental	Illumina [1-2]		0
+93284	hsa-miR-23c		MIMAT0018000	experimental	Illumina [1]		0
+93285	hsa-miR-3620-3p	hsa-miR-3620	MIMAT0018001	experimental	Illumina [1]		0
+93286	hsa-miR-3621		MIMAT0018002	experimental	Illumina [1]		0
+93287	hsa-miR-3622a-5p		MIMAT0018003	experimental	Illumina [1-2]		0
+93288	hsa-miR-3622a-3p		MIMAT0018004	experimental	Illumina [1-2]		0
+93289	hsa-miR-3622b-5p		MIMAT0018005	experimental	Illumina [1]		0
+93290	hsa-miR-3622b-3p		MIMAT0018006	experimental	Illumina [1]		0
+93349	hsa-miR-3646		MIMAT0018065	experimental	454 [1]		0
+93352	hsa-miR-3648		MIMAT0018068	experimental	454 [1]		0
+93353	hsa-miR-3649		MIMAT0018069	experimental	454 [1]		0
+93354	hsa-miR-3650		MIMAT0018070	experimental	454 [1]		0
+93355	hsa-miR-3651		MIMAT0018071	experimental	454 [1]		0
+93356	hsa-miR-3652		MIMAT0018072	experimental	454 [1]		0
+93357	hsa-miR-3653-3p	hsa-miR-3653	MIMAT0018073	experimental	454 [1]		1
+93358	hsa-miR-3654		MIMAT0018074	experimental	454 [1]		0
+93359	hsa-miR-3655		MIMAT0018075	experimental	454 [1]		0
+93360	hsa-miR-3656		MIMAT0018076	experimental	454 [1]		1
+93361	hsa-miR-3657		MIMAT0018077	experimental	454 [1]		0
+93362	hsa-miR-3658		MIMAT0018078	experimental	454 [1]		0
+93363	hsa-miR-1273e		MIMAT0018079	experimental	454 [1]		1
+93364	hsa-miR-3659		MIMAT0018080	experimental	Northern [1], Illumina [2]		0
+93365	hsa-miR-3660		MIMAT0018081	experimental	Northern [1], Illumina [2]		0
+93366	hsa-miR-3661		MIMAT0018082	experimental	Northern [1], Illumina [2]		0
+93367	hsa-miR-3662		MIMAT0018083	experimental	Northern [1]		0
+93368	hsa-miR-3663-5p		MIMAT0018084	experimental	Northern [1]		0
+93369	hsa-miR-3663-3p		MIMAT0018085	experimental	Illumina [2]		0
+93370	hsa-miR-3664-5p	hsa-miR-3664	MIMAT0018086	experimental	Northern [1], Illumina [2]		0
+93371	hsa-miR-3665		MIMAT0018087	experimental	microarray [1]		0
+93372	hsa-miR-3666		MIMAT0018088	experimental	microarray [1]		0
+93373	hsa-miR-3667-5p		MIMAT0018089	experimental	Illumina [1]		0
+93374	hsa-miR-3667-3p		MIMAT0018090	experimental	Illumina [1]		0
+93375	hsa-miR-3668		MIMAT0018091	experimental	Illumina [1]		0
+93377	hsa-miR-3670		MIMAT0018093	experimental	Illumina [1]		0
+93378	hsa-miR-3671		MIMAT0018094	experimental	Illumina [1]		0
+93379	hsa-miR-3672		MIMAT0018095	experimental	Illumina [1]		0
+93381	hsa-miR-3674		MIMAT0018097	experimental	Illumina [1]		0
+93382	hsa-miR-3675-5p		MIMAT0018098	experimental	Illumina [1]		0
+93383	hsa-miR-3675-3p		MIMAT0018099	experimental	Illumina [1]		0
+93385	hsa-miR-3677-3p	hsa-miR-3677	MIMAT0018101	experimental	Illumina [1-2]		0
+93386	hsa-miR-3678-5p		MIMAT0018102	experimental	Illumina [1]		0
+93387	hsa-miR-3678-3p		MIMAT0018103	experimental	Illumina [1]		0
+93388	hsa-miR-3679-5p		MIMAT0018104	experimental	Illumina [1-3]		0
+93389	hsa-miR-3679-3p		MIMAT0018105	experimental	Illumina [1,3]		0
+93390	hsa-miR-3680-5p	hsa-miR-3680	MIMAT0018106	experimental	Illumina [1]		0
+93391	hsa-miR-3680-3p	hsa-miR-3680*	MIMAT0018107	experimental	Illumina [1]		0
+93392	hsa-miR-3681-5p	hsa-miR-3681	MIMAT0018108	experimental	Illumina [1]		0
+93393	hsa-miR-3681-3p	hsa-miR-3681*	MIMAT0018109	experimental	Illumina [1]		0
+93394	hsa-miR-3682-3p	hsa-miR-3682	MIMAT0018110	experimental	Illumina [1-2]		0
+93395	hsa-miR-3683		MIMAT0018111	experimental	Illumina [1]		0
+93396	hsa-miR-3684		MIMAT0018112	experimental	Illumina [1]		0
+93397	hsa-miR-3685		MIMAT0018113	experimental	Illumina [1]		0
+93398	hsa-miR-3686		MIMAT0018114	experimental	Illumina [1]		0
+93399	hsa-miR-3687		MIMAT0018115	experimental	Illumina [1]		1
+93400	hsa-miR-3688-3p	hsa-miR-3688	MIMAT0018116	experimental	Illumina [1]		0
+93401	hsa-miR-3689a-5p		MIMAT0018117	experimental	Illumina [1-2]		0
+93402	hsa-miR-3689a-3p		MIMAT0018118	experimental	Illumina [1-2]		0
+93403	hsa-miR-3690		MIMAT0018119	experimental	Illumina [1]		0
+93404	hsa-miR-3691-5p	hsa-miR-3691	MIMAT0018120	experimental	Illumina [1-2]		0
+93405	hsa-miR-3692-5p	hsa-miR-3692*	MIMAT0018121	experimental	Illumina [1]		0
+93406	hsa-miR-3692-3p	hsa-miR-3692	MIMAT0018122	experimental	Illumina [1]		0
+93448	hsa-miR-3713		MIMAT0018164	experimental	SOLiD [1]		0
+93449	hsa-miR-3714		MIMAT0018165	experimental	SOLiD [1]		0
+93462	hsa-miR-3180		MIMAT0018178	experimental	Illumina [1]		0
+93464	hsa-miR-3907		MIMAT0018179	experimental	Illumina [1]		0
+93465	hsa-miR-3689b-5p	hsa-miR-3689b	MIMAT0018180	experimental	Illumina [1]		0
+93466	hsa-miR-3689b-3p	hsa-miR-3689b*	MIMAT0018181	experimental	Illumina [1]		0
+93467	hsa-miR-3908		MIMAT0018182	experimental	Illumina [1]		0
+93468	hsa-miR-3909		MIMAT0018183	experimental	Illumina [1-2]		0
+93469	hsa-miR-3910		MIMAT0018184	experimental	Illumina [1]		0
+93470	hsa-miR-3911		MIMAT0018185	experimental	Illumina [1-2]		0
+93471	hsa-miR-3912-3p		MIMAT0018186	experimental	Illumina [1-2]		0
+93472	hsa-miR-3913-5p	hsa-miR-3913	MIMAT0018187	experimental	Illumina [1]		0
+94585	hsa-miR-3913-3p		MIMAT0019225	not_experimental	\N		0
+93474	hsa-miR-3914		MIMAT0018188	experimental	Illumina [1-2]		0
+93475	hsa-miR-3915		MIMAT0018189	experimental	Illumina [1]		0
+93477	hsa-miR-3916		MIMAT0018190	experimental	Illumina [1]		0
+93478	hsa-miR-3917		MIMAT0018191	experimental	Illumina [1]		0
+93479	hsa-miR-3918		MIMAT0018192	experimental	Illumina [1]		0
+93480	hsa-miR-3919		MIMAT0018193	experimental	Illumina [1]		0
+93481	hsa-miR-3150b-3p	hsa-miR-3150b	MIMAT0018194	experimental	Illumina [1-3]		0
+93482	hsa-miR-3920		MIMAT0018195	experimental	Illumina [1]		0
+93483	hsa-miR-3921		MIMAT0018196	experimental	Illumina [1]		0
+93484	hsa-miR-3922-3p	hsa-miR-3922	MIMAT0018197	experimental	Illumina [1-2]		0
+93485	hsa-miR-3923		MIMAT0018198	experimental	Illumina [1]		0
+93487	hsa-miR-3924		MIMAT0018199	experimental	Illumina [1]		0
+93488	hsa-miR-3925-5p	hsa-miR-3925	MIMAT0018200	experimental	Illumina [1-2]		0
+93489	hsa-miR-3926		MIMAT0018201	experimental	Illumina [1-2]		0
+93490	hsa-miR-3927-3p	hsa-miR-3927	MIMAT0018202	experimental	Illumina [1-2]		0
+93491	hsa-miR-676-5p	hsa-miR-676*	MIMAT0018203	experimental	Illumina [1,3]		0
+93492	hsa-miR-676-3p	hsa-miR-676	MIMAT0018204	experimental	Illumina [1-3]		0
+93494	hsa-miR-3928-3p		MIMAT0018205	experimental	Illumina [1-2]		0
+93495	hsa-miR-3929		MIMAT0018206	experimental	Illumina [1]		0
+93638	hsa-miR-3934-5p	hsa-miR-3934	MIMAT0018349	experimental	Illumina [1-2]		0
+93639	hsa-miR-3935		MIMAT0018350	experimental	Illumina [1]		0
+93640	hsa-miR-3936		MIMAT0018351	experimental	Illumina [1-3]		0
+93641	hsa-miR-3937		MIMAT0018352	experimental	Illumina [1]		0
+93642	hsa-miR-3938		MIMAT0018353	experimental	Illumina [1]		0
+93643	hsa-miR-548y		MIMAT0018354	experimental	Illumina [1]		0
+93644	hsa-miR-3939		MIMAT0018355	experimental	Illumina [1]		0
+93645	hsa-miR-3940-3p	hsa-miR-3940	MIMAT0018356	experimental	Illumina [1-2]		0
+93646	hsa-miR-3941		MIMAT0018357	experimental	Illumina [1]		0
+93647	hsa-miR-3942-5p	hsa-miR-3942	MIMAT0018358	experimental	Illumina [1-3]		0
+93648	hsa-miR-3943		MIMAT0018359	experimental	Illumina [1]		0
+93649	hsa-miR-3944-3p	hsa-miR-3944	MIMAT0018360	experimental	Illumina [1-2]		0
+93650	hsa-miR-3945		MIMAT0018361	experimental	Illumina [1]		0
+93734	hsa-miR-374c-5p	hsa-miR-374c	MIMAT0018443	experimental	Illumina [1]		0
+93735	hsa-miR-642b-3p	hsa-miR-642b	MIMAT0018444	experimental	Illumina [1]		0
+93736	hsa-miR-550b-3p	hsa-miR-550b	MIMAT0018445	experimental	Illumina [1]		0
+93738	hsa-miR-548z		MIMAT0018446	experimental	Illumina [1]		0
+93739	hsa-miR-548aa		MIMAT0018447	experimental	Illumina [1]		0
+93936	hsa-miR-151b		MIMAT0010214	experimental	RAKE [1], Illumina [2]		0
+93937	hsa-miR-378d		MIMAT0018926	experimental	Illumina [1]		0
+94119	hsa-miR-2681-5p	hsa-miR-2681*	MIMAT0013515	experimental	Illumina [1]		0
+94120	hsa-miR-2681-3p	hsa-miR-2681	MIMAT0013516	experimental	Illumina [1]		0
+94121	hsa-miR-2682-5p	hsa-miR-2682	MIMAT0013517	experimental	Illumina [1-2]		0
+94122	hsa-miR-2682-3p	hsa-miR-2682*	MIMAT0013518	experimental	Illumina [2]		0
+94140	hsa-miR-3117-5p		MIMAT0019197	experimental	Illumina [2-3]		0
+94141	hsa-miR-3120-5p		MIMAT0019198	experimental	Illumina [2]		0
+94142	hsa-miR-3121-5p		MIMAT0019199	experimental	Illumina [3]		0
+94143	hsa-miR-3124-3p		MIMAT0019200	experimental	Illumina [3]		0
+94144	hsa-miR-3127-3p		MIMAT0019201	experimental	Illumina [2]		0
+94145	hsa-miR-3129-3p		MIMAT0019202	experimental	Illumina [3]		0
+94146	hsa-miR-3136-3p		MIMAT0019203	experimental	Illumina [2-3]		0
+94147	hsa-miR-3140-5p		MIMAT0019204	experimental	Illumina [3-4]		0
+94148	hsa-miR-3145-5p		MIMAT0019205	experimental	Illumina [2]		0
+94149	hsa-miR-3150a-5p		MIMAT0019206	experimental	Illumina [2]		0
+94150	hsa-miR-3152-5p		MIMAT0019207	experimental	Illumina [4]		0
+94151	hsa-miR-3074-5p		MIMAT0019208	experimental	Illumina [2]		0
+94153	hsa-miR-3157-3p		MIMAT0019210	experimental	Illumina [2]		0
+94154	hsa-miR-3158-5p		MIMAT0019211	not_experimental	\N		0
+94159	hsa-miR-3162-3p		MIMAT0019213	experimental	Illumina [2]		0
+94160	hsa-miR-3173-5p		MIMAT0019214	experimental	Illumina [2-3]		0
+94161	hsa-miR-3177-5p		MIMAT0019215	experimental	Illumina [2-3]		0
+94164	hsa-miR-3187-5p		MIMAT0019216	experimental	Illumina [2]		0
+94165	hsa-miR-3189-5p		MIMAT0019217	experimental	Illumina [2]		0
+94166	hsa-miR-3194-3p		MIMAT0019218	experimental	Illumina [2]		0
+94170	hsa-miR-3619-3p		MIMAT0019219	experimental	Illumina [2]		0
+94171	hsa-miR-3664-3p		MIMAT0019220	experimental	Illumina [2]		0
+94172	hsa-miR-3677-5p		MIMAT0019221	experimental	Illumina [2]		0
+94173	hsa-miR-3682-5p		MIMAT0019222	experimental	Illumina [2]		0
+94174	hsa-miR-3688-5p		MIMAT0019223	experimental	Illumina [1]		0
+94175	hsa-miR-3691-3p		MIMAT0019224	experimental	Illumina [2]		0
+94587	hsa-miR-3150b-5p		MIMAT0019226	experimental	Illumina [2-3]		0
+94588	hsa-miR-3922-5p		MIMAT0019227	experimental	Illumina [2]		0
+94589	hsa-miR-3925-3p		MIMAT0019228	experimental	Illumina [2]		0
+94600	hsa-miR-3940-5p		MIMAT0019229	experimental	Illumina [2]		0
+94601	hsa-miR-3942-3p		MIMAT0019230	experimental	Illumina [2-3]		0
+94602	hsa-miR-3944-5p		MIMAT0019231	experimental	Illumina [2]		0
+94605	hsa-miR-1268b		MIMAT0018925	experimental	Illumina [1]		0
+94607	hsa-miR-378e		MIMAT0018927	experimental	Illumina [1]		0
+94609	hsa-miR-548ab		MIMAT0018928	experimental	Illumina [1]		0
+94610	hsa-miR-4417		MIMAT0018929	experimental	Illumina [1]		1
+94611	hsa-miR-4418		MIMAT0018930	experimental	Illumina [1]		0
+94612	hsa-miR-4419a		MIMAT0018931	experimental	Illumina [1]		1
+94613	hsa-miR-378f		MIMAT0018932	experimental	Illumina [1]		0
+94614	hsa-miR-4420		MIMAT0018933	experimental	Illumina [1]		0
+94615	hsa-miR-4421		MIMAT0018934	experimental	Illumina [1]		0
+94616	hsa-miR-4422		MIMAT0018935	experimental	Illumina [1-2]		0
+94617	hsa-miR-4423-5p		MIMAT0019232	experimental	Illumina [2,4]		0
+94618	hsa-miR-4423-3p		MIMAT0018936	experimental	Illumina [1-2,4]		0
+94619	hsa-miR-378g		MIMAT0018937	experimental	Illumina [1]		0
+94620	hsa-miR-548ac		MIMAT0018938	experimental	Illumina [1]		0
+94621	hsa-miR-4424		MIMAT0018939	experimental	Illumina [1]		0
+94622	hsa-miR-4425		MIMAT0018940	experimental	Illumina [1]		0
+94623	hsa-miR-4426		MIMAT0018941	experimental	Illumina [1]		0
+94624	hsa-miR-4427		MIMAT0018942	experimental	Illumina [1]		0
+94625	hsa-miR-4428		MIMAT0018943	experimental	Illumina [1]		0
+94626	hsa-miR-4429		MIMAT0018944	experimental	Illumina [1]		0
+94627	hsa-miR-4430		MIMAT0018945	experimental	Illumina [1]		0
+94628	hsa-miR-548ad-3p	hsa-miR-548ad	MIMAT0018946	experimental	Illumina [1]		0
+94629	hsa-miR-4431		MIMAT0018947	experimental	Illumina [1]		0
+94630	hsa-miR-4432		MIMAT0018948	experimental	Illumina [1]		0
+94631	hsa-miR-4433a-3p	hsa-miR-4433-3p	MIMAT0018949	experimental	Illumina [1]		0
+94632	hsa-miR-4434		MIMAT0018950	experimental	Illumina [1]		0
+94633	hsa-miR-4435		MIMAT0018951	experimental	Illumina [1]		0
+94634	hsa-miR-4436a		MIMAT0018952	experimental	Illumina [1-2]		0
+94636	hsa-miR-4437		MIMAT0018953	experimental	Illumina [1]		0
+94637	hsa-miR-548ae-3p	hsa-miR-548ae	MIMAT0018954	experimental	Illumina [1]		0
+94639	hsa-miR-4438		MIMAT0018956	experimental	Illumina [1]		0
+94640	hsa-miR-4439		MIMAT0018957	experimental	Illumina [1]		0
+94641	hsa-miR-4440		MIMAT0018958	experimental	Illumina [1]		0
+94642	hsa-miR-4441		MIMAT0018959	experimental	Illumina [1]		0
+94643	hsa-miR-4442		MIMAT0018960	experimental	Illumina [1]		0
+94644	hsa-miR-4443		MIMAT0018961	experimental	Illumina [1]		0
+94645	hsa-miR-4444		MIMAT0018962	experimental	Illumina [1]		0
+94646	hsa-miR-4445-5p	hsa-miR-4445	MIMAT0018963	experimental	Illumina [1]		0
+94647	hsa-miR-4445-3p	hsa-miR-4445*	MIMAT0018964	experimental	Illumina [1]		0
+94648	hsa-miR-4446-5p		MIMAT0019233	experimental	Illumina [2-3]		0
+94649	hsa-miR-4446-3p		MIMAT0018965	experimental	Illumina [1-3]		0
+94650	hsa-miR-4447		MIMAT0018966	experimental	Illumina [1]		0
+94651	hsa-miR-4448		MIMAT0018967	experimental	Illumina [1]		0
+94652	hsa-miR-4449		MIMAT0018968	experimental	Illumina [1]		0
+94653	hsa-miR-548ag		MIMAT0018969	experimental	Illumina [1]		0
+94655	hsa-miR-4450		MIMAT0018971	experimental	Illumina [1]		0
+94656	hsa-miR-548ah-5p	hsa-miR-548ah	MIMAT0018972	experimental	Illumina [1]		0
+94657	hsa-miR-4451		MIMAT0018973	experimental	Illumina [1]		0
+94658	hsa-miR-4452		MIMAT0018974	experimental	Illumina [1]		0
+94659	hsa-miR-4453		MIMAT0018975	experimental	Illumina [1]		0
+94660	hsa-miR-4454		MIMAT0018976	experimental	Illumina [1]		0
+94661	hsa-miR-4455		MIMAT0018977	experimental	Illumina [1]		0
+94662	hsa-miR-4456		MIMAT0018978	experimental	Illumina [1]		0
+94663	hsa-miR-4457		MIMAT0018979	experimental	Illumina [1]		0
+94664	hsa-miR-4458		MIMAT0018980	experimental	Illumina [1]		0
+94665	hsa-miR-4459		MIMAT0018981	experimental	Illumina [1]		1
+94666	hsa-miR-4460		MIMAT0018982	experimental	Illumina [1]		0
+94667	hsa-miR-4461		MIMAT0018983	experimental	Illumina [1]		1
+94668	hsa-miR-378h		MIMAT0018984	experimental	Illumina [1]		0
+94669	hsa-miR-3135b		MIMAT0018985	experimental	Illumina [1]		0
+94670	hsa-miR-4462		MIMAT0018986	experimental	Illumina [1]		0
+94671	hsa-miR-4463		MIMAT0018987	experimental	Illumina [1]		0
+94672	hsa-miR-4464		MIMAT0018988	experimental	Illumina [1]		0
+94673	hsa-miR-548ai		MIMAT0018989	experimental	Illumina [1]		0
+94674	hsa-miR-548aj-3p	hsa-miR-548aj	MIMAT0018990	experimental	Illumina [1]		0
+94676	hsa-miR-4465		MIMAT0018992	experimental	Illumina [1]		0
+94677	hsa-miR-4466		MIMAT0018993	experimental	Illumina [1]		0
+94678	hsa-miR-4467		MIMAT0018994	experimental	Illumina [1-2]		0
+94679	hsa-miR-4468		MIMAT0018995	experimental	Illumina [1]		0
+94680	hsa-miR-4469		MIMAT0018996	experimental	Illumina [1-2]		0
+94681	hsa-miR-4470		MIMAT0018997	experimental	Illumina [1]		0
+94682	hsa-miR-4471		MIMAT0018998	experimental	Illumina [1-2]		0
+94683	hsa-miR-4472		MIMAT0018999	experimental	Illumina [1]		0
+94685	hsa-miR-4473		MIMAT0019000	experimental	Illumina [1]		0
+94686	hsa-miR-4474-5p		MIMAT0019234	experimental	Illumina [2-3]		0
+94687	hsa-miR-4474-3p		MIMAT0019001	experimental	Illumina [1-3]		0
+94688	hsa-miR-4475		MIMAT0019002	experimental	Illumina [1]		0
+94689	hsa-miR-4476		MIMAT0019003	experimental	Illumina [1]		0
+94690	hsa-miR-4477a		MIMAT0019004	experimental	Illumina [1]		0
+94691	hsa-miR-4477b		MIMAT0019005	experimental	Illumina [1]		0
+94692	hsa-miR-4478		MIMAT0019006	experimental	Illumina [1]		0
+94693	hsa-miR-3689c		MIMAT0019007	experimental	Illumina [1]		0
+94695	hsa-miR-3689d		MIMAT0019008	experimental	Illumina [1]		0
+94697	hsa-miR-3689e		MIMAT0019009	experimental	Illumina [1]		0
+94698	hsa-miR-3689f		MIMAT0019010	experimental	Illumina [1]		0
+94699	hsa-miR-4479		MIMAT0019011	experimental	Illumina [1]		0
+94700	hsa-miR-3155b		MIMAT0019012	experimental	Illumina [1]		0
+94701	hsa-miR-548ak		MIMAT0019013	experimental	Illumina [1]		0
+94702	hsa-miR-4480		MIMAT0019014	experimental	Illumina [1]		0
+94703	hsa-miR-4481		MIMAT0019015	experimental	Illumina [1]		0
+94705	hsa-miR-4483		MIMAT0019017	experimental	Illumina [1]		0
+94706	hsa-miR-4484		MIMAT0019018	experimental	Illumina [1]		0
+94707	hsa-miR-4485-3p	hsa-miR-4485	MIMAT0019019	experimental	Illumina [1]		0
+94708	hsa-miR-4486		MIMAT0019020	experimental	Illumina [1]		0
+94709	hsa-miR-4487		MIMAT0019021	experimental	Illumina [1]		0
+94710	hsa-miR-4488		MIMAT0019022	experimental	Illumina [1]		0
+94711	hsa-miR-4489		MIMAT0019023	experimental	Illumina [1-2]		0
+94712	hsa-miR-548al		MIMAT0019024	experimental	Illumina [1]		0
+94713	hsa-miR-4490		MIMAT0019025	experimental	Illumina [1]		0
+94714	hsa-miR-4491		MIMAT0019026	experimental	Illumina [1]		0
+94715	hsa-miR-4492		MIMAT0019027	experimental	Illumina [1]		0
+94716	hsa-miR-4493		MIMAT0019028	experimental	Illumina [1]		0
+94717	hsa-miR-4494		MIMAT0019029	experimental	Illumina [1]		0
+94718	hsa-miR-4495		MIMAT0019030	experimental	Illumina [1]		0
+94719	hsa-miR-4496		MIMAT0019031	experimental	Illumina [1]		0
+94720	hsa-miR-4497		MIMAT0019032	experimental	Illumina [1]		0
+94721	hsa-miR-4498		MIMAT0019033	experimental	Illumina [1]		0
+94722	hsa-miR-4419b		MIMAT0019034	experimental	Illumina [1]		1
+94723	hsa-miR-4499		MIMAT0019035	experimental	Illumina [1]		0
+94724	hsa-miR-4500		MIMAT0019036	experimental	Illumina [1]		0
+94725	hsa-miR-4501		MIMAT0019037	experimental	Illumina [1]		0
+94726	hsa-miR-4502		MIMAT0019038	experimental	Illumina [1]		0
+94727	hsa-miR-4503		MIMAT0019039	experimental	Illumina [1]		0
+94728	hsa-miR-4504		MIMAT0019040	experimental	Illumina [1]		0
+94729	hsa-miR-4505		MIMAT0019041	experimental	Illumina [1]		0
+94730	hsa-miR-4506		MIMAT0019042	experimental	Illumina [1]		0
+94731	hsa-miR-2392		MIMAT0019043	experimental	Illumina [1]		0
+94732	hsa-miR-4507		MIMAT0019044	experimental	Illumina [1]		0
+94733	hsa-miR-4508		MIMAT0019045	experimental	Illumina [1]		0
+94734	hsa-miR-4509		MIMAT0019046	experimental	Illumina [1]		0
+94737	hsa-miR-4510		MIMAT0019047	experimental	Illumina [1]		0
+94738	hsa-miR-4511		MIMAT0019048	experimental	Illumina [1-2], qPCR [2]		0
+94739	hsa-miR-4512		MIMAT0019049	experimental	Illumina [1]		0
+94740	hsa-miR-4513		MIMAT0019050	experimental	Illumina [1]		0
+94741	hsa-miR-4514		MIMAT0019051	experimental	Illumina [1]		0
+94742	hsa-miR-4515		MIMAT0019052	experimental	Illumina [1]		0
+94743	hsa-miR-4516		MIMAT0019053	experimental	Illumina [1]		0
+94744	hsa-miR-4517		MIMAT0019054	experimental	Illumina [1]		0
+94745	hsa-miR-4518		MIMAT0019055	experimental	Illumina [1]		0
+94746	hsa-miR-4519		MIMAT0019056	experimental	Illumina [1]		0
+94747	hsa-miR-4520-5p	hsa-miR-4520a-5p	MIMAT0019235	experimental	Illumina [1]		0
+94748	hsa-miR-4520-3p	hsa-miR-4520a-3p	MIMAT0019057	experimental	Illumina [1-3]		0
+94749	hsa-miR-4521		MIMAT0019058	experimental	Illumina [1]		0
+94750	hsa-miR-1269b		MIMAT0019059	experimental	Illumina [1]		0
+94751	hsa-miR-4522		MIMAT0019060	experimental	Illumina [1]		0
+94752	hsa-miR-4523		MIMAT0019061	experimental	Illumina [1]		0
+94753	hsa-miR-4524a-5p	hsa-miR-4524	MIMAT0019062	experimental	Illumina [1-2,4]		0
+94754	hsa-miR-4524a-3p	hsa-miR-4524*	MIMAT0019063	experimental	Illumina [1-2,4]		0
+94755	hsa-miR-4525		MIMAT0019064	experimental	Illumina [1]		0
+94756	hsa-miR-4526		MIMAT0019065	experimental	Illumina [1-2]		0
+94757	hsa-miR-4527		MIMAT0019066	experimental	Illumina [1]		0
+94758	hsa-miR-4528		MIMAT0019067	experimental	Illumina [1]		0
+94759	hsa-miR-4529-5p		MIMAT0019236	experimental	Illumina [2]		0
+94760	hsa-miR-4529-3p		MIMAT0019068	experimental	Illumina [1-2]		0
+94761	hsa-miR-4530		MIMAT0019069	experimental	Illumina [1]		0
+94762	hsa-miR-4531		MIMAT0019070	experimental	Illumina [1]		0
+94763	hsa-miR-4532		MIMAT0019071	experimental	Illumina [1]		1
+94764	hsa-miR-4533		MIMAT0019072	experimental	Illumina [1]		0
+94765	hsa-miR-4534		MIMAT0019073	experimental	Illumina [1]		0
+94766	hsa-miR-378i		MIMAT0019074	experimental	Illumina [1]		0
+94767	hsa-miR-4535		MIMAT0019075	experimental	Illumina [1]		0
+94768	hsa-miR-548am-3p	hsa-miR-548am	MIMAT0019076	experimental	Illumina [1]		0
+94769	hsa-miR-1587		MIMAT0019077	experimental	Illumina [1]		0
+94770	hsa-miR-4536-5p	hsa-miR-4536	MIMAT0019078	not_experimental	\N		0
+94771	hsa-miR-548an		MIMAT0019079	experimental	Illumina [1]		0
+94772	hsa-miR-4537		MIMAT0019080	experimental	Illumina [1]		0
+94773	hsa-miR-4538		MIMAT0019081	experimental	Illumina [1]		0
+94774	hsa-miR-4539		MIMAT0019082	experimental	Illumina [1]		0
+94775	hsa-miR-4540		MIMAT0019083	experimental	Illumina [1]		0
+94876	hsa-miR-3960		MIMAT0019337	not_experimental	\N	MI0016963	0
+94896	hsa-miR-3972		MIMAT0019357	experimental	Illumina [1]		0
+94897	hsa-miR-3973		MIMAT0019358	experimental	Illumina [1]		0
+94898	hsa-miR-3974		MIMAT0019359	experimental	Illumina [1]		0
+94899	hsa-miR-3975		MIMAT0019360	experimental	Illumina [1]		0
+94900	hsa-miR-3976		MIMAT0019361	experimental	Illumina [1]		0
+94901	hsa-miR-3977		MIMAT0019362	experimental	Illumina [1]		0
+94902	hsa-miR-3978		MIMAT0019363	experimental	Illumina [1]		0
+95241	hsa-miR-4632-3p	hsa-miR-4632	MIMAT0019688	experimental	Illumina [1]		0
+95242	hsa-miR-4633-5p		MIMAT0019689	experimental	Illumina [1]		0
+95243	hsa-miR-4633-3p		MIMAT0019690	experimental	Illumina [1]		0
+95244	hsa-miR-4634		MIMAT0019691	experimental	Illumina [1]		0
+95245	hsa-miR-4635		MIMAT0019692	experimental	Illumina [1]		0
+95246	hsa-miR-4636		MIMAT0019693	experimental	Illumina [1]		0
+95247	hsa-miR-4637		MIMAT0019694	experimental	Illumina [1-2]		0
+95248	hsa-miR-4638-5p		MIMAT0019695	experimental	Illumina [1]		0
+95249	hsa-miR-4638-3p		MIMAT0019696	experimental	Illumina [1]		0
+95250	hsa-miR-4639-5p		MIMAT0019697	experimental	Illumina [1]		0
+95251	hsa-miR-4639-3p		MIMAT0019698	experimental	Illumina [1]		0
+95252	hsa-miR-4640-5p		MIMAT0019699	experimental	Illumina [1]		0
+95253	hsa-miR-4640-3p		MIMAT0019700	experimental	Illumina [1]		0
+95254	hsa-miR-4641		MIMAT0019701	experimental	Illumina [1]		0
+95255	hsa-miR-4642		MIMAT0019702	experimental	Illumina [1]		0
+95256	hsa-miR-4643		MIMAT0019703	experimental	Illumina [1]		0
+95257	hsa-miR-4644		MIMAT0019704	experimental	Illumina [1]		0
+95258	hsa-miR-4645-5p		MIMAT0019705	experimental	Illumina [1]		0
+95259	hsa-miR-4645-3p		MIMAT0019706	experimental	Illumina [1]		0
+95260	hsa-miR-4646-5p		MIMAT0019707	experimental	Illumina [1]		0
+95261	hsa-miR-4646-3p		MIMAT0019708	experimental	Illumina [1]		0
+95262	hsa-miR-4647		MIMAT0019709	experimental	Illumina [1]		0
+95263	hsa-miR-4648		MIMAT0019710	experimental	Illumina [1]		0
+95264	hsa-miR-4649-5p		MIMAT0019711	experimental	Illumina [1]		0
+95265	hsa-miR-4649-3p		MIMAT0019712	experimental	Illumina [1]		0
+95266	hsa-miR-4650-5p		MIMAT0019713	experimental	Illumina [1]		0
+95267	hsa-miR-4650-3p		MIMAT0019714	experimental	Illumina [1]		0
+95270	hsa-miR-4651		MIMAT0019715	experimental	Illumina [1]		0
+95271	hsa-miR-4652-5p		MIMAT0019716	experimental	Illumina [1]		0
+95272	hsa-miR-4652-3p		MIMAT0019717	experimental	Illumina [1]		0
+95273	hsa-miR-4653-5p		MIMAT0019718	experimental	Illumina [1]		0
+95274	hsa-miR-4653-3p		MIMAT0019719	experimental	Illumina [1]		0
+95275	hsa-miR-4654		MIMAT0019720	experimental	Illumina [1]		0
+95276	hsa-miR-4655-5p		MIMAT0019721	experimental	Illumina [1]		0
+95277	hsa-miR-4655-3p		MIMAT0019722	experimental	Illumina [1]		0
+95278	hsa-miR-4656		MIMAT0019723	experimental	Illumina [1]		0
+95279	hsa-miR-4657		MIMAT0019724	experimental	Illumina [1]		0
+95280	hsa-miR-4658		MIMAT0019725	experimental	Illumina [1]		0
+95281	hsa-miR-4659a-5p		MIMAT0019726	experimental	Illumina [1]		0
+95282	hsa-miR-4659a-3p		MIMAT0019727	experimental	Illumina [1]		0
+95283	hsa-miR-4660		MIMAT0019728	experimental	Illumina [1]		0
+95284	hsa-miR-4661-5p		MIMAT0019729	experimental	Illumina [1]		0
+95285	hsa-miR-4661-3p		MIMAT0019730	experimental	Illumina [1]		0
+95286	hsa-miR-4662a-5p		MIMAT0019731	experimental	Illumina [1,3]		0
+95287	hsa-miR-4662a-3p		MIMAT0019732	experimental	Illumina [1,3]		0
+95288	hsa-miR-4659b-5p		MIMAT0019733	experimental	Illumina [1]		0
+95289	hsa-miR-4659b-3p		MIMAT0019734	experimental	Illumina [1]		0
+95290	hsa-miR-4663		MIMAT0019735	experimental	Illumina [1]		0
+95291	hsa-miR-4662b		MIMAT0019736	experimental	Illumina [1]		0
+95292	hsa-miR-4664-5p		MIMAT0019737	experimental	Illumina [1]		0
+95293	hsa-miR-4664-3p		MIMAT0019738	experimental	Illumina [1]		0
+95294	hsa-miR-4665-5p		MIMAT0019739	experimental	Illumina [1]		0
+95295	hsa-miR-4665-3p		MIMAT0019740	experimental	Illumina [1]		0
+95296	hsa-miR-4666a-5p	hsa-miR-4666-5p	MIMAT0019741	experimental	Illumina [1]		0
+95297	hsa-miR-4666a-3p	hsa-miR-4666-3p	MIMAT0019742	experimental	Illumina [1]		0
+95298	hsa-miR-4667-5p		MIMAT0019743	experimental	Illumina [1-2]		0
+95299	hsa-miR-4667-3p		MIMAT0019744	experimental	Illumina [1-2]		0
+95300	hsa-miR-4668-5p		MIMAT0019745	experimental	Illumina [1]		0
+95301	hsa-miR-4668-3p		MIMAT0019746	experimental	Illumina [1]		0
+95302	hsa-miR-219b-5p		MIMAT0019747	experimental	Illumina [1]		0
+95303	hsa-miR-219b-3p		MIMAT0019748	experimental	Illumina [1]		0
+95304	hsa-miR-4669		MIMAT0019749	experimental	Illumina [1]		0
+95305	hsa-miR-4670-5p		MIMAT0019750	experimental	Illumina [1]		0
+95306	hsa-miR-4670-3p		MIMAT0019751	experimental	Illumina [1]		0
+95307	hsa-miR-4671-5p		MIMAT0019752	experimental	Illumina [1]		0
+95308	hsa-miR-4671-3p		MIMAT0019753	experimental	Illumina [1]		0
+95309	hsa-miR-4672		MIMAT0019754	experimental	Illumina [1]		0
+95310	hsa-miR-4673		MIMAT0019755	experimental	Illumina [1]		0
+95311	hsa-miR-4674		MIMAT0019756	experimental	Illumina [1]		0
+95312	hsa-miR-4675		MIMAT0019757	experimental	Illumina [1]		0
+95313	hsa-miR-4676-5p		MIMAT0019758	experimental	Illumina [1]		0
+95314	hsa-miR-4676-3p		MIMAT0019759	experimental	Illumina [1]		0
+95315	hsa-miR-4677-5p		MIMAT0019760	experimental	Illumina [1,3]		0
+95316	hsa-miR-4677-3p		MIMAT0019761	experimental	Illumina [1,3]		0
+95317	hsa-miR-4678		MIMAT0019762	experimental	Illumina [1]		0
+95318	hsa-miR-4679		MIMAT0019763	experimental	Illumina [1]		0
+95320	hsa-miR-4680-5p		MIMAT0019764	experimental	Illumina [1]		0
+95321	hsa-miR-4680-3p		MIMAT0019765	experimental	Illumina [1]		0
+95322	hsa-miR-4681		MIMAT0019766	experimental	Illumina [1]		0
+95323	hsa-miR-4682		MIMAT0019767	experimental	Illumina [1]		0
+95324	hsa-miR-4683		MIMAT0019768	experimental	Illumina [1]		0
+95325	hsa-miR-4684-5p		MIMAT0019769	experimental	Illumina [1]		0
+95326	hsa-miR-4684-3p		MIMAT0019770	experimental	Illumina [1]		0
+95327	hsa-miR-4685-5p		MIMAT0019771	experimental	Illumina [1]		0
+95328	hsa-miR-4685-3p		MIMAT0019772	experimental	Illumina [1]		0
+95329	hsa-miR-4686		MIMAT0019773	experimental	Illumina [1]		0
+95330	hsa-miR-4687-5p		MIMAT0019774	experimental	Illumina [1]		0
+95331	hsa-miR-4687-3p		MIMAT0019775	experimental	Illumina [1]		0
+95332	hsa-miR-1343-3p		MIMAT0019776	experimental	Illumina [1-2]		0
+95333	hsa-miR-4688		MIMAT0019777	experimental	Illumina [1]		0
+95334	hsa-miR-4689		MIMAT0019778	experimental	Illumina [1]		0
+95335	hsa-miR-4690-5p		MIMAT0019779	experimental	Illumina [1]		0
+95336	hsa-miR-4690-3p		MIMAT0019780	experimental	Illumina [1]		0
+95337	hsa-miR-4691-5p		MIMAT0019781	experimental	Illumina [1]		0
+95338	hsa-miR-4691-3p		MIMAT0019782	experimental	Illumina [1]		0
+95339	hsa-miR-4692		MIMAT0019783	experimental	Illumina [1]		0
+95340	hsa-miR-4693-5p		MIMAT0019784	experimental	Illumina [1]		0
+95341	hsa-miR-4693-3p		MIMAT0019785	experimental	Illumina [1]		0
+95342	hsa-miR-4694-5p		MIMAT0019786	experimental	Illumina [1]		0
+95343	hsa-miR-4694-3p		MIMAT0019787	experimental	Illumina [1]		0
+95344	hsa-miR-4695-5p		MIMAT0019788	experimental	Illumina [1]		0
+95345	hsa-miR-4695-3p		MIMAT0019789	experimental	Illumina [1]		0
+95346	hsa-miR-4696		MIMAT0019790	experimental	Illumina [1]		0
+95347	hsa-miR-4697-5p		MIMAT0019791	experimental	Illumina [1]		0
+95348	hsa-miR-4697-3p		MIMAT0019792	experimental	Illumina [1]		0
+95349	hsa-miR-4698		MIMAT0019793	experimental	Illumina [1]		0
+95350	hsa-miR-4699-5p		MIMAT0019794	experimental	Illumina [1]		0
+95351	hsa-miR-4699-3p		MIMAT0019795	experimental	Illumina [1]		0
+95352	hsa-miR-4700-5p		MIMAT0019796	experimental	Illumina [1]		0
+95353	hsa-miR-4700-3p		MIMAT0019797	experimental	Illumina [1]		0
+95354	hsa-miR-4701-5p		MIMAT0019798	experimental	Illumina [1]		0
+95355	hsa-miR-4701-3p		MIMAT0019799	experimental	Illumina [1]		0
+95357	hsa-miR-4703-5p		MIMAT0019801	experimental	Illumina [1]		0
+95358	hsa-miR-4703-3p		MIMAT0019802	experimental	Illumina [1]		0
+95359	hsa-miR-4704-5p		MIMAT0019803	experimental	Illumina [1]		0
+95360	hsa-miR-4704-3p		MIMAT0019804	experimental	Illumina [1]		0
+95361	hsa-miR-4705		MIMAT0019805	experimental	Illumina [1]		0
+95362	hsa-miR-4706		MIMAT0019806	experimental	Illumina [1]		0
+95363	hsa-miR-4707-5p		MIMAT0019807	experimental	Illumina [1]		0
+95364	hsa-miR-4707-3p		MIMAT0019808	experimental	Illumina [1]		0
+95365	hsa-miR-4708-5p		MIMAT0019809	experimental	Illumina [1]		0
+95366	hsa-miR-4708-3p		MIMAT0019810	experimental	Illumina [1]		0
+95367	hsa-miR-4709-5p		MIMAT0019811	experimental	Illumina [1]		0
+95368	hsa-miR-4709-3p		MIMAT0019812	experimental	Illumina [1]		0
+95369	hsa-miR-203b-5p	hsa-miR-3545-5p	MIMAT0019813	experimental	Illumina [1-2]		0
+95370	hsa-miR-203b-3p	hsa-miR-3545-3p	MIMAT0019814	experimental	Illumina [1-2]		0
+95371	hsa-miR-4710		MIMAT0019815	experimental	Illumina [1]		0
+95372	hsa-miR-4711-5p		MIMAT0019816	experimental	Illumina [1]		0
+95373	hsa-miR-4711-3p		MIMAT0019817	experimental	Illumina [1]		0
+95374	hsa-miR-4712-5p		MIMAT0019818	experimental	Illumina [1]		0
+95375	hsa-miR-4712-3p		MIMAT0019819	experimental	Illumina [1]		0
+95376	hsa-miR-4713-5p		MIMAT0019820	experimental	Illumina [1]		0
+95377	hsa-miR-4713-3p		MIMAT0019821	experimental	Illumina [1]		0
+95378	hsa-miR-4714-5p		MIMAT0019822	experimental	Illumina [1]		0
+95379	hsa-miR-4714-3p		MIMAT0019823	experimental	Illumina [1]		0
+95380	hsa-miR-4715-5p		MIMAT0019824	experimental	Illumina [1]		0
+95381	hsa-miR-4715-3p		MIMAT0019825	experimental	Illumina [1]		0
+95382	hsa-miR-4716-5p		MIMAT0019826	experimental	Illumina [1]		0
+95383	hsa-miR-4716-3p		MIMAT0019827	experimental	Illumina [1]		0
+95384	hsa-miR-3529-5p	hsa-miR-3529	MIMAT0019828	experimental	Illumina [1]		0
+95385	hsa-miR-4717-5p		MIMAT0019829	experimental	Illumina [1]		0
+95386	hsa-miR-4717-3p		MIMAT0019830	experimental	Illumina [1]		0
+95387	hsa-miR-4718		MIMAT0019831	experimental	Illumina [1]		0
+95388	hsa-miR-4719		MIMAT0019832	experimental	Illumina [1]		0
+95389	hsa-miR-4720-5p		MIMAT0019833	experimental	Illumina [1]		0
+95390	hsa-miR-4720-3p		MIMAT0019834	experimental	Illumina [1]		0
+95391	hsa-miR-4721		MIMAT0019835	experimental	Illumina [1]		0
+95392	hsa-miR-4722-5p		MIMAT0019836	experimental	Illumina [1]		0
+95393	hsa-miR-4722-3p		MIMAT0019837	experimental	Illumina [1]		0
+95395	hsa-miR-4520-2-3p	hsa-miR-4520b-3p	MIMAT0020300	experimental	Illumina [1]		0
+95396	hsa-miR-4723-5p		MIMAT0019838	experimental	Illumina [1]		0
+95397	hsa-miR-4723-3p		MIMAT0019839	experimental	Illumina [1]		0
+95398	hsa-miR-451b		MIMAT0019840	experimental	Illumina [1]		0
+95399	hsa-miR-4724-5p		MIMAT0019841	experimental	Illumina [1]		0
+95400	hsa-miR-4724-3p		MIMAT0019842	experimental	Illumina [1]		0
+95401	hsa-miR-4725-5p		MIMAT0019843	experimental	Illumina [1]		0
+95402	hsa-miR-4725-3p		MIMAT0019844	experimental	Illumina [1]		0
+95403	hsa-miR-4726-5p		MIMAT0019845	experimental	Illumina [1]		0
+95404	hsa-miR-4726-3p		MIMAT0019846	experimental	Illumina [1]		0
+95405	hsa-miR-4727-5p		MIMAT0019847	experimental	Illumina [1]		0
+95406	hsa-miR-4727-3p		MIMAT0019848	experimental	Illumina [1]		0
+95407	hsa-miR-4728-5p		MIMAT0019849	experimental	Illumina [1]		0
+95408	hsa-miR-4728-3p		MIMAT0019850	experimental	Illumina [1]		0
+95409	hsa-miR-4729		MIMAT0019851	experimental	Illumina [1]		0
+95410	hsa-miR-4730		MIMAT0019852	experimental	Illumina [1]		0
+95411	hsa-miR-4731-5p		MIMAT0019853	experimental	Illumina [1]		0
+95412	hsa-miR-4731-3p		MIMAT0019854	experimental	Illumina [1]		0
+95413	hsa-miR-4732-5p		MIMAT0019855	experimental	Illumina [1]		0
+95414	hsa-miR-4732-3p		MIMAT0019856	experimental	Illumina [1]		0
+95415	hsa-miR-4733-5p		MIMAT0019857	experimental	Illumina [1]		0
+95416	hsa-miR-4733-3p		MIMAT0019858	experimental	Illumina [1]		0
+95417	hsa-miR-4734		MIMAT0019859	experimental	Illumina [1]		0
+95418	hsa-miR-4735-5p		MIMAT0019860	experimental	Illumina [1]		0
+95419	hsa-miR-4735-3p		MIMAT0019861	experimental	Illumina [1]		0
+95420	hsa-miR-4736		MIMAT0019862	experimental	Illumina [1]		0
+95421	hsa-miR-4737		MIMAT0019863	experimental	Illumina [1]		0
+95422	hsa-miR-3064-5p		MIMAT0019864	experimental	Illumina [1]		0
+95423	hsa-miR-3064-3p		MIMAT0019865	experimental	Illumina [1]		0
+95424	hsa-miR-4738-5p		MIMAT0019866	experimental	Illumina [1]		0
+95425	hsa-miR-4738-3p		MIMAT0019867	experimental	Illumina [1]		0
+95426	hsa-miR-4739		MIMAT0019868	experimental	Illumina [1]		0
+95427	hsa-miR-4740-5p		MIMAT0019869	experimental	Illumina [1]		0
+95428	hsa-miR-4740-3p		MIMAT0019870	experimental	Illumina [1]		0
+95429	hsa-miR-4741		MIMAT0019871	experimental	Illumina [1]		0
+95430	hsa-miR-4742-5p		MIMAT0019872	experimental	Illumina [1-2]		0
+95431	hsa-miR-4742-3p		MIMAT0019873	experimental	Illumina [1-2]		0
+95432	hsa-miR-4743-5p	hsa-miR-4743	MIMAT0019874	experimental	Illumina [1-2]		0
+95433	hsa-miR-4744		MIMAT0019875	experimental	Illumina [1]		0
+95434	hsa-miR-122b-5p		MIMAT0019876	experimental	Illumina [1]		0
+95435	hsa-miR-122b-3p		MIMAT0019877	experimental	Illumina [1]		0
+95436	hsa-miR-4745-5p		MIMAT0019878	experimental	Illumina [1]		0
+95437	hsa-miR-4745-3p		MIMAT0019879	experimental	Illumina [1]		0
+95438	hsa-miR-4746-5p		MIMAT0019880	experimental	Illumina [1]		0
+95439	hsa-miR-4746-3p		MIMAT0019881	experimental	Illumina [1]		0
+95440	hsa-miR-4747-5p		MIMAT0019882	experimental	Illumina [1]		0
+95441	hsa-miR-4747-3p		MIMAT0019883	experimental	Illumina [1]		0
+95442	hsa-miR-4748		MIMAT0019884	experimental	Illumina [1]		0
+95443	hsa-miR-4749-5p		MIMAT0019885	experimental	Illumina [1]		0
+95444	hsa-miR-4749-3p		MIMAT0019886	experimental	Illumina [1]		0
+95445	hsa-miR-4750-5p	hsa-miR-4750	MIMAT0019887	experimental	Illumina [1]		0
+95446	hsa-miR-4751		MIMAT0019888	experimental	Illumina [1]		0
+95447	hsa-miR-4752		MIMAT0019889	experimental	Illumina [1]		0
+95448	hsa-miR-4753-5p		MIMAT0019890	experimental	Illumina [1]		0
+95449	hsa-miR-4753-3p		MIMAT0019891	experimental	Illumina [1]		0
+95450	hsa-miR-371b-5p		MIMAT0019892	experimental	Illumina [1]		0
+95451	hsa-miR-371b-3p		MIMAT0019893	experimental	Illumina [1]		0
+95452	hsa-miR-4754		MIMAT0019894	experimental	Illumina [1]		0
+95453	hsa-miR-4755-5p		MIMAT0019895	experimental	Illumina [1]		0
+95454	hsa-miR-4755-3p		MIMAT0019896	experimental	Illumina [1]		0
+95455	hsa-miR-499b-5p	hsa-miR-499a-5p	MIMAT0019897	experimental	Illumina [1]		0
+95456	hsa-miR-499b-3p	hsa-miR-499a-3p	MIMAT0019898	experimental	Illumina [1]		0
+95457	hsa-miR-4756-5p		MIMAT0019899	experimental	Illumina [1]		0
+95458	hsa-miR-4756-3p		MIMAT0019900	experimental	Illumina [1]		0
+95459	hsa-miR-4757-5p		MIMAT0019901	experimental	Illumina [1]		0
+95460	hsa-miR-4757-3p		MIMAT0019902	experimental	Illumina [1]		0
+95461	hsa-miR-4758-5p		MIMAT0019903	experimental	Illumina [1]		0
+95462	hsa-miR-4758-3p		MIMAT0019904	experimental	Illumina [1]		0
+95463	hsa-miR-4759		MIMAT0019905	experimental	Illumina [1]		0
+95464	hsa-miR-4760-5p		MIMAT0019906	experimental	Illumina [1]		0
+95465	hsa-miR-4760-3p		MIMAT0019907	experimental	Illumina [1]		0
+95466	hsa-miR-4761-5p		MIMAT0019908	experimental	Illumina [1]		0
+95467	hsa-miR-4761-3p		MIMAT0019909	experimental	Illumina [1]		0
+95468	hsa-miR-4762-5p		MIMAT0019910	experimental	Illumina [1]		0
+95469	hsa-miR-4762-3p		MIMAT0019911	experimental	Illumina [1]		0
+95470	hsa-miR-4763-5p		MIMAT0019912	experimental	Illumina [1]		0
+95471	hsa-miR-4763-3p		MIMAT0019913	experimental	Illumina [1]		0
+95472	hsa-miR-4764-5p		MIMAT0019914	experimental	Illumina [1]		0
+95473	hsa-miR-4764-3p		MIMAT0019915	experimental	Illumina [1]		0
+95474	hsa-miR-4765		MIMAT0019916	experimental	Illumina [1]		0
+95475	hsa-miR-4766-5p		MIMAT0019917	experimental	Illumina [1]		0
+95476	hsa-miR-4766-3p		MIMAT0019918	experimental	Illumina [1]		0
+95477	hsa-miR-4767		MIMAT0019919	experimental	Illumina [1]		0
+95478	hsa-miR-4768-5p		MIMAT0019920	experimental	Illumina [1]		0
+95479	hsa-miR-4768-3p		MIMAT0019921	experimental	Illumina [1]		0
+95480	hsa-miR-4769-5p		MIMAT0019922	experimental	Illumina [1]		0
+95481	hsa-miR-4769-3p		MIMAT0019923	experimental	Illumina [1]		0
+95482	hsa-miR-4770		MIMAT0019924	experimental	Illumina [1]		0
+95483	hsa-miR-4771		MIMAT0019925	experimental	Illumina [1]		0
+95485	hsa-miR-4772-5p		MIMAT0019926	experimental	Illumina [1]		0
+95486	hsa-miR-4772-3p		MIMAT0019927	experimental	Illumina [1]		0
+95487	hsa-miR-4773		MIMAT0019928	experimental	Illumina [1]		0
+95489	hsa-miR-4774-5p		MIMAT0019929	experimental	Illumina [1-2]		0
+95490	hsa-miR-4774-3p		MIMAT0019930	experimental	Illumina [1-2]		0
+95491	hsa-miR-4775		MIMAT0019931	experimental	Illumina [1]		0
+95492	hsa-miR-4776-5p		MIMAT0019932	experimental	Illumina [1]		0
+95493	hsa-miR-4776-3p		MIMAT0019933	experimental	Illumina [1]		0
+95496	hsa-miR-4777-5p		MIMAT0019934	experimental	Illumina [1]		0
+95497	hsa-miR-4777-3p		MIMAT0019935	experimental	Illumina [1]		0
+95498	hsa-miR-4778-5p		MIMAT0019936	experimental	Illumina [1]		0
+95499	hsa-miR-4778-3p		MIMAT0019937	experimental	Illumina [1]		0
+95500	hsa-miR-4779		MIMAT0019938	experimental	Illumina [1]		0
+95501	hsa-miR-4780		MIMAT0019939	experimental	Illumina [1]		0
+95502	hsa-miR-4436b-5p		MIMAT0019940	experimental	Illumina [1]		0
+95503	hsa-miR-4436b-3p		MIMAT0019941	experimental	Illumina [1]		0
+95504	hsa-miR-4781-5p		MIMAT0019942	experimental	Illumina [1]		0
+95505	hsa-miR-4781-3p		MIMAT0019943	experimental	Illumina [1]		0
+95506	hsa-miR-4782-5p		MIMAT0019944	experimental	Illumina [1]		0
+95507	hsa-miR-4782-3p		MIMAT0019945	experimental	Illumina [1]		0
+95508	hsa-miR-4783-5p		MIMAT0019946	experimental	Illumina [1]		0
+95509	hsa-miR-4783-3p		MIMAT0019947	experimental	Illumina [1]		0
+95510	hsa-miR-4784		MIMAT0019948	experimental	Illumina [1]		0
+95511	hsa-miR-4785		MIMAT0019949	experimental	Illumina [1]		0
+95512	hsa-miR-1245b-5p		MIMAT0019950	experimental	Illumina [1]		0
+95513	hsa-miR-1245b-3p		MIMAT0019951	experimental	Illumina [1]		0
+95514	hsa-miR-2467-5p		MIMAT0019952	experimental	Illumina [1]		0
+95515	hsa-miR-2467-3p		MIMAT0019953	experimental	Illumina [1]		0
+95516	hsa-miR-4786-5p		MIMAT0019954	experimental	Illumina [1]		0
+95517	hsa-miR-4786-3p		MIMAT0019955	experimental	Illumina [1]		0
+95518	hsa-miR-4787-5p		MIMAT0019956	experimental	Illumina [1]		0
+95519	hsa-miR-4787-3p		MIMAT0019957	experimental	Illumina [1]		0
+95520	hsa-miR-4788		MIMAT0019958	experimental	Illumina [1]		0
+95521	hsa-miR-4789-5p		MIMAT0019959	experimental	Illumina [1]		0
+95522	hsa-miR-4789-3p		MIMAT0019960	experimental	Illumina [1]		0
+95523	hsa-miR-4790-5p		MIMAT0019961	experimental	Illumina [1]		0
+95524	hsa-miR-4790-3p		MIMAT0019962	experimental	Illumina [1]		0
+95525	hsa-miR-4791		MIMAT0019963	experimental	Illumina [1]		0
+95526	hsa-miR-4792		MIMAT0019964	experimental	Illumina [1]		1
+95527	hsa-miR-4793-5p		MIMAT0019965	experimental	Illumina [1]		0
+95528	hsa-miR-4793-3p		MIMAT0019966	experimental	Illumina [1]		0
+95529	hsa-miR-4794		MIMAT0019967	experimental	Illumina [1]		0
+95530	hsa-miR-4795-5p		MIMAT0019968	experimental	Illumina [1]		0
+95531	hsa-miR-4795-3p		MIMAT0019969	experimental	Illumina [1]		0
+95532	hsa-miR-4796-5p		MIMAT0019970	experimental	Illumina [1]		0
+95533	hsa-miR-4796-3p		MIMAT0019971	experimental	Illumina [1]		0
+95534	hsa-miR-4797-5p		MIMAT0019972	experimental	Illumina [1]		0
+95535	hsa-miR-4797-3p		MIMAT0019973	experimental	Illumina [1]		0
+95536	hsa-miR-4798-5p		MIMAT0019974	experimental	Illumina [1]		0
+95537	hsa-miR-4798-3p		MIMAT0019975	experimental	Illumina [1]		0
+95538	hsa-miR-4799-5p		MIMAT0019976	experimental	Illumina [1]		0
+95539	hsa-miR-4799-3p		MIMAT0019977	experimental	Illumina [1]		0
+95542	hsa-miR-4800-5p		MIMAT0019978	experimental	Illumina [1]		0
+95543	hsa-miR-4800-3p		MIMAT0019979	experimental	Illumina [1]		0
+95544	hsa-miR-4801		MIMAT0019980	experimental	Illumina [1]		0
+95545	hsa-miR-4802-5p		MIMAT0019981	experimental	Illumina [1,3]		0
+95546	hsa-miR-4802-3p		MIMAT0019982	experimental	Illumina [1,3]		0
+95547	hsa-miR-4803		MIMAT0019983	experimental	Illumina [1]		0
+95548	hsa-miR-4804-5p		MIMAT0019984	experimental	Illumina [1]		0
+95549	hsa-miR-4804-3p		MIMAT0019985	experimental	Illumina [1]		0
+96015	hsa-miR-5047		MIMAT0020541	experimental	Northern [1], RTPCR [1]		0
+96078	hsa-miR-5095		MIMAT0020600	experimental	RTPCR [1]		1
+96079	hsa-miR-1273f		MIMAT0020601	experimental	RTPCR [1]		1
+96080	hsa-miR-1273g-5p	hsa-miR-1273g	MIMAT0020602	experimental	RTPCR [1]		1
+96081	hsa-miR-5096		MIMAT0020603	experimental	RTPCR [1]		1
+96296	hsa-miR-197-5p		MIMAT0022691	not_experimental	\N		0
+96298	hsa-miR-181b-3p		MIMAT0022692	not_experimental	\N		0
+96300	hsa-miR-204-3p		MIMAT0022693	not_experimental	\N		0
+96301	hsa-miR-211-3p		MIMAT0022694	not_experimental	\N		0
+96302	hsa-miR-212-5p		MIMAT0022695	not_experimental	\N		0
+96342	hsa-miR-301a-5p		MIMAT0022696	not_experimental	\N		0
+96344	hsa-miR-365a-5p	hsa-miR-365*	MIMAT0009199	not_experimental	\N		0
+96345	hsa-miR-365b-5p		MIMAT0022833	experimental	454 [5]		0
+96346	hsa-miR-365b-3p		MIMAT0022834	experimental	cloned [1,3-4], array-cloned [2]		0
+96347	hsa-miR-382-3p		MIMAT0022697	not_experimental	\N		0
+96351	hsa-miR-345-3p		MIMAT0022698	not_experimental	\N		0
+96369	hsa-miR-450a-1-3p		MIMAT0022700	experimental	Illumina [5]		0
+96370	hsa-miR-506-5p		MIMAT0022701	not_experimental	\N		0
+96371	hsa-miR-514a-5p		MIMAT0022702	not_experimental	\N		0
+96377	hsa-miR-539-3p		MIMAT0022705	not_experimental	\N		0
+96380	hsa-miR-561-5p		MIMAT0022706	not_experimental	\N		0
+96381	hsa-miR-570-5p		MIMAT0022707	not_experimental	\N		0
+96382	hsa-miR-584-3p		MIMAT0022708	not_experimental	\N		0
+96385	hsa-miR-642a-3p		MIMAT0020924	experimental	SOLiD [3]		0
+96386	hsa-miR-652-5p		MIMAT0022709	not_experimental	\N		0
+96387	hsa-miR-659-5p		MIMAT0022710	not_experimental	\N		0
+96388	hsa-miR-660-3p		MIMAT0022711	not_experimental	\N		0
+96389	hsa-miR-550a-3-5p		MIMAT0020925	not_experimental	\N		0
+96390	hsa-miR-1271-3p		MIMAT0022712	not_experimental	\N		0
+96391	hsa-miR-1185-2-3p		MIMAT0022713	not_experimental	\N		0
+96392	hsa-miR-766-5p		MIMAT0022714	not_experimental	\N		0
+96394	hsa-miR-1185-1-3p		MIMAT0022838	not_experimental	\N		0
+96408	hsa-miR-873-3p		MIMAT0022717	not_experimental	\N		0
+96410	hsa-miR-1285-5p		MIMAT0022719	not_experimental	\N		0
+96412	hsa-miR-1304-3p		MIMAT0022720	not_experimental	\N		0
+96413	hsa-miR-1247-3p		MIMAT0022721	not_experimental	\N		0
+96414	hsa-miR-548g-5p		MIMAT0022722	not_experimental	\N		0
+96416	hsa-miR-548h-3p		MIMAT0022723	not_experimental	\N		0
+96417	hsa-miR-1277-5p		MIMAT0022724	not_experimental	\N		0
+96419	hsa-miR-1255b-2-3p		MIMAT0022725	not_experimental	\N		0
+96420	hsa-miR-1306-5p		MIMAT0022726	not_experimental	\N		0
+96421	hsa-miR-1307-5p		MIMAT0022727	not_experimental	\N		0
+96422	hsa-miR-513c-3p		MIMAT0022728	not_experimental	\N		0
+96447	hsa-miR-548t-3p		MIMAT0022730	not_experimental	\N		0
+96449	hsa-miR-3184-3p		MIMAT0022731	not_experimental	\N		0
+96450	hsa-miR-3190-3p		MIMAT0022839	experimental	Illumina [1-2]		0
+96451	hsa-miR-3191-5p		MIMAT0022732	not_experimental	\N		0
+96452	hsa-miR-548x-5p		MIMAT0022733	not_experimental	\N		0
+96464	hsa-miR-374c-3p		MIMAT0022735	not_experimental	\N		0
+96465	hsa-miR-642b-5p		MIMAT0022736	not_experimental	\N		0
+96466	hsa-miR-550b-2-5p		MIMAT0022737	not_experimental	\N		0
+96469	hsa-miR-548o-5p		MIMAT0022738	not_experimental	\N		0
+96471	hsa-miR-4433a-5p	hsa-miR-4433-5p	MIMAT0020956	not_experimental	\N		0
+96472	hsa-miR-548ah-3p		MIMAT0020957	not_experimental	\N		0
+96473	hsa-miR-548aj-5p		MIMAT0022739	not_experimental	\N		0
+96476	hsa-miR-4482-3p		MIMAT0020958	not_experimental	\N		0
+96477	hsa-miR-548am-5p		MIMAT0022740	not_experimental	\N		0
+96478	hsa-miR-4536-3p		MIMAT0020959	not_experimental	\N		0
+96487	hsa-miR-3529-3p		MIMAT0022741	not_experimental	\N		0
+96537	hsa-miR-4999-5p		MIMAT0021017	not_experimental	\N		0
+96538	hsa-miR-4999-3p		MIMAT0021018	not_experimental	\N		0
+96539	hsa-miR-5000-5p		MIMAT0021019	experimental	Illumina [2]		0
+96540	hsa-miR-5000-3p		MIMAT0021020	experimental	Illumina [2]		0
+96541	hsa-miR-5001-5p		MIMAT0021021	not_experimental	\N		0
+96542	hsa-miR-5001-3p		MIMAT0021022	not_experimental	\N		0
+96543	hsa-miR-5002-5p		MIMAT0021023	not_experimental	\N		0
+96544	hsa-miR-5002-3p		MIMAT0021024	not_experimental	\N		0
+96545	hsa-miR-5003-5p		MIMAT0021025	not_experimental	\N		0
+96546	hsa-miR-5003-3p		MIMAT0021026	not_experimental	\N		0
+96547	hsa-miR-5004-5p		MIMAT0021027	not_experimental	\N		0
+96548	hsa-miR-5004-3p		MIMAT0021028	not_experimental	\N		0
+96549	hsa-miR-548ao-5p		MIMAT0021029	not_experimental	\N		0
+96550	hsa-miR-548ao-3p		MIMAT0021030	not_experimental	\N		0
+96553	hsa-miR-5006-5p		MIMAT0021033	experimental	Illumina [2]		0
+96554	hsa-miR-5006-3p		MIMAT0021034	experimental	Illumina [2]		0
+96555	hsa-miR-5007-5p		MIMAT0021035	not_experimental	\N		0
+96556	hsa-miR-5007-3p		MIMAT0021036	not_experimental	\N		0
+96557	hsa-miR-548ap-5p		MIMAT0021037	not_experimental	\N		0
+96558	hsa-miR-548ap-3p		MIMAT0021038	not_experimental	\N		0
+96559	hsa-miR-5008-5p		MIMAT0021039	not_experimental	\N		0
+96560	hsa-miR-5008-3p		MIMAT0021040	not_experimental	\N		0
+96561	hsa-miR-5009-5p		MIMAT0021041	not_experimental	\N		0
+96562	hsa-miR-5009-3p		MIMAT0021042	not_experimental	\N		0
+96563	hsa-miR-5010-5p		MIMAT0021043	experimental	Illumina [2]		0
+96564	hsa-miR-5010-3p		MIMAT0021044	experimental	Illumina [2]		0
+96565	hsa-miR-5011-5p		MIMAT0021045	not_experimental	\N		0
+96566	hsa-miR-5011-3p		MIMAT0021046	not_experimental	\N		0
+96600	hsa-miR-5087		MIMAT0021079	experimental	Illumina [1], qPCR [1]		0
+96601	hsa-miR-5088-5p		MIMAT0021080	experimental	Illumina [1], qPCR [1], meta-analysis [2]		0
+96602	hsa-miR-5089-5p	hsa-miR-5089	MIMAT0021081	experimental	Illumina [1-2], qPCR [1]		0
+96603	hsa-miR-5090		MIMAT0021082	experimental	Illumina [1], qPCR [1]		0
+96604	hsa-miR-5091		MIMAT0021083	experimental	Illumina [1], qPCR [1]		0
+96605	hsa-miR-5092		MIMAT0021084	experimental	Illumina [1], qPCR [1]		0
+96606	hsa-miR-5093		MIMAT0021085	experimental	Illumina [1], qPCR [1]		0
+96607	hsa-miR-5094		MIMAT0021086	experimental	Illumina [1], qPCR [1]		0
+96608	hsa-miR-1273g-3p		MIMAT0022742	not_experimental	\N		1
+96648	hsa-miR-5186		MIMAT0021116	experimental	Illumina [1]		0
+96649	hsa-miR-5187-5p		MIMAT0021117	experimental	Illumina [1-2]		0
+96650	hsa-miR-5187-3p		MIMAT0021118	experimental	Illumina [1-2]		0
+96651	hsa-miR-5188		MIMAT0021119	experimental	Illumina [1]		0
+96652	hsa-miR-5189-5p		MIMAT0021120	experimental	Illumina [1]		0
+96653	hsa-miR-5190		MIMAT0021121	experimental	Illumina [1]		0
+96654	hsa-miR-5191		MIMAT0021122	experimental	Illumina [1]		0
+96655	hsa-miR-5192		MIMAT0021123	experimental	Illumina [1]		0
+96656	hsa-miR-5193		MIMAT0021124	experimental	Illumina [1]		0
+96657	hsa-miR-5194		MIMAT0021125	experimental	Illumina [1]		0
+96658	hsa-miR-5195-5p		MIMAT0021126	experimental	Illumina [1]		0
+96659	hsa-miR-5195-3p		MIMAT0021127	experimental	Illumina [1]		0
+96660	hsa-miR-5196-5p		MIMAT0021128	experimental	Illumina [1]		0
+96661	hsa-miR-5196-3p		MIMAT0021129	experimental	Illumina [1]		0
+96662	hsa-miR-5197-5p		MIMAT0021130	experimental	Illumina [1]		0
+96663	hsa-miR-5197-3p		MIMAT0021131	experimental	Illumina [1]		0
+97841	hsa-miR-4524b-5p		MIMAT0022255	experimental	SOLiD [1]		0
+97842	hsa-miR-4524b-3p		MIMAT0022256	experimental	SOLiD [1]		0
+97843	hsa-miR-5571-5p		MIMAT0022257	experimental	SOLiD [1]		0
+97844	hsa-miR-5571-3p		MIMAT0022258	experimental	SOLiD [1]		0
+97845	hsa-miR-5100		MIMAT0022259	experimental	SOLiD [1]		0
+97846	hsa-miR-5572		MIMAT0022260	experimental	SOLiD [1]		0
+97855	hsa-miR-548aq-5p		MIMAT0022263	not_experimental	\N		0
+97856	hsa-miR-548aq-3p		MIMAT0022264	not_experimental	\N		0
+97857	hsa-miR-548ar-5p		MIMAT0022265	not_experimental	\N		0
+97858	hsa-miR-548ar-3p		MIMAT0022266	not_experimental	\N		0
+97859	hsa-miR-548as-5p		MIMAT0022267	not_experimental	\N		0
+97860	hsa-miR-548as-3p		MIMAT0022268	not_experimental	\N		0
+97861	hsa-miR-5579-5p		MIMAT0022269	not_experimental	\N		0
+97862	hsa-miR-5579-3p		MIMAT0022270	not_experimental	\N		0
+97863	hsa-miR-664b-5p	hsa-miR-644b-5p	MIMAT0022271	not_experimental	\N		0
+97864	hsa-miR-664b-3p	hsa-miR-644b-3p	MIMAT0022272	not_experimental	\N		0
+97865	hsa-miR-5580-5p		MIMAT0022273	not_experimental	\N		0
+97866	hsa-miR-5580-3p		MIMAT0022274	not_experimental	\N		0
+97867	hsa-miR-5581-5p		MIMAT0022275	not_experimental	\N		0
+97868	hsa-miR-5581-3p		MIMAT0022276	not_experimental	\N		0
+97869	hsa-miR-548at-5p		MIMAT0022277	experimental	Illumina [2]		0
+97870	hsa-miR-548at-3p		MIMAT0022278	experimental	Illumina [2]		0
+97871	hsa-miR-5582-5p		MIMAT0022279	not_experimental	\N		0
+97872	hsa-miR-5582-3p		MIMAT0022280	not_experimental	\N		0
+97873	hsa-miR-5583-5p		MIMAT0022281	not_experimental	\N		0
+97874	hsa-miR-5583-3p		MIMAT0022282	not_experimental	\N		0
+97877	hsa-miR-5584-5p		MIMAT0022283	not_experimental	\N		0
+97878	hsa-miR-5584-3p		MIMAT0022284	not_experimental	\N		0
+97879	hsa-miR-5585-5p		MIMAT0022285	not_experimental	\N		0
+97880	hsa-miR-5585-3p		MIMAT0022286	not_experimental	\N		0
+97881	hsa-miR-5586-5p		MIMAT0022287	not_experimental	\N		0
+97882	hsa-miR-5586-3p		MIMAT0022288	not_experimental	\N		0
+97883	hsa-miR-5587-5p		MIMAT0022289	not_experimental	\N		0
+97884	hsa-miR-5587-3p		MIMAT0022290	not_experimental	\N		0
+97885	hsa-miR-548au-5p		MIMAT0022291	not_experimental	\N		0
+97886	hsa-miR-548au-3p		MIMAT0022292	not_experimental	\N		0
+97887	hsa-miR-1295b-5p		MIMAT0022293	not_experimental	\N		0
+97888	hsa-miR-1295b-3p		MIMAT0022294	not_experimental	\N		0
+97889	hsa-miR-5588-5p		MIMAT0022295	not_experimental	\N		0
+97890	hsa-miR-5588-3p		MIMAT0022296	not_experimental	\N		0
+97891	hsa-miR-5589-5p		MIMAT0022297	not_experimental	\N		0
+97892	hsa-miR-5589-3p		MIMAT0022298	not_experimental	\N		0
+97895	hsa-miR-5590-5p		MIMAT0022299	not_experimental	\N		0
+97896	hsa-miR-5590-3p		MIMAT0022300	not_experimental	\N		0
+97897	hsa-miR-5591-5p		MIMAT0022301	not_experimental	\N		0
+97898	hsa-miR-5591-3p		MIMAT0022302	not_experimental	\N		0
+97899	hsa-miR-548av-5p		MIMAT0022303	not_experimental	\N		0
+97900	hsa-miR-548av-3p		MIMAT0022304	not_experimental	\N		0
+98075	hsa-miR-5680		MIMAT0022468	experimental	Illumina [1]		0
+98076	hsa-miR-5681a		MIMAT0022469	experimental	Illumina [1]		0
+98077	hsa-miR-5682		MIMAT0022470	experimental	Illumina [1]		0
+98078	hsa-miR-548aw		MIMAT0022471	experimental	Illumina [1]		0
+98079	hsa-miR-5683		MIMAT0022472	experimental	Illumina [1]		0
+98080	hsa-miR-5684		MIMAT0022473	experimental	Illumina [1]		0
+98081	hsa-miR-548ax		MIMAT0022474	experimental	Illumina [1]		0
+98082	hsa-miR-5685		MIMAT0022475	experimental	Illumina [1]		0
+98083	hsa-miR-5692c		MIMAT0022476	experimental	Illumina [1]		0
+98086	hsa-miR-5687		MIMAT0022478	experimental	Illumina [1]		0
+98087	hsa-miR-5688		MIMAT0022479	experimental	Illumina [1]		0
+98088	hsa-miR-5681b		MIMAT0022480	experimental	Illumina [1]		0
+98089	hsa-miR-5689		MIMAT0022481	experimental	Illumina [1]		0
+98090	hsa-miR-5690		MIMAT0022482	experimental	Illumina [1]		0
+98091	hsa-miR-5691		MIMAT0022483	experimental	Illumina [1]		0
+98092	hsa-miR-5692a		MIMAT0022484	experimental	Illumina [1]		0
+98094	hsa-miR-4666b		MIMAT0022485	experimental	Illumina [1]		0
+98095	hsa-miR-5693		MIMAT0022486	experimental	Illumina [1]		0
+98096	hsa-miR-5694		MIMAT0022487	experimental	Illumina [1]		0
+98097	hsa-miR-5695		MIMAT0022488	experimental	Illumina [1]		0
+98098	hsa-miR-5696		MIMAT0022489	experimental	Illumina [1]		0
+98099	hsa-miR-5697		MIMAT0022490	experimental	Illumina [1]		0
+98100	hsa-miR-5698		MIMAT0022491	experimental	Illumina [1]		0
+98101	hsa-miR-5699-3p		MIMAT0022492	experimental	Illumina [1-2]		0
+98102	hsa-miR-5700		MIMAT0022493	experimental	Illumina [1]		0
+98103	hsa-miR-5701		MIMAT0022494	experimental	Illumina [1]		0
+98104	hsa-miR-5702		MIMAT0022495	experimental	Illumina [1]		0
+98105	hsa-miR-5703		MIMAT0022496	experimental	Illumina [1]		0
+98106	hsa-miR-5692b		MIMAT0022497	experimental	Illumina [1]		0
+98107	hsa-miR-5704		MIMAT0022498	experimental	Illumina [1]		0
+98108	hsa-miR-5705		MIMAT0022499	experimental	Illumina [1]		0
+98109	hsa-miR-5706		MIMAT0022500	experimental	Illumina [1]		0
+98110	hsa-miR-5707		MIMAT0022501	experimental	Illumina [1]		0
+98111	hsa-miR-5708		MIMAT0022502	experimental	Illumina [1]		0
+98428	hsa-miR-98-3p		MIMAT0022842	experimental	SOLiD [4]		0
+98430	hsa-miR-216a-3p		MIMAT0022844	experimental	SOLiD [3]		0
+98447	hsa-miR-376c-5p		MIMAT0022861	experimental	SOLiD [5]		0
+98448	hsa-miR-381-5p		MIMAT0022862	experimental	SOLiD [3]		0
+98543	hsa-miR-376b-5p		MIMAT0022923	experimental	SOLiD [4]		0
+98554	hsa-miR-495-5p		MIMAT0022924	experimental	SOLiD [3]		0
+98555	hsa-miR-503-3p		MIMAT0022925	experimental	SOLiD [4]		0
+98561	hsa-miR-376a-2-5p		MIMAT0022928	experimental	SOLiD [4]		0
+98564	hsa-miR-758-5p		MIMAT0022929	experimental	SOLiD [3]		0
+98585	hsa-miR-937-5p		MIMAT0022938	not_experimental	\N		0
+98586	hsa-miR-939-3p		MIMAT0022939	not_experimental	\N		0
+98588	hsa-miR-1178-5p		MIMAT0022940	not_experimental	\N		0
+98589	hsa-miR-1227-5p		MIMAT0022941	not_experimental	\N		0
+98590	hsa-miR-1229-5p		MIMAT0022942	not_experimental	\N		0
+98591	hsa-miR-1233-5p		MIMAT0022943	experimental	meta-analysis [2]		0
+98593	hsa-miR-1236-5p		MIMAT0022945	not_experimental	\N		0
+98594	hsa-miR-1237-5p		MIMAT0022946	not_experimental	\N		0
+98595	hsa-miR-1238-5p		MIMAT0022947	not_experimental	\N		0
+98596	hsa-miR-1292-3p		MIMAT0022948	not_experimental	\N		0
+98747	hsa-miR-3606-3p		MIMAT0022965	not_experimental	\N		0
+98748	hsa-miR-3617-3p		MIMAT0022966	experimental	Illumina [2]		0
+98749	hsa-miR-3620-5p		MIMAT0022967	not_experimental	\N		0
+98752	hsa-miR-3927-5p		MIMAT0022970	experimental	Illumina [2]		0
+98757	hsa-miR-3934-3p		MIMAT0022975	experimental	Illumina [2]		0
+98768	hsa-miR-4632-5p		MIMAT0022977	not_experimental	\N		0
+98769	hsa-miR-4743-3p		MIMAT0022978	experimental	Illumina [2]		0
+98770	hsa-miR-4750-3p		MIMAT0022979	not_experimental	\N		0
+98776	hsa-miR-5089-3p		MIMAT0022984	experimental	Illumina [2]		0
+98943	hsa-miR-5739		MIMAT0023116	experimental	cloned [1]		0
+99083	hsa-miR-5787		MIMAT0023252	experimental	cloned [1]		0
+99531	hsa-miR-6068		MIMAT0023693	experimental	SOLiD [1]		0
+99532	hsa-miR-6069		MIMAT0023694	experimental	SOLiD [1]		0
+99533	hsa-miR-6070		MIMAT0023695	experimental	SOLiD [1]		0
+99534	hsa-miR-6071		MIMAT0023696	experimental	SOLiD [1]		0
+99535	hsa-miR-6072		MIMAT0023697	experimental	SOLiD [1]		0
+99536	hsa-miR-6073		MIMAT0023698	experimental	SOLiD [1]		0
+99537	hsa-miR-6074		MIMAT0023699	experimental	SOLiD [1]		0
+99538	hsa-miR-6075		MIMAT0023700	experimental	SOLiD [1]		0
+99539	hsa-miR-6076		MIMAT0023701	experimental	SOLiD [1]		0
+99540	hsa-miR-6077		MIMAT0023702	experimental	SOLiD [1]		0
+99541	hsa-miR-6078		MIMAT0023703	experimental	SOLiD [1]		0
+99542	hsa-miR-6079		MIMAT0023704	experimental	SOLiD [1]		0
+99543	hsa-miR-6080		MIMAT0023705	experimental	SOLiD [1]		0
+99544	hsa-miR-6081		MIMAT0023706	experimental	SOLiD [1]		0
+99545	hsa-miR-6082		MIMAT0023707	experimental	SOLiD [1]		0
+99546	hsa-miR-6083		MIMAT0023708	experimental	SOLiD [1]		0
+99547	hsa-miR-6084		MIMAT0023709	experimental	SOLiD [1]		0
+99548	hsa-miR-6085		MIMAT0023710	experimental	SOLiD [1]		0
+99549	hsa-miR-6086		MIMAT0023711	experimental	cloned [1], qPCR [1]		0
+99550	hsa-miR-6087		MIMAT0023712	experimental	cloned [1], qPCR [1]		1
+99551	hsa-miR-6088		MIMAT0023713	experimental	cloned [1], qPCR [1]		0
+99552	hsa-miR-6089		MIMAT0023714	experimental	cloned [1], qPCR [1]		0
+99553	hsa-miR-6090		MIMAT0023715	experimental	cloned [1], qPCR [1]		0
+100446	hsa-miR-6124		MIMAT0024597	experimental	microarray [1]		0
+100447	hsa-miR-6125		MIMAT0024598	experimental	microarray [1]		0
+100448	hsa-miR-6126		MIMAT0024599	experimental	microarray [1]		0
+100459	hsa-miR-6127		MIMAT0024610	experimental	Illumina [1]		0
+100460	hsa-miR-6128		MIMAT0024611	experimental	Illumina [1]		0
+100461	hsa-miR-378j		MIMAT0024612	experimental	Illumina [1]		0
+100462	hsa-miR-6129		MIMAT0024613	experimental	Illumina [1]		0
+100463	hsa-miR-6130		MIMAT0024614	experimental	Illumina [1]		0
+100464	hsa-miR-6131		MIMAT0024615	experimental	Illumina [1]		0
+100465	hsa-miR-6132		MIMAT0024616	experimental	Illumina [1]		0
+100466	hsa-miR-6133		MIMAT0024617	experimental	Illumina [1]		0
+100467	hsa-miR-6134		MIMAT0024618	experimental	Illumina [1]		0
+100631	hsa-miR-6165		MIMAT0024782	experimental	qPCR [1]		0
+101321	hsa-miR-6499-5p		MIMAT0025450	experimental	Illumina [1]		0
+101322	hsa-miR-6499-3p		MIMAT0025451	experimental	Illumina [1]		0
+101323	hsa-miR-548ay-5p		MIMAT0025452	experimental	Illumina [1]		0
+101324	hsa-miR-548ay-3p		MIMAT0025453	experimental	Illumina [1]		0
+101325	hsa-miR-6500-5p		MIMAT0025454	experimental	Illumina [1]		0
+101326	hsa-miR-6500-3p		MIMAT0025455	experimental	Illumina [1]		0
+101327	hsa-miR-548az-5p		MIMAT0025456	experimental	Illumina [1]		0
+101328	hsa-miR-548az-3p		MIMAT0025457	experimental	Illumina [1]		0
+101329	hsa-miR-6501-5p		MIMAT0025458	experimental	Illumina [1]		0
+101330	hsa-miR-6501-3p		MIMAT0025459	experimental	Illumina [1]		0
+101331	hsa-miR-6502-5p		MIMAT0025460	experimental	Illumina [1]		0
+101332	hsa-miR-6502-3p		MIMAT0025461	experimental	Illumina [1]		0
+101333	hsa-miR-6503-5p		MIMAT0025462	experimental	Illumina [1]		0
+101334	hsa-miR-6503-3p		MIMAT0025463	experimental	Illumina [1]		0
+101335	hsa-miR-6504-5p		MIMAT0025464	experimental	Illumina [1]		0
+101336	hsa-miR-6504-3p		MIMAT0025465	experimental	Illumina [1]		0
+101337	hsa-miR-6505-5p		MIMAT0025466	experimental	Illumina [1]		0
+101338	hsa-miR-6505-3p		MIMAT0025467	experimental	Illumina [1]		0
+101339	hsa-miR-6506-5p		MIMAT0025468	experimental	Illumina [1]		0
+101340	hsa-miR-6506-3p		MIMAT0025469	experimental	Illumina [1]		0
+101341	hsa-miR-6507-5p		MIMAT0025470	experimental	Illumina [1]		0
+101342	hsa-miR-6507-3p		MIMAT0025471	experimental	Illumina [1]		0
+101343	hsa-miR-6508-5p		MIMAT0025472	experimental	Illumina [1]		0
+101344	hsa-miR-6508-3p		MIMAT0025473	experimental	Illumina [1]		0
+101345	hsa-miR-6509-5p		MIMAT0025474	experimental	Illumina [1-2]		0
+101346	hsa-miR-6509-3p		MIMAT0025475	experimental	Illumina [1]		0
+101347	hsa-miR-6510-5p		MIMAT0025476	experimental	Illumina [1]		0
+101348	hsa-miR-6510-3p		MIMAT0025477	experimental	Illumina [1]		0
+101349	hsa-miR-6511a-5p		MIMAT0025478	experimental	Illumina [1-2]		0
+101350	hsa-miR-6511a-3p		MIMAT0025479	experimental	Illumina [1-2]		0
+101351	hsa-miR-6512-5p		MIMAT0025480	experimental	Illumina [1]		0
+101352	hsa-miR-6512-3p		MIMAT0025481	experimental	Illumina [1]		0
+101353	hsa-miR-6513-5p		MIMAT0025482	experimental	Illumina [1]		0
+101354	hsa-miR-6513-3p		MIMAT0025483	experimental	Illumina [1]		0
+101355	hsa-miR-6514-5p		MIMAT0025484	experimental	Illumina [1]		0
+101356	hsa-miR-6514-3p		MIMAT0025485	experimental	Illumina [1]		0
+101357	hsa-miR-6515-5p		MIMAT0025486	experimental	Illumina [1-2]		0
+101358	hsa-miR-6515-3p		MIMAT0025487	experimental	Illumina [1]		0
+101747	hsa-miR-6715a-3p		MIMAT0025841	experimental	Illumina [1]		0
+101748	hsa-miR-6715b-5p		MIMAT0025842	experimental	Illumina [1]		0
+101749	hsa-miR-6715b-3p		MIMAT0025843	experimental	Illumina [1]		0
+101750	hsa-miR-6716-5p		MIMAT0025844	not_experimental	\N		0
+101751	hsa-miR-6716-3p		MIMAT0025845	experimental	Illumina [1]		0
+101752	hsa-miR-6717-5p		MIMAT0025846	experimental	Illumina [1]		0
+101753	hsa-miR-6511b-5p		MIMAT0025847	experimental	meta-analysis [1]		0
+101754	hsa-miR-6511b-3p		MIMAT0025848	experimental	meta-analysis [1]		0
+101755	hsa-miR-6718-5p		MIMAT0025849	experimental	Illumina [1]		0
+101756	hsa-miR-6719-3p		MIMAT0025850	experimental	Illumina [1]		0
+101757	hsa-miR-6720-3p		MIMAT0025851	experimental	Illumina [1-2]		0
+101758	hsa-miR-6721-5p		MIMAT0025852	experimental	Illumina [1]		0
+101759	hsa-miR-6722-5p		MIMAT0025853	experimental	Illumina [1]		0
+101760	hsa-miR-6722-3p		MIMAT0025854	experimental	Illumina [1]		0
+101761	hsa-miR-6723-5p		MIMAT0025855	experimental	Illumina [1]		1
+101762	hsa-miR-6724-5p		MIMAT0025856	experimental	Illumina [1]		0
+101763	hsa-miR-892c-5p		MIMAT0025857	experimental	Illumina [1]		0
+101764	hsa-miR-892c-3p		MIMAT0025858	experimental	Illumina [1]		0
+103401	hsa-let-7c-3p		MIMAT0026472	experimental	Illumina [6]		0
+103402	hsa-miR-95-5p		MIMAT0026473	experimental	Illumina [3]		0
+103403	hsa-miR-208a-5p		MIMAT0026474	experimental	Illumina [2]		0
+103404	hsa-miR-210-5p		MIMAT0026475	experimental	Illumina [5]		0
+103405	hsa-miR-215-3p		MIMAT0026476	experimental	Illumina [3]		0
+103406	hsa-miR-128-1-5p		MIMAT0026477	experimental	Illumina [4]		0
+103407	hsa-miR-133a-5p		MIMAT0026478	experimental	Illumina [3]		0
+103408	hsa-miR-152-5p		MIMAT0026479	experimental	Illumina [5]		0
+103409	hsa-miR-153-5p		MIMAT0026480	experimental	Illumina [3]		0
+103410	hsa-miR-134-3p		MIMAT0026481	experimental	Illumina [5]		0
+103411	hsa-miR-190a-3p		MIMAT0026482	experimental	Illumina [3]		0
+103414	hsa-miR-128-2-5p		MIMAT0031095	experimental	Illumina [4]		0
+103415	hsa-miR-370-5p		MIMAT0026483	experimental	Illumina [4]		0
+103416	hsa-miR-372-5p		MIMAT0026484	experimental	Illumina [3]		0
+103417	hsa-miR-383-3p		MIMAT0026485	experimental	Illumina [3]		0
+103418	hsa-miR-328-5p		MIMAT0026486	experimental	Illumina [4]		0
+103498	hsa-miR-433-5p		MIMAT0026554	experimental	Illumina [3]		0
+103499	hsa-miR-329-5p		MIMAT0026555	experimental	Illumina [5]		0
+103501	hsa-miR-412-5p		MIMAT0026557	experimental	Illumina [2]		0
+103502	hsa-miR-410-5p		MIMAT0026558	experimental	Illumina [6]		0
+105254	hsa-miR-7162-5p		MIMAT0028234	experimental	Illumina [1]		0
+103503	hsa-miR-487a-5p		MIMAT0026559	experimental	Illumina [4]		0
+103551	hsa-miR-489-5p		MIMAT0026605	experimental	Illumina [3]		0
+103552	hsa-miR-511-3p		MIMAT0026606	experimental	Illumina [2]		0
+103553	hsa-miR-494-5p		MIMAT0026607	experimental	Illumina [4]		0
+103554	hsa-miR-181d-3p		MIMAT0026608	experimental	Illumina [3]		0
+103555	hsa-miR-520f-5p		MIMAT0026609	experimental	Illumina [2]		0
+103556	hsa-miR-519d-5p		MIMAT0026610	experimental	Illumina [3]		0
+103557	hsa-miR-520g-5p		MIMAT0026611	experimental	Illumina [3]		0
+103558	hsa-miR-450a-2-3p		MIMAT0031074	not_experimental	\N		0
+103559	hsa-miR-504-3p		MIMAT0026612	experimental	Illumina [3]		0
+103560	hsa-miR-510-3p		MIMAT0026613	experimental	Illumina [3]		0
+103561	hsa-miR-487b-5p		MIMAT0026614	experimental	Illumina [3]		0
+103562	hsa-miR-552-5p		MIMAT0026615	experimental	Illumina [2]		0
+103563	hsa-miR-579-5p		MIMAT0026616	experimental	Illumina [3]		0
+103564	hsa-miR-580-5p		MIMAT0026617	experimental	Illumina [2]		0
+103565	hsa-miR-585-5p		MIMAT0026618	experimental	Illumina [2]		0
+103566	hsa-miR-597-3p		MIMAT0026619	experimental	Illumina [3]		0
+103567	hsa-miR-598-5p		MIMAT0026620	experimental	Illumina [3]		0
+103568	hsa-miR-605-3p		MIMAT0026621	experimental	Illumina [2]		0
+103569	hsa-miR-619-5p		MIMAT0026622	experimental	Illumina [2]		0
+103570	hsa-miR-627-3p		MIMAT0026623	experimental	Illumina [3]		0
+103571	hsa-miR-651-3p		MIMAT0026624	experimental	Illumina [3]		0
+103572	hsa-miR-653-3p		MIMAT0026625	experimental	Illumina [3]		0
+103573	hsa-miR-655-5p		MIMAT0026626	experimental	Illumina [3]		0
+103574	hsa-miR-656-5p		MIMAT0026627	experimental	Illumina [2]		0
+103584	hsa-miR-668-5p		MIMAT0026636	experimental	Illumina [2]		0
+103585	hsa-miR-1296-3p		MIMAT0026637	experimental	Illumina [4]		0
+103586	hsa-miR-1468-3p		MIMAT0026638	experimental	Illumina [3]		0
+103587	hsa-miR-1301-5p		MIMAT0026639	experimental	Illumina [5]		0
+103588	hsa-miR-670-3p		MIMAT0026640	experimental	Illumina [3]		0
+103589	hsa-miR-1298-3p		MIMAT0026641	experimental	Illumina [3]		0
+103669	hsa-miR-891a-3p		MIMAT0026717	experimental	Illumina [2]		0
+103670	hsa-miR-874-5p		MIMAT0026718	experimental	Illumina [3]		0
+103671	hsa-miR-889-5p		MIMAT0026719	experimental	Illumina [2]		0
+103672	hsa-miR-887-5p		MIMAT0026720	experimental	Illumina [3]		0
+103673	hsa-miR-216b-3p		MIMAT0026721	experimental	Illumina [3]		0
+103674	hsa-miR-208b-5p		MIMAT0026722	experimental	Illumina [3]		0
+103686	hsa-miR-942-3p		MIMAT0026734	experimental	Illumina [2]		0
+103687	hsa-miR-1180-5p		MIMAT0026735	experimental	Illumina [3]		0
+103688	hsa-miR-548e-5p		MIMAT0026736	experimental	Illumina [2]		0
+103689	hsa-miR-548j-3p		MIMAT0026737	experimental	Illumina [2]		0
+103690	hsa-miR-1287-3p		MIMAT0026738	experimental	Illumina [3]		0
+103691	hsa-miR-548f-5p		MIMAT0026739	experimental	Illumina [2]		0
+103692	hsa-miR-1250-3p		MIMAT0026740	experimental	Illumina [2]		0
+103693	hsa-miR-1251-3p		MIMAT0026741	experimental	Illumina [3]		0
+103694	hsa-miR-1266-3p		MIMAT0026742	experimental	Illumina [2]		0
+103695	hsa-miR-1288-5p		MIMAT0026743	experimental	Illumina [2]		0
+103696	hsa-miR-1252-3p		MIMAT0026744	experimental	Illumina [2]		0
+103701	hsa-miR-513b-3p		MIMAT0026749	experimental	Illumina [2]		0
+103718	hsa-miR-1537-5p		MIMAT0026765	experimental	Illumina [3]		0
+103886	hsa-miR-1908-3p		MIMAT0026916	experimental	Illumina [4]		0
+103887	hsa-miR-1910-3p		MIMAT0026917	experimental	Illumina [2]		0
+103891	hsa-miR-2276-5p		MIMAT0026921	experimental	Illumina [2]		0
+104024	hsa-miR-3151-3p		MIMAT0027026	experimental	Illumina [4]		0
+104025	hsa-miR-3192-3p		MIMAT0027027	experimental	Illumina [3]		0
+104030	hsa-miR-500b-3p		MIMAT0027032	experimental	Illumina [2]		0
+104033	hsa-miR-3912-5p		MIMAT0027036	experimental	Illumina [2]		0
+104034	hsa-miR-3928-5p		MIMAT0027037	experimental	Illumina [2]		0
+104035	hsa-miR-1343-5p		MIMAT0027038	experimental	Illumina [2]		0
+104038	hsa-miR-5088-3p		MIMAT0027041	experimental	meta-analysis [2]		0
+104085	hsa-miR-5189-3p		MIMAT0027088	experimental	Illumina [2]		0
+104100	hsa-miR-5699-5p		MIMAT0027103	experimental	Illumina [2]		0
+104108	hsa-miR-1199-5p		MIMAT0031119	not_experimental	\N		0
+104109	hsa-miR-1199-3p		MIMAT0031120	not_experimental	\N		0
+104365	hsa-miR-6720-5p		MIMAT0027345	experimental	Illumina [2]		0
+104373	hsa-miR-6726-5p		MIMAT0027353	experimental	meta-analysis [1]		0
+104374	hsa-miR-6726-3p		MIMAT0027354	experimental	meta-analysis [1]		0
+104375	hsa-miR-6727-5p		MIMAT0027355	experimental	meta-analysis [1]		0
+104376	hsa-miR-6727-3p		MIMAT0027356	experimental	meta-analysis [1]		0
+104377	hsa-miR-6728-5p		MIMAT0027357	experimental	meta-analysis [1]		0
+104378	hsa-miR-6728-3p		MIMAT0027358	experimental	meta-analysis [1]		0
+104379	hsa-miR-6729-5p		MIMAT0027359	experimental	meta-analysis [1]		0
+104380	hsa-miR-6729-3p		MIMAT0027360	experimental	meta-analysis [1]		0
+104381	hsa-miR-6730-5p		MIMAT0027361	experimental	meta-analysis [1]		0
+104382	hsa-miR-6730-3p		MIMAT0027362	experimental	meta-analysis [1]		0
+104383	hsa-miR-6731-5p		MIMAT0027363	experimental	meta-analysis [1]		0
+104384	hsa-miR-6731-3p		MIMAT0027364	experimental	meta-analysis [1]		0
+104385	hsa-miR-6732-5p		MIMAT0027365	experimental	meta-analysis [1]		0
+104386	hsa-miR-6732-3p		MIMAT0027366	experimental	meta-analysis [1]		0
+104387	hsa-miR-6733-5p		MIMAT0027367	experimental	meta-analysis [1]		0
+104388	hsa-miR-6733-3p		MIMAT0027368	experimental	meta-analysis [1]		0
+104389	hsa-miR-6734-5p		MIMAT0027369	experimental	meta-analysis [1]		0
+104390	hsa-miR-6734-3p		MIMAT0027370	experimental	meta-analysis [1]		0
+104391	hsa-miR-6735-5p		MIMAT0027371	experimental	meta-analysis [1]		0
+104392	hsa-miR-6735-3p		MIMAT0027372	experimental	meta-analysis [1]		0
+104393	hsa-miR-6736-5p		MIMAT0027373	experimental	meta-analysis [1]		0
+104394	hsa-miR-6736-3p		MIMAT0027374	experimental	meta-analysis [1]		0
+104395	hsa-miR-6737-5p		MIMAT0027375	experimental	meta-analysis [1]		0
+104396	hsa-miR-6737-3p		MIMAT0027376	experimental	meta-analysis [1]		0
+104397	hsa-miR-6738-5p		MIMAT0027377	experimental	meta-analysis [1]		0
+104398	hsa-miR-6738-3p		MIMAT0027378	experimental	meta-analysis [1]		0
+104399	hsa-miR-6739-5p		MIMAT0027379	experimental	meta-analysis [1]		0
+104400	hsa-miR-6739-3p		MIMAT0027380	experimental	meta-analysis [1]		0
+104401	hsa-miR-6740-5p		MIMAT0027381	experimental	meta-analysis [1]		0
+104402	hsa-miR-6740-3p		MIMAT0027382	experimental	meta-analysis [1]		0
+104403	hsa-miR-6741-5p		MIMAT0027383	experimental	meta-analysis [1]		0
+104404	hsa-miR-6741-3p		MIMAT0027384	experimental	meta-analysis [1]		0
+104405	hsa-miR-6742-5p		MIMAT0027385	experimental	meta-analysis [1]		0
+104406	hsa-miR-6742-3p		MIMAT0027386	experimental	meta-analysis [1]		0
+104407	hsa-miR-6743-5p		MIMAT0027387	experimental	meta-analysis [1]		0
+104408	hsa-miR-6743-3p		MIMAT0027388	experimental	meta-analysis [1]		0
+104409	hsa-miR-6744-5p		MIMAT0027389	experimental	meta-analysis [1]		0
+104410	hsa-miR-6744-3p		MIMAT0027390	experimental	meta-analysis [1]		0
+104411	hsa-miR-6745		MIMAT0027391	experimental	meta-analysis [1]		0
+104412	hsa-miR-6746-5p		MIMAT0027392	experimental	meta-analysis [1]		0
+104413	hsa-miR-6746-3p		MIMAT0027393	experimental	meta-analysis [1]		0
+104414	hsa-miR-6747-5p		MIMAT0027394	experimental	meta-analysis [1]		0
+104415	hsa-miR-6747-3p		MIMAT0027395	experimental	meta-analysis [1]		0
+104416	hsa-miR-6748-5p		MIMAT0027396	experimental	meta-analysis [1]		0
+104417	hsa-miR-6748-3p		MIMAT0027397	experimental	meta-analysis [1]		0
+104418	hsa-miR-6749-5p		MIMAT0027398	experimental	meta-analysis [1]		0
+104419	hsa-miR-6749-3p		MIMAT0027399	experimental	meta-analysis [1]		0
+104420	hsa-miR-6750-5p		MIMAT0027400	experimental	meta-analysis [1]		0
+104421	hsa-miR-6750-3p		MIMAT0027401	experimental	meta-analysis [1]		0
+104422	hsa-miR-6751-5p		MIMAT0027402	experimental	meta-analysis [1]		0
+104423	hsa-miR-6751-3p		MIMAT0027403	experimental	meta-analysis [1]		0
+104424	hsa-miR-6752-5p		MIMAT0027404	experimental	meta-analysis [1]		0
+104425	hsa-miR-6752-3p		MIMAT0027405	experimental	meta-analysis [1]		0
+104426	hsa-miR-6753-5p		MIMAT0027406	experimental	meta-analysis [1]		0
+104427	hsa-miR-6753-3p		MIMAT0027407	experimental	meta-analysis [1]		0
+104428	hsa-miR-6754-5p		MIMAT0027408	experimental	meta-analysis [1]		0
+104429	hsa-miR-6754-3p		MIMAT0027409	experimental	meta-analysis [1]		0
+104430	hsa-miR-6755-5p		MIMAT0027410	experimental	meta-analysis [1]		0
+104431	hsa-miR-6755-3p		MIMAT0027411	experimental	meta-analysis [1]		0
+104432	hsa-miR-6756-5p		MIMAT0027412	experimental	meta-analysis [1]		0
+104433	hsa-miR-6756-3p		MIMAT0027413	experimental	meta-analysis [1]		0
+104434	hsa-miR-6757-5p		MIMAT0027414	experimental	meta-analysis [1]		0
+104435	hsa-miR-6757-3p		MIMAT0027415	experimental	meta-analysis [1]		0
+104436	hsa-miR-6758-5p		MIMAT0027416	experimental	meta-analysis [1]		0
+104437	hsa-miR-6758-3p		MIMAT0027417	experimental	meta-analysis [1]		0
+104438	hsa-miR-6759-5p		MIMAT0027418	experimental	meta-analysis [1]		0
+104439	hsa-miR-6759-3p		MIMAT0027419	experimental	meta-analysis [1]		0
+104440	hsa-miR-6760-5p		MIMAT0027420	experimental	meta-analysis [1]		0
+104441	hsa-miR-6760-3p		MIMAT0027421	experimental	meta-analysis [1]		0
+104442	hsa-miR-6761-5p		MIMAT0027422	experimental	meta-analysis [1]		0
+104443	hsa-miR-6761-3p		MIMAT0027423	experimental	meta-analysis [1]		0
+104444	hsa-miR-6762-5p		MIMAT0027424	experimental	meta-analysis [1]		0
+104445	hsa-miR-6762-3p		MIMAT0027425	experimental	meta-analysis [1]		0
+104446	hsa-miR-6763-5p		MIMAT0027426	experimental	meta-analysis [1]		0
+104447	hsa-miR-6763-3p		MIMAT0027427	experimental	meta-analysis [1]		0
+104448	hsa-miR-6764-5p		MIMAT0027428	experimental	meta-analysis [1]		0
+104449	hsa-miR-6764-3p		MIMAT0027429	experimental	meta-analysis [1]		0
+104450	hsa-miR-6765-5p		MIMAT0027430	experimental	meta-analysis [1]		0
+104451	hsa-miR-6765-3p		MIMAT0027431	experimental	meta-analysis [1]		0
+104452	hsa-miR-6766-5p		MIMAT0027432	experimental	meta-analysis [1]		0
+104453	hsa-miR-6766-3p		MIMAT0027433	experimental	meta-analysis [1]		0
+104454	hsa-miR-6767-5p		MIMAT0027434	experimental	meta-analysis [1]		0
+104455	hsa-miR-6767-3p		MIMAT0027435	experimental	meta-analysis [1]		0
+104456	hsa-miR-6768-5p		MIMAT0027436	experimental	meta-analysis [1]		0
+104457	hsa-miR-6768-3p		MIMAT0027437	experimental	meta-analysis [1]		0
+104458	hsa-miR-6769a-5p		MIMAT0027438	experimental	meta-analysis [1]		0
+104459	hsa-miR-6769a-3p		MIMAT0027439	experimental	meta-analysis [1]		0
+104460	hsa-miR-6770-5p		MIMAT0027440	experimental	meta-analysis [1]		0
+104461	hsa-miR-6770-3p		MIMAT0027441	experimental	meta-analysis [1]		0
+104462	hsa-miR-6771-5p		MIMAT0027442	experimental	meta-analysis [1]		0
+104463	hsa-miR-6771-3p		MIMAT0027443	experimental	meta-analysis [1]		0
+104464	hsa-miR-6772-5p		MIMAT0027444	experimental	meta-analysis [1]		0
+104465	hsa-miR-6772-3p		MIMAT0027445	experimental	meta-analysis [1]		0
+104466	hsa-miR-6773-5p		MIMAT0027446	experimental	meta-analysis [1]		0
+104467	hsa-miR-6773-3p		MIMAT0027447	experimental	meta-analysis [1]		0
+104468	hsa-miR-6774-5p		MIMAT0027448	experimental	meta-analysis [1]		0
+104469	hsa-miR-6774-3p		MIMAT0027449	experimental	meta-analysis [1]		0
+104470	hsa-miR-6775-5p		MIMAT0027450	experimental	meta-analysis [1]		0
+104471	hsa-miR-6775-3p		MIMAT0027451	experimental	meta-analysis [1]		0
+104472	hsa-miR-6776-5p		MIMAT0027452	experimental	meta-analysis [1]		0
+104473	hsa-miR-6776-3p		MIMAT0027453	experimental	meta-analysis [1]		0
+104474	hsa-miR-6777-5p		MIMAT0027454	experimental	meta-analysis [1]		0
+104475	hsa-miR-6777-3p		MIMAT0027455	experimental	meta-analysis [1]		0
+104476	hsa-miR-6778-5p		MIMAT0027456	experimental	meta-analysis [1]		0
+104477	hsa-miR-6778-3p		MIMAT0027457	experimental	meta-analysis [1]		0
+104478	hsa-miR-6779-5p		MIMAT0027458	experimental	meta-analysis [1]		0
+104479	hsa-miR-6779-3p		MIMAT0027459	experimental	meta-analysis [1]		0
+104480	hsa-miR-6780a-5p		MIMAT0027460	experimental	meta-analysis [1]		0
+104481	hsa-miR-6780a-3p		MIMAT0027461	experimental	meta-analysis [1]		0
+104482	hsa-miR-6781-5p		MIMAT0027462	experimental	meta-analysis [1]		0
+104483	hsa-miR-6781-3p		MIMAT0027463	experimental	meta-analysis [1]		0
+104484	hsa-miR-6782-5p		MIMAT0027464	experimental	meta-analysis [1]		0
+104485	hsa-miR-6782-3p		MIMAT0027465	experimental	meta-analysis [1]		0
+104486	hsa-miR-6783-5p		MIMAT0027466	experimental	meta-analysis [1]		0
+104487	hsa-miR-6783-3p		MIMAT0027467	experimental	meta-analysis [1]		0
+104488	hsa-miR-6784-5p		MIMAT0027468	experimental	meta-analysis [1]		0
+104489	hsa-miR-6784-3p		MIMAT0027469	experimental	meta-analysis [1]		0
+104490	hsa-miR-6785-5p		MIMAT0027470	experimental	meta-analysis [1]		0
+104491	hsa-miR-6785-3p		MIMAT0027471	experimental	meta-analysis [1]		0
+104492	hsa-miR-6786-5p		MIMAT0027472	experimental	meta-analysis [1]		0
+104493	hsa-miR-6786-3p		MIMAT0027473	experimental	meta-analysis [1]		0
+104494	hsa-miR-6787-5p		MIMAT0027474	experimental	meta-analysis [1]		0
+104495	hsa-miR-6787-3p		MIMAT0027475	experimental	meta-analysis [1]		0
+104496	hsa-miR-6788-5p		MIMAT0027476	experimental	meta-analysis [1]		0
+104497	hsa-miR-6788-3p		MIMAT0027477	experimental	meta-analysis [1]		0
+104498	hsa-miR-6789-5p		MIMAT0027478	experimental	meta-analysis [1]		0
+104499	hsa-miR-6789-3p		MIMAT0027479	experimental	meta-analysis [1]		0
+104500	hsa-miR-6790-5p		MIMAT0027480	experimental	meta-analysis [1]		0
+104501	hsa-miR-6790-3p		MIMAT0027481	experimental	meta-analysis [1]		0
+104502	hsa-miR-6791-5p		MIMAT0027482	experimental	meta-analysis [1]		0
+104503	hsa-miR-6791-3p		MIMAT0027483	experimental	meta-analysis [1]		0
+104504	hsa-miR-6792-5p		MIMAT0027484	experimental	meta-analysis [1]		0
+104505	hsa-miR-6792-3p		MIMAT0027485	experimental	meta-analysis [1]		0
+104506	hsa-miR-6793-5p		MIMAT0027486	experimental	meta-analysis [1]		0
+104507	hsa-miR-6793-3p		MIMAT0027487	experimental	meta-analysis [1]		0
+104508	hsa-miR-6794-5p		MIMAT0027488	experimental	meta-analysis [1]		0
+104509	hsa-miR-6794-3p		MIMAT0027489	experimental	meta-analysis [1]		0
+104510	hsa-miR-6795-5p		MIMAT0027490	experimental	meta-analysis [1]		0
+104511	hsa-miR-6795-3p		MIMAT0027491	experimental	meta-analysis [1]		0
+104512	hsa-miR-6796-5p		MIMAT0027492	experimental	meta-analysis [1]		0
+104513	hsa-miR-6796-3p		MIMAT0027493	experimental	meta-analysis [1]		0
+104514	hsa-miR-6797-5p		MIMAT0027494	experimental	meta-analysis [1]		0
+104515	hsa-miR-6797-3p		MIMAT0027495	experimental	meta-analysis [1]		0
+104516	hsa-miR-6798-5p		MIMAT0027496	experimental	meta-analysis [1]		0
+104517	hsa-miR-6798-3p		MIMAT0027497	experimental	meta-analysis [1]		0
+104518	hsa-miR-6799-5p		MIMAT0027498	experimental	meta-analysis [1]		0
+104519	hsa-miR-6799-3p		MIMAT0027499	experimental	meta-analysis [1]		0
+104520	hsa-miR-6800-5p		MIMAT0027500	experimental	meta-analysis [1]		0
+104521	hsa-miR-6800-3p		MIMAT0027501	experimental	meta-analysis [1]		0
+104522	hsa-miR-6801-5p		MIMAT0027502	experimental	meta-analysis [1]		0
+104523	hsa-miR-6801-3p		MIMAT0027503	experimental	meta-analysis [1]		0
+104524	hsa-miR-6802-5p		MIMAT0027504	experimental	meta-analysis [1]		0
+104525	hsa-miR-6802-3p		MIMAT0027505	experimental	meta-analysis [1]		0
+104526	hsa-miR-6803-5p		MIMAT0027506	experimental	meta-analysis [1]		0
+104527	hsa-miR-6803-3p		MIMAT0027507	experimental	meta-analysis [1]		0
+104528	hsa-miR-6804-5p		MIMAT0027508	experimental	meta-analysis [1]		0
+104529	hsa-miR-6804-3p		MIMAT0027509	experimental	meta-analysis [1]		0
+104530	hsa-miR-6805-5p		MIMAT0027510	experimental	meta-analysis [1]		0
+104531	hsa-miR-6805-3p		MIMAT0027511	experimental	meta-analysis [1]		0
+104532	hsa-miR-6806-5p		MIMAT0027512	experimental	meta-analysis [1]		0
+104533	hsa-miR-6806-3p		MIMAT0027513	experimental	meta-analysis [1]		0
+104534	hsa-miR-6807-5p		MIMAT0027514	experimental	meta-analysis [1]		0
+104535	hsa-miR-6807-3p		MIMAT0027515	experimental	meta-analysis [1]		0
+104536	hsa-miR-6808-5p		MIMAT0027516	experimental	meta-analysis [1]		0
+104537	hsa-miR-6808-3p		MIMAT0027517	experimental	meta-analysis [1]		0
+104538	hsa-miR-6809-5p		MIMAT0027518	experimental	meta-analysis [1]		0
+104539	hsa-miR-6809-3p		MIMAT0027519	experimental	meta-analysis [1]		0
+104540	hsa-miR-6810-5p		MIMAT0027520	experimental	meta-analysis [1]		0
+104541	hsa-miR-6810-3p		MIMAT0027521	experimental	meta-analysis [1]		0
+104542	hsa-miR-6811-5p		MIMAT0027522	experimental	meta-analysis [1]		0
+104543	hsa-miR-6811-3p		MIMAT0027523	experimental	meta-analysis [1]		0
+104544	hsa-miR-6812-5p		MIMAT0027524	experimental	meta-analysis [1]		0
+104545	hsa-miR-6812-3p		MIMAT0027525	experimental	meta-analysis [1]		0
+104546	hsa-miR-6813-5p		MIMAT0027526	experimental	meta-analysis [1]		0
+104547	hsa-miR-6813-3p		MIMAT0027527	experimental	meta-analysis [1]		0
+104548	hsa-miR-6814-5p		MIMAT0027528	experimental	meta-analysis [1]		0
+104549	hsa-miR-6814-3p		MIMAT0027529	experimental	meta-analysis [1]		0
+104550	hsa-miR-6815-5p		MIMAT0027530	experimental	meta-analysis [1]		0
+104551	hsa-miR-6815-3p		MIMAT0027531	experimental	meta-analysis [1]		0
+104552	hsa-miR-6816-5p		MIMAT0027532	experimental	meta-analysis [1]		0
+104553	hsa-miR-6816-3p		MIMAT0027533	experimental	meta-analysis [1]		0
+104554	hsa-miR-6817-5p		MIMAT0027534	experimental	meta-analysis [1]		0
+104555	hsa-miR-6817-3p		MIMAT0027535	experimental	meta-analysis [1]		0
+104556	hsa-miR-6818-5p		MIMAT0027536	experimental	meta-analysis [1]		0
+104557	hsa-miR-6818-3p		MIMAT0027537	experimental	meta-analysis [1]		0
+104558	hsa-miR-6819-5p		MIMAT0027538	experimental	meta-analysis [1]		0
+104559	hsa-miR-6819-3p		MIMAT0027539	experimental	meta-analysis [1]		0
+104560	hsa-miR-6820-5p		MIMAT0027540	experimental	meta-analysis [1]		0
+104561	hsa-miR-6820-3p		MIMAT0027541	experimental	meta-analysis [1]		0
+104562	hsa-miR-6821-5p		MIMAT0027542	experimental	meta-analysis [1]		0
+104563	hsa-miR-6821-3p		MIMAT0027543	experimental	meta-analysis [1]		0
+104564	hsa-miR-6822-5p		MIMAT0027544	experimental	meta-analysis [1]		0
+104565	hsa-miR-6822-3p		MIMAT0027545	experimental	meta-analysis [1]		0
+104566	hsa-miR-6823-5p		MIMAT0027546	experimental	meta-analysis [1]		0
+104567	hsa-miR-6823-3p		MIMAT0027547	experimental	meta-analysis [1]		0
+104568	hsa-miR-6824-5p		MIMAT0027548	experimental	meta-analysis [1]		0
+104569	hsa-miR-6824-3p		MIMAT0027549	experimental	meta-analysis [1]		0
+104570	hsa-miR-6825-5p		MIMAT0027550	experimental	meta-analysis [1]		0
+104571	hsa-miR-6825-3p		MIMAT0027551	experimental	meta-analysis [1]		0
+104572	hsa-miR-6826-5p		MIMAT0027552	experimental	meta-analysis [1]		0
+104573	hsa-miR-6826-3p		MIMAT0027553	experimental	meta-analysis [1]		0
+104574	hsa-miR-6827-5p		MIMAT0027554	experimental	meta-analysis [1]		0
+104575	hsa-miR-6827-3p		MIMAT0027555	experimental	meta-analysis [1]		0
+104576	hsa-miR-6828-5p		MIMAT0027556	experimental	meta-analysis [1]		0
+104577	hsa-miR-6828-3p		MIMAT0027557	experimental	meta-analysis [1]		0
+104578	hsa-miR-6829-5p		MIMAT0027558	experimental	meta-analysis [1]		0
+104579	hsa-miR-6829-3p		MIMAT0027559	experimental	meta-analysis [1]		0
+104580	hsa-miR-6830-5p		MIMAT0027560	experimental	meta-analysis [1]		0
+104581	hsa-miR-6830-3p		MIMAT0027561	experimental	meta-analysis [1]		0
+104582	hsa-miR-6831-5p		MIMAT0027562	experimental	meta-analysis [1]		0
+104583	hsa-miR-6831-3p		MIMAT0027563	experimental	meta-analysis [1]		0
+104584	hsa-miR-6832-5p		MIMAT0027564	experimental	meta-analysis [1]		0
+104585	hsa-miR-6832-3p		MIMAT0027565	experimental	meta-analysis [1]		0
+104586	hsa-miR-6833-5p		MIMAT0027566	experimental	meta-analysis [1]		0
+104587	hsa-miR-6833-3p		MIMAT0027567	experimental	meta-analysis [1]		0
+104588	hsa-miR-6834-5p		MIMAT0027568	experimental	meta-analysis [1]		0
+104589	hsa-miR-6834-3p		MIMAT0027569	experimental	meta-analysis [1]		0
+104590	hsa-miR-6835-5p		MIMAT0027570	experimental	meta-analysis [1]		0
+104591	hsa-miR-6835-3p		MIMAT0027571	experimental	meta-analysis [1]		0
+104592	hsa-miR-6780b-5p		MIMAT0027572	experimental	meta-analysis [1]		0
+104593	hsa-miR-6780b-3p		MIMAT0027573	experimental	meta-analysis [1]		0
+104594	hsa-miR-6836-5p		MIMAT0027574	experimental	meta-analysis [1]		0
+104595	hsa-miR-6836-3p		MIMAT0027575	experimental	meta-analysis [1]		0
+104596	hsa-miR-6837-5p		MIMAT0027576	experimental	meta-analysis [1]		0
+104597	hsa-miR-6837-3p		MIMAT0027577	experimental	meta-analysis [1]		0
+104598	hsa-miR-6838-5p		MIMAT0027578	experimental	meta-analysis [1]		0
+104599	hsa-miR-6838-3p		MIMAT0027579	experimental	meta-analysis [1]		0
+104600	hsa-miR-6839-5p		MIMAT0027580	experimental	meta-analysis [1]		0
+104601	hsa-miR-6839-3p		MIMAT0027581	experimental	meta-analysis [1]		0
+104602	hsa-miR-6840-5p		MIMAT0027582	experimental	meta-analysis [1]		0
+104603	hsa-miR-6840-3p		MIMAT0027583	experimental	meta-analysis [1]		0
+104604	hsa-miR-6841-5p		MIMAT0027584	experimental	meta-analysis [1]		0
+104605	hsa-miR-6841-3p		MIMAT0027585	experimental	meta-analysis [1]		0
+104606	hsa-miR-6842-5p		MIMAT0027586	experimental	meta-analysis [1]		0
+104607	hsa-miR-6842-3p		MIMAT0027587	experimental	meta-analysis [1]		0
+104608	hsa-miR-6843-3p		MIMAT0027588	experimental	meta-analysis [1]		0
+104609	hsa-miR-6844		MIMAT0027589	experimental	meta-analysis [1]		0
+104610	hsa-miR-6845-5p		MIMAT0027590	experimental	meta-analysis [1]		0
+104611	hsa-miR-6845-3p		MIMAT0027591	experimental	meta-analysis [1]		0
+104612	hsa-miR-6846-5p		MIMAT0027592	experimental	meta-analysis [1]		0
+104613	hsa-miR-6846-3p		MIMAT0027593	experimental	meta-analysis [1]		0
+104614	hsa-miR-6847-5p		MIMAT0027594	experimental	meta-analysis [1]		0
+104615	hsa-miR-6847-3p		MIMAT0027595	experimental	meta-analysis [1]		0
+104616	hsa-miR-6848-5p		MIMAT0027596	experimental	meta-analysis [1]		0
+104617	hsa-miR-6848-3p		MIMAT0027597	experimental	meta-analysis [1]		0
+104618	hsa-miR-6849-5p		MIMAT0027598	experimental	meta-analysis [1]		0
+104619	hsa-miR-6849-3p		MIMAT0027599	experimental	meta-analysis [1]		0
+104620	hsa-miR-6850-5p		MIMAT0027600	experimental	meta-analysis [1]		0
+104621	hsa-miR-6850-3p		MIMAT0027601	experimental	meta-analysis [1]		0
+104622	hsa-miR-6851-5p		MIMAT0027602	experimental	meta-analysis [1]		0
+104623	hsa-miR-6851-3p		MIMAT0027603	experimental	meta-analysis [1]		0
+104624	hsa-miR-6852-5p		MIMAT0027604	experimental	meta-analysis [1], Illumina [2]		0
+104625	hsa-miR-6852-3p		MIMAT0027605	experimental	meta-analysis [1]		0
+104626	hsa-miR-6853-5p		MIMAT0027606	experimental	meta-analysis [1]		0
+104627	hsa-miR-6853-3p		MIMAT0027607	experimental	meta-analysis [1]		0
+104628	hsa-miR-6854-5p		MIMAT0027608	experimental	meta-analysis [1]		0
+104629	hsa-miR-6854-3p		MIMAT0027609	experimental	meta-analysis [1]		0
+104630	hsa-miR-6855-5p		MIMAT0027610	experimental	meta-analysis [1]		0
+104631	hsa-miR-6855-3p		MIMAT0027611	experimental	meta-analysis [1]		0
+104632	hsa-miR-6856-5p		MIMAT0027612	experimental	meta-analysis [1]		0
+104633	hsa-miR-6856-3p		MIMAT0027613	experimental	meta-analysis [1]		0
+104634	hsa-miR-6857-5p		MIMAT0027614	experimental	meta-analysis [1]		0
+104635	hsa-miR-6857-3p		MIMAT0027615	experimental	meta-analysis [1]		0
+104636	hsa-miR-6858-5p		MIMAT0027616	experimental	meta-analysis [1]		0
+104637	hsa-miR-6858-3p		MIMAT0027617	experimental	meta-analysis [1]		0
+104638	hsa-miR-6859-5p		MIMAT0027618	experimental	meta-analysis [1]		0
+104639	hsa-miR-6859-3p		MIMAT0027619	experimental	meta-analysis [1]		0
+104640	hsa-miR-6769b-5p		MIMAT0027620	experimental	meta-analysis [1]		0
+104641	hsa-miR-6769b-3p		MIMAT0027621	experimental	meta-analysis [1]		0
+104642	hsa-miR-6860		MIMAT0027622	experimental	meta-analysis [1]		0
+104643	hsa-miR-6861-5p		MIMAT0027623	experimental	meta-analysis [1]		0
+104644	hsa-miR-6861-3p		MIMAT0027624	experimental	meta-analysis [1]		0
+104645	hsa-miR-6862-5p		MIMAT0027625	experimental	meta-analysis [1]		0
+104646	hsa-miR-6862-3p		MIMAT0027626	experimental	meta-analysis [1]		0
+104647	hsa-miR-6863		MIMAT0027627	experimental	meta-analysis [1]		0
+104648	hsa-miR-6864-5p		MIMAT0027628	experimental	meta-analysis [1]		0
+104649	hsa-miR-6864-3p		MIMAT0027629	experimental	meta-analysis [1]		0
+104650	hsa-miR-6865-5p		MIMAT0027630	experimental	meta-analysis [1]		0
+104651	hsa-miR-6865-3p		MIMAT0027631	experimental	meta-analysis [1]		0
+104652	hsa-miR-6866-5p		MIMAT0027632	experimental	meta-analysis [1]		0
+104653	hsa-miR-6866-3p		MIMAT0027633	experimental	meta-analysis [1]		0
+104654	hsa-miR-6867-5p		MIMAT0027634	experimental	meta-analysis [1]		0
+104655	hsa-miR-6867-3p		MIMAT0027635	experimental	meta-analysis [1]		0
+104656	hsa-miR-6868-5p		MIMAT0027636	experimental	meta-analysis [1]		0
+104657	hsa-miR-6868-3p		MIMAT0027637	experimental	meta-analysis [1]		0
+104658	hsa-miR-6869-5p		MIMAT0027638	experimental	meta-analysis [1]		0
+104659	hsa-miR-6869-3p		MIMAT0027639	experimental	meta-analysis [1]		0
+104660	hsa-miR-6870-5p		MIMAT0027640	experimental	meta-analysis [1]		0
+104661	hsa-miR-6870-3p		MIMAT0027641	experimental	meta-analysis [1]		0
+104662	hsa-miR-6871-5p		MIMAT0027642	experimental	meta-analysis [1]		0
+104663	hsa-miR-6871-3p		MIMAT0027643	experimental	meta-analysis [1]		0
+104664	hsa-miR-6872-5p		MIMAT0027644	experimental	meta-analysis [1]		0
+104665	hsa-miR-6872-3p		MIMAT0027645	experimental	meta-analysis [1]		0
+104666	hsa-miR-6873-5p		MIMAT0027646	experimental	meta-analysis [1]		0
+104667	hsa-miR-6873-3p		MIMAT0027647	experimental	meta-analysis [1]		0
+104668	hsa-miR-6874-5p		MIMAT0027648	experimental	meta-analysis [1]		0
+104669	hsa-miR-6874-3p		MIMAT0027649	experimental	meta-analysis [1]		0
+104670	hsa-miR-6875-5p		MIMAT0027650	experimental	meta-analysis [1]		0
+104671	hsa-miR-6875-3p		MIMAT0027651	experimental	meta-analysis [1]		0
+104672	hsa-miR-6876-5p		MIMAT0027652	experimental	meta-analysis [1]		0
+104673	hsa-miR-6876-3p		MIMAT0027653	experimental	meta-analysis [1]		0
+104674	hsa-miR-6877-5p		MIMAT0027654	experimental	meta-analysis [1]		0
+104675	hsa-miR-6877-3p		MIMAT0027655	experimental	meta-analysis [1]		0
+104676	hsa-miR-6878-5p		MIMAT0027656	experimental	meta-analysis [1]		0
+104677	hsa-miR-6878-3p		MIMAT0027657	experimental	meta-analysis [1]		0
+104678	hsa-miR-6879-5p		MIMAT0027658	experimental	meta-analysis [1]		0
+104679	hsa-miR-6879-3p		MIMAT0027659	experimental	meta-analysis [1]		0
+104680	hsa-miR-6880-5p		MIMAT0027660	experimental	meta-analysis [1]		0
+104681	hsa-miR-6880-3p		MIMAT0027661	experimental	meta-analysis [1]		0
+104682	hsa-miR-6881-5p		MIMAT0027662	experimental	meta-analysis [1]		0
+104683	hsa-miR-6881-3p		MIMAT0027663	experimental	meta-analysis [1]		0
+104684	hsa-miR-6882-5p		MIMAT0027664	experimental	meta-analysis [1]		0
+104685	hsa-miR-6882-3p		MIMAT0027665	experimental	meta-analysis [1]		0
+104686	hsa-miR-6883-5p		MIMAT0027666	experimental	meta-analysis [1]		0
+104687	hsa-miR-6883-3p		MIMAT0027667	experimental	meta-analysis [1]		0
+104688	hsa-miR-6884-5p		MIMAT0027668	experimental	meta-analysis [1]		0
+104689	hsa-miR-6884-3p		MIMAT0027669	experimental	meta-analysis [1]		0
+104690	hsa-miR-6885-5p		MIMAT0027670	experimental	meta-analysis [1]		0
+104691	hsa-miR-6885-3p		MIMAT0027671	experimental	meta-analysis [1]		0
+104692	hsa-miR-6886-5p		MIMAT0027672	experimental	meta-analysis [1]		0
+104693	hsa-miR-6886-3p		MIMAT0027673	experimental	meta-analysis [1]		0
+104694	hsa-miR-6887-5p		MIMAT0027674	experimental	meta-analysis [1]		0
+104695	hsa-miR-6887-3p		MIMAT0027675	experimental	meta-analysis [1]		0
+104696	hsa-miR-6888-5p		MIMAT0027676	experimental	meta-analysis [1]		0
+104697	hsa-miR-6888-3p		MIMAT0027677	experimental	meta-analysis [1]		0
+104698	hsa-miR-6889-5p		MIMAT0027678	experimental	meta-analysis [1]		0
+104699	hsa-miR-6889-3p		MIMAT0027679	experimental	meta-analysis [1]		0
+104700	hsa-miR-6890-5p		MIMAT0027680	experimental	meta-analysis [1]		0
+104701	hsa-miR-6890-3p		MIMAT0027681	experimental	meta-analysis [1]		0
+104702	hsa-miR-6891-5p		MIMAT0027682	experimental	meta-analysis [1]		0
+104703	hsa-miR-6891-3p		MIMAT0027683	experimental	meta-analysis [1]		0
+104704	hsa-miR-6892-5p		MIMAT0027684	experimental	meta-analysis [1]		0
+104705	hsa-miR-6892-3p		MIMAT0027685	experimental	meta-analysis [1]		0
+104706	hsa-miR-6893-5p		MIMAT0027686	experimental	meta-analysis [1]		0
+104707	hsa-miR-6893-3p		MIMAT0027687	experimental	meta-analysis [1]		0
+104708	hsa-miR-6894-5p		MIMAT0027688	experimental	meta-analysis [1]		0
+104709	hsa-miR-6894-3p		MIMAT0027689	experimental	meta-analysis [1]		0
+104710	hsa-miR-6895-5p		MIMAT0027690	experimental	meta-analysis [1]		0
+104711	hsa-miR-6895-3p		MIMAT0027691	experimental	meta-analysis [1]		0
+105129	hsa-miR-7106-5p		MIMAT0028109	experimental	meta-analysis [1]		0
+105130	hsa-miR-7106-3p		MIMAT0028110	experimental	meta-analysis [1]		0
+105131	hsa-miR-7107-5p		MIMAT0028111	experimental	meta-analysis [1]		0
+105132	hsa-miR-7107-3p		MIMAT0028112	experimental	meta-analysis [1]		0
+105133	hsa-miR-7108-5p		MIMAT0028113	experimental	meta-analysis [1]		0
+105134	hsa-miR-7108-3p		MIMAT0028114	experimental	meta-analysis [1]		0
+105135	hsa-miR-7109-5p		MIMAT0028115	experimental	meta-analysis [1]		0
+105136	hsa-miR-7109-3p		MIMAT0028116	experimental	meta-analysis [1]		0
+105137	hsa-miR-7110-5p		MIMAT0028117	experimental	meta-analysis [1]		0
+105138	hsa-miR-7110-3p		MIMAT0028118	experimental	meta-analysis [1]		0
+105139	hsa-miR-7111-5p		MIMAT0028119	experimental	meta-analysis [1]		0
+105140	hsa-miR-7111-3p		MIMAT0028120	experimental	meta-analysis [1]		0
+105141	hsa-miR-7112-5p		MIMAT0028121	experimental	meta-analysis [1]		0
+105142	hsa-miR-7112-3p		MIMAT0028122	experimental	meta-analysis [1]		0
+105143	hsa-miR-7113-5p		MIMAT0028123	experimental	meta-analysis [1]		0
+105144	hsa-miR-7113-3p		MIMAT0028124	experimental	meta-analysis [1]		0
+105145	hsa-miR-7114-5p		MIMAT0028125	experimental	meta-analysis [1]		0
+105146	hsa-miR-7114-3p		MIMAT0028126	experimental	meta-analysis [1]		0
+105231	hsa-miR-7150		MIMAT0028211	experimental	Northern [1], primer-extension [2]		0
+105232	hsa-miR-7151-5p		MIMAT0028212	experimental	Illumina [1]		0
+105233	hsa-miR-7151-3p		MIMAT0028213	experimental	Illumina [1]		0
+105234	hsa-miR-7152-5p		MIMAT0028214	experimental	Illumina [1]		0
+105235	hsa-miR-7152-3p		MIMAT0028215	experimental	Illumina [1]		0
+105236	hsa-miR-7153-5p		MIMAT0028216	experimental	Illumina [1]		0
+105237	hsa-miR-7153-3p		MIMAT0028217	experimental	Illumina [1]		0
+105238	hsa-miR-7154-5p		MIMAT0028218	experimental	Illumina [1]		0
+105239	hsa-miR-7154-3p		MIMAT0028219	experimental	Illumina [1]		0
+105240	hsa-miR-7155-5p		MIMAT0028220	experimental	Illumina [1]		0
+105241	hsa-miR-7155-3p		MIMAT0028221	experimental	Illumina [1]		0
+105242	hsa-miR-7156-5p		MIMAT0028222	experimental	Illumina [1]		0
+105243	hsa-miR-7156-3p		MIMAT0028223	experimental	Illumina [1]		0
+105244	hsa-miR-7157-5p		MIMAT0028224	experimental	Illumina [1]		0
+105245	hsa-miR-7157-3p		MIMAT0028225	experimental	Illumina [1]		0
+105246	hsa-miR-7158-5p		MIMAT0028226	experimental	Illumina [1]		0
+105247	hsa-miR-7158-3p		MIMAT0028227	experimental	Illumina [1]		0
+105248	hsa-miR-7161-5p		MIMAT0028232	experimental	Illumina [1]		0
+105249	hsa-miR-7161-3p		MIMAT0028233	experimental	Illumina [1]		0
+105250	hsa-miR-7159-5p		MIMAT0028228	experimental	Illumina [1]		0
+105251	hsa-miR-7159-3p		MIMAT0028229	experimental	Illumina [1]		0
+105252	hsa-miR-7160-5p		MIMAT0028230	experimental	Illumina [1]		0
+105253	hsa-miR-7160-3p		MIMAT0028231	experimental	Illumina [1]		0
+105255	hsa-miR-7162-3p		MIMAT0028235	experimental	Illumina [1]		0
+106370	hsa-miR-7515		MIMAT0029310	experimental	cloned [1], qRT-PCR [1]		0
+106863	hsa-miR-7641		MIMAT0029782	experimental	cloned [1]		1
+107101	hsa-miR-7702		MIMAT0030017	experimental	Illumina [1]		0
+107102	hsa-miR-7703		MIMAT0030018	experimental	Illumina [1]		0
+107103	hsa-miR-7704		MIMAT0030019	experimental	Illumina [1]		0
+107104	hsa-miR-7705		MIMAT0030020	experimental	Illumina [1]		0
+107105	hsa-miR-7706		MIMAT0030021	experimental	Illumina [1]		0
+107498	hsa-miR-7843-5p		MIMAT0030411	experimental	Illumina [1]		0
+107499	hsa-miR-7843-3p		MIMAT0030412	experimental	Illumina [1]		0
+107500	hsa-miR-4433b-5p		MIMAT0030413	experimental	Illumina [1]		0
+107501	hsa-miR-4433b-3p		MIMAT0030414	experimental	Illumina [1]		0
+107502	hsa-miR-1273h-5p		MIMAT0030415	experimental	Illumina [1]		0
+107503	hsa-miR-1273h-3p		MIMAT0030416	experimental	Illumina [1]		0
+107504	hsa-miR-6516-5p		MIMAT0030417	experimental	Illumina [1]		0
+107505	hsa-miR-6516-3p		MIMAT0030418	experimental	Illumina [1]		0
+107506	hsa-miR-7844-5p		MIMAT0030419	experimental	Illumina [1]		0
+107507	hsa-miR-7845-5p		MIMAT0030420	experimental	Illumina [1]		0
+107508	hsa-miR-7846-3p		MIMAT0030421	experimental	Illumina [1]		0
+107509	hsa-miR-7847-3p		MIMAT0030422	experimental	Illumina [1]		0
+107510	hsa-miR-7848-3p		MIMAT0030423	experimental	Illumina [1]		0
+107511	hsa-miR-7849-3p		MIMAT0030424	experimental	Illumina [1]		0
+107512	hsa-miR-7850-5p		MIMAT0030425	experimental	Illumina [1]		0
+107513	hsa-miR-7851-3p		MIMAT0030426	experimental	Illumina [1]		0
+107514	hsa-miR-7852-3p		MIMAT0030427	experimental	Illumina [1]		0
+107515	hsa-miR-7853-5p		MIMAT0030428	experimental	Illumina [1]		0
+107516	hsa-miR-7854-3p		MIMAT0030429	experimental	Illumina [1]		0
+107517	hsa-miR-7855-5p		MIMAT0030430	experimental	Illumina [1]		0
+107518	hsa-miR-7856-5p		MIMAT0030431	experimental	Illumina [1]		0
+107933	hsa-miR-548ba		MIMAT0031175	experimental	Illumina [1]		0
+107934	hsa-miR-7973		MIMAT0031176	experimental	Illumina [1]		0
+107935	hsa-miR-7974		MIMAT0031177	experimental	Illumina [1]		0
+107936	hsa-miR-7975		MIMAT0031178	experimental	Illumina [1]		0
+107937	hsa-miR-7976		MIMAT0031179	experimental	Illumina [1]		0
+107938	hsa-miR-7977		MIMAT0031180	experimental	Illumina [1]		0
+107939	hsa-miR-7978		MIMAT0031181	experimental	Illumina [1]		0
+108132	hsa-miR-8052		MIMAT0030979	experimental	Illumina [1]		0
+108133	hsa-miR-8053		MIMAT0030980	experimental	Illumina [1]		0
+108134	hsa-miR-8054		MIMAT0030981	experimental	Illumina [1]		0
+108135	hsa-miR-8055		MIMAT0030982	experimental	Illumina [1]		0
+108136	hsa-miR-8056		MIMAT0030983	experimental	Illumina [1]		0
+108137	hsa-miR-8057		MIMAT0030984	experimental	Illumina [1]		0
+108138	hsa-miR-8058		MIMAT0030985	experimental	Illumina [1]		0
+108139	hsa-miR-8059		MIMAT0030986	experimental	Illumina [1]		0
+108140	hsa-miR-8060		MIMAT0030987	experimental	Illumina [1]		0
+108141	hsa-miR-8061		MIMAT0030988	experimental	Illumina [1]		0
+108142	hsa-miR-8062		MIMAT0030989	experimental	Illumina [1]		0
+108143	hsa-miR-8063		MIMAT0030990	experimental	Illumina [1]		0
+108144	hsa-miR-8064		MIMAT0030991	experimental	Illumina [1]		0
+108145	hsa-miR-8065		MIMAT0030992	experimental	Illumina [1]		0
+108146	hsa-miR-8066		MIMAT0030993	experimental	Illumina [1]		0
+108147	hsa-miR-8067		MIMAT0030994	experimental	Illumina [1]		0
+108148	hsa-miR-8068		MIMAT0030995	experimental	Illumina [1]		0
+108149	hsa-miR-8069		MIMAT0030996	experimental	Illumina [1]		0
+108150	hsa-miR-8070		MIMAT0030997	experimental	Illumina [1]		0
+108151	hsa-miR-8071		MIMAT0030998	experimental	Illumina [1]		0
+108152	hsa-miR-8072		MIMAT0030999	experimental	Illumina [1]		0
+108153	hsa-miR-8073		MIMAT0031000	experimental	Illumina [1]		0
+108154	hsa-miR-8074		MIMAT0031001	experimental	Illumina [1]		0
+108155	hsa-miR-8075		MIMAT0031002	experimental	Illumina [1]		0
+108156	hsa-miR-8076		MIMAT0031003	experimental	Illumina [1]		0
+108157	hsa-miR-8077		MIMAT0031004	experimental	Illumina [1]		0
+108158	hsa-miR-8078		MIMAT0031005	experimental	Illumina [1]		0
+108159	hsa-miR-8079		MIMAT0031006	experimental	Illumina [1]		0
+108160	hsa-miR-8080		MIMAT0031007	experimental	Illumina [1]		0
+108161	hsa-miR-8081		MIMAT0031008	experimental	Illumina [1]		0
+108162	hsa-miR-8082		MIMAT0031009	experimental	Illumina [1]		0
+108163	hsa-miR-8083		MIMAT0031010	experimental	Illumina [1]		0
+108164	hsa-miR-8084		MIMAT0031011	experimental	Illumina [1]		0
+108165	hsa-miR-8085		MIMAT0031012	experimental	Illumina [1]		0
+108166	hsa-miR-8086		MIMAT0031013	experimental	Illumina [1]		0
+108167	hsa-miR-8087		MIMAT0031014	experimental	Illumina [1]		0
+108168	hsa-miR-8088		MIMAT0031015	experimental	Illumina [1]		0
+108169	hsa-miR-8089		MIMAT0031016	experimental	Illumina [1]		0
+109104	hsa-miR-3653-5p		MIMAT0032110	not_experimental	\N		1
+109108	hsa-miR-548ad-5p		MIMAT0032114	not_experimental	\N		0
+109007	hsa-miR-301b-5p		MIMAT0032026	not_experimental	\N		0
+109010	hsa-miR-1249-5p		MIMAT0032029	not_experimental	\N		0
+109109	hsa-miR-548ae-5p		MIMAT0032115	not_experimental	\N		0
+109110	hsa-miR-4485-5p		MIMAT0032116	not_experimental	\N		0
+110960	hsa-miR-8485		MIMAT0033692	experimental	RT-PCR [1]		0
+113018	hsa-miR-9500		MIMAT0035542	experimental	qPCR [1]		0
+113182	hsa-miR-548bb-5p		MIMAT0035703	experimental	cloned [1]		0
+113183	hsa-miR-548bb-3p		MIMAT0035704	experimental	cloned [1]		0
+115180	hsa-miR-1974		MIMAT0009449				1
+115181	hsa-miR-1977		MIMAT0009452				1
+115182	hsa-miR-1978		MIMAT0009453				1
+115202	hsa-miR-3130-5p		MIMAT0014995				1
+115229	hsa-miR-1975		MIMAT0009450				1
+115231	hsa-miR-3172		MIMAT0015047				1
+115232	hsa-miR-1979		MIMAT0009454				1
+115276	hsa-miR-3647-5p		MIMAT0018066				1
+115341	hsa-miR-4482-5p		MIMAT0019016				1
+115395	hsa-miR-5686		MIMAT0022477				1
+115407	hsa-miR-3676		MIMAT0018100				1
+115447	hsa-miR-3669		MIMAT0018092				1
+115448	hsa-miR-3673		MIMAT0018096				1
+115466	hsa-miR-375-5p		MIMAT0037313	not_experimental	\N		0
+115459	hsa-miR-103a-1-5p		MIMAT0037306	not_experimental	\N		0
+115460	hsa-miR-196a-1-3p		MIMAT0037307	not_experimental	\N		0
+115465	hsa-miR-101-2-5p		MIMAT0037312	not_experimental	\N		0
+115461	hsa-miR-217-3p		MIMAT0037308	not_experimental	\N		0
+115462	hsa-miR-135a-2-3p		MIMAT0037309	not_experimental	\N		0
+115463	hsa-miR-137-5p		MIMAT0037310	not_experimental	\N		0
+115464	hsa-miR-320a-5p		MIMAT0037311	not_experimental	\N		0
+115489	hsa-miR-1912-5p		MIMAT0037333	experimental	Illumina [3]		0
+115478	hsa-miR-498-3p		MIMAT0037323	experimental	Illumina [3]		0
+115479	hsa-miR-520e-5p		MIMAT0037324	experimental	Illumina [2]		0
+115480	hsa-miR-520b-5p		MIMAT0037325	experimental	Illumina [2]		0
+115481	hsa-miR-526a-3p		MIMAT0037326	experimental	Illumina [3]		0
+115482	hsa-miR-519a-2-5p		MIMAT0037327	experimental	Illumina [3]		0
+115483	hsa-miR-549a-5p		MIMAT0037328	experimental	Illumina [2]		0
+115486	hsa-miR-147b-5p		MIMAT0037331	not_experimental	\N		0
+115487	hsa-miR-190b-3p		MIMAT0037332	not_experimental	\N		0
+117742	hsa-miR-9718		MIMAT0039310	not_experimental	\N		0
+117751	hsa-miR-9898		MIMAT0039318	experimental	Illumina [1]		0
+117752	hsa-miR-9899		MIMAT0039319	experimental	Illumina [1]		0
+117753	hsa-miR-9900		MIMAT0039320	experimental	Illumina [1]		0
+117754	hsa-miR-9901		MIMAT0039321	experimental	Illumina [1]		0
+117755	hsa-miR-9902		MIMAT0039322	experimental	Illumina [1]		0
+117756	hsa-miR-9903		MIMAT0039323	experimental	Illumina [1]		0
+118248	hsa-miR-9985		MIMAT0039763	experimental	Illumina [1]		0
+118249	hsa-miR-1843		MIMAT0039764	experimental	Illumina [1]		0
+118250	hsa-miR-548bc		MIMAT0039765	experimental	Illumina [1]		0
+118251	hsa-miR-9986		MIMAT0039766	experimental	Illumina [1]		0
+119655	hsa-miR-10226		MIMAT0041128	experimental	Illumina [1]		0
+120170	hsa-miR-10392-5p		MIMAT0041615	experimental	Illumina [1]		0
+120171	hsa-miR-10392-3p		MIMAT0041616	experimental	Illumina [1]		0
+120172	hsa-miR-10393-5p		MIMAT0041617	experimental	Illumina [1]		0
+120173	hsa-miR-10393-3p		MIMAT0041618	experimental	Illumina [1]		0
+120174	hsa-miR-10394-5p		MIMAT0041619	experimental	Illumina [1]		0
+120175	hsa-miR-10394-3p		MIMAT0041620	experimental	Illumina [1]		0
+120176	hsa-miR-10395-5p		MIMAT0041621	experimental	Illumina [1]		0
+120177	hsa-miR-10395-3p		MIMAT0041622	experimental	Illumina [1]		0
+120178	hsa-miR-10396a-5p		MIMAT0041623	experimental	Illumina [1]		0
+120179	hsa-miR-10396a-3p		MIMAT0041624	experimental	Illumina [1]		0
+120180	hsa-miR-10397-5p		MIMAT0041625	experimental	Illumina [1]		0
+120181	hsa-miR-10397-3p		MIMAT0041626	experimental	Illumina [1]		0
+120182	hsa-miR-10398-5p		MIMAT0041627	experimental	Illumina [1]		0
+120183	hsa-miR-10398-3p		MIMAT0041628	experimental	Illumina [1]		0
+120184	hsa-miR-10399-5p		MIMAT0041629	experimental	Illumina [1]		0
+120185	hsa-miR-10399-3p		MIMAT0041630	experimental	Illumina [1]		0
+120186	hsa-miR-10400-5p		MIMAT0041631	experimental	Illumina [1]		0
+120187	hsa-miR-10400-3p		MIMAT0041632	experimental	Illumina [1]		0
+120188	hsa-miR-10401-5p		MIMAT0041633	experimental	Illumina [1]		0
+120189	hsa-miR-10401-3p		MIMAT0041634	experimental	Illumina [1]		0
+120190	hsa-miR-10396b-5p		MIMAT0041635	experimental	Illumina [1]		0
+120191	hsa-miR-10396b-3p		MIMAT0041636	experimental	Illumina [1]		0
+120569	hsa-miR-10522-5p		MIMAT0041991	experimental	Illumina [1]		0
+120570	hsa-miR-10523-5p		MIMAT0041992	experimental	Illumina [1]		0
+120571	hsa-miR-9983-3p		MIMAT0041993	experimental	Illumina [1]		0
+120572	hsa-miR-10524-5p		MIMAT0041994	experimental	Illumina [1]		0
+120573	hsa-miR-10525-3p		MIMAT0041995	experimental	Illumina [1]		0
+120574	hsa-miR-10526-3p		MIMAT0041996	experimental	Illumina [1]		0
+120575	hsa-miR-10527-5p		MIMAT0041997	experimental	Illumina [1]		0
+123029	hsa-miR-11181-5p		MIMAT0043996	experimental	RT-qPCR [1]		0
+123030	hsa-miR-11181-3p		MIMAT0043997	experimental	RT-qPCR [1]		0
+123770	hsa-miR-11399		MIMAT0044656	experimental	Illumina [1]		0
+123771	hsa-miR-11400		MIMAT0044657	experimental	Illumina [1]		0
+123772	hsa-miR-11401		MIMAT0044658	experimental	Illumina [1]		0
+128000	hsa-miR-3059-5p		MIMAT0048633	not_experimental	\N		0
+128001	hsa-miR-3059-3p		MIMAT0048634	not_experimental	\N		0
+128002	hsa-miR-3085-5p		MIMAT0048635	not_experimental	\N		0
+128003	hsa-miR-3085-3p		MIMAT0048636	not_experimental	\N		0
+128004	hsa-miR-6529-5p		MIMAT0048637	not_experimental	\N		0
+128005	hsa-miR-6529-3p		MIMAT0048638	not_experimental	\N		0
+128006	hsa-miR-9851-5p		MIMAT0048639	not_experimental	\N		0
+128007	hsa-miR-9851-3p		MIMAT0048640	not_experimental	\N		0
+128386	hsa-miR-12113		MIMAT0049007	experimental	Illumina [1]		0
+128387	hsa-miR-12114		MIMAT0049008	experimental	Illumina [1]		0
+128388	hsa-miR-12115		MIMAT0049009	experimental	Illumina [1]		0
+128389	hsa-miR-12116		MIMAT0049010	experimental	Illumina [1]		0
+128390	hsa-miR-12117		MIMAT0049011	experimental	Illumina [1]		0
+128391	hsa-miR-12118		MIMAT0049012	experimental	Illumina [1]		0
+128392	hsa-miR-12119		MIMAT0049013	experimental	Illumina [1]		0
+128393	hsa-miR-12120		MIMAT0049014	experimental	Illumina [1]		0
+128394	hsa-miR-12121		MIMAT0049015	experimental	Illumina [1]		0
+128395	hsa-miR-12122		MIMAT0049016	experimental	Illumina [1]		0
+128396	hsa-miR-12123		MIMAT0049017	experimental	Illumina [1]		0
+128397	hsa-miR-12124		MIMAT0049018	experimental	Illumina [1]		0
+128398	hsa-miR-12125		MIMAT0049019	experimental	Illumina [1]		0
+128399	hsa-miR-12126		MIMAT0049020	experimental	Illumina [1]		0
+128400	hsa-miR-12127		MIMAT0049021	experimental	Illumina [1]		0
+128401	hsa-miR-12128		MIMAT0049022	experimental	Illumina [1]		0
+128402	hsa-miR-12129		MIMAT0049023	experimental	Illumina [1]		0
+128403	hsa-miR-12130		MIMAT0049024	experimental	Illumina [1]		0
+128404	hsa-miR-12131		MIMAT0049025	experimental	Illumina [1]		0
+128405	hsa-miR-12132		MIMAT0049026	experimental	Illumina [1]		0
+128406	hsa-miR-12133		MIMAT0049027	experimental	Illumina [1]		0
+128410	hsa-miR-12135		MIMAT0049031	experimental	Illumina [1]		0
+128411	hsa-miR-12136		MIMAT0049032	experimental	Illumina [1]		0
