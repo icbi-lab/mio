@@ -30,5 +30,3 @@ MIO allows the identification of genes affecting the vulnerability of cancer bas
 ### MIO architecture
 
 
-
-![architecture](doc/architecture.png)
