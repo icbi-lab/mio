@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+
+{%block body%}
+{% if bMir %}
+<section id="#">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+        <p><h1 class="page-header">{{mature}}</h1></p>
+      
+          <div id="family_div">
+          <h2 class="sub-header">General information</h2>
+            <ul>
+              {% for  precursor in mature.mirna_set.all %}
+              {% if precursor.prefam_id.all.0 != None %}
+                <li id="family_li">Family: {{precursor.prefam_id.all.0}} <span id="family"></span></li>
+              {% endif %}
+              {%endfor%}
+              {% for  precursor in mature.mirna_set.all%}
+              <li id="precursor_li">Precursor: {{precursor}}<ul id="precursor"></ul></li>
+              {%endfor%}
+            </ul>
+          </div>
+          {% if precursor.description%}
+          <div id="chromosomal_position">
+            <h4>Description</h4>
+            <ul>
+              {%for precursor in mature.mirna_set.all%}
+                <li id="previous_mirna_id_li">{{precursor.description}}<ul id="primary_transcript_chromosomal_positions"></ul></li>
+              {%endfor%}
+            </ul>
+          </div>
+          {%endif%}
+          <div id="sequence">
+            <h4>Sequence</h4>
+            <ul>
+              {% for  precursor in mature.mirna_set.all %}
+              <li id="stemloop_sequence_li">Stem-loop: {{precursor.sequence}}<pre class="sequence" id="stemloop_sequence"></pre></li>
+              {%endfor%}
+              <li id="mature_sequence_li">Mature: {{mature_sequence}}<pre class="sequence" id="mature_sequence"></pre></li>
+            </ul>
+          </div>
+          <div id="chromosomal_position">
+            <h4>Chromosomal positions</h4>
+            <ul>
+              {% for  precursor in mature.mirna_set.all %}
+                <li id="primary_transcript_chromosomal_positions_li">Primary transcript: {{precursor.mirna_chromosome_build_set.all.0}}<ul id="primary_transcript_chromosomal_positions"></ul></li>
+              {%endfor%}
+            </ul>
+          </div>
+
+          {% if mature.previous_mature_id != None and precursor.previous_mature_id != None %}
+          <div id="previous_id">
+            <h4>Previous ID</h4>
+            <ul>
+              <li id="previous_mature_id_li">Previous Mature ID: {{mature.previous_mature_id}}<ul id="primary_transcript_chromosomal_positions"></ul></li>
+              {%for precursor in mature.mirna_set.all%}
+                <li id="previous_mirna_id_li">Previous Precursor ID: {{precursor.previous_mirna_id}}<ul id="primary_transcript_chromosomal_positions"></ul></li>
+              {%endfor%}
+            </ul>
+          </div>
+          {%endif%}
+          <div id="other_databases">
+            <h4>Other Databases</h4>
+            <ul>
+                <li id="mirbase_li">miRBase: <a href="https://www.mirbase.org/cgi-bin/mature.pl?acc={{mature.mature_acc}}"  target="_blank">{{mature.mature_acc}}</a></li>
+                <li id="ensembl_li">miRPathDB: <a href="https://mpd.bioinf.uni-sb.de/mirna.html?mirna={{mature}}&organism=hsa"  target="_blank">{{mature}}</a></li>
+                <li id="cosmic_li">miRCarta: <a href="https://mircarta.cs.uni-saarland.de/search_box/{{mature}}"  target="_blank">{{mature}}</a></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        {% if identifier %}
+
+        <h4>Target</h4>
+        <p class="lead"></p>
+        <p></p>
+        <table id="example" class="display" style="width:100%">
+          <thead>
+            <tr>
+            {% for c in  col%}
+              <th>{{c}}</th>
+            {% endfor %}
+            </tr>
+          </thead>
+        </table>
+        {%else%}
+        {%endif%}
+      </div>
+      <div class="col-lg-8 mx-auto">
+        {% if identifier2 %}
+
+        <h4>Immune related microRNA signature</h4>
+        <p class="lead"></p>
+        <p></p>
+        <table id="mirset" class="display" style="width:100%">
+          <thead>
+            <tr>
+            {% for c in  col2%}
+              <th>{{c}}</th>
+            {% endfor %}
+            </tr>
+          </thead>
+        </table>
+        {%else%}
+        {%endif%}
+      </div>
+    </div>
+  </div>
+</section>
+{%else%}
+<section id="#">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+      <p><h1>{{mature}}</h1></p>
+      <p>We have not been able to find the microna in our database.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{%endif%}
+{%endblock body%}
+
+
+{% block js %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.18/af-2.3.0/b-1.5.2/b-colvis-1.5.2/b-flash-1.5.2/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/fh-3.1.4/r-2.2.2/datatables.min.css"/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.18/af-2.3.0/b-1.5.2/b-colvis-1.5.2/b-flash-1.5.2/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/fh-3.1.4/r-2.2.2/datatables.min.js"></script>
+<!-- needed to use moment.js for our date sorting-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.19/sorting/datetime-moment.js"></script>
+
+{%if identifier%}
+<script>
+  $(document).ready(function() {
+      $('#example').DataTable( {    dom: 'B<"clear">lfrtip',
+    buttons: {
+        name: 'primary',
+        buttons: [ 'copy', 'csv', 'excel' ]
+        },
+        "columnDefs": [
+          {
+            "targets": 1,
+            "data": "1",
+            "render": function ( data, type, row, meta ) {
+              return '<a href="/gene_view/'+data+'"  target="_blank">'+data+'</a>';
+            }
+          },
+          {
+            "targets": 2,
+            "data": "2",
+            "render": function ( data, type, row, meta ) {
+              return '<a href="/microrna_view/'+data+'"  target="_blank">'+data+'</a>';
+            }
+          } ],
+        "ajax": '{% url "results_json" identifier=identifier %}'
+      } );
+  } );
+</script>
+{%endif%} 
+
+{%if identifier2%}
+<script>
+  $(document).ready(function() {
+      $('#mirset').DataTable( {    dom: 'B<"clear">lfrtip',
+    buttons: {
+        name: 'primary',
+        buttons: [ 'copy', 'csv', 'excel' ]
+        },
+        "ajax": '{% url "results_json" identifier=identifier2 %}'
+      } );
+  } );
+</script>
+{%endif%} 
+  {% endblock js%}

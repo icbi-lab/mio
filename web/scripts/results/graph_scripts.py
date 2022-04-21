@@ -270,6 +270,97 @@ def plotly_heat(matrix, colorscale = 'RdBu_r', zmin = None, zmax = None, zmid = 
 ####################
 ###   Scatter   ####
 ####################
+def infiltrated_score_plot(ExprDf = None, lCell = None, lMir = None):
+    import plotly.graph_objs as go
+    import plotly.express as px
+    import plotly.offline as opy
+
+    config = {
+    'toImageButtonOptions': {
+        'format': 'svg', # one of png, svg, jpeg, webp
+    }}
+
+
+    # Rename the lists of columns
+
+    fig = go.Figure()
+    i = 0
+
+    for cell in lCell:  
+        if i == 0:
+            fig.add_scatter(x=ExprDf[lMir[0]], y=ExprDf[cell], mode='markers', visible = True)
+        else:
+            fig.add_scatter(x=ExprDf[lMir[0]], y=ExprDf[cell], mode='markers', visible = False)
+        i += 1
+
+        
+    #The trace restyling  to be performed at an option selection in the first/second dropdown menu
+    # is defined within  buttons1/buttons2 below:
+
+    buttons1 = [dict(method = "restyle",
+                    args = [{'x': [ExprDf[lMir[k]] for cell in lCell],
+                            'y': [ExprDf[cell] for cell in lCell]
+                            }], 
+                    label = lMir[k])   for k in range(0, len(lMir))]  
+
+
+    buttons2 = [dict(method = "restyle",
+                    args = [{'visible':[cell == lCell[k] for cell in lCell]}],
+                    label = lCell[k])   for k in range(0, len(lCell))]  
+
+
+
+    fig.update_layout(title_text='Module Score',
+
+                    
+                    updatemenus=[dict(active=0,
+                                        buttons=buttons1,
+                                        x=1.15,
+                                        y=1,
+                                        xanchor='left',
+                                        yanchor='top'),
+                                
+                                dict(buttons=buttons2,
+                                        x=1.15,
+                                        y=0.85,
+                                        xanchor='left',
+                                        yanchor='top')
+
+                                
+
+                                ]); 
+
+    #Add annotations for the two dropdown menus:
+
+
+    # Set x-axis title
+    fig.update_xaxes(title_text="<b>miRNA Expression</b>")
+
+    # Set y-axes titles
+    fig.update_yaxes(title_text="<b>Module score</b>")
+
+    fig.add_annotation(
+                x=1.05,
+                y=1,
+                xref='paper',
+                yref='paper',
+                showarrow=False,
+                xanchor='left',
+                text="Select<br>miRNA")
+
+    fig.add_annotation(
+                x=1.05,
+                y=0.85,
+                showarrow=False,
+                xref='paper',
+                yref='paper',
+                xanchor='left',
+                #yanchor='top',
+                text="Select<br>Geneset");
+
+    div = opy.plot(fig, auto_open=False, output_type='div', config = config)
+
+    return div
 
 def module_score_plot(ExprDf = None, dfDict = None, lMir = None):
     import plotly.graph_objs as go
@@ -365,6 +456,80 @@ def module_score_plot(ExprDf = None, dfDict = None, lMir = None):
 
     return div
 
+
+def ips_score_plot(ExprDf = None, dfIps = None, lMir = None):
+    import plotly.graph_objs as go
+    import plotly.express as px
+    import plotly.offline as opy
+    import pandas as pd
+    config = {
+    'toImageButtonOptions': {
+        'format': 'svg', # one of png, svg, jpeg, webp
+    }}
+
+    # Rename the lists of columns
+
+    fig = go.Figure()
+    i = 0
+    ExprDf = pd.concat((ExprDf[lMir], dfIps), axis = 1)
+    for mir in lMir:  
+        if i == 0:
+            fig.add_scatter(x=ExprDf[mir], y=ExprDf["AZ"], mode='markers', visible = True)
+        else:
+            fig.add_scatter(x=ExprDf[mir], y=ExprDf["AZ"], mode='markers', visible = False)
+        i += 1
+
+        
+    #The trace restyling  to be performed at an option selection in the first/second dropdown menu
+    # is defined within  buttons1/buttons2 below:
+
+    buttons1 = [dict(method = "restyle",
+                    args = [{'x': [ExprDf[lMir[k]]],
+                            'y': [ExprDf["AZ"]]
+                            }], 
+                    label = lMir[k])   for k in range(0, len(lMir))]  
+
+
+
+
+
+    fig.update_layout(title_text='Immunophenoscore',
+
+                    
+                    updatemenus=[dict(active=0,
+                                        buttons=buttons1,
+                                        x=1.15,
+                                        y=1,
+                                        xanchor='left',
+                                        yanchor='top'),
+                            
+
+                                
+
+                                ]); 
+
+    #Add annotations for the two dropdown menus:
+
+
+    # Set x-axis title
+    fig.update_xaxes(title_text="<b>miRNA Expression</b>")
+
+    # Set y-axes titles
+    fig.update_yaxes(title_text="<b>Immunophenoscore</b>")
+
+    fig.add_annotation(
+                x=1.05,
+                y=1,
+                xref='paper',
+                yref='paper',
+                showarrow=False,
+                xanchor='left',
+                text="Select<br>miRNA")
+
+
+    div = opy.plot(fig, auto_open=False, output_type='div', config = config)
+
+    return div
 #################
 ### ROC #####3###
 #################
@@ -609,7 +774,7 @@ def closet_value(given_value, a_list):
     return closet
 
 
-def df_to_kaplan_meier_plot(df, timestamp="time", status="event", conditions="exprs", translations={1:"High", 0:"Low"}, q=None, target = None, treshold = None, dataset = None):
+def df_to_kaplan_meier_plot(df, timestamp="time", status="event", conditions="exprs", translations={1:"High", 0:"Low"}, q=None, target = None, treshold = None, dataset = None, optimal = False):
     import pandas as pd
     from lifelines import KaplanMeierFitter, CoxPHFitter
     import numpy as np
@@ -699,6 +864,8 @@ def df_to_kaplan_meier_plot(df, timestamp="time", status="event", conditions="ex
 
     # Statics
     log_hr, pval, hr_high, hr_low = get_hazard_ratio(df)
+    if optimal:
+        adj_pval = -1.63 * pval * (1 + 2.35 * np.log(pval))
     #print(log_hr), print(hr_high), print(hr_low)
     fig.append_trace(plotly.graph_objs.Scatter(x=(x_max*0.65,), 
                                             y=(1,),
@@ -714,10 +881,19 @@ def df_to_kaplan_meier_plot(df, timestamp="time", status="event", conditions="ex
                      1, 1)
     fig.append_trace(plotly.graph_objs.Scatter(x=(x_max*0.65,), 
                                             y=(0.9,),
-                                            text = "p.value = %.3f"%(pval) if pval >= 0.001 else "p.value < 0.001", 
+                                            text = "p.value = %.3f "%(pval) if pval >= 0.001 else "p.value < 0.001" , 
                                             mode='text', 
                                             showlegend=False), 
                      1, 1)
+    
+    if optimal:
+        fig.append_trace(plotly.graph_objs.Scatter(x=(x_max*0.65,), 
+                                                y=(0.85,),
+                                                text = "padj = %.3f "%(adj_pval) if adj_pval >= 0.001 else "padj < 0.001" , 
+                                                mode='text', 
+                                                showlegend=False), 
+                        1, 1)
+    
     # prettier layout
     x_axis_range = [x_min - x_max * 0.05, x_max * 1.05]
     fig['layout']['xaxis2']['visible'] = False

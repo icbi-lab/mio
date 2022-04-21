@@ -1,5 +1,5 @@
 from mirWeb.settings import BASE_DIR
-from scripts.analysis.workflow_task import (run_correlation, 
+from scripts.analysis.workflow_task import (run_correlation, run_ips_correlation, run_infiltration_correlation,
                                     run_feature, run_feature_ratio,
                                     run_feature_survival, run_feature_survival_ratio,
                                     run_classification)
@@ -9,12 +9,44 @@ import django_rq
 from analysis.models import Queue
 
 def getCorrelation(workflow, method = "Correlation", FilterChoice = "NF", normal = True, logfc = 1.2, pval = 0.005, survival = False, group = "event", \
-                     filter_sample = False, group_sample = "event", filter_group = "0"):
+                     filter_sample = False, group_sample = "event", filter_group = "0", background = False):
     
     try:
         workflow.set_status(1)
         table = run_correlation(workflow, method = method , FilterChoice = FilterChoice, normal = normal, logfc = logfc, \
-            pval = pval, survival = survival, group = group, filter_sample = filter_sample, group_sample = group_sample, filter_group=filter_group)
+            pval = pval, survival = survival, group = group, filter_sample = filter_sample, group_sample = group_sample, filter_group=filter_group, background = background)
+        print(table.head())
+        workflow.set_status(2)
+        
+    except Exception as excp:
+        print("Error %s"%excp)
+        workflow.set_log(excp)
+        workflow.set_status(3)
+
+
+def getIpsCorrelation(workflow, method = "Correlation", FilterChoice = "NF", normal = True, group = "event", \
+                     filter_sample = False, group_sample = "event", filter_group = "0"):
+    
+    try:
+        workflow.set_status(1)
+        table = run_ips_correlation(workflow, method = method , FilterChoice = FilterChoice, normal = normal, \
+            group = group, filter_sample = filter_sample, group_sample = group_sample, filter_group=filter_group)
+        print(table.head())
+        workflow.set_status(2)
+        
+    except Exception as excp:
+        print("Error %s"%excp)
+        workflow.set_log(excp)
+        workflow.set_status(3)
+
+
+def getInfiltrationCorrelation(workflow, normal = True, group = "event", lCell = [], \
+                     filter_sample = False, group_sample = "event", filter_group = "0"):
+    
+    try:
+        workflow.set_status(1)
+        table = run_infiltration_correlation(workflow, normal = normal,lCell = lCell, \
+            group = group, filter_sample = filter_sample, group_sample = group_sample, filter_group=filter_group)
         print(table.head())
         workflow.set_status(2)
         
@@ -92,10 +124,27 @@ def QueueSqlite(df, table_name):
     queue.enqueue(updateSqliteTable, df, table_name)
 
 def QueueCorrelation(workflow, method = "Correlation", FilterChoice = "NF", normal = True, logfc = 1.2, pval = 0.005, survival = False, group = "event", \
-                     filter_sample = False, group_sample = "event", filter_group = "0"):
+                     filter_sample = False, group_sample = "event", filter_group = "0", background = False):
     queue = django_rq.get_queue('normal')              
     job = queue.enqueue(getCorrelation, workflow=workflow, method = method, FilterChoice = FilterChoice, normal = normal, \
-        logfc = logfc, pval = pval, survival = survival, group = group, filter_sample = filter_sample, group_sample = group_sample, filter_group=filter_group)
+        logfc = logfc, pval = pval, survival = survival, group = group, filter_sample = filter_sample, group_sample = group_sample, filter_group=filter_group, background = background)
+
+    Queue(job_id=job.id, workflow_id= workflow).save()
+
+def QueueIpsCorrelation(workflow, method = "Correlation", FilterChoice = "NF", normal = True,  group = "event", \
+                     filter_sample = False, group_sample = "event", filter_group = "0"):
+    queue = django_rq.get_queue('normal')              
+    job = queue.enqueue(getIpsCorrelation, workflow=workflow, method = method, FilterChoice = FilterChoice, normal = normal, \
+         group = group, filter_sample = filter_sample, group_sample = group_sample, filter_group=filter_group)
+
+    Queue(job_id=job.id, workflow_id= workflow).save()
+
+
+def QueueInfiltrationCorrelation(workflow, normal = True, group = "event", lCell = [], \
+                     filter_sample = False, group_sample = "event", filter_group = "0"):
+    queue = django_rq.get_queue('normal')              
+    job = queue.enqueue(getInfiltrationCorrelation, workflow=workflow, lCell = lCell, normal = normal, \
+         group = group, filter_sample = filter_sample, group_sample = group_sample, filter_group=filter_group)
 
     Queue(job_id=job.id, workflow_id= workflow).save()
 
@@ -129,6 +178,7 @@ def QueueClassification(workflow, model = "rf", k = 10, normal = False, group = 
     queue = django_rq.get_queue('faster')
     job = queue.enqueue(getClassification, workflow=workflow, model = model, k = k, normal = normal, group = group, feature = feature, use_fit_model = use_fit_model, pk = pk)
     Queue(job_id=job.id, workflow_id= workflow).save()
+
 
 """
 def QueueCorrelation(workflow, method = "Correlation", FilterChoice = "NF", normal = True, logfc = 1.2, pval = 0.005, survival = False, group = "event", \

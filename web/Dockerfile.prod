@@ -69,6 +69,11 @@ RUN apt-get update && apt-get -y install --no-install-recommends --no-install-su
       && add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/' \
       && apt-get -y install r-base 
 
+#Install git
+RUN apt-get -y install git git-lfs
+
+RUN git lfs install
+
 ##R Library 
 COPY ./scripts/docker/r_dependence.r ${APP_HOME}
 RUN Rscript ${APP_HOME}/r_dependence.r
@@ -107,8 +112,12 @@ RUN touch /home/app/web/gunicorn-access.log && chown nobody:nogroup /home/app/we
 RUN mkdir -p '/home/app/web/staticfiles/account' & chown -R nobody:nogroup '/home/app/web/staticfiles/account'
 RUN mkdir -p '/home/app/.local/bin/' 
 RUN mkdir -p '/home/app/web/Data/' && chown -R nobody:nogroup '/home/app/web/Data/' && chmod ugo+rw '/home/app/web/Data/'
-RUN python3 -m pip install git+https://github.com/icbi-lab/miopy.git
-
+#RUN git lfs clone https://github.com/icbi-lab/miopy.git 
+#COPY ./miopy $APP_HOME
+RUN cd $APP_HOME/miopy/ && python3 ./setup.py install --user
+RUN find /home/app/ -type f -print0 | xargs -0 chown nobody:nogroup 
+RUN find /home/app/ -type d -print0 | xargs -0 chown nobody:nogroup 
+RUN rm -rf $APP_HOME/miopy/
 # change to the app user
 #USER app
 RUN chmod +x "/home/app/web/entrypoint.sh"

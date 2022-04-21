@@ -1,48 +1,75 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 {% load static%}
-{% block titulo %}
-   Feature Selection
-{% endblock titulo %}
 
 {% block css %}
-<link href="{% static 'admin/css/vendor/select2/select2.css' %}" type="text/css" media="screen" rel="stylesheet">
-<link href="{% static 'admin/css/autocomplete.css' %}" type="text/css" media="screen" rel="stylesheet">
+
 {% endblock css %}
 
 {% block body %}
 
-<section id="#">
-    <div class="container">
+<section id="about">
+   <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2> {{title}} </h2>
+          {% if messages %}
+          <div>
+              <ul>
+              {% for message in messages %}
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                      <strong>{{message | safe}}</strong>
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+              </div>
+              {% endfor %}
+              </ul>
+          </div>  
+        {% endif %}
+        
+          <h2>{{title}}</h2>
           <hr class="my-4">
+
+          <div class="container">
+            <h3>Run examples dataset</h3><br>
+          <table style="width:100%">
+            <tr>
+              <td align="center">
+                <input type="button" class="btn btn-outline-primary" onclick='run_example("TCGA-LUAD", "IFNG [Higgs]","TCGA-LUAD-IFNG")' value="Example 1"/>
+                <input type="button" class="btn btn-outline-secondary" onclick='run_example("TCGA-CHOL", "Antitumor cytokines [Bagaev]","TCGA-CHOL-CYTOK" )' value="Example 2"/>
+                <input type="button" class="btn btn-outline-success" onclick='run_example("TCGA-COAD", "Checkpoint molecules [Bagaev]","TCGA-LUAD-CHECKPOINT")' value="Example 3"/>
+              </td> 
+            </tr>
+            <tr><td style="padding: 10px"></td></tr>
+          </table>
+      </div>
+
+
+
           <form method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            
-            {{form.topk | as_crispy_field}}
-            {{form.k | as_crispy_field}}
-            {{form.label | as_crispy_field}}
-            {{form.group | as_crispy_field}}
-            <p>
-              <p> Select dataset to analyze </p>
+             {% csrf_token %}
 
-            <select class="chosen" style="width:350px;" name="publicDataset"> 
-              {% for value,key in form.publicDataset.field.choices %}
-                  <option name="publicDataset" value="{{value}}">{{key}}</option>
-              {%endfor%}
-            </select>
-          </p>
-            <p> Select geneset to analyze </p>
-            <p>
-            <select class="chosen" style="width:350px;" name="publicGeneset" multiple> 
-              {% for value,key in form.publicGeneset.field.choices %}
-                  <option name="publicGeneset" value="{{value}}">{{key}}</option>
-              {%endfor%}
-            </select>
+             {{form.topk | as_crispy_field}}
+             {{form.k | as_crispy_field}}
+             {{form.label | as_crispy_field}}
+             {{form.group | as_crispy_field}}
+
+              <p> Select datasetet to analyze </p>
+              <select class="chosen" style="width:350px;" id="publicDataset", name="publicDataset"> 
+                {% for value,key in form.publicDataset.field.choices %}
+                    <option name="publicDataset" value="{{value}}">{{key}}</option>
+                {%endfor%}
+              </select>
+
+
+              <p>
+              <p> Select geneset to analyze </p>
+              <select class="chosen" style="width:350px;" id="publicGeneset", name="publicGeneset" multiple> 
+                {% for value,key in form.publicGeneset.field.choices %}
+                    <option name="publicGeneset" value="{{value}}">{{key}}</option>
+                {%endfor%}
+              </select>
             </p>
-
 
             <p>
               <div id="filter_pair" name = "filter_pair"  class="form-check form-switch">
@@ -67,22 +94,106 @@
               {{form.filter_group| as_crispy_field}}
             </div>
 
-            <button type="submit" class="btn btn-primary btn-block">Run Analysis</button>
+            <button type="submit" class="btn btn-primary btn-block">Submit Analysis</button>
           </form>
-
         </div>
       </div>
     </div>
-  </section>
- 
+  </div>
+</section>      
 {% endblock body %}
 
-
 {% block js %}
-<script src="{% static 'admin/js/vendor/select2/select2.full.js'%}"></script>
-<script src="{% static 'admin/js/jquery.init.js' %}"></script>
-<script src="{% static 'admin/js/autocomplete.js' %}"></script>
 
+<script type="text/javascript">
+
+
+    /**
+     * Select additional options in a multi select chosen
+     * @param $select jQuery selector for a multi select
+     * @param values array with strings
+     */
+
+     
+  function selectAdditionalChosenOptions($select, values) {
+        var selected = $select.val() || [];                 //get current options
+        selected = selected.concat(values);                 //merge with new options
+        selected = $.grep(selected, function(el, index) {
+            return index === $.inArray(el, selected);       //make options unique
+        });
+        $select.val(null);                                  //delete current options
+        $select.val(selected);                              //add new options
+        $select.trigger('chosen:updated');
+    }
+function setSelectedValue(selectObj, valueToSet) {
+    for (var i = 0; i < selectObj.options.length; i++) {
+        console.log(selectObj.options[i].text);
+        if (selectObj.options[i].text== valueToSet) {
+            selectObj.options[i].selected = true;
+            console.log("Option selected");
+            
+          }
+        else{
+          selectObj.options[i].selected = false;
+        }
+    }
+}
+
+
+function objClick(selectObj, valueToSet) {
+  selectObj.addEventListener('change', e => {
+    console.log('clicked');
+  });
+
+  console.log('Using click()');
+  selectObj.click();
+
+  console.log('Using dispatchEvent');
+  selectObj.dispatchEvent(new Event('change'));
+}
+
+function example(dataset, geneset, label){
+    // Define select Boxes
+    var InputTop = document.getElementById("id_topk"); 
+    var InputK = document.getElementById("id_k"); 
+    var SelectDataset = document.getElementById("publicDataset");
+    var Label = document.getElementById("id_label");
+    var SelectGeneset = document.getElementById("publicGeneset");
+    var checkboxfilter = document.getElementById("filter_sample_checkbox");
+    var checkboxfilterpair = document.getElementById("filter_pair_checkbox");
+
+
+    //Set Topk
+    InputTop.value = 25;
+    //Set K-Fold
+    InputK.value = 2;
+    //Set selected label
+    Label.value = label;
+    //Set selected Dataset
+    setSelectedValue(SelectDataset, dataset);
+    objClick(SelectDataset);
+    selectAdditionalChosenOptions($('#publicDataset'), ['Thailand']);
+    //Set selected Dataset
+    setSelectedValue(SelectGeneset, geneset);
+    objClick(SelectGeneset);
+    selectAdditionalChosenOptions($('#publicGeneset'), ['Thailand']);
+
+    if (checkboxfilter.checked == false){
+      objClick(checkboxfilter);
+
+    }
+
+    if (checkboxfilterpair.checked == false){
+      objClick(checkboxfilterpair);
+
+    }
+
+}
+
+function run_example(dataset, geneset, tag){
+  example(dataset, geneset, tag);
+}
+</script>
 
 <script type="text/javascript">
   var checkboxfilter = document.getElementById("filter_sample_checkbox");
@@ -110,6 +221,6 @@
       document.getElementById("filterpairs").style = "display:none";
     }
   });
-</script>
-
+          </script>
 {% endblock js %}
+

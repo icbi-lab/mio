@@ -2,30 +2,31 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy,reverse
 
 from django.http import HttpResponse, Http404
-from .forms import (SessionSearchForm, WorkflowFilterForm,
-                    GeneForm, GenesetForm, MirnasetForm, GenesetGMTForm, WorkflowCorrelationForm, WorkflowGenesetCorForm, AllCorrelationForm,
+from .forms import (SessionSearchForm, WorkflowFilterForm,WorkflowFilterBasicForm,WorkflowInfiltratedCorForm,
+                     WorkflowCorrelationForm, WorkflowGenesetCorForm, AllCorrelationForm, WorkflowIPSCorForm,
                     SyntheticLethalityForm, TargetPredictorForm,
                     DatasetForm, SessionCreateForm, 
                     WorkFlowClassificationForm, WorkFlowFeaturesForm, WorkFlowFeaturesRatioForm)
 
-from .models import Mirnaset, Session, File, Workflow, Geneset, Dataset
+from .models import Mirnaset, Session, File, Workflow, Geneset, Dataset, Gene, Mirna_mature
 from django.views.generic import (View, CreateView, ListView, DeleteView)
 import os
 from wsgiref.util import FileWrapper
-from django.views.generic.edit import FormView
 from django.contrib import messages
 from mirWeb.settings import DATA_DIR
 from registration.models import User
-from .task import QueueSqlite, parse_file, QueueCorrelation, QueueFeature, QueueFeatureRatio, QueueSurvivalFeature, QueueSurvivalFeatureRatio, QueueClassification
-from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin, PermissionRequiredMixin
+from .task import QueueSqlite, parse_file, QueueCorrelation, QueueFeature, QueueFeatureRatio, \
+    QueueInfiltrationCorrelation, QueueSurvivalFeature, QueueSurvivalFeatureRatio, QueueClassification, QueueIpsCorrelation
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Q
-import io
 from django.core.paginator import Paginator
 import pandas as pd 
 from django.http import JsonResponse, HttpResponse, Http404, HttpResponseForbidden
 import json
 import uuid
 import logging
+from django.contrib.auth import authenticate, login
+
 
 # Create a logger for this file
 logger = logging.getLogger(__file__)
@@ -88,10 +89,23 @@ class SessionIndexView(CreateView):
         return render(request, self.template_name, {'form': form})
 
 
-class SessionCreateView(LoginRequiredMixin, CreateView):
+class SessionCreateView(CreateView):
     template_name = 'analysis/session_create.html'
 
     def get(self, request):
+        if not self.request.user.is_authenticated:
+            try:
+                user = User()
+                user.create_temporal()
+
+            except Exception as error:
+                print(error)
+                return redirect('index')
+
+            else:
+                login(request,user, backend = 'allauth.account.auth_backends.AuthenticationBackend')
+                messages.warning(request,"You are logged in as an anonymous user. Your data will be deleted in 7 days.")
+
         try:
             # Obtain the session from the DB with the session_slug (identifier)
             form = SessionCreateForm()
@@ -144,7 +158,7 @@ class SessionDetailView(View):
             wrkfl = session.get_workflows()
 
             #Correlation
-            wrkfl_cor = wrkfl.filter(Q(analysis="Correlation")|(Q(analysis="GeneSetScore"))).order_by("analysis","label")
+            wrkfl_cor = wrkfl.filter(Q(analysis="Correlation")|(Q(analysis="GeneSetScore")|Q(analysis="Immunophenoscore")|Q(analysis = "Infiltrated"))).order_by("analysis","label")
             p = Paginator(wrkfl_cor, 5)  # creating a paginator object 
             # We pase the session to the template with the Context Dyct
             page_number = request.GET.get('page1')
@@ -418,7 +432,7 @@ class DatasetDeleteView(DeleteView, LoginRequiredMixin):
             return handler(request, *args, **kwargs)
 
 class CreateDatasetView(LoginRequiredMixin, CreateView):
-    template_name = 'analysis/create_gene.html'
+    template_name = 'gene/create_gene.html'
 
     def get(self, request, user_slug):
         try:
@@ -472,6 +486,7 @@ class CreateDatasetView(LoginRequiredMixin, CreateView):
                 except Exception as error:
                     
                     messages.warning(request,error)
+                    data.delete()
                     return render(request, self.template_name, context)
                     
                 else:
@@ -492,6 +507,11 @@ class DatasetListView(ListView):
     context_object_name = 'datasets'
     paginate_by = 5
     template_name = 'analysis/dataset_list.html'  # Specify your own template name/location
+    
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context['query'] = self.request.GET.get('search')
+        return context
 
     def get_queryset(self):
         result = super(DatasetListView, self).get_queryset()
@@ -627,8 +647,8 @@ class CorrelationWorkflow(LoginRequiredMixin, CreateView):
             # We pase the session to the template with the Context Dyct
             bPer = session.check_permissions_analysis(request.user)
             if not bPer:
-                print("as")
-                return render(request,'error/NotOwner.html', context)
+                identifier = session.session_redirect(request.user)
+                return redirect('workflow_correlation', session_slug=identifier)
             context['session_detail'] = session
             return render(request, self.template_name, context)
 
@@ -644,6 +664,16 @@ class CorrelationWorkflow(LoginRequiredMixin, CreateView):
             dForm["analysis"] = "Correlation"
             dForm["analysis_type"] = "microRNA/Gene Corr."
 
+            if dForm["publicGeneset"] == []:
+                print("Not geneset")
+                messages.warning(request=request, message = "Please select almost one Geneset or microRNAset")
+                context = {'form': form}
+                context["title"] = "miRNA/Gene Correlation Analysis"
+                return render(request, self.template_name, context=context)
+            else:
+                print("GS")
+                pass
+
             try:
                 wrkf = Workflow()
                 wrkf.assign_workflow(dForm, session_slug)
@@ -651,7 +681,7 @@ class CorrelationWorkflow(LoginRequiredMixin, CreateView):
                 QueueCorrelation(
                     wrkf, method=dForm["analysis"], FilterChoice=dForm["filter"], normal=dForm["normal"], \
                     filter_sample = dForm["filter_sample"], group_sample = dForm["group_sample"], filter_group = dForm["filter_group"], \
-                    logfc = dForm["logfc"], pval = dForm["pval"], survival = dForm["survival"], group = dForm["group"])
+                    logfc = dForm["logfc"], pval = dForm["pval"], survival = dForm["survival"], group = dForm["group"], background = dForm["background"])
 
             except Exception as error:
                 print(error)
@@ -682,8 +712,8 @@ class GeneSetScoreWorkflow(LoginRequiredMixin, CreateView):
         else:
             bPer = session.check_permissions_analysis(request.user)
             if not bPer:
-                print("as")
-                return render(request,'error/NotOwner.html', context)
+                identifier = session.session_redirect(request.user)
+                return redirect('workflow_genesetscore', session_slug=identifier)
 
             # We pase the session to the template with the Context Dyct
             context['session_detail'] = session
@@ -698,6 +728,16 @@ class GeneSetScoreWorkflow(LoginRequiredMixin, CreateView):
             dForm["analysis"] = "GeneSetScore"
             dForm["analysis_type"] = "microRNA/Geneset Corr."
 
+            if dForm["publicGeneset"] == []:
+                print("Not geneset")
+                messages.warning(request=request, message = "Please select almost one Geneset or microRNAset")
+                context = {'form': form}
+                context["title"] = "miRNA/Geneset Correlation Analysis"
+                return render(request, self.template_name, context=context)
+            else:
+                print("GS")
+                pass
+
             try:
                 wrkf = Workflow()
                 wrkf.assign_workflow(dForm, session_slug)
@@ -711,7 +751,125 @@ class GeneSetScoreWorkflow(LoginRequiredMixin, CreateView):
         else:
             print("Algo ha ido mal")
             print(form.errors)
-redirect
+            messages.warning(request=request, message = form.errors)
+            context = {'form': form}
+            context["title"] = "miRNA/Geneset Correlation Analysis"
+            return render(request, self.template_name, context=context)
+
+
+class ImmuneScoreWorkflow(LoginRequiredMixin, CreateView):
+    template_name = 'analysis/workflow_ips_create.html'
+
+    def get(self, request, session_slug):
+        try:
+            # Obtain the session from the DB with the session_slug (identifier)
+            session = Session.objects.get(identifier=session_slug)
+            form = WorkflowIPSCorForm(user=request.user)
+            context = {'form': form}
+            context["title"] = "miRNA/Immunophenoscore Correlation Analysis"
+
+
+        except Exception as error:
+            print(error)
+            raise Http404('Session not found...!')
+
+        else:
+            bPer = session.check_permissions_analysis(request.user)
+            if not bPer:
+                identifier = session.session_redirect(request.user)
+                return redirect('workflow_immunephenoscore', session_slug=identifier)
+
+            # We pase the session to the template with the Context Dyct
+            context['session_detail'] = session
+            return render(request, self.template_name, context)
+
+    def post(self, request, session_slug):
+        # We get the filter condition
+        form = WorkflowIPSCorForm(request.POST, request.FILES,user=request.user)
+        if form.is_valid():
+            print(form.cleaned_data)
+            dForm = form.cleaned_data
+            dForm["analysis"] = "Immunophenoscore"
+            dForm["analysis_type"] = "microRNA/Immunophenoscore Corr."
+
+            try:
+                wrkf = Workflow()
+                wrkf.assign_workflow(dForm, session_slug)
+                QueueIpsCorrelation(wrkf, method=dForm["analysis"], normal=dForm["normal"],\
+                    filter_sample = dForm["filter_sample"], group_sample = dForm["group_sample"], filter_group = dForm["filter_group"])
+            except Exception as error:
+                print(error)
+
+            finally:
+                return redirect('session_detail', session_slug=session_slug)
+        else:
+            print("Algo ha ido mal")
+            print(form.errors)
+            messages.warning(request=request, message = form.errors)
+            context = {'form': form}
+            context["title"] = "miRNA/Immunophenoscore Correlation Analysis"
+            return render(request, self.template_name, context=context)
+
+
+
+
+class ImmuneCellInfiltrationWorkflow(LoginRequiredMixin, CreateView):
+    template_name = 'analysis/workflow_infiltration_create.html'
+
+    def get(self, request, session_slug):
+        try:
+            # Obtain the session from the DB with the session_slug (identifier)
+            session = Session.objects.get(identifier=session_slug)
+            form = WorkflowInfiltratedCorForm(user=request.user)
+            context = {'form': form}
+            context["title"] = "miRNA/Immune Cell Infiltration Correlation Analysis"
+
+
+        except Exception as error:
+            print(error)
+            raise Http404('Session not found...!')
+
+        else:
+            bPer = session.check_permissions_analysis(request.user)
+            if not bPer:
+                identifier = session.session_redirect(request.user)
+                return redirect('workflow_immunecellinfiltration', session_slug=identifier)
+
+            # We pase the session to the template with the Context Dyct
+            context['session_detail'] = session
+            return render(request, self.template_name, context)
+
+    def post(self, request, session_slug):
+        # We get the filter condition
+        form = WorkflowInfiltratedCorForm(request.POST, request.FILES,user=request.user)
+        if form.is_valid():
+            print(form.cleaned_data)
+            dForm = form.cleaned_data
+            dForm["analysis"] = "Infiltrated"
+            dForm["analysis_type"] = "microRNA/Infiltrated Corr."
+
+            try:
+                wrkf = Workflow()
+                wrkf.assign_workflow(dForm, session_slug)
+               
+                lCell =  dForm["timer"] + dForm["mcp"] + dForm["quantiseq"] + dForm["epic"]
+
+                QueueInfiltrationCorrelation(wrkf, normal=dForm["normal"],lCell = lCell,
+                    filter_sample = dForm["filter_sample"], group_sample = dForm["group_sample"], filter_group = dForm["filter_group"])
+            except Exception as error:
+                print(error)
+
+            finally:
+                return redirect('session_detail', session_slug=session_slug)
+        else:
+            print("Algo ha ido mal")
+            print(form.errors)
+            messages.warning(request=request, message = form.errors)
+            context = {'form': form}
+            context["title"] = "miRNA/Immunophenoscore Correlation Analysis"
+            return render(request, self.template_name, context=context)
+
+
 
 class FeatureWorkflow(LoginRequiredMixin, CreateView):
     template_name = 'analysis/workflow_feature.html'
@@ -730,8 +888,8 @@ class FeatureWorkflow(LoginRequiredMixin, CreateView):
         else:
             bPer = session.check_permissions_analysis(request.user)
             if not bPer:
-                print("as")
-                return render(request,'error/NotOwner.html', context)
+                identifier = session.session_redirect(request.user)
+                return redirect('workflow_feature', session_slug=identifier)
             # We pase the session to the template with the Context Dyct
             context['session_detail'] = session
             return render(request, self.template_name, context)
@@ -779,8 +937,8 @@ class ClassificationWorkflow(LoginRequiredMixin, CreateView):
         else:
             bPer = session.check_permissions_analysis(request.user)
             if not bPer:
-                print("as")
-                return render(request,'error/NotOwner.html', context)            
+                identifier = session.session_redirect(request.user)
+                return redirect('workflow_classification', session_slug=identifier)           
             # We pase the session to the template with the Context Dyct
             context['session_detail'] = session
             return render(request, self.template_name, context)
@@ -838,8 +996,8 @@ class FeatureRatioWorkflow(LoginRequiredMixin, CreateView):
         else:
             bPer = session.check_permissions_analysis(request.user)
             if not bPer:
-                print("as")
-                return render(request,'error/NotOwner.html', context)            
+                identifier = session.session_redirect(request.user)
+                return redirect('workflow_feature_ratio', session_slug=identifier)          
             # We pase the session to the template with the Context Dyct
             context['session_detail'] = session
             return render(request, self.template_name, context)
@@ -872,7 +1030,7 @@ class FeatureRatioWorkflow(LoginRequiredMixin, CreateView):
 
 
 class SurvivalFeatureWorkflow(LoginRequiredMixin, CreateView):
-    template_name = 'analysis/workflow_feature.html'
+    template_name = 'analysis/workflow_feature_survival.html'
 
     def get(self, request, session_slug):
         try:
@@ -888,8 +1046,8 @@ class SurvivalFeatureWorkflow(LoginRequiredMixin, CreateView):
         else:
             bPer = session.check_permissions_analysis(request.user)
             if not bPer:
-                print("as")
-                return render(request,'error/NotOwner.html', context)            
+                identifier = session.session_redirect(request.user)
+                return redirect('workflow_survival', session_slug=identifier)         
             # We pase the session to the template with the Context Dyct
             context['session_detail'] = session
             return render(request, self.template_name, context)
@@ -937,8 +1095,8 @@ class SurvivalFeatureRatioWorkflow(LoginRequiredMixin, CreateView):
         else:
             bPer = session.check_permissions_analysis(request.user)
             if not bPer:
-                print("as")
-                return render(request,'error/NotOwner.html', context)            
+                identifier = session.session_redirect(request.user)
+                return redirect('workflow_survival_ratio', session_slug=identifier)             
             # We pase the session to the template with the Context Dyct
             context['session_detail'] = session
             return render(request, self.template_name, context)
@@ -967,6 +1125,48 @@ class SurvivalFeatureRatioWorkflow(LoginRequiredMixin, CreateView):
         else:
             print("Algo ha ido mal")
             print(form.errors)
+
+
+class WorkflowFilterBasicView(CreateView):
+    template_name = 'analysis/workflow_filter_basic.html'
+
+    def get(self, request, session_slug, pk):
+        try:
+            # Obtain the session from the DB with the session_slug (identifier)
+            session = Session.objects.get(identifier=session_slug)
+            wrkfl = Workflow.objects.get(pk=pk)
+            print(session)
+            form = WorkflowFilterBasicForm ()
+            context = {'form': form}
+            context["title"] = "Filter Table Correlation"
+            context["workflow"] = wrkfl
+        except:
+            raise Http404('Session not found...!')
+
+        else:
+            # We pase the session to the template with the Context Dyct
+            context['session_detail'] = session
+            return render(request, self.template_name, context)
+
+
+    def post(self, request, session_slug, pk):
+        # We get the filter condition
+        form = WorkflowFilterBasicForm(request.POST)
+        print(request.POST)
+        if form.is_valid():
+            # We add the workflow id and all the filter dict in the session cache
+            form.cleaned_data["pk"] = pk
+            print(form.cleaned_data)
+            request.session["filter_dict"] = form.cleaned_data
+
+            # Redirect the user to results view
+            return redirect('results_detail_basic', session_slug=session_slug, pk = pk)
+        else:
+            print(form.errors)
+            messages.warning(request=request, message = form.errors)
+
+        return render(request, self.template_name, {'form': form, "title": "Filter Table Correlation"})
+
 
 
 class WorkflowFilterView(CreateView):
@@ -1005,7 +1205,9 @@ class WorkflowFilterView(CreateView):
             return redirect('results_detail', session_slug=session_slug, pk = pk)
         else:
             print(form.errors)
-        return render(request, self.template_name, {'form': form})
+            messages.warning(request=request, message = form.errors)
+
+        return render(request, self.template_name, {'form': form, "title": "Filter Table Correlation"})
 
 
 class SyntheticLethalityWorkflow(CreateView):
@@ -1017,7 +1219,7 @@ class SyntheticLethalityWorkflow(CreateView):
             session = Session.objects.get(identifier=session_slug)
             form = SyntheticLethalityForm(session=session, user = request.user)
             context = {'form': form}
-            context["title"] = "Get miRNA or Gene targeting"
+            context["title"] = "miRNA Synthetic Lethal Prediction"
 
         except:
             raise Http404('Session not found...!')
@@ -1114,147 +1316,9 @@ class TargtePredictorWorkflow(CreateView):
             return render(request, self.template_name, context)
 
 
-#### Genes ###
-class GeneUploadView(UserPassesTestMixin, FormView):
-    template_name = 'analysis/create_gene.html'
-    form_class = GeneForm
-
-    def form_valid(self, form):
-        # This method is called when valid form data has been POSTed.
-        # It should return an HttpResponse.
-        print(form.cleaned_data)
-        file = form.cleaned_data["file"]
-        df = parse_file(file)
-        table = form.cleaned_data["table"]
-        QueueSqlite(df,table)
-        return redirect('index')
-
-    def test_func(self):
-        return self.request.user.is_staff
-
-class CreateSetView(LoginRequiredMixin, CreateView):
-    template_name = 'analysis/create_gene.html'
-
-    def get(self, request, user_slug):
-        try:
-            # Obtain the session from the DB with the session_slug (identifier)
-            user = User.objects.get(identifier=user_slug)
-            print("##########################")
-            print(request.META.get('PATH_INFO', ''))
-            form = GenesetForm(user=request.user) if "geneset" in request.META.get('PATH_INFO', '') else MirnasetForm(user=request.user)
-
-            context = {'form': form}
-
-        except Exception as error:
-            print(error)
-            raise Http404('User not found...!')
-
-        else:
-            # We pase the session to the template with the Context Dyct
-            context['user'] = user
-            context['title'] = "Upload Set"
-
-            return render(request, self.template_name, context)
-
-        return render(request, self.template_name, context)
-
-    def post(self, request, user_slug):
-        # We get the filter condition
-        form = GenesetForm(request.POST, request.FILES, user=request.user) if "geneset" in request.META.get('PATH_INFO', '') else MirnasetForm(request.POST, request.FILES, user=request.user)
-        context = {'form': form}
-        #context['user'] = user
-        context['title'] = "Upload Geneset"
-
-        if form.is_valid():
-            # This method is called when valid form data has been POSTed.
-            # It should return an HttpResponse.
-            formDict = form.cleaned_data
-            try:
-                if "geneset" in request.META.get('HTTP_REFERER', ''):
-                    object = Geneset()
-                else:
-                    object = Mirnaset()
-
-                print("Create Geneset")
-                object.user_id = User.objects.get(identifier=user_slug)
-                print("Add User")
-                object.public = formDict["public"]
-                
-                object.from_form(name = formDict["name"], description = formDict["description"],
-                                        ref = formDict["ref_link"], lFeature = formDict["file"].read().decode('utf-8').split("\n"), identifier = formDict["format"],
-                                        user_slug = user_slug, public=formDict["public"])
-
-
-            except Exception as error:
-                print(error)
-                messages.warning(request, "We detected the following errors: %s"%error)
-                return render(request, self.template_name, context)
-
-        elif not form.is_valid():
-            messages.warning(request, "We detected the following errors: %s"%form.errors)
-            return render(request, self.template_name, context)
-
-        return redirect('data_detail', user_slug=user_slug)
-
-
-
-class CreateGeneSetFromGMTView(LoginRequiredMixin, CreateView):
-    template_name = 'analysis/create_gene.html'
-
-    def get(self, request, user_slug):
-        try:
-            print("as")
-            # Obtain the session from the DB with the session_slug (identifier)
-            user = User.objects.get(identifier=user_slug)
-            form = GenesetGMTForm(user=request.user)
-            context = {'form': form}
-
-        except Exception as error:
-            print(error)
-            raise Http404('User not found...!')
-
-        else:
-            # We pase the session to the template with the Context Dyct
-            context['user'] = user
-            context['title'] = "Upload Geneset"
-
-            return render(request, self.template_name, context)
-
-        return render(request, self.template_name, context)
-
-    def post(self, request, user_slug):
-        # We get the filter condition
-        form = GenesetGMTForm(request.POST, request.FILES, user=request.user)
-        if form.is_valid():
-            # This method is called when valid form data has been POSTed.
-            # It should return an HttpResponse.
-            formDict = form.cleaned_data
-            try:
-                gtm = formDict["file"].read().decode('utf-8').split("\n")
-                for gs in gtm:
-
-                    lGs = gs.split("\t")
-                    name = lGs[0]
-                    description = lGs[1]
-                    lGene = lGs[2:]
-                    print(lGene)
-                    
-                    GS = Geneset()
-                    GS.from_form(name = name, description = description, ref = "#", \
-                         lFeature = lGene, public = formDict["public"], identifier = formDict["geneFormat"], user_slug = user_slug)
-                    print(GS)
-            except Exception as error:
-                print("We detected the following errors: %s"%error)
-                messages.warning(request, "We detected the following errors: %s"%error)
-                return render(request, self.template_name)
-
-        elif not form.is_valid():
-            messages.warning(request, "We detected the following errors: %s"%form.errors)
-            return render(request, self.template_name)
-            
-        return redirect('data_detail', user_slug=user_slug)
-
-
+##############
+#### SET #####
+##############
 class MirnasetDeleteView(DeleteView, LoginRequiredMixin):
             
     # specify the model you want to use
@@ -1276,25 +1340,6 @@ class MirnasetDeleteView(DeleteView, LoginRequiredMixin):
             handler = getattr(self, request.method.lower(), self.http_method_not_allowed)
             return handler(request, *args, **kwargs)
 
-class GenesetDeleteView(DeleteView, LoginRequiredMixin):
-            
-    # specify the model you want to use
-    model = Geneset
-     
-    # can specify success url
-    # url to redirect after successfully
-    # deleting object
-    def get_success_url(self):
-        return reverse('data_detail',kwargs={"user_slug":self.request.user.get_identifier()})
-    def dispatch(self, request, *args, **kwargs):
-        # safety checks go here ex: is user allowed to delete?
-        ## Get Session
-        geneset = Geneset.objects.get(pk=kwargs['pk'])
-        if not geneset.is_owner(request.user):
-            return HttpResponseForbidden()
-        else:
-            handler = getattr(self, request.method.lower(), self.http_method_not_allowed)
-            return handler(request, *args, **kwargs)
 
 def DownloadSet(request, pk, identifier, set_type):
     # some code
@@ -1306,6 +1351,7 @@ def DownloadSet(request, pk, identifier, set_type):
     response = HttpResponse(file_data, content_type='application/text charset=utf-8')
     response['Content-Disposition'] = 'attachment; filename="%s_%s.txt"'%(set_type, str(object.name))
     return response
+
 
 def DownloadAllGMT(request, identifier, set_type):
    # some code
@@ -1321,7 +1367,6 @@ def DownloadAllGMT(request, identifier, set_type):
     response = HttpResponse(file_data, content_type='application/text charset=utf-8')
     response['Content-Disposition'] = 'attachment; filename="mio_%s_db.gmt"'%set_type
     return response
-
 
 
 def FeatureToSet(request, session_slug, pk):
@@ -1386,69 +1431,13 @@ def SaveModel(request, session_slug, pk):
 
 
 
-class GenesetListView(ListView):
-    #https://simpleisbetterthancomplex.com/tutorial/2016/08/03/how-to-paginate-with-django.html
-    model = Geneset
-    context_object_name = 'genesets'
-    paginate_by = 5
-    template_name = 'analysis/geneset_list.html'  # Specify your own template name/location
-
-    def get_queryset(self):
-        result = super(GenesetListView, self).get_queryset()
-        query = self.request.GET.get('search')
-
-        if query:
-            print("Query")
-            try:
-                queryset = Geneset.objects.filter(Q(public=True) & Q(user_id=User.objects.get(username = "root"))\
-                    & (Q(name__icontains=query)|Q(description__icontains=query))).order_by("name")
-            except Exception as error:
-                print(error)
-                queryset = []
-        else:
-            try:
-                queryset = Geneset.objects.filter(Q(public=True, user_id=User.objects.get(username = "root"))).order_by("name")
-            except:
-                queryset = []
-
-        return queryset
-
-
-
-class MirnasetListView(ListView):
-    #https://simpleisbetterthancomplex.com/tutorial/2016/08/03/how-to-paginate-with-django.html
-    model = Mirnaset
-    context_object_name = 'mirnasets'
-    paginate_by = 5
-    template_name = 'analysis/mirset_list.html'  # Specify your own template name/location
-
-    def get_queryset(self):
-        result = super(MirnasetListView, self).get_queryset()
-        query = self.request.GET.get('search')
-
-        if query:
-            print("Query")
-            try:
-                queryset = Mirnaset.objects.filter(Q(public=True) & Q(user_id=User.objects.get(username = "root"))\
-                    & (Q(name__icontains=query)|Q(description__icontains=query))).order_by("name")
-            except Exception as error:
-                print(error)
-                queryset = []
-        else:
-            try:
-                queryset = Mirnaset.objects.filter(Q(public=True, user_id=User.objects.get(username = "root"))).order_by("name")
-            except:
-                queryset = []
-
-        return queryset
-
 #################
 #### ADMIN ######
 #################
 
 
 class AllCorrelationWorkflow(LoginRequiredMixin, CreateView):
-    template_name = 'analysis/create_gene.html'
+    template_name = 'gene/create_gene.html'
 
     def get(self, request, session_slug):
         try:
@@ -1479,6 +1468,7 @@ class AllCorrelationWorkflow(LoginRequiredMixin, CreateView):
         if form.is_valid():
             print(form.cleaned_data)
             dForm = form.cleaned_data
+
             dForm["analysis"] = "Correlation"
             dForm["analysis_type"] = "microRNA/Gene Corr."
                 
@@ -1505,6 +1495,121 @@ class AllCorrelationWorkflow(LoginRequiredMixin, CreateView):
 
         return render(request, self.template_name, {'form': form})
 
+###################
+### Search Index ##
+###################
+
+
+class SearchDetailView(View):
+    """
+    Main View of the page. We obtain all the information related with the Session thanks to
+    the session identifier
+    """
+    template_name = 'analysis/search_data_detail.html'
+
+    def get(self, request, query):  # loads the session_detail template with the selected session object loaded as 'instance' and upload associated with that instance loaded from 'form'
+        try:
+            # Obtain the session from the DB with the session_slug (identifier)
+            user = request.user
+            query = request.GET.get('query')
+        except Exception as error:
+            print(error)
+            raise Http404('User not found...!')
+
+        else:
+            #Gene
+            try:
+                print(query)
+                gene = Gene.objects.filter((Q(hgnc_id__icontains=query)|Q(symbol__icontains=query)| \
+                                            Q(approved_name__icontains=query)|Q(previus_symbol__icontains=query)|\
+                                            Q(alias_symbols__icontains=query))).order_by("symbol").distinct()
+                print(gene)
+            except Exception as error:
+                print(error)
+                gene = []
+
+            p = Paginator(gene, 5)  # creating a paginator object 
+            # We pase the session to the template with the Context Dyct
+            page_number = request.GET.get('page1')
+
+            try:
+                page_gene = p.get_page(page_number)  # returns the desired page object
+            except PageNotAnInteger:
+                # if page_number is not an integer then assign the first page
+                page_gene = p.page(1)
+            except EmptyPage:
+                # if page is empty then return last page
+                page_gene = p.page(p.num_pages)
+
+            #MicroRNA
+            try:
+                microrna = Mirna_mature.objects.filter((Q(mature_name__icontains=query)|Q(previous_mature_id__icontains=query)| \
+                                            Q(mature_acc__icontains=query))).order_by("mature_name").distinct()
+            except Exception as error:
+                print(error)
+                microrna = []
+
+            p = Paginator(microrna, 5)  # creating a paginator object 
+            # We pase the session to the template with the Context Dyct
+            page_number = request.GET.get('page2')
+
+            try:
+                page_microrna = p.get_page(page_number)  # returns the desired page object
+            except PageNotAnInteger:
+                # if page_number is not an integer then assign the first page
+                page_microrna = p.page(1)
+            except EmptyPage:
+                # if page is empty then return last page
+                page_microrna = p.page(p.num_pages)
+
+
+            #Geneset
+            try:
+                geneset = Geneset.objects.filter(Q(public=True) & Q(user_id=User.objects.get(username = "root"))\
+                    & (Q(name__icontains=query)|Q(description__icontains=query)|Q(genes_id__in = gene))).order_by("name").distinct()
+            except Exception as error:
+                geneset = []
+
+            p = Paginator(geneset, 5)  # creating a paginator object 
+            # We pase the session to the template with the Context Dyct
+            page_number = request.GET.get('page3')
+            try:
+                page_geneset = p.get_page(page_number)  # returns the desired page object
+            except PageNotAnInteger:
+                # if page_number is not an integer then assign the first page
+                page_geneset = p.page(1)
+            except EmptyPage:
+                # if page is empty then return last page
+                page_geneset = p.page(p.num_pages)
+
+            #Mirset
+            try:
+                mirset = Mirnaset.objects.filter(Q(public=True) & Q(user_id=User.objects.get(username = "root"))\
+                    & (Q(name__icontains=query)|Q(description__icontains=query)|Q(mirna_id__in = microrna))).order_by("name").distinct()
+            except Exception as error:
+                mirset = []
+
+            p = Paginator(mirset, 5)  # creating a paginator object 
+            # We pase the session to the template with the Context Dyct
+            page_number = request.GET.get('page4')
+            try:
+                page_mirset = p.get_page(page_number)  # returns the desired page object
+            except PageNotAnInteger:
+                # if page_number is not an integer then assign the first page
+                page_mirset = p.page(1)
+            except EmptyPage:
+                # if page is empty then return last page
+                page_mirset = p.page(p.num_pages)
+
+
+            context = {'user': user}
+            context["query"] = query
+            context['page_gene'] = page_gene
+            context['page_microrna'] = page_microrna
+            context['page_geneset'] = page_geneset
+            context['page_mirset'] = page_mirset
+
+            return render(request, self.template_name, context)
 
 ###########
 ## Error ##

@@ -25,6 +25,8 @@ urlpatterns = [
     path('', include('analysis.urls')),
     path('', include('results.urls')),
     path('', include('registration.urls')),
+    path('', include('microrna.urls')),
+    path('', include('gene.urls')),
     path('accounts/', include('allauth.urls')),
     path('django-rq/', include('django_rq.urls')),
 

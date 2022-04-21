@@ -30,7 +30,13 @@
             {% csrf_token %}
             
             <div id="tquery">
-              {{form.tQuery | as_crispy_field}}
+              <div id="tquery">
+                <select class="chosen" id="locality-dropdown" style="width:350px;" name="tQuery"> 
+                  {% for value,key in form.tQuery.field.choices %}
+                      <option name="tQuery" value="{{value}}">{{key}}</option>
+                  {%endfor%}
+                </select>            
+              </div>
             </div>
 
             <p>
@@ -64,7 +70,20 @@
                 {% for value,key in form.table.field.choices %}
                     <option name="table" value="{{value}}">{{key}}</option>
                 {%endfor%}
-              </select>              {{form.pval | as_crispy_field}}
+              </select>              
+              <p>
+                <div id="method" name = "method" class="col-sm-30">
+                  <p>  Select the coefficient for applying the filters*  </p>
+                    <select name="method" id="myselect">
+                      {% for id, name in form.method.field.choices %}
+                    <option value="{{ id }}">{{ name }}</option>
+                      {% endfor %}
+                    </select>
+                  </div>
+                </p>
+                <div id="pvalue">
+                {{form.pval | as_crispy_field}}
+              </div>
               {{form.low_coef | as_crispy_field}}
               {{form.high_coef | as_crispy_field}}
             </div>
@@ -97,8 +116,13 @@
 
               {{form.min_db | as_crispy_field}}
 
-            <button type="submit" class="btn btn-primary btn-block">Apply Filter</button>
-          </form>
+              <button id="submit" type="submit" class="btn btn-primary btn-block" onclick="showDiv()">Submit</button>
+
+              <button id="loading" style="display:none" class="btn btn-primary btn-block" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
+            </form>
 
         </div>
       </div>
@@ -108,6 +132,14 @@
 {% endblock body %}
 
 {% block js %}
+<script type="text/javascript">
+
+function showDiv() {
+  document.getElementById('submit').style.display = "none";
+  document.getElementById('loading').style = "display:true";   
+}
+
+</script>
 
 <script type="text/javascript">
         var checkbox = document.getElementById("use_correlationcheckbox");
@@ -163,4 +195,19 @@
         }
       }      
   </script>
+
+<script type="text/javascript">
+  var SelectChoice = document.getElementById("myselect");
+  SelectChoice.addEventListener('change', function() {
+              const method_value = ["Lasso", "Ridge", "ElasticNet", "Elastic net"]  
+              // Get the value of selected <option>
+              var value = SelectChoice.options[SelectChoice.selectedIndex].value;
+              if (method_value.includes(value)){
+                // checks pre_indexed genome selected
+                document.getElementById("pvalue").style = "display:None"
+              }else{
+                document.getElementById("pvalue").style = "display:true"
+              }
+            });
+</script>
 {% endblock js %}

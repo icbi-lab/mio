@@ -57,7 +57,10 @@
                               <ul class="dropdown-menu">
                                   </li><a href="{% url 'workflow_correlation' session_slug=session_detail.identifier %}" class="dropdown-item"> miRNA/Gene Correlation</a></li>
                                   <li><a href="{% url 'workflow_genesetscore' session_slug=session_detail.identifier %}" class="dropdown-item"> miRNA/Geneset Correlation</a></li>
-                              </ul>
+                                  <li><a href="{% url 'workflow_immunephenoscore' session_slug=session_detail.identifier %}" class="dropdown-item"> miRNA/Immunophenoscore Correlation</a></li>
+                                  <li><a href="{% url 'workflow_immunecellinfiltration' session_slug=session_detail.identifier %}" class="dropdown-item"> miRNA/Immune Cell Infiltration Correlation</a></li>
+                                 <!--  <li><a href="#" class="dropdown-item"> miRNA/Custom Parameter Correlation</a></li>-->
+                                </ul>
                           </li>
                         
                         <li class="nav-item dropdown">
@@ -119,11 +122,10 @@
                               <li><a href="{%url 'password_change'%}"  class="dropdown-item"> Change Password</a></li>
                             {% endif %}
                               <li><a href="{%url 'account_logout'%}" class="dropdown-item"> Logout</a></li>
-                              <li><a href="{% url 'data_detail' user_slug=user.identifier%}" class="dropdown-item"> Upload Data</a></li>
+                              <li><a href="{% url 'data_detail' user_slug=user.identifier%}" class="dropdown-item"> User Data</a></li>
                               <li><a href="{% url 'download_all' %}" class="dropdown-item"> Download All User Data</a></li>
                           </ul>
                       </li>
-                      <li class="nav-item active"> <a class="nav-link" href="{% url 'analysis'%}"> Sessions </a> </li>
                     {%endif%}
 
                     <!-- Always-->
@@ -134,10 +136,20 @@
                         <li><a href="{% url 'metadata_detail' pk=1 %}" class="dropdown-item"> Example dataset</a></li>
                       </ul>
                     </li>
+                    <li class="nav-item active"> <a class="nav-link" href="{% url 'analysis'%}"> Analysis sessions </a> </li>
                     <li class="nav-item active"> <a class="nav-link" href="{% url 'dataset_list'%}"> Public Datasets </a> </li>
                     <li class="nav-item active"> <a class="nav-link" href="{% url 'geneset_list'%}"> Public Genesets </a> </li>
                     <li class="nav-item active"> <a class="nav-link" href="{% url 'mirnaset_list'%}"> Public MiRNAsets </a> </li>
+
                   </ul>
+
+                  <div class="search-container" style="padding-top: 5px;padding-left: 40px;">
+                    <form method="GET" action="{% url 'search_view' query='query'%}" >
+                      <input type="text" placeholder="Search..." name="query">
+                      <button type="submit">Submit</button>
+                    </form>
+                  </div>
+
             </ul><!--End User Menu-->
 
         </div> <!-- End Menu -->
@@ -152,20 +164,7 @@
 
       {% endblock header %}
     
-      {% if messages %}
-      <div>
-          <ul>
-          {% for message in messages %}
-          <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                  <strong>{{message | safe}}</strong>
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
-          </div>
-          {% endfor %}
-          </ul>
-      </div>  
-    {% endif %}
+      
 
       {% block body %}
   
@@ -176,7 +175,7 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">MIO &copy;Institute of Bioinformatics</p>
+        <p class="m-0 text-center text-white">MIO &copy; Institute of Bioinformatics</p>
         <p class="m-0 text-center text-white">Medical University of Innsbruck  | <a href="{% url 'privacy_en' %}">Privacy</a> | <a href="{% url 'impressum' %}">Imprint</a> | <a href="{% url 'reference' %}"> References</a></p>
         <p></p>
 
@@ -200,7 +199,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.5/chosen.jquery.min.js"></script>
   <script type="text/javascript">
 
-    $(".chosen").chosen({width: "100%"});
+    $(".chosen").chosen({width: "100%", max_shown_results: 10});
   </script>
 
   {% block js %}

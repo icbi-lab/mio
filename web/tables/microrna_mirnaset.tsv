@@ -1,0 +1,27 @@
+id	name	description	ref_link	public	user_id_id
+27	Lymphocyte microRNA Signature [Incorvaia]	Predictive Biomarker of Immunotherapy Response 	Incorvaia et al. Cancers 2020 (PMID: 33207823)	t	1
+28	ImmiRSig [Xu]	Prognostic in Gastric Cancer	Xu et al. Front Genet 2021 (PMID: 34290743)	t	1
+29	Tumor immune escape [Eichmueller]	miRNAs Modulating Tumor Immune Escape	Eichmüller et al. J Natl Cancer Institute 2017 (PMID: 28383653)	t	1
+30	Immunomodulatory microRNAs up in cancer [Omar]	Immunomodulatory microRNA up in cancer	Omar et al. FEBS J 2019 (PMID: 31306553)	t	1
+31	Immunomodulatory microRNAs down in cancer [Omar]	Immunomodulatory microRNA down in cancer	Omar et al. FEBS J 2019 (PMID: 31306553)	t	1
+32	Tumor associated miRNAs affecting tumor immune escape [Hirschberger]	nan	Hirschberger et al. Cancer Letters 2017 (PMID: 29800684)	t	1
+33	Immuno-miRs [Hirschberger]	nan	Hirschberger et al. Cancer Letters 2017 (PMID: 29800684)	t	1
+34	Immunecheckpoint related microRNAs [Smolle]	nan	Smolle et al. FEBS J 2017 PMID:28132417)	t	1
+35	ICP [Yang]	nan	Yang et al. Cancer Letters 2018 (PMID:29800685)	t	1
+36	Immune regulation [Cortez]	nan	Cortez et al. Genes Chrom Cancer 2019 (PMID:30578699)	t	1
+37	Regulating antigen processing and presentation [Yi]	nan	Yi et al. J Hematol Oncol 2020 (PMID:32222150)	t	1
+38	Regulating NKG2D ligands [Yi]	nan	Yi et al. J Hematol Oncol 2020 (PMID:32222150)	t	1
+39	Regulating PD-L1 [Yi]	nan	Yi et al. J Hematol Oncol 2020 (PMID:32222150)	t	1
+40	Regulating immune evasion via exosomes [Yi]	nan	Yi et al. J Hematol Oncol 2020 (PMID:32222150)	t	1
+41	Tumor-immune communication [Cho]	nan	Cho et al. Cancers 2020 (PMID: 32722019)	t	1
+42	MiRNA related with TAM in tumor progression [Xing]	nan	Xing et al. Front Immunol 2021 (PMID:34084160)	t	1
+43	MiRNA related with NK cells in tumor progression [Xing]	nan	Xing et al. Front Immunol 2021 (PMID:34084160)	t	1
+44	MiRNA related with MDSC in tumor progression [Xing]	nan	Xing et al. Front Immunol 2021 (PMID:34084160)	t	1
+45	MiRNA influences the tumor process by modulating Treg [Xing]	nan	Xing et al. Front Immunol 2021 (PMID:34084160)	t	1
+46	MiRNA roles in granulocytes [Xing]	nan	Xing et al. Front Immunol 2021 (PMID:34084160)	t	1
+47	MiRNA Roles in DC [Xing]	nan	Xing et al. Front Immunol 2021 (PMID:34084160)	t	1
+48	MiRNAs mediate platinum resistance in OC [Zou]	nan	Zou et al. Front Immunol 2021 (PMID:33868274)	t	1
+49	MiRNA mediated immune escape in OC [Zou]	nan	Zou et al. Front Immunol 2021 (PMID:33868274)	t	1
+50	Immunoregulators [Lone]	nan	Lone et al. Semin Cell Dev Biol 2021 (PMID:33926791)	t	1
+51	MicroRNA targeting PD-L1 [Danbaran]	nan	Danbaran et al. Int Immunopharmacol 2020 (PMID:32416456)	t	1
+52	MicroRNA targeting PD-L1 synthesis pathway [Danbaran]	nan	Danbaran et al. Int Immunopharmacol 2020 (PMID:32416456)	t	1

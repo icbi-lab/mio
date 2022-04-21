@@ -1,15 +1,11 @@
+from re import M
 from django import forms
-from django.contrib.admin.widgets import AutocompleteSelect, AutocompleteSelectMultiple, AutocompleteMixin
-from django.contrib import admin
-from .models import Gene, Mirna, Session, File, Workflow, Geneset,Dataset, Mirnaset
+from .models import Session, Geneset, Mirnaset, Dataset
 from django.core.exceptions import ValidationError
-import pandas as pd
 from mirWeb.settings import CONTENT_TYPES, MAX_UPLOAD_SIZE
 from django.forms.widgets import HiddenInput
-from crispy_forms.bootstrap import InlineCheckboxes
-from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Layout, Div, Field, Fieldset
-
+import os
+from mirWeb.settings import BASE_DIR
 ####FileField####
 from django import forms
 from django.template.defaultfilters import filesizeformat
@@ -89,13 +85,17 @@ class KaplanMeierForm(forms.Form):
 
         self.fields["dataset"] = dataset
 
-
     
-    target = forms.CharField(label="Gene or miRNA name or ratio", max_length=50)
+    #BASE QUERY
+    path_dir = os.path.join(BASE_DIR,"static/data/lFeature.txt")
+    result = open(path_dir,"r").read().split()
+    res = list(zip(result,result))
+    target = forms.ChoiceField(choices = res, label="Gene or miRNA name",required=False)
     get_cutoff = forms.BooleanField(label="Determine the optimal cutpoint of variables", required=False)
     q = forms.FloatField(label="Quantile to split the sample in Higher and Lower", initial=0.5, min_value=0, max_value=1,
         widget = forms.NumberInput(attrs={'id': 'form_q', 'step': "0.05"}))
     
+
 ##### Session ####
 class SessionSearchForm(forms.Form):
     """
@@ -126,8 +126,7 @@ class SessionSearchForm(forms.Form):
 
         session = forms.ChoiceField(label = "Available Analysis", choices=SESSION_CHOICES)
 
-        self.fields["session"] = session
-    
+        self.fields["session"] = session 
 
 
 class SessionCreateForm(forms.ModelForm):
@@ -164,7 +163,7 @@ class DatasetForm(forms.ModelForm):
         model = Dataset
         exclude = ["exprFile", "user_id","metadataFile","mirFile","geneFile",\
              "corFile", "pearFile", "number_gene","number_mir", "number_sample",\
-             "metadata_fields"]
+             "metadata_fields", "featureFile"]
 
 
 ##### Workflow ####
@@ -200,8 +199,186 @@ class WorkflowFilterForm(forms.Form):
                 "checked": "",
                 "class": "form-check form-check-inline"
             }))
+    METHOD_CHOICES = ( ("R","Pearson (R)"),
+                     ("Rho","Spearman (Rho)"), 
+                     ("Tau","Kendall (Tau)"),
+                     ("Lasso","Lasso"),
+                     ("Ridge","Ridge"),
+                     ("ElasticNet","Elastic net"))
+                     
+    method = forms.ChoiceField(choices=METHOD_CHOICES,label="Select the coefficient for applying the filters", initial="R") 
 
     min_db = forms.IntegerField(initial=5, max_value=40, min_value=0, required=False)        
+
+
+class WorkflowFilterBasicForm(forms.Form):
+    """
+    Form to get the Correlation data for the analysis.
+
+    Ref:
+    https://stackoverflow.com/questions/50960800/searchable-drop-down-for-choice-field-in-django-admin
+    """
+
+    pval = forms.FloatField(min_value=0, max_value=1, initial=0.05,label="Maximum adjust P.value", 
+        widget = forms.NumberInput(attrs={'id': 'form_pval', 'step': "0.01"}))
+
+    #nDB = forms.IntegerField(min_value=0, max_value=20, initial=6,label="Minimum Number of Predictions Tools")
+    low_coef = forms.FloatField(min_value=-1, max_value=1, initial=-0.5, 
+        label="Coefficient equal or lower than",     
+        widget = forms.NumberInput(attrs={'id': 'form_low_coef', 'step': "0.1"}))
+
+    high_coef = forms.FloatField(min_value=-1, max_value=1, initial=0.5, 
+        label="Coefficient equal or higher than",
+        widget = forms.NumberInput(attrs={'id': 'form_high_coef', 'step': "0.1"}))
+                     
+    METHOD_CHOICES = ( ("R","Pearson (R)"),
+                     ("Rho","Spearman (Rho)"), 
+                     ("Tau","Kendall (Tau)"),
+                     ("Lasso","Lasso"),
+                     ("Ridge","Ridge"),
+                     ("ElasticNet","Elastic net"))
+                     
+    method = forms.ChoiceField(choices=METHOD_CHOICES,label="Select the coefficient for applying the filters", initial="R", required=False)   
+
+class WorkflowIPSCorForm(forms.Form):
+    """
+    Form to get the Correlation data for the analysis.
+
+    Ref:
+    https://stackoverflow.com/questions/50960800/searchable-drop-down-for-choice-field-in-django-admin
+    https://stackoverflow.com/questions/57143113/django-how-to-use-the-admin-autocomplete-field-in-a-custom-form
+    """
+
+    ### Data From DB###
+    def __init__(self, *args, **kwargs):
+        self.user = kwargs.pop('user', None)
+        super(WorkflowIPSCorForm, self).__init__(*args, **kwargs)
+
+        ### Select Public DataSet ###
+        try:
+            DATASET_CHOICES = list(Dataset.objects.filter(public=True).values_list("id","name"))
+            #print(DATASET_CHOICES)
+
+            if self.user.is_authenticated:
+                DATASET_USER = list(Dataset.objects.filter(user_id=self.user).values_list("id","name"))
+                DATASET_CHOICES += DATASET_USER
+            DATASET_CHOICES = list(set(DATASET_CHOICES))
+
+        except Exception as error:
+            print(error)
+            DATASET_CHOICES =[]
+
+        publicDataset = forms.ChoiceField(choices=[(None,"-----"),]+DATASET_CHOICES, label="Select available dataset", required=False)
+        self.fields["publicDataset"] = publicDataset
+      
+    ### Name ###
+    label = forms.CharField(label="Add a name for the Analysis")
+
+    ### Custom Files ###
+    TECHNOLOGY_CHOICES = [
+        ("sequencing", "Sequencing Data"),
+        ("microarray", "Microarray Data")
+    ]
+    geneFile = RestrictedFileField(label="Select Gene File", required=False, content_types=CONTENT_TYPES, max_upload_size=MAX_UPLOAD_SIZE)
+    mirFile = RestrictedFileField(label="Select miRNA File", required=False, content_types=CONTENT_TYPES, max_upload_size=MAX_UPLOAD_SIZE)
+    clinicalFile = RestrictedFileField(label="Add Custom Metadata", required=False, content_types=CONTENT_TYPES, max_upload_size=MAX_UPLOAD_SIZE)
+    technology = forms.ChoiceField(choices=TECHNOLOGY_CHOICES)
+
+    ##Dataset Chioces##
+
+    PUBLIC_CHOICES = (
+        (3,"--------"),
+        (0, "Available Dataset"),
+        (1, "Provide Own Dataset"),
+    )
+
+    dataset = forms.ChoiceField(choices=PUBLIC_CHOICES, label="Select available dataset", required=False)
+    name_dataset = forms.CharField(label="Name Dataset", required=False)
+
+    ### Filter Sample
+    filter_sample = forms.BooleanField(label="Apply normalization to the data", required=False)
+    group_sample = forms.CharField(label="Group name in metadata for filter", initial="sample_type", required=False)
+    filter_group = forms.CharField(label="Group name in metadata for Correlation", initial="PrimaryTumor", required=False)
+
+    ### Normalize ###
+    normal = forms.BooleanField(label="Apply normalization to the data", required=False)
+
+
+
+class WorkflowInfiltratedCorForm(forms.Form):
+    """
+    Form to get the Correlation data for the analysis.
+
+    Ref:
+    https://stackoverflow.com/questions/50960800/searchable-drop-down-for-choice-field-in-django-admin
+    https://stackoverflow.com/questions/57143113/django-how-to-use-the-admin-autocomplete-field-in-a-custom-form
+    """
+
+    ### Data From DB###
+    def __init__(self, *args, **kwargs):
+        self.user = kwargs.pop('user', None)
+        super(WorkflowInfiltratedCorForm, self).__init__(*args, **kwargs)
+
+        ### Select Public DataSet ###
+        try:
+            DATASET_CHOICES = list(Dataset.objects.filter(name="TCGA-OV").values_list("id","name"))
+            #print(DATASET_CHOICES)
+
+        except Exception as error:
+            print(error)
+            DATASET_CHOICES =[]
+
+        publicDataset = forms.ChoiceField(choices=[(None,"-----"),]+DATASET_CHOICES, label="Select available dataset", required=False)
+        self.fields["publicDataset"] = publicDataset
+      
+    ### Name ###
+    label = forms.CharField(label="Add a name for the Analysis")
+
+    #BASE QUERY
+    path_dir = os.path.join(BASE_DIR,"static/data/lMethod.txt")
+    result = open(path_dir,"r").read().split("\n")
+
+    lTimer = [x for x in result if x.startswith("TIMER")]
+    TIMER_CHOICES = list(zip(lTimer,[x.replace("TIMER|","") for x in lTimer]))
+
+    lTimer = [x for x in result if x.startswith("MCP_COUNTER")]
+    MCP_COUNTER_CHOICES = list(zip(lTimer,[x.replace("MCP_COUNTER|","") for x in lTimer]))
+    #print(MCP_COUNTER_CHOICES)
+    lTimer = [x for x in result if x.startswith("QUANTISEQ")]
+    QUANTISEQ_CHOICES = list(zip(lTimer,[x.replace("QUANTISEQ|","") for x in lTimer]))
+
+    lTimer = [x for x in result if x.startswith("EPIC")]
+    EPICCHOICES = list(zip(lTimer,[x.replace("EPIC|","") for x in lTimer]))
+
+    timer = forms.MultipleChoiceField(choices=TIMER_CHOICES, label="Select Cell", required=False, \
+        widget=forms.CheckboxSelectMultiple(attrs={
+                "checked": "",
+                "class": "form-check form-check-inline"
+            }))
+    mcp = forms.MultipleChoiceField(choices=MCP_COUNTER_CHOICES, label="Select Cell", required=False, \
+        widget=forms.CheckboxSelectMultiple(attrs={
+                "checked": "",
+                "class": "form-check form-check-inline"
+            }))
+    quantiseq = forms.MultipleChoiceField(choices=QUANTISEQ_CHOICES, label="Select Cell", required=False, \
+        widget=forms.CheckboxSelectMultiple(attrs={
+                "checked": "",
+                "class": "form-check form-check-inline"
+            }))
+    epic = forms.MultipleChoiceField(choices=EPICCHOICES, label="Select Cell", required=False, \
+        widget=forms.CheckboxSelectMultiple(attrs={
+                "checked": "",
+                "class": "form-check form-check-inline"
+            }))
+    ### Filter Sample
+    filter_sample = forms.BooleanField(label="Apply normalization to the data", required=False)
+    group_sample = forms.CharField(label="Group name in metadata for filter", initial="sample_type", required=False)
+    filter_group = forms.CharField(label="Group name in metadata for Correlation", initial="PrimaryTumor", required=False)
+
+    ### Normalize ###
+    normal = forms.BooleanField(label="Apply normalization to the data", required=False)
+
+
 
 
 class WorkflowGenesetCorForm(forms.Form):
@@ -248,7 +425,7 @@ class WorkflowGenesetCorForm(forms.Form):
             GENESET_CHOICES =[]
 
         #GENESET_CHOICES = [("", "Using Genes in the file")] + GENESET_CHOICES
-        publicGeneset = forms.MultipleChoiceField(choices=GENESET_CHOICES, label="Select geneset", required=False)
+        publicGeneset = forms.MultipleChoiceField(choices=GENESET_CHOICES, label="Select geneset", required=True)
         self.fields["publicGeneset"] = publicGeneset
       
     ### Name ###
@@ -277,8 +454,8 @@ class WorkflowGenesetCorForm(forms.Form):
 
     ### Filter Sample
     filter_sample = forms.BooleanField(label="Apply normalization to the data", required=False)
-    group_sample = forms.CharField(label="Group name in metadata for filter", initial="event", required=False)
-    filter_group = forms.CharField(label="Group name in metadata for Correlation", initial="event", required=False)
+    group_sample = forms.CharField(label="Group name in metadata for filter", initial="sample_type", required=False)
+    filter_group = forms.CharField(label="Group name in metadata for Correlation", initial="PrimaryTumor", required=False)
 
     ### Normalize ###
     normal = forms.BooleanField(label="Apply normalization to the data", required=False)
@@ -366,11 +543,14 @@ class WorkflowCorrelationForm(forms.Form):
     normal = forms.BooleanField(label="Apply normalization to the data", required=False)
     survival = forms.BooleanField(label="Get Log Hazard Ratio for gene and miRNA", required=False)
 
+    ## Bacground ##
+    background = forms.BooleanField(label="Background modul with non-target gene/microRNA pairs", required=False)
+
 
     ### Filter Sample
     filter_sample = forms.BooleanField(label="Apply normalization to the data", required=False)
-    group_sample = forms.CharField(label="Group name in metadata for filter", initial="event", required=False)
-    filter_group = forms.CharField(label="Group Name in metadata for correlation", initial="event", required=False)
+    group_sample = forms.CharField(label="Group name in metadata for filter", initial="sample_type", required=False)
+    filter_group = forms.CharField(label="Group Name in metadata for correlation", initial="PrimaryTumor", required=False)
 
     ### Select Filter Gene Expression ###
     FILTER_CHOICES = [
@@ -431,8 +611,8 @@ class WorkFlowFeaturesForm(forms.Form):
 
     ### Filter Sample
     filter_sample = forms.BooleanField(label="Apply normalization to the data", required=False)
-    group_sample = forms.CharField(label="Group name in metadata for filter", initial="event", required=False)
-    filter_group = forms.CharField(label="Group Name in metadata for correlation", initial="event", required=False)
+    group_sample = forms.CharField(label="Group name in metadata for filter", initial="sample_type", required=False)
+    filter_group = forms.CharField(label="Group Name in metadata for correlation", initial="PrimaryTumor", required=False)
 
 
 class WorkFlowFeaturesRatioForm(forms.Form):
@@ -485,8 +665,8 @@ class WorkFlowFeaturesRatioForm(forms.Form):
     
     ### Filter Sample
     filter_sample = forms.BooleanField(label="Apply normalization to the data", required=False)
-    group_sample = forms.CharField(label="Group name in metadata for filter", initial="event", required=False)
-    filter_group = forms.CharField(label="Group Name in metadata for correlation", initial="event", required=False)
+    group_sample = forms.CharField(label="Group name in metadata for filter", initial="sample_type", required=False)
+    filter_group = forms.CharField(label="Group Name in metadata for correlation", initial="PrimaryTumor", required=False)
 
     ### Filter Pairs
     filter_pair = forms.BooleanField(label="Filter the gene/microRNA pairs", required=False)
@@ -581,6 +761,11 @@ class WorkFlowClassificationForm(forms.Form):
     #use_geneset = forms.BooleanField(label="Uses geneset as feature")
     #use_mirnaset = forms.BooleanField(label="Uses mirnaset as feature")
 
+
+#################
+### TARGET #####
+##############
+
 class SyntheticLethalityForm(forms.Form):
     """
     Form to get the Correlation data for the analysis.
@@ -626,12 +811,25 @@ class SyntheticLethalityForm(forms.Form):
         self.fields["publicGeneset"] = publicGeneset
         
     #BASE QUERY    
-    tQuery = forms.CharField(label="Gene name", max_length=50, required=False)
+    #BASE QUERY
+    path_dir =    path_dir = os.path.join(BASE_DIR,"static/data/lGeneMatrix.txt")
+    result = open(path_dir,"r").read().split()
+    res = list(zip(result,result))
+    tQuery = forms.ChoiceField(choices = res, label="Gene or miRNA name",required=False)
     use_correlation = forms.BooleanField(label="Use correlation result", required=False)
     use_set = forms.BooleanField(label="Predict Geneset or microRNAset target", required=False)
 
     #CORRELATION QUERY
-    pval = forms.FloatField(min_value=0, max_value=1, initial=0.05,label="Maximum Adjust P. Value", 
+    METHOD_CHOICES = ( ("R","Pearson (R)"),
+                     ("Rho","Spearman (Rho)"), 
+                     ("Tau","Kendall (Tau)"),
+                     ("Lasso","Lasso"),
+                     ("Ridge","Ridge"),
+                     ("ElasticNet","Elastic net"))
+                     
+    method = forms.ChoiceField(choices=METHOD_CHOICES,label="Select the coefficient for applying the filters") 
+
+    pval = forms.FloatField(min_value=0, max_value=1, initial=0.05,label="Maximum adjust P.value", 
         widget = forms.NumberInput(attrs={'id': 'form_pval', 'step': "0.01"}))
 
     low_coef = forms.FloatField(min_value=-1, max_value=1, initial=-0.5, 
@@ -641,6 +839,8 @@ class SyntheticLethalityForm(forms.Form):
     high_coef = forms.FloatField(min_value=-1, max_value=1, initial=0.5, 
         label="Coefficient equal or higher than",
         widget = forms.NumberInput(attrs={'id': 'form_high_coef', 'step': "0.1"}))
+
+    survival = forms.BooleanField(label="Get log hazard ratio for Gene and miRNA", required=False)
 
     ##DB QUERY
     join = forms.ChoiceField(choices=(("or","OR"),("and","AND")), label="Filter method to target Databases",required=False)
@@ -711,13 +911,26 @@ class TargetPredictorForm(forms.Form):
         self.fields["publicGeneset"] = publicGeneset
         self.fields["publicMirnaset"] = publicMirnaset
         
-    #BASE QUERY    
-    tQuery = forms.CharField(label="Gene or miRNA name", max_length=50, required=False)
+    #BASE QUERY
+    path_dir = os.path.join(BASE_DIR,"static/data/lFeature.txt")
+    result = open(path_dir,"r").read().split()
+    res = list(zip(result,result))
+    tQuery = forms.ChoiceField(choices = res, label="Gene or miRNA name",required=False)
     use_correlation = forms.BooleanField(label="Use correlation result", required=False)
     use_set = forms.BooleanField(label="Predict Geneset or microRNAset target", required=False)
 
+
     #CORRELATION QUERY
-    pval = forms.FloatField(min_value=0, max_value=1, initial=0.05,label="Maximum Adjust P. Value", 
+    METHOD_CHOICES = ( ("R","Pearson (R)"),
+                     ("Rho","Spearman (Rho)"), 
+                     ("Tau","Kendall (Tau)"),
+                     ("Lasso","Lasso"),
+                     ("Ridge","Ridge"),
+                     ("ElasticNet","Elastic net"))
+                     
+    method = forms.ChoiceField(choices=METHOD_CHOICES,label="Select the coefficient for applying the filters") 
+
+    pval = forms.FloatField(min_value=0, max_value=1, initial=0.05,label="Maximum adjust P.value", 
         widget = forms.NumberInput(attrs={'id': 'form_pval', 'step': "0.01"}))
 
     low_coef = forms.FloatField(min_value=-1, max_value=1, initial=-0.5, 
@@ -728,108 +941,19 @@ class TargetPredictorForm(forms.Form):
         label="Coefficient equal or higher than",
         widget = forms.NumberInput(attrs={'id': 'form_high_coef', 'step': "0.1"}))
 
+    survival = forms.BooleanField(label="Get log hazard ratio for Gene and miRNA", required=False)
+
     ##DB QUERY
     join = forms.ChoiceField(choices=(("or","OR"),("and","AND")), label="Filter method to target Databases",required=False)
 
     DB_CHOICES = tuple(zip(load_matrix_header(),load_matrix_header()))
 
-    nDB = forms.MultipleChoiceField(choices=DB_CHOICES,label="Minimum Number of Predictions Tools", required=False, \
+    nDB = forms.MultipleChoiceField(choices=DB_CHOICES,label="Minimum number of Predictions Tools", required=False, \
         widget=forms.CheckboxSelectMultiple(attrs={
                 "checked": "",
                 "class": "form-check form-check-inline"
             }))
     min_db = forms.IntegerField(initial=5, max_value=40, min_value=0)        
-##### Gene ####
-
-class GeneForm(forms.Form):
-    """
-    Form to update the Geneset, Gene, Synthetic Lethality, Gene_set_Gene
-    in the DB. This tables has the cBioportal format.
-    This form is used by GeneUploadView
-    """
-    TABLE_CHOICES = [
-        ("analysis_geneset","GeneSet"),
-        ("analysis_gene","Gene"),
-        ("analysis_geneset_genes_id", "GeneSet2Genes"),
-        ("analysis_gene_synthetic_lethal", "Synthetic_lethal"),
-        ("analysis_mirna", "miRNA"),
-        ("analysis_target","target"),
-        ("reference_prediction_tool","Reference")
-
-
-    ]
-    file = forms.FileField()
-    table = forms.ChoiceField(choices=TABLE_CHOICES, required=True)
-
-
-class GenesetForm(forms.ModelForm):
-    """
-    Form to create a new GeneSet from the user.
-    This form is used by CreateGeneSetView
-    """
-    def __init__(self, *args, **kwargs):
-        self.user = kwargs.pop('user', None)
-        super(GenesetForm, self).__init__(*args, **kwargs)  
-
-        if self.user.is_staff is False:
-            self.fields["public"].widget = HiddenInput()
-
-
-
-    ID_CHOICE = [("symbol","Symbol"),("entrezid","Gene_ID")]
-
-    file = RestrictedFileField(label="Select geneset File", required=False, content_types=CONTENT_TYPES, max_upload_size=MAX_UPLOAD_SIZE)
-
-    format = forms.ChoiceField(choices=ID_CHOICE,label="Select the Gene Identifier")
-    
-    class Meta:
-        model = Geneset
-        exclude = ["external_id", "genes_id","user_id"]
-
-class MirnasetForm(forms.ModelForm):
-    """
-    Form to create a new GeneSet from the user.
-    This form is used by CreateGeneSetView
-    """
-    def __init__(self, *args, **kwargs):
-        self.user = kwargs.pop('user', None)
-        super(MirnasetForm, self).__init__(*args, **kwargs)  
-
-        if self.user.is_staff is False:
-            self.fields["public"].widget = HiddenInput()
-
-
-
-    ID_CHOICE = [("accesion","Accesion (MIMATXXXXXX)"),("id","Id (hsa-miR-XXXX)")]
-
-    file = RestrictedFileField(label="Select mirnaset file", required=False, content_types=CONTENT_TYPES, max_upload_size=MAX_UPLOAD_SIZE)
-
-    format = forms.ChoiceField(choices=ID_CHOICE,label="Select the miRNA Identifier")
-    
-    class Meta:
-        model = Mirnaset
-        exclude = ["mirna_id","user_id"]
-
-
-class GenesetGMTForm(forms.Form):
-    """
-    Form to update the Geneset, Gene, Synthetic Lethality, Gene_set_Gene
-    in the DB. This tables has the cBioportal format.
-    This form is used by GeneUploadView
-    """
-    def __init__(self, *args, **kwargs):
-        self.user = kwargs.pop('user', None)
-        super(GenesetGMTForm, self).__init__(*args, **kwargs)  
-
-        if self.user.is_staff is False:
-            self.fields["public"].widget = HiddenInput()
-    
-    ID_CHOICE = [("symbol","Symbol"),("entrezid","Entrez_ID")]     
-    file = forms.FileField()
-    geneFormat = forms.ChoiceField(choices=ID_CHOICE,label="Select the Gene Identifier")
-    public = forms.ChoiceField(choices= [(False, "No"),(True,"Yes")], initial=False)
-
-
 
 
 class AllCorrelationForm(forms.Form):

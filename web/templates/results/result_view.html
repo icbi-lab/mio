@@ -101,23 +101,9 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 mx-auto">          
-      {% if messages %}
-        <div>
-            <ul>
-            {% for message in messages %}
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                    <strong>{{message | safe}}</strong>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-            </div>
-            {% endfor %}
-            </ul>
-        </div>  
-      {% endif %}
       
       {% if identifier2 %}
-        <h2>Result Over Representation Analysis </h2>
+        <h2>microRNA Summary</h2>
         <hr class="my-4">
         <table id="table2" class="display" style="width:100%">
           <thead>
@@ -129,6 +115,21 @@
           </thead>
         </table>
         {%endif%}
+
+        {% if identifier3 %}
+        <h2>Gene Summary</h2>
+        <hr class="my-4">
+        <table id="table3" class="display" style="width:100%">
+          <thead>
+            <tr>
+            {% for c in  col3%}
+              <th>{{c}}</th>
+            {% endfor %}
+            </tr>
+          </thead>
+        </table>
+        {%endif%}
+
       </div>
     </div>
   </div>
@@ -149,23 +150,8 @@
   </section> 
 {%endif%}
 
-{% if plotly_weigth %}
-<section id=heatmap class="bg-light">
+<section id=net class="bg-light">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto">
-        <h2>Heatmap</h2>
-          <hr class="my-4">
-            {{plotly_weigth | safe}}
-            <hr class="my-4">
-      </div>
-    </div>
-  </div> 
-</section> 
-{% endif %}
-
-  <section id=net class="bg-light">
-    <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Network</h2>
@@ -195,7 +181,7 @@
                   <table class="table" id="legenddiv">
                 
                     <tbody>
-                      {% if hr%}
+                {% if hr%}
                 <tr style="text-align:center"><td style="font-size:12px">Node Legend</td>
                 </tr>
                       <tr>
@@ -207,6 +193,7 @@
                 </div></td>
                       
                       </tr>
+              {%endif%}
               <tr style="text-align:center"><td style="font-size:12px">Edge Legend</td>
               
               </tr>
@@ -222,12 +209,11 @@
                 <hr width=20% style="height: 2.5px;background-color: #333;"> 10
                 <hr width=20% style="height: 1px;background-color: #333;"> 4
               {%else%}
-                <p style="text-align:center"><b>Absolute value of pearson coefficient </b></p>
+                <p style="text-align:center"><b>Absolute value of {{method}} </b></p>
                 <hr width=20% style="height: 10px;background-color: #333;"> 1
                 <hr width=20% style="height: 5px;background-color: #333;"> 0.5
                 <hr width=20% style="height: 2.5px;background-color: #333;"> 0.25
                 <hr width=20% style="height: 1px;background-color: #333;"> 0.1
-              {%endif%}
               {%endif%}
 
               </div></td>
@@ -240,6 +226,7 @@
 
               <hr class="my-4">
               {%endif%}
+
             <a  class="btn btn-primary btn-lg btn-block" href="{% url 'session_detail' session_slug=session_detail.identifier %}">Back to Session</a>
 
         </div>
@@ -293,12 +280,28 @@
                     extension: '.tsv'
                 }]
             },
+            "columnDefs": [ {
+            "targets": 2,
+            "data": "2",
+            "render": function ( data, type, row, meta ) {
+              return '<a href="/microrna_view/'+data+'"  target="_blank">'+data+'</a>';
+            }
+          },
+          {
+            "targets": 1,
+            "data": "1",
+            "render": function ( data, type, row, meta ) {
+              return '<a href="/gene_view/'+data+'"  target="_blank">'+data+'</a>';
+            }
+          } ],
             "ajax": '{% url "results_json" identifier=identifier %}'
 
           } );
       } );
     </script>
 {%endif%}
+
+
 
 {%if identifier2 %}
 
@@ -313,14 +316,53 @@
                 extend: 'csvHtml5',
                 fieldSeparator: '\t',
                 extension: '.tsv'
-            }]
-        },
-        "ajax": '{% url "results_json" identifier=identifier2 %}'
+              }]
+            },
+            "columnDefs": [ 
+          {
+            "targets": 0,
+            "data": "0",
+            "render": function ( data, type, row, meta ) {
+              return '<a href="/microrna_view/'+data+'"  target="_blank">'+data+'</a>';
+            }
+          } ],
+            "ajax": '{% url "results_json" identifier=identifier2 %}'
 
+          } );
       } );
-  } );
 </script>
 {%endif%}
+
+{%if identifier3 %}
+
+<script>
+
+  $(document).ready(function() {
+      $('#table3').DataTable( {    dom: 'B<"clear">lfrtip',
+    buttons: {
+        name: 'primary',
+        buttons: [ 'csv', 'excel', {
+                text: 'TSV',
+                extend: 'csvHtml5',
+                fieldSeparator: '\t',
+                extension: '.tsv'
+              }]
+            },
+            "columnDefs": [ 
+          {
+            "targets": 0,
+            "data": "0",
+            "render": function ( data, type, row, meta ) {
+              return '<a href="/gene_view/'+data+'"  target="_blank">'+data+'</a>';
+            }
+          } ],
+            "ajax": '{% url "results_json" identifier=identifier3 %}'
+
+          } );
+      } );
+</script>
+{%endif%}
+
 {%if identifier_style%}
 
 <script>

@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+description =  models.TextField(max_length=900000, null=True)
+ref_link = models.TextField(max_length=900000)
+public = models.BooleanField(choices =  [(False, "No"),(True,"Yes")], default=False)
+genes_id = models.ManyToManyField(Gene) #Relation Geneset-Gene
+user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+
+{%block body%}
+{% if bMirnaset %}
+<section id="#">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+        <p><h1 class="page-header">{{mirnaset}}</h1></p>
+          <div id="family_div">
+          <h2 class="sub-header">General information</h2>
+            <ul>
+                <li id="geneid_li">Name: {{mirnaset.name}} <span id=></span></li>
+                <li id="genesymbol_li">Description: {{mirnaset.description}}<ul id="precursor"></ul></li>
+                <li id="genename_li">Reference: {{mirnaset.ref_link}}<ul id="precursor"></ul></li>
+                <li id="genename_li">Number of genes: {{mirnaset.get_number_mir}}<ul id="precursor"></ul></li>
+
+            </ul>
+          </div>
+          <div id="family_div">
+            <h2 class="sub-header">Status information</h2>
+              <ul>
+                  <li id="genestatus_li">Status: {{mirnaset.public}} <span id=></span></li>
+                  <li id="geneprevius_symbol_li">Owner: {{mirnaset.user_id}}<ul id="precursor"></ul></li>
+              </ul>
+          
+      </div>
+    </div>
+  </div>
+</section>
+{%else%}
+<section id="#">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+      <p><h1>{{mirnaset}}</h1></p>
+      <p>We have not been able to find the micrornaset in our database.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{%endif%}
+{%endblock body%}
+
+
+{% block js %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.18/af-2.3.0/b-1.5.2/b-colvis-1.5.2/b-flash-1.5.2/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/fh-3.1.4/r-2.2.2/datatables.min.css"/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.18/af-2.3.0/b-1.5.2/b-colvis-1.5.2/b-flash-1.5.2/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/fh-3.1.4/r-2.2.2/datatables.min.js"></script>
+<!-- needed to use moment.js for our date sorting-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.19/sorting/datetime-moment.js"></script>
+
+{%if identifier%}
+<script>
+  $(document).ready(function() {
+      $('#example').DataTable( {    dom: 'B<"clear">lfrtip',
+    buttons: {
+        name: 'primary',
+        buttons: [ 'copy', 'csv', 'excel' ]
+        },
+        "columnDefs": [
+          {
+            "targets": 1,
+            "data": "1",
+            "render": function ( data, type, row, meta ) {
+              return '<a href="https://www.genecards.org/cgi-bin/carddisp.pl?gene='+data+'&organism=hsa"  target="_blank">'+data+'</a>';
+            }
+          } ],
+        "ajax": '{% url "results_json" identifier=identifier %}'
+      } );
+  } );
+</script>
+{%endif%} 
+
+  {% endblock js%}

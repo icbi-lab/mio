@@ -90,7 +90,13 @@
                     <th>
 
                       {% if workflow.status == 2 %}
+                          {% if workflow.analysis == "Correlation"%}
                           <a class="btn btn-success" href="{% url 'workflow_filter' session_slug=session_detail.identifier pk=workflow.pk %}">View</a>
+                          {% else %}
+                          <a class="btn btn-success" href="{% url 'workflow_filter_basic' session_slug=session_detail.identifier pk=workflow.pk %}">View</a>
+                          {%endif%}
+
+                          
                     </th>
 
                     <th> 

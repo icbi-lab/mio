@@ -2,7 +2,7 @@ import pandas as pd
 from mirWeb.settings import DATA_DIR, NUM_THREADS
 from miopy.correlation import (read_count, concat_matrix, all_methods, tmm_normal, voom_normal, 
                              differential_expression_array, differential_expression_edger, 
-                             intersection, gene_set_correlation,
+                             intersection, gene_set_correlation,ips_correlation,
                              process_matrix_list, header_list, adjust_geneset)
 from miopy.feature_selection import feature_selection
 from miopy.survival import survival_selection
@@ -14,7 +14,7 @@ import numpy as np
 
 def run_correlation(wrkflw, method = "Correlation", FilterChoice = "NF", \
                     normal = True, logfc = 1.2, pval = 0.005, survival = False, group = "event", \
-                     filter_sample = False, group_sample = "event", filter_group = "0"):
+                     filter_sample = False, group_sample = "event", filter_group = "0", background = False):
 
     exprDf = wrkflw.dataset_id.get_expr(custom_metadata = wrkflw.custom_metadata, normal = normal, survival = survival, filter_sample = filter_sample, group_sample = group_sample, filter_group = filter_group)
 
@@ -47,7 +47,7 @@ def run_correlation(wrkflw, method = "Correlation", FilterChoice = "NF", \
         
         else:
             print("Run Correlation")
-            table, dfPearson = all_methods(exprDf, lMirUser = lMir, lGeneUser = lGene, n_core = NUM_THREADS, hr = survival)
+            table, dfPearson = all_methods(exprDf, lMirUser = lMir, lGeneUser = lGene, n_core = NUM_THREADS, hr = survival, background = background)
             
         table = table.round(4)
         File().set_data(wrkflw, table, "Correlation", True, "GeneCorrelation")
@@ -83,6 +83,54 @@ def run_correlation(wrkflw, method = "Correlation", FilterChoice = "NF", \
     return table
 
 
+
+def run_infiltration_correlation(wrkflw,normal = True,  group = "event", lCell = [], \
+                     filter_sample = False, group_sample = "event", filter_group = "0"):
+
+    exprDf = wrkflw.dataset_id.get_expr(custom_metadata = wrkflw.custom_metadata, normal = normal, survival = False, \
+             filter_sample = filter_sample, group_sample = group_sample, filter_group = filter_group)
+
+    lMir, lGene = header_list(exprDf)
+
+    print("Leido los ficheros")
+
+    print("Obtenida Matrix Expression")
+
+    metadata = pd.read_csv(wrkflw.dataset_id.get_metadatapath(),index_col=0)
+    metadata = metadata[lCell]
+    exprDf = pd.concat((exprDf, metadata), axis = 1).dropna()
+    print("Dentro de immuno infiltrate")
+    table, dfPearson = all_methods(exprDf, lMirUser = lMir, lGeneUser = lCell, n_core = NUM_THREADS, hr = False, \
+        k = 5, background = False, test = False, add_target = False)
+    print("cara culo")        
+    File().set_data(wrkflw, table, "Correlation", True, "Immunecellinfiltration")
+    File().set_data(wrkflw, dfPearson, "Pearson", False, "Immunecellinfiltration")
+    
+    return table
+
+def run_ips_correlation(wrkflw, method = "Correlation", FilterChoice = "NF", \
+                    normal = True, group = "event", \
+                     filter_sample = False, group_sample = "event", filter_group = "0"):
+
+    exprDf = wrkflw.dataset_id.get_expr(custom_metadata = wrkflw.custom_metadata, normal = normal, survival = False, filter_sample = filter_sample, group_sample = group_sample, filter_group = filter_group)
+
+    lMir, lGene = header_list(exprDf)
+
+    print("Leido los ficheros")
+
+
+    print("Obtenida Matrix Expression")
+
+    
+
+    table, dfCor, dfIPS = ips_correlation(exprDf, lMirUser = lMir, n_core = NUM_THREADS)   
+
+    File().set_data(wrkflw, table, "Correlation", True,"IpsCorrelation")
+    File().set_data(wrkflw, dfCor, "Pearson", False,"IpsCorrelation")
+    File().set_pickle(workflow=wrkflw, file = dfIPS, ftype = "Pickle", is_result = False, description = "Immunephenoscore", label = "IpsCorrelation_"+wrkflw.label)
+
+
+    return table
 
 
 def run_feature_ratio(wrkflw, topk = 100, k = 10, normal = False, group = "event", filter_sample = False, group_sample = "event", filter_group = "0", filter_pair = False, low_coef = 0.5, min_db = 20):

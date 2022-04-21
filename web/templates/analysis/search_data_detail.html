@@ -1,0 +1,280 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block first_menu_nav %}
+
+{% endblock first_menu_nav %}
+
+{% block menu_nav% }
+
+<li class="nav-item">
+  <a class="nav-link js-scroll-trigger" href="#data">Session Data</a>
+</li>
+{% endblock menu_nav% }
+
+
+{% block body %}
+
+ <section id="data" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h1>Results</h1>
+          {%if page_gene%}     
+          <p class="lead"></p>
+          <h2>Genes</h2>     
+          <p class="lead"></p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th> Symbol </th>
+                  <th> Name </th>
+                  <th>Alias</th>
+                  <th></th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                {% for gene in page_gene.object_list %}                
+                  <tr>
+                    <th> {{gene.symbol}} </th>
+                    <th> {{gene.approved_name}} </th>
+                    <th> {{gene.alias_symbols}} </th>
+                    <th>
+                      <form method="get" action="{% url 'gene_view' gene_id=gene.symbol %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary">View</button>
+                      </form>
+                    </th>
+                  </tr>
+                {% endfor %}
+              </tbody>
+              <p class="lead"></p>
+
+           </table>
+
+            {% if page_gene %}
+            <ul class="pagination list-inline d-flex justify-content-center">
+              {% if page_gene.has_previous %}
+                <li><a class="btn btn-outline-info" href="?query={{query}}&page1={{ page_gene.previous_page_number }}">&laquo;</a></li>
+              {% else %}
+                <li class="btn btn-outline-secondary"><span>&laquo;</span></li>
+              {% endif %}
+              {% for i in page_gene.paginator.page_range %}
+                {% if page_gene.number == i %}
+                  <li class="btn btn-outline-secondary"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                {% elif i > page_gene.number|add:'-3' and i < page_gene.number|add:'3' %}
+                  <li><a class="btn btn-outline-info" href="?query={{query}}&page1={{ i }}">{{ i }}</a></li>
+                {% endif %}
+                {% if page_gene.paginator.num_pages > page_gene.number|add:'3' and forloop.last %}
+                <li><a class="btn btn-outline-info">...</a></li>
+                <li><a class="btn btn-outline-info"href="?query={{query}}&page1={{ page_gene.paginator.num_pages }}">{{ page_gene.paginator.num_pages }}</a></li>
+                {% endif %}
+              {% endfor %}
+              {% if page_dataset.has_next %}
+                <li><a class="btn btn-outline-info" href="?query={{query}}&page1={{ page_gene.next_page_number }}">&raquo;</a></li>
+              {% else %}
+                <li class="btn btn-outline-secondary"><span>&raquo;</span></li>
+              {% endif %}
+            </ul>
+          {%endif%}
+          {%endif%}
+
+          {% if page_microrna %}
+
+          <p class="lead"></p>
+          <h2>microRNA</h2>     
+          <p class="lead"></p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th> Name </th>
+                  <th> Accesion </th>
+                  <th>Previous Name</th>
+                  <th></th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                {% for microrna in page_microrna.object_list %}                
+                  <tr>
+                    <th> {{microrna.mature_name}} </th>
+                    <th> {{microrna.mature_acc}} </th>
+                    <th> {{microrna.previous_mature_id}} </th>
+                    <th>
+                      <form method="get" action="{% url 'microrna_view' microrna_id=microrna.mature_name %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary">View</button>
+                      </form>
+                    </th>
+                  </tr>
+                {% endfor %}
+              </tbody>
+              <p class="lead"></p>
+
+           </table>
+
+            {% if page_microrna %}
+            <ul class="pagination list-inline d-flex justify-content-center">
+              {% if page_microrna.has_previous %}
+                <li><a class="btn btn-outline-info" href="?query={{query}}&page2={{ page_microrna.previous_page_number }}">&laquo;</a></li>
+              {% else %}
+                <li class="btn btn-outline-secondary"><span>&laquo;</span></li>
+              {% endif %}
+              {% for i in page_microrna.paginator.page_range %}
+                {% if page_microrna.number == i %}
+                  <li class="btn btn-outline-secondary"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                {% elif i > page_microrna.number|add:'-3' and i < page_microrna.number|add:'3' %}
+                  <li><a class="btn btn-outline-info" href="?query={{query}}&page2={{ i }}">{{ i }}</a></li>
+                {% endif %}
+                {% if page_microrna.paginator.num_pages > page_microrna.number|add:'3' and forloop.last %}
+                <li><a class="btn btn-outline-info">...</a></li>
+                <li><a class="btn btn-outline-info"href="?query={{query}}&page2={{ page_microrna.paginator.num_pages }}">{{ page_microrna.paginator.num_pages }}</a></li>
+                {% endif %}
+              {% endfor %}
+              {% if page_dataset.has_next %}
+                <li><a class="btn btn-outline-info" href="?query={{query}}&page2={{ page_microrna.next_page_number }}">&raquo;</a></li>
+              {% else %}
+                <li class="btn btn-outline-secondary"><span>&raquo;</span></li>
+              {% endif %}
+            </ul>
+          {%endif%}
+          {%endif%}
+
+          {% if page_geneset %}
+
+          <p class="lead"></p>
+          <h2>Immune related gene signature</h2>     
+          <p class="lead"></p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th> Name </th>
+                  <th> Description </th>
+                  <th> Reference </th>
+                  <th></th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                {% for geneset in page_geneset.object_list %}                
+                  <tr>
+                    <th> {{geneset.name}} </th>
+                    <th> {{geneset.description}} </th>
+                    <th> {{geneset.ref_link}} </th>
+                    <th>
+                      <form method="get" action="{% url 'geneset_view' geneset_id=geneset.pk %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary">View</button>
+                      </form>
+                    </th>
+                  </tr>
+                {% endfor %}
+              </tbody>
+              <p class="lead"></p>
+
+           </table>
+
+            {% if page_geneset %}
+            <ul class="pagination list-inline d-flex justify-content-center">
+              {% if page_geneset.has_previous %}
+                <li><a class="btn btn-outline-info" href="?query={{query}}&page3={{ page_geneset.previous_page_number }}">&laquo;</a></li>
+              {% else %}
+                <li class="btn btn-outline-secondary"><span>&laquo;</span></li>
+              {% endif %}
+              {% for i in page_geneset.paginator.page_range %}
+                {% if page_geneset.number == i %}
+                  <li class="btn btn-outline-secondary"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                {% elif i > page_geneset.number|add:'-3' and i < page_geneset.number|add:'3' %}
+                  <li><a class="btn btn-outline-info" href="?query={{query}}&page3={{ i }}">{{ i }}</a></li>
+                {% endif %}
+                {% if page_geneset.paginator.num_pages > page_geneset.number|add:'3' and forloop.last %}
+                <li><a class="btn btn-outline-info">...</a></li>
+                <li><a class="btn btn-outline-info"href="?query={{query}}&page3={{ page_geneset.paginator.num_pages }}">{{ page_geneset.paginator.num_pages }}</a></li>
+                {% endif %}
+              {% endfor %}
+              {% if page_dataset.has_next %}
+                <li><a class="btn btn-outline-info" href="?query={{query}}&page3={{ page_geneset.next_page_number }}">&raquo;</a></li>
+              {% else %}
+                <li class="btn btn-outline-secondary"><span>&raquo;</span></li>
+              {% endif %}
+            </ul>
+          {%endif%}
+          {%endif%}
+
+
+
+          {% if page_mirset %}
+
+          <p class="lead"></p>
+          <h2>Immune related microRNA signature</h2>     
+          <p class="lead"></p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th> Name </th>
+                  <th> Description </th>
+                  <th> Reference </th>
+                  <th></th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                {% for mirset in page_mirset.object_list %}                
+                  <tr>
+                    <th> {{mirset.name}} </th>
+                    <th> {{mirset.description}} </th>
+                    <th> {{mirset.ref_link}} </th>
+                    <th>
+                      <form method="get" action="{% url 'mirnaset_view' mirnaset_id=mirset.pk %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary">View</button>
+                      </form>
+                    </th>
+                  </tr>
+                {% endfor %}
+              </tbody>
+              <p class="lead"></p>
+
+           </table>
+
+            {% if page_mirset %}
+            <ul class="pagination list-inline d-flex justify-content-center">
+              {% if page_mirset.has_previous %}
+                <li><a class="btn btn-outline-info" href="?query={{query}}&page4={{ page_mirset.previous_page_number }}">&laquo;</a></li>
+              {% else %}
+                <li class="btn btn-outline-secondary"><span>&laquo;</span></li>
+              {% endif %}
+              {% for i in page_mirset.paginator.page_range %}
+                {% if page_mirset.number == i %}
+                  <li class="btn btn-outline-secondary"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                {% elif i > page_mirset.number|add:'-3' and i < page_mirset.number|add:'3' %}
+                  <li><a class="btn btn-outline-info" href="?query={{query}}&page4={{ i }}">{{ i }}</a></li>
+                {% endif %}
+                {% if page_mirset.paginator.num_pages > page_mirset.number|add:'3' and forloop.last %}
+                <li><a class="btn btn-outline-info">...</a></li>
+                <li><a class="btn btn-outline-info"href="?query={{query}}&page4={{ page_mirset.paginator.num_pages }}">{{ page_mirset.paginator.num_pages }}</a></li>
+                {% endif %}
+              {% endfor %}
+              {% if page_dataset.has_next %}
+                <li><a class="btn btn-outline-info" href="?query={{query}}&page4={{ page_mirset.next_page_number }}">&raquo;</a></li>
+              {% else %}
+                <li class="btn btn-outline-secondary"><span>&raquo;</span></li>
+              {% endif %}
+            </ul>
+          {%endif%}
+          {%endif%}
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+{% endblock body %}

@@ -111,6 +111,20 @@
                   extension: '.tsv'
               }]
           },
+        "columnDefs": [ {
+            "targets": 2,
+            "data": "2",
+            "render": function ( data, type, row, meta ) {
+              return '<a href="/microrna_view/'+data+'"  target="_blank">'+data+'</a>';
+            }
+          },
+          {
+            "targets": 1,
+            "data": "1",
+            "render": function ( data, type, row, meta ) {
+              return '<a href="/gene_view/'+data+'"  target="_blank">'+data+'</a>';
+            }
+          } ],
           "ajax": '{% url "results_json" identifier=identifier %}'
         } );
     } );

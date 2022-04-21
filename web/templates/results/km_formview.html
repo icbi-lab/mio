@@ -26,10 +26,14 @@
           {% endif %}
         
           <h2>{{title}}</h2>
-            <form method="POST" enctype="multipart/form-data">
-                {% csrf_token %}            
-                {{form.target | as_crispy_field}}
-
+            <form method="POST" enctype="multipart/form-data" id="KaplaForm" data-target-url="{% url 'ajax_load_cities' %}" novalidate>               {% csrf_token %}            
+              <p>
+                <select class="chosen" id="locality-dropdown" style="width:350px;" name="target"> 
+                  {% for value,key in form.target.field.choices %}
+                      <option name="target" value="{{value}}">{{key}}</option>
+                  {%endfor%}
+                </select>            
+              </p>
                 <p>
                   <div id="get_cutoff" name = "get_cutoff"  class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" name = "get_cutoff" id="get_cutoffcheckbox" value=True>
@@ -42,24 +46,35 @@
                 </div>
               <p>
                 <p> Select dataset to analyze </p>
-                <select class="chosen" style="width:350px;" name="dataset"> 
+                <select class="chosen" style="width:350px;" name="dataset" id="dataset"> 
                   {% for value,key in form.dataset.field.choices %}
                       <option name="dataset" value="{{value}}">{{key}}</option>
                   {%endfor%}
                 </select>
               </p>
-              <button type="submit" class="btn btn-primary btn-block">Obtain Curve</button>
-            </form>
+              <button id="submit" type="submit" class="btn btn-primary btn-block" onclick="showDiv()">Submit</button>
+
+              <button id="loading" style="display:none" class="btn btn-primary btn-block" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
 
         </div>
       </div>
     </div>
   </section>
-
 {% endblock body %}
 
 
 {% block js %}
+<script type="text/javascript">
+
+function showDiv() {
+  document.getElementById('submit').style.display = "none";
+  document.getElementById('loading').style = "display:true";   
+}
+
+</script>
 
 <script type="text/javascript">
         var checkbox = document.getElementById("get_cutoffcheckbox");

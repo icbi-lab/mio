@@ -1,0 +1,36 @@
+TIMER|B cell
+TIMER|T cell CD4+
+TIMER|T cell CD8+
+TIMER|Neutrophil
+TIMER|Macrophage
+TIMER|Myeloid dendritic cell
+MCP_COUNTER|T cell
+MCP_COUNTER|T cell CD8+
+MCP_COUNTER|cytotoxicity score
+MCP_COUNTER|NK cell
+MCP_COUNTER|B cell
+MCP_COUNTER|Monocyte
+MCP_COUNTER|Macrophage/Monocyte
+MCP_COUNTER|Myeloid dendritic cell
+MCP_COUNTER|Neutrophil
+MCP_COUNTER|Endothelial cell
+MCP_COUNTER|Cancer associated fibroblast
+QUANTISEQ|B cell
+QUANTISEQ|Macrophage M1
+QUANTISEQ|Macrophage M2
+QUANTISEQ|Monocyte
+QUANTISEQ|Neutrophil
+QUANTISEQ|NK cell
+QUANTISEQ|T cell CD4+ (non-regulatory)
+QUANTISEQ|T cell CD8+
+QUANTISEQ|T cell regulatory (Tregs)
+QUANTISEQ|Myeloid dendritic cell
+QUANTISEQ|uncharacterized cell
+EPIC|B cell
+EPIC|Cancer associated fibroblast
+EPIC|T cell CD4+
+EPIC|T cell CD8+
+EPIC|Endothelial cell
+EPIC|Macrophage
+EPIC|NK cell
+EPIC|uncharacterized cell

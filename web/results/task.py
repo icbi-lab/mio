@@ -1,6 +1,8 @@
 import pandas as pd
 from django.shortcuts import redirect
-from analysis.models import File, Workflow, Dataset, Gene, Mirna, Target
+from analysis.models import File, Workflow, Dataset, Gene
+from microrna.models import Mirna_mature
+from microrna.models import Target
 from mirWeb.settings import DATA_DIR, IMG_ROOT, NUM_THREADS
 from pathlib import Path
 from miopy import borda_table, load_matrix_header, get_target_query, FilterDF, load_table_counts, load_synthetic
@@ -56,24 +58,17 @@ def predict_target_query(lTarget = None, lTools = None, method = "or", min_db = 
 
     if len(lTarget) > 0: 
         lGene = list(Gene.objects.filter(symbol__in = lTarget).values_list("pk"))
+        lMir = list(Mirna_mature.objects.filter(mature_name__in = lTarget).values_list("pk",))
 
-        lMir = list(Mirna.objects.filter(mature_id__in = lTarget).values_list("pk",))
+        target = pd.DataFrame(Target.objects.filter(Q(gene_id__in = lGene) | Q(mirna_id__in = lMir)).values("id" , "gene_id_id__symbol", "mirna_id_id__mature_name", "target", "number_target"))
+                
+        if not target.empty:
+            target.columns =  ["ID" , "Gene", "Mir", "Prediction Tools", "Number Prediction Tools"]
 
-        target = pd.DataFrame(Target.objects.filter(Q(gene_id__in = lGene) | Q(mirna_id__in = lMir)).values())
-        target.columns =  ["id" , "gene_id_id", "mirna_id_id", "Prediction Tools", "Number Prediction Tools"]
-        #Filter by number
-        target = target[target["Number Prediction Tools"] >= min_db]
+            #Filter by number
+            target = target[target["Number Prediction Tools"] >= min_db]
 
-        dfGene = pd.DataFrame(Gene.objects.filter(pk__in = target["gene_id_id"].tolist()).values_list("pk","symbol"))
-        dfGene.columns = ["gene_id_id","Gene"]
-        dfMir = pd.DataFrame(Mirna.objects.filter(pk__in = target["mirna_id_id"].tolist()).values_list("pk","mature_id"))
-        dfMir.columns = ["mirna_id_id","Mir"]
-
-        target = pd.merge(target, dfGene, on = "gene_id_id")
-        target = pd.merge(target, dfMir, on = "mirna_id_id")
-
-        target = target[["Gene", "Mir", "Prediction Tools", "Number Prediction Tools"]]
-        matrix = None
+            matrix = None
     else:
         target, matrix = None, None
     return target, matrix
@@ -82,14 +77,14 @@ def predict_target_query(lTarget = None, lTools = None, method = "or", min_db = 
 def ora_mir(lGene, mir_name, q):
     from scipy.stats import fisher_exact
     try:
-        mir = Mirna.objects.get(mature_id=mir_name)
+        mir = Mirna_mature.objects.get(mature_name=mir_name)
     except:
-        mir = Mirna.objects.filter(mature_id=mir_name)[0]
+        mir = Mirna_mature.objects.filter(mature_name=mir_name)[0]
 
     print(mir)
     total_number_gene_universe = 20386
     total_number_gene_list = len(set(lGene))
-    temp_list = list(Gene.objects.filter(entrez_id__in = Target.objects.filter(mirna_id=mir.pk, number_target__gte = q).values_list("gene_id")).values_list("symbol"))
+    temp_list = list(Gene.objects.filter(hgnc_id__in = Target.objects.filter(mirna_id=mir.pk, number_target__gte = q).values_list("gene_id")).values_list("symbol"))
     target_gene_list = [x[0] for x in temp_list]
     target_number_universe = len(set(target_gene_list))
     target_number_list = len(set(lGene).intersection(set(target_gene_list)))

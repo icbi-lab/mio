@@ -6,6 +6,7 @@ from .models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 
+
 # Create your views here.
 
 class UserCreateTemporal(View):
@@ -52,9 +53,11 @@ class UserUpdateTemporalView(UpdateView):
 
     def form_valid(self, form):
         """If the form is valid, redirect to the supplied URL."""
-        messages.success(self.request,"Datos actualizados correctamente")
+        messages.success(self.request,"Data updated correctly")
         self.object = form.save()
         self.object.set_not_temporal()
+        login(self.request,self.object, backend = 'allauth.account.auth_backends.AuthenticationBackend')
+
         return super().form_valid(form)
 
 class UserUpdateView(UpdateView):
@@ -77,6 +80,7 @@ class UserUpdateView(UpdateView):
 
     def form_valid(self, form):
         """If the form is valid, redirect to the supplied URL."""
-        messages.success(self.request,"Datos actualizados correctamente")
+        messages.success(self.request,"Data updated correctly")
         self.object = form.save()
+        login(self.request,self.object, backend = 'allauth.account.auth_backends.AuthenticationBackend')
         return super().form_valid(form)

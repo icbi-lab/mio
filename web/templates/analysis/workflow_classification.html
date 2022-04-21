@@ -19,6 +19,22 @@
           
           <h2> {{title}} </h2>
           <hr class="my-4">
+
+          <div class="container">
+            <h3>Run examples dataset</h3><br>
+          <table style="width:100%">
+            <tr>
+              <td align="center">
+                <!-- dataset, geneset, mirset, model, label, filter_col -->
+                <input type="button" class="btn btn-outline-primary" onclick='run_example("TCGA-UVM ", "UV_RESPONSE_DN [HALLMARK]", "", "Logistic Regression","TCGA-UVM-UV_RESPONSE-TEST","event")' value="Example 1"/>
+                <input type="button" class="btn btn-outline-secondary" onclick='run_example("TCGA-CRC", "Immune checkpoints [ICBI]","","Random Forest", "TCGA-CRC-ICP-SURVIVAL","event" )' value="Example 2"/>
+                <input type="button" class="btn btn-outline-success" onclick='run_example("TCGA-LAML", ""," Immune checkpoint [Yang]","Logistic Regression", "TCGA-LAML-ICP-SURVIVAL","event" )' value="Example 3"/>
+              </td> 
+            </tr>
+            <tr><td style="padding: 10px"></td></tr>
+          </table>
+      </div>
+
           {% if messages %}
           <div>
               <ul>
@@ -37,13 +53,15 @@
             {% csrf_token %}
 
             {{form.label | as_crispy_field}}
-            <p> Select dataset to analyze </p>
-            <select class="chosen" style="width:350px;" name="publicDataset"> 
-              {% for value,key in form.publicDataset.field.choices %}
-                  <option name="publicDataset" value="{{value}}">{{key}}</option>
-              {%endfor%}
-            </select>
-            <p>
+
+              <p> Select datasetet to analyze </p>
+              <select class="chosen" style="width:350px;" id="publicDataset", name="publicDataset"> 
+                {% for value,key in form.publicDataset.field.choices %}
+                    <option name="publicDataset" value="{{value}}">{{key}}</option>
+                {%endfor%}
+              </select>
+              <p>
+
               <div id="use_fit_model" name = "use_fit_model"  class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" name = "use_fit_model" id="use_fit_modelcheckbox" value=True>
                 <label class="form-check-label" for="use_fit_modelcheckbox">Use training model</label>
@@ -59,7 +77,7 @@
               {{form.k | as_crispy_field}}
               
               <p> Select genset to analyze </p>
-              <select class="chosen" style="width:350px;" name="publicGeneset" multiple> 
+              <select id = "publicGeneset" class="chosen" style="width:350px;" name="publicGeneset" multiple> 
                 {% for value,key in form.publicGeneset.field.choices %}
                     <option name="publicGeneset" value="{{value}}">{{key}}</option>
                 {%endfor%}
@@ -70,7 +88,7 @@
 
 
               <p> Select miRNAset to analyze </p>
-              <select id = "chosenmir" class="chosen" style="width:350px;" name="publicMirnaset" multiple> 
+              <select id = "publicMirnaset" class="chosen" style="width:350px;" name="publicMirnaset" multiple> 
                 {% for value,key in form.publicMirnaset.field.choices %}
                     <option name="publicMirnaset" value="{{value}}">{{key}}</option>
                 {%endfor%}
@@ -117,4 +135,88 @@
       });
 </script>
 
+<script type="text/javascript">
+
+
+  /**
+   * Select additional options in a multi select chosen
+   * @param $select jQuery selector for a multi select
+   * @param values array with strings
+   */
+
+   
+function selectAdditionalChosenOptions($select, values) {
+      var selected = $select.val() || [];                 //get current options
+      selected = selected.concat(values);                 //merge with new options
+      selected = $.grep(selected, function(el, index) {
+          return index === $.inArray(el, selected);       //make options unique
+      });
+      $select.val(null);                                  //delete current options
+      $select.val(selected);                              //add new options
+      $select.trigger('chosen:updated');
+  }
+function setSelectedValue(selectObj, valueToSet) {
+  for (var i = 0; i < selectObj.options.length; i++) {
+      console.log(selectObj.options[i].text);
+      if (selectObj.options[i].text == valueToSet) {
+          selectObj.options[i].selected = true;
+          console.log("Option selected");
+          return;
+      }
+  }
+}
+
+function objClick(selectObj, valueToSet) {
+selectObj.addEventListener('change', e => {
+  console.log('clicked');
+});
+
+console.log('Using click()');
+selectObj.click();
+
+console.log('Using dispatchEvent');
+selectObj.dispatchEvent(new Event('change'));
+}
+
+function example(dataset, geneset, mirset, model, label, filter_col){
+
+  // Define select Boxes
+  var InputK = document.getElementById("id_k"); 
+  var InputGroup = document.getElementById("id_group"); 
+  var SelectDataset = document.getElementById("publicDataset");
+  var SelectGeneset= document.getElementById("publicGeneset");
+  var SelectMirset= document.getElementById("publicMirnaset");
+  var SelectModel = document.getElementById("id_model");
+  var Label = document.getElementById("id_label");
+
+
+  //Set K-Fold
+  InputK.value = 3;
+  //Set selected label
+  Label.value = label;
+  //Set selected label
+  InputGroup.value = filter_col;
+  //Set selected Dataset
+  setSelectedValue(SelectModel, model);
+  setSelectedValue(SelectDataset, dataset);
+  objClick(SelectDataset);
+  selectAdditionalChosenOptions($('#publicDataset'), ['Thailand']);
+  if (geneset !== ""){
+    setSelectedValue(SelectGeneset, geneset);
+    objClick(SelectGeneset);
+    selectAdditionalChosenOptions($('#publicDataset'), ['Thailand']);
+  }
+  if (mirset !== ""){
+    setSelectedValue(SelectMirset, mirset);
+    objClick(SelectMirset);
+    selectAdditionalChosenOptions($('#publicDataset'), ['Thailand']);
+  }
+
+
+}
+
+function run_example(dataset, geneset, mirset, model, label, filter_col){
+example(dataset, geneset, mirset, model, label, filter_col);
+}
+</script>
 {% endblock js %}

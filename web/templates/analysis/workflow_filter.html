@@ -12,12 +12,40 @@
         <div class="col-lg-8 mx-auto">
           <h2> {{title}} </h2>
           <hr class="my-4">
+          {% if messages %}
+      <div>
+          <ul>
+          {% for message in messages %}
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  <strong>{{message | safe}}</strong>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+          </div>
+          {% endfor %}
+          </ul>
+      </div>  
+    {% endif %}
           <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
-            
+            {% if workflow.analysis == "Correlation" %}
+
+            <p>
+              <div id="method" name = "method" class="col-sm-30">
+              <p>  Select the coefficient for applying the filters*  </p>
+                <select name="method" id="myselect">
+                  {% for id, name in form.method.field.choices %}
+                <option value="{{ id }}">{{ name }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </p>
+            {%endif%}
+            <div id="pvalue">
             {{form.pval | as_crispy_field}}
-            {{form.low_coef | as_crispy_field}}
-            {{form.high_coef | as_crispy_field}}
+          </div>
+          {{form.low_coef | as_crispy_field}}
+          {{form.high_coef | as_crispy_field}}
 
             {% if workflow.analysis == "Correlation" %}
               {{form.survival | as_crispy_field}}
@@ -52,8 +80,12 @@
             {% endif %}
 
             
-            <button type="submit" class="btn btn-primary btn-block">Apply Filter</button>
+            <button id="submit" type="submit" class="btn btn-primary btn-block" onclick="showDiv()">Submit</button>
 
+            <button id="loading" style="display:none" class="btn btn-primary btn-block" type="button" disabled>
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              Loading...
+            </button>
           </form>
 
         </div>
@@ -64,7 +96,30 @@
 {% endblock body %}
 
 {% block js%}
-  <script type="text/javascript">  
+<script type="text/javascript">
+
+  function showDiv() {
+    document.getElementById('submit').style.display = "none";
+    document.getElementById('loading').style = "display:true";   
+  }
+  
+</script>
+
+<script type="text/javascript">
+  var SelectChoice = document.getElementById("myselect");
+  SelectChoice.addEventListener('change', function() {
+              const method_value = ["Lasso", "Ridge", "ElasticNet", "Elastic net"]  
+              // Get the value of selected <option>
+              var value = SelectChoice.options[SelectChoice.selectedIndex].value;
+              if (method_value.includes(value)){
+                // checks pre_indexed genome selected
+                document.getElementById("pvalue").style = "display:None"
+              }else{
+                document.getElementById("pvalue").style = "display:true"
+              }
+            });
+</script>
+<script type="text/javascript">  
     function selects(){  
         var ele=document.getElementsByName('nDB');  
         for(var i=0; i<ele.length; i++){  

@@ -12,7 +12,11 @@
         <div class="col-lg-8 mx-auto">
           <h2>Kaplan Meier</h2>
             <hr class="my-4">
+            {% if KM_script%}
               {{KM_script| safe}}
+            {% else %}
+            The {{target}} could not be found in {{dataset}}
+            {% endif %}
               <hr class="my-4">
               <a  class="btn btn-primary btn-lg btn-block" href="{% url 'session_detail' session_slug=session_detail.identifier %}">Back to Session</a>
 

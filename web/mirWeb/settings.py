@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'results',
     'registration',
     'reference',
+    'microrna',
+    'gene',
     ##Other apps
     'crispy_forms',
     'django_extensions',
@@ -273,24 +275,23 @@ MAX_UPLOAD_SIZE = "104857600"
 ###Email
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.i-med.ac.at'
+EMAIL_USE_TLS = False
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'web.tool.mio@gmail.com'
-EMAIL_HOST_PASSWORD = 'ruvuKU02'
+EMAIL_HOST_USER = 'noreply@i-med.ac.at'
+#EMAIL_HOST_PASSWORD = 'ruvuKU02'
 LOGIN_REDIRECT_URL = '/' # default to /accounts/profile 
 
 ##LOGGING##
 LOGGING = {
     "version": 1,
-    "disable_existing_loggers": False,
-    "root": {"level": "INFO", "handlers": ["file"]},
-    "handlers": {
-        "file": {
-            "level": "INFO",
-            "class": "logging.FileHandler",
-            "filename": "/var/log/django.log",
-            "formatter": "app",
+        'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': '/var/log/django.log',
         },
     },
     "loggers": {

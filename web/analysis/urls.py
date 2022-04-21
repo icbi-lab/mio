@@ -13,9 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
 from django.urls import path
-from django.views.generic.base import View
 from . import views
 from django.contrib.auth.decorators import login_required, permission_required
 urlpatterns = [
@@ -41,7 +39,10 @@ urlpatterns = [
     path("session_detail/<slug:session_slug>/workflow_synthetic/", views.SyntheticLethalityWorkflow.as_view(),name="workflow_synthetic"),
     path("session_detail/<slug:session_slug>/workflow_target/", views.TargtePredictorWorkflow.as_view(),name="workflow_target"),
     path("session_detail/<slug:session_slug>/workflow_genesetscore/", views.GeneSetScoreWorkflow.as_view(),name="workflow_genesetscore"),
+    path("session_detail/<slug:session_slug>/workflow_immunophenoscore/", views.ImmuneScoreWorkflow.as_view(),name="workflow_immunephenoscore"),
+    path("session_detail/<slug:session_slug>/workflow_immunecellinfiltration/", views.ImmuneCellInfiltrationWorkflow.as_view(),name="workflow_immunecellinfiltration"),
     path("session_detail/<slug:session_slug>/workflow_filter/<int:pk>", views.WorkflowFilterView.as_view(),name="workflow_filter"),
+    path("session_detail/<slug:session_slug>/workflow_filte_basic/<int:pk>", views.WorkflowFilterBasicView.as_view(),name="workflow_filter_basic"),
     path("session_detail/<slug:session_slug>/workflow_feature/", views.FeatureWorkflow.as_view(),name="workflow_feature"),
     path("session_detail/<slug:session_slug>/workflow_classification/", views.ClassificationWorkflow.as_view(),name="workflow_classification"),
     path("session_detail/<slug:session_slug>/workflow_feature_ratio/", views.FeatureRatioWorkflow.as_view(),name="workflow_feature_ratio"),
@@ -50,20 +51,12 @@ urlpatterns = [
 
 
     ####Genes####
-    path("create_gene/", views.GeneUploadView.as_view(),name="create_genes"),
-    path("data_detail/<slug:user_slug>/create_geneset/", views.CreateSetView.as_view(), name="create_geneset"),
+
     path("geneset_list/download_geneset/<int:pk>/<str:identifier>/<str:set_type>/", views.DownloadSet, name="download_geneset"),
     path("geneset_list/download_geneset_gmt/<str:identifier>/<str:set_type>/", views.DownloadAllGMT, name="download_geneset_gmt"),
-    path("data_detail/<slug:user_slug>/delet_geneset/<int:pk>", views.GenesetDeleteView.as_view(), name="delet_geneset"),
-    #path("data_detail/<slug:user_slug>/update_geneset/<int:pk>", views.GenesetUpdateView.as_view(), name="update_geneset"),
-    path("geneset_list/", views.GenesetListView.as_view(), name="geneset_list"),
-    path("geneset_list/<slug:search>", views.GenesetListView.as_view(), name="geneset_list"),
-    path("data_detail/<slug:user_slug>/create_geneset_gmt/", views.CreateGeneSetFromGMTView.as_view(), name="create_geneset_gmt"),
     path("feature_set/<slug:session_slug>/<int:pk>/", views.FeatureToSet, name="feature_set"),
 
     ###MIRNA####
-    path("mirnaset_list/", views.MirnasetListView.as_view(), name="mirnaset_list"),
-    path("data_detail/<slug:user_slug>/create_mirset/", views.CreateSetView.as_view(), name="create_mirset"),
     path("data_detail/<slug:user_slug>/delet_mirnaset/<int:pk>", views.MirnasetDeleteView.as_view(), name="delet_mirset"),
 
     ####File###
@@ -85,6 +78,9 @@ urlpatterns = [
     path("metadata_detail/<int:pk>", views.DatasetDetailView.as_view(), name = "metadata_detail"),
     path("not_owner/", views.handlernotowner, name="not_owner"),
     path("dataset_download/<int:pk>/<slug:file_name>", views.dataset_download, name = "dataset_download"),
+
+    #### Search ####
+    path("search/<slug:query>", views.SearchDetailView.as_view(), name = "search_view"),
 
 
 

@@ -12,10 +12,38 @@
    <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-
+          {% if messages %}
+          <div>
+              <ul>
+              {% for message in messages %}
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                      <strong>{{message | safe}}</strong>
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+              </div>
+              {% endfor %}
+              </ul>
+          </div>  
+        {% endif %}
         
           <h2>{{title}}</h2>
           <hr class="my-4">
+
+          <div class="container">
+            <h3>Run examples</h3><br>
+          <table style="width:100%">
+            <tr>
+              <td align="center">
+                <input type="button" class="btn btn-outline-primary" onclick='run_example("TCGA-LUAD", "IFNG [Higgs]","TCGA-LUAD-IFNG")' value="Example 1"/>
+                <input type="button" class="btn btn-outline-secondary" onclick='run_example("TCGA-CHOL", "Antitumor cytokines [Bagaev]","TCGA-CHOL-CYTOK" )' value="Example 2"/>
+                <input type="button" class="btn btn-outline-success" onclick='run_example("TCGA-COAD", "Checkpoint molecules [Bagaev]","TCGA-LUAD-CHECKPOINT")' value="Example 3"/>
+              </td> 
+            </tr>
+            <tr><td style="padding: 10px"></td></tr>
+          </table>
+      </div>
+
           <p>
             <div id="dataset" name = "dataset" class="col-sm-30">
             <p> Select dataset to analyze </p>
@@ -40,7 +68,7 @@
 
             <div id="public" style="display:none">
               <p> Select datasetet to analyze </p>
-              <select class="chosen" style="width:350px;" name="publicDataset"> 
+              <select class="chosen" style="width:350px;" id="publicDataset", name="publicDataset"> 
                 {% for value,key in form.publicDataset.field.choices %}
                     <option name="publicDataset" value="{{value}}">{{key}}</option>
                 {%endfor%}
@@ -52,9 +80,9 @@
               {{form.label| as_crispy_field}}
               {{form.normal| as_crispy_field}}
               {{form.survival| as_crispy_field}}
-
+              {{form.background | as_crispy_field}}
               <p> Select geneset to analyze </p>
-              <select class="chosen" style="width:350px;" name="publicGeneset" multiple> 
+              <select class="chosen" style="width:350px;" id="publicGeneset", name="publicGeneset" multiple> 
                 {% for value,key in form.publicGeneset.field.choices %}
                     <option name="publicGeneset" value="{{value}}">{{key}}</option>
                 {%endfor%}
@@ -99,6 +127,89 @@
 {% endblock body %}
 
 {% block js %}
+
+<script type="text/javascript">
+
+
+    /**
+     * Select additional options in a multi select chosen
+     * @param $select jQuery selector for a multi select
+     * @param values array with strings
+     */
+
+     
+  function selectAdditionalChosenOptions($select, values) {
+        var selected = $select.val() || [];                 //get current options
+        selected = selected.concat(values);                 //merge with new options
+        selected = $.grep(selected, function(el, index) {
+            return index === $.inArray(el, selected);       //make options unique
+        });
+        $select.val(null);                                  //delete current options
+        $select.val(selected);                              //add new options
+        $select.trigger('chosen:updated');
+    }
+
+function setSelectedValue(selectObj, valueToSet) {
+    for (var i = 0; i < selectObj.options.length; i++) {
+        console.log(selectObj.options[i].text);
+        if (selectObj.options[i].text== valueToSet) {
+            selectObj.options[i].selected = true;
+            console.log("Option selected");
+            
+        }
+        else{
+          selectObj.options[i].selected = false;
+        }
+    }
+}
+
+function objClick(selectObj) {
+  selectObj.addEventListener('change', e => {
+    console.log('clicked');
+  });
+
+  console.log('Using click()');
+  selectObj.click();
+
+  console.log('Using dispatchEvent');
+  selectObj.dispatchEvent(new Event('change'));
+}
+
+function example(dataset, geneset, label){
+    // Define select Boxes 
+    var SelectMode = document.getElementById("myselect");
+    var SelectDataset = document.getElementById("publicDataset");
+    var Label = document.getElementById("id_label");
+    var SelectGeneset = document.getElementById("publicGeneset");
+    var checkboxfilter = document.getElementById("filter_sample_checkbox");
+
+    //Set selected Mode
+    setSelectedValue(SelectMode, "Available dataset");
+    objClick(SelectMode);  
+    //Set selected Dataset
+    setSelectedValue(SelectDataset, dataset);
+    objClick(SelectDataset);
+    selectAdditionalChosenOptions($('#publicDataset'), ['Thailand']);
+    //Set selected label
+    Label.value = label;
+    //Set selected Dataset
+    setSelectedValue(SelectGeneset, geneset);
+    objClick(SelectGeneset);
+    selectAdditionalChosenOptions($('#publicGeneset'), ['Thailand']);
+    //Filter sample
+    //checkboxfilter.checked = true;
+    if (checkboxfilter.checked == false){
+      objClick(checkboxfilter);
+
+    }
+
+}
+
+function run_example(dataset, geneset, tag){
+  example(dataset, geneset, tag);
+}
+
+</script>
 
 <script type="text/javascript">
             var SelectChoice = document.getElementById("myselect");

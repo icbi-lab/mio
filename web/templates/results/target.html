@@ -49,8 +49,7 @@
 <!-- needed to use moment.js for our date sorting-->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.19/sorting/datetime-moment.js"></script>
-
-{%if identifier%}
+  
 <script>
   $(document).ready(function() {
       $('#example').DataTable( {    dom: 'B<"clear">lfrtip',
@@ -58,6 +57,20 @@
         name: 'primary',
         buttons: [ 'copy', 'csv', 'excel' ]
         },
+        "columnDefs": [ {
+            "targets": 2,
+            "data": "2",
+            "render": function ( data, type, row, meta ) {
+              return '<a href="/microrna_view/'+data+'"  target="_blank">'+data+'</a>';
+            }
+          },
+          {
+            "targets": 1,
+            "data": "1",
+            "render": function ( data, type, row, meta ) {
+              return '<a href="/gene_view/'+data+'"  target="_blank">'+data+'</a>';
+            }
+          } ],
         "ajax": '{% url "results_json" identifier=identifier %}'
       } );
   } );

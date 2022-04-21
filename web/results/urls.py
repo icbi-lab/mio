@@ -21,6 +21,8 @@ from . import views
 urlpatterns = [
     ### Correlation View ####
     path("results_detail/<slug:session_slug>/workflow_filter/<int:pk>", views.ReultsDetailView.as_view(), name = "results_detail"),
+    path("results_detail/<slug:session_slug>/workflow_filter_basic/<int:pk>", views.ReultsDetailBasicView.as_view(), name = "results_detail_basic"),
+
     path("results_detail/<slug:session_slug>/cytoscape/<slug:identifier_data>/<slug:identifier_style>", views.CytoscapeView.as_view(), name = "cytoscape_full"),
 
     #path("results_detail/<slug:session_slug>/workflow_filter/<int:pk>", views.TestView.as_view(), name = "results_detail"),
@@ -34,7 +36,7 @@ urlpatterns = [
     #### Kaplan Meier ####
     path("survival/<slug:session_slug>/kaplan_meier_form/", views.KaplanMeierFormView.as_view(), name = "survival_formkm"),
     path("survival/<slug:session_slug>/kaplan_meier_plot/", views.KaplanMeierView.as_view(), name = "survival_km"),
-
+    path('ajax/load-cities/', views.load_mirgen, name='ajax_load_cities'),  # <-- this one here
     ### Feature View ####
     path("feature_list/<slug:identifier>", views.FeatureListJson, name = "results_json"),
     path("results_detail/<slug:session_slug>/workflow_feature/<int:pk>", views.FeatureDetailView.as_view(), name = "results_feature"),
@@ -49,6 +51,9 @@ urlpatterns = [
     path("results_detail/<slug:session_slug>/workflow_classification/<int:pk>", views.ClassificationView.as_view(), name = "results_classification"),
 
     path("cytoscape/<slug:identifier>", views.CytoListJson, name = "cytoscape_json"),
+
+    ###Feature
+    path("feature", views.GeneMirListJson, name = "feature_json"),
 
         
 ]

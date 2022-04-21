@@ -16,7 +16,8 @@ from django.db.models import Q
 from django.http import HttpResponseForbidden
 from django.core.exceptions import PermissionDenied
 from django.shortcuts import render, redirect
-
+from microrna.models import Mirnaset, Mirna_mature
+from gene.models import Gene, Geneset
 from mirWeb.settings import DATA_DIR
 
 
@@ -66,217 +67,27 @@ class Session(models.Model):
             print("Not owner")
             return False
 
+    def session_redirect(self, user):
+        lSession = user.get_session()
+        if len(lSession) == 0:
+            session = Session()
+            session.user_id = user
+            name = user.username + "_" + str(uuid.uuid4())
+            session.name = name[0: 49 if len(name) > 49 else -1]
+            session.save()
+            identifier = session.identifier
+        else:
+            identifier = lSession[0].identifier
+        return identifier
+
     #Unic identifier used in the URL
     identifier = models.UUIDField(default = uuid.uuid4, editable = False, unique = True)
-    public = models.BooleanField(choices =  [(0, "No"),(1,"Si")], default=0)
+    public = models.BooleanField(choices =  [(0, "No"),(1,"Yes")], default=0)
     name = models.CharField(max_length=50,unique=True,null=False)
 
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
-
-class Gene(models.Model): #Gene Data from cBioportal
-    """
-    Gene table. Genes extracted from the CBioPortal.
-    """
-    def __str__(self):
-        return self.symbol
-
-    entrez_id = models.PositiveIntegerField(primary_key=True) 
-    symbol = models.CharField(max_length=255, null=False)
-    gene_type = models.CharField(max_length=75, null=False) 
-    synthetic_lethal = models.ManyToManyField("self", blank=True)
-
-
-class Mirna(models.Model): #Gene Data from cBioportal
-    """
-    Gene table. Genes extracted from the CBioPortal.
-    """
-    def __str__(self):
-        return self.mature_id
-
-    mir_type = models.CharField(max_length=255, null=False) 
-    mature_acc = models.CharField(max_length=255, null=False)
-    mature_id = models.CharField(max_length=255, null=True)
-
-    gene_target = models.ManyToManyField(Gene, through='Target')
-    class Meta:
-        indexes = [models.Index(fields=["mature_id",])]
-
-class Target(models.Model):
-    
-    def __str__(self):
-        return "%s/%s"%(self.mirna_id,self.gene_id)
-
-    gene_id = models.ForeignKey(Gene, on_delete=models.CASCADE)
-    mirna_id = models.ForeignKey(Mirna, on_delete=models.CASCADE)
-    target = models.CharField(max_length=41)
-    number_target = models.PositiveIntegerField()
-
-    class Meta:
-        unique_together = (("gene_id", "mirna_id"),)
-        indexes = [models.Index(fields=['gene_id', 'mirna_id'])]
-
-
-class Mirnaset(models.Model): #Gene Data from cBioportal
-    """
-    Gene table. Genes extracted from the CBioPortal.
-    """
-    def __str__(self):
-        return self.name
-
-    def check_mirset(self):
-        if self.get_number_mir() == 0:
-            #self.delete()
-            return False
-        else:
-            return True
-
-    def to_txt(self, mirna = "mature_id"):
-        lFields = [self.name,">"+self.description,">"+self.ref_link]
-        lFields += [str(mir) for mir in self.get_mir(mirna)]
-        txt = "\n".join(lFields)
-        return txt
-
-    def to_gmt(self, mirna = "mature_id"):
-        lFields = [self.name,self.description+" "+self.ref_link,"\t".join([str(mir) for mir in self.get_mir(mirna)])]
-        txt = "\t".join(lFields)
-        return txt 
-
-    def get_mir(self, mirna="mature_id"):# Obtain a gene list to Geneset
-        return list(self.mirna_id.values_list(mirna, flat=True))
-
-
-    def get_number_mir(self):
-        """
-        Function to get the number of genes from geneset
-        Return:
-            Int
-        """
-        return len(self.get_mir())
-
-    def create_mirset(self, name, description, ref, user_slug, public):
-        self.external_id = name
-        self.name = name
-        self.description = description
-        self.ref_link = ref
-        self.user_id = User.objects.get(identifier=user_slug)
-        self.public = public
-        self.save()
-
-    def from_form(self, name = None, description = None, ref = None, lFeature = None, identifier = None, public = False, user_slug = None):
-        self.create_mirset(name, description, ref, user_slug, public)
-        #file = file.read().decode('utf-8')
-        #df = pd.read_table(io.StringIO(file), delimiter='\t',names=["Gene",])
-        
-        try:
-            if identifier == "id":
-                mirna = Mirna.objects.filter(mature_id__in=lFeature)
-            else:
-                mirna = Mirna.objects.filter(mature_acc__in=lFeature)
-                            
-            self.mirna_id.add(*mirna)
-
-
-
-        except Exception as error:
-            self.delete()
-            print(error)
-            return False
-
-        else:
-            self.save() if self.check_mirset() else self.delete()
-
-    def is_owner(self, user):
-        return True if self.user_id == user else False
-
-    name = models.CharField(max_length=500, unique=True)
-    description =  models.TextField(max_length=900000)
-    ref_link = models.TextField(max_length=900000)
-    public = models.BooleanField(choices =  [(False, "No"),(True,"Si")], default=False)
-
-    mirna_id = models.ManyToManyField(Mirna) #Relation Geneset-Gene
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
-
-
-class Geneset (models.Model):
-    """
-    Geneset Table.
-    """
-    def __str__(self):
-        return self.name
-    
-    def to_txt(self, gname = "symbol"):
-        lFields = [self.name,">"+self.description,">"+self.ref_link]
-        lFields += [str(gene) for gene in self.get_genes(gname)]
-        txt = "\n".join(lFields)
-        return txt
-
-    def to_gmt(self, gname = "symbol"):
-        lFields = [self.name,self.description+" "+self.ref_link,"\t".join([str(gene) for gene in self.get_genes(gname)])]
-        txt = "\t".join(lFields)
-        return txt 
-
-    def get_genes(self, gname="symbol"):# Obtain a gene list to Geneset
-        return list(self.genes_id.values_list(gname, flat=True))
-
-    def get_number_genes(self):
-        """
-        Function to get the number of genes from geneset
-        Return:
-            Int
-        """
-        return len(self.get_genes())
-
-    def check_geneset(self):
-        if self.get_number_genes() == 0:
-            #self.delete()
-            return False
-        else:
-            return True
-
-
-    def create_geneset(self, name, description, ref, user_slug, public):
-        self.external_id = name
-        self.name = name
-        self.description = description
-        self.ref_link = ref
-        self.user_id = User.objects.get(identifier=user_slug)
-        self.public = public
-        self.save()
-
-    def from_form(self, name = None, description = None, ref = None, lFeature = None, identifier = None, public = False, user_slug = None):
-        self.create_geneset(name, description, ref, user_slug, public)
-        #file = file.read().decode('utf-8')
-        #df = pd.read_table(io.StringIO(file), delimiter='\t',names=["Gene",])
-        
-        try:
-            if identifier == "symbol":
-                genes = Gene.objects.filter(symbol__in=lFeature)
-                self.genes_id.add(*genes)
-            else:
-                genes = Gene.objects.filter(pk__in=lFeature)
-                self.genes_id.set(*genes)
-
-
-        except Exception as error:
-            self.delete()
-            print(error)
-            return False
-
-        else:
-            self.save() if self.check_geneset() else self.delete()
-
-    def is_owner(self, user):
-        return True if self.user_id == user else False
-
-    external_id = models.CharField(max_length=500)
-    name = models.CharField(max_length=500, unique=True)
-    description =  models.TextField(max_length=900000, null=True)
-    ref_link = models.TextField(max_length=900000)
-    public = models.BooleanField(choices =  [(False, "No"),(True,"Si")], default=False)
-    genes_id = models.ManyToManyField(Gene) #Relation Geneset-Gene
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
 
     
 
@@ -351,6 +162,16 @@ class Dataset(models.Model):
         self.exprFile.name = "ExpresionSet.%i.csv"%(self.pk)
         self.save()
     
+    def set_featurelist(self,file = None):
+        from django.core.files.base import ContentFile
+        import pickle
+        
+        content = pickle.dumps(file)
+        fid = ContentFile(content)
+        self.featureFile.save(f"{self.name}_feature_list.pickle", fid)
+        fid.close()
+        self.save()
+    
     def set_number_gene(self):
         #Get Paths
         genePath = self.get_genepath()
@@ -371,6 +192,7 @@ class Dataset(models.Model):
         #Get Paths
         df = self.get_expr()
         self.number_sample = len(df.index)
+        self.set_featurelist(df.columns.tolist())
         self.save()
 
     def set_metadata_fields(self):
@@ -380,6 +202,10 @@ class Dataset(models.Model):
         df = read_count(genePath, sep)
         self.metadata_fields = ", ".join(df.columns.tolist())
         self.save()
+
+    def get_features(self):
+        import pickle
+        return pickle.load( open(self.get_featurepath(), "rb" ) ) 
 
     def get_number_gene(self):
         if self.number_gene == None:
@@ -402,7 +228,7 @@ class Dataset(models.Model):
         return self.metadata_fields
 
     def check_dataset(self):
-        if self.set_number_gene == 0 or self.set_number_mir == 0 or self.number_sample == 0:
+        if self.get_number_gene() == 0 or self.get_number_mir() == 0 or self.get_number_sample() == 0:
             self.delete()
             return False
         else:
@@ -410,6 +236,9 @@ class Dataset(models.Model):
 
     def get_mirpath(self):
         return settings.DATA_DIR+"/"+ self.mirFile.url
+
+    def get_featurepath(self):
+        return settings.DATA_DIR+"/"+ self.featureFile.url
 
     def get_genepath(self):
         return settings.DATA_DIR+"/"+ self.geneFile.url
@@ -551,7 +380,8 @@ class Dataset(models.Model):
     mirFile = models.FileField(storage=data_root, upload_to=get_session_path, blank=False, null=False)
     exprFile = models.FileField(storage=data_root, upload_to=get_session_path, blank=True, null=True)
     metadataFile = models.FileField(storage=data_root,upload_to=get_session_path, blank=False, null=False)
-    public = models.BooleanField(choices =  [(False, "No"),(True,"Si")], default=True)
+    featureFile = models.FileField(storage=data_root,upload_to=get_session_path, blank=True, null=True)
+    public = models.BooleanField(choices =  [(False, "No"),(True,"Yes")], default=True)
     technology = models.CharField(max_length=50, choices=TECHNOLOGY_CHOICES)
     corFile = models.FileField(storage=data_root, upload_to=get_session_path, blank=True, null=True)
     pearFile = models.FileField(storage=data_root, upload_to=get_session_path, blank=True, null=True)

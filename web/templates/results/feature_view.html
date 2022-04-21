@@ -159,7 +159,18 @@
                   fieldSeparator: '\t',
                   extension: '.tsv'
               }]
-          },
+            },
+            "columnDefs": [ {
+            "targets": 0,
+            "data": "0",
+            "render": function ( data, type, row, meta ) {
+                if(data.includes("hsa-")){
+                  return '<a href="/microrna_view/'+data+'"  target="_blank">'+data+'</a>';
+                } else{
+                return '<a href="/gene_view/'+data+'"  target="_blank">'+data+'</a>';
+            }
+            }
+          }],
           "ajax": '{% url "results_json" identifier=identifier %}'
         } );
     } );
