@@ -2,7 +2,7 @@
 
 In order to identify miRNA target genes of immune-related signatures and pathways in cancer samples, we have developed the user-friendly web platform MIO and the Python toolkit miopy integrating various analyses and visualization methods based on provided or custom bulk miRNA and gene expression data. We include regularized regression and survival analysis and provide information of 40 miRNA target prediction tools as well as a collection of curated immune-related gene signatures and analyses of >30 cancer types based on data from The Cancer Genome Atlas (TCGA). 
 
-- For an online version of the tool, please see [user guide](https://mio.i-med.ac.at/staticfiles/media/MIO_Manual.pdf) and [online](https://mio.i-med.ac.at/).
+- For an online version of the tool, please see [user guide](/man/MIO_Manual.pdf) and [online](https://mio.i-med.ac.at/).
 
 - Please see [setup guide](doc/setupguide.md) for instructions on setting up MIO
 
