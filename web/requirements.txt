@@ -23,7 +23,7 @@ oauthlib==3.1.0
 pandarallel==1.5.2
 pandas==1.2.4
 patsy==0.5.1
-Pillow==8.2.0
+Pillow==9.0.1
 pycparser==2.20
 PyJWT==2.1.0
 pyparsing==3.0.0b2
