@@ -15,7 +15,7 @@ MIO is built with three components:
 ---
 _Please cite as:_  
 
-_Monfort-Lanzas P, Gronauer R, Madersbacher L, et al. MIO: MicroRNA target analysis system for Immuno-Oncology. Bioinformatics (Oxford, England). 2022 Jun:btac366. DOI: [10.1093/bioinformatics/btac366](https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/btac366/6596596?login=true). PMID: [35642895](https://pubmed.ncbi.nlm.nih.gov/35642895/)._
+_Pablo Monfort-Lanzas, Raphael Gronauer, Leonie Madersbacher, Christoph Schatz, Dietmar Rieder, Hubert Hackl, MIO: microRNA target analysis system for immuno-oncology, Bioinformatics, Volume 38, Issue 14, 15 July 2022, Pages 3665–3667, [10.1093/bioinformatics/btac366](https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/btac366/6596596?login=true). PMID: [35642895](https://pubmed.ncbi.nlm.nih.gov/35642895/)._
 ---
 
 ### Current Analyses
