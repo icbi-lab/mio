@@ -44,7 +44,7 @@ statsmodels
 threadpoolctl==2.1.0
 tqdm==4.60.0
 urllib3==1.26.5
-gunicorn==19.5.0
+gunicorn==22.0.0
 psycopg2-binary==2.8.5
 arrow==0.7.0
 click==6.2
